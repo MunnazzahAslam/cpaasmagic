@@ -104,19 +104,19 @@ class Vendors extends React.Component {
                 </Link></div>
               },
               {
-                title: 'Type', field: 'Gartner_Vendor_Type', render: rowData => <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                title: 'Type', field: 'Gartner_Vendor_Type', render: rowData => <div style={{ display: 'flex', justifyContent: 'start', alignItems: 'start' }}>
                 <Link to={`/vendors/${rowData.TransformX_Vendor_Id}`}>
                 <p>{rowData.Gartner_Vendor_Type}</p>
                 </Link></div>
               },
               {
-                title: 'Industry', field: 'LinkedIn_Vendor_Industry', render: rowData => <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                title: 'Industry', field: 'LinkedIn_Vendor_Industry', render: rowData => <div style={{ display: 'flex', justifyContent: 'start', alignItems: 'start' }}>
                 <Link to={`/vendors/${rowData.TransformX_Vendor_Id}`}>
                 <p>{rowData.LinkedIn_Vendor_Industry}</p>
                 </Link></div>
               },
               {
-                title: 'Headquarters Region', field: 'TransformX_Vendor_Headquarter_Region', render: rowData => <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                title: 'Headquarters Region', field: 'TransformX_Vendor_Headquarter_Region', render: rowData => <div style={{ display: 'flex', justifyContent: 'start', alignItems: 'start' }}>
                 <Link to={`/vendors/${rowData.TransformX_Vendor_Id}`}>
                   <p>{rowData.TransformX_Vendor_Headquarter_Region}</p>
                 </Link></div>
@@ -124,7 +124,7 @@ class Vendors extends React.Component {
               {
                 title: 'Specialities', field: 'TransformX_Vendor_Unique_Sell_Point', cellStyle: {
                   width: '60%'
-                 }, render: rowData => <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                 }, render: rowData => <div style={{ display: 'flex', justifyContent: 'start', alignItems: 'start' }}>
                  <Link to={`/vendors/${rowData.TransformX_Vendor_Id}`}>
                    <p>{rowData.TransformX_Vendor_Unique_Sell_Point}</p>
                  </Link></div>
