@@ -98,19 +98,33 @@ class APIs extends React.Component {
                                 IMImobile: 'IMImobile',
                                 '8x8': '8x8',
                                 'RingCentral': 'RingCentral'
-                            }
+                            }, render: rowData => <div style={{ display: 'flex', justifyContent: 'start', alignItems: 'start' }}>
+                                <Link to={`/vendors/${rowData.TransformX_Vendor_Id}`}>
+                                    <p>{rowData.TransformX_Vendor_Name}</p> </Link></div>
                         },
 
-                        { title: 'Category', field: 'TransformX_API_Category1' },
+                        {
+                            title: 'Category', field: 'TransformX_API_Category1', render: rowData => <div style={{ display: 'flex', justifyContent: 'justify', alignItems: 'center' }}>
+                                <Link to={`/apis/${rowData.TransformX_API_Id}`}>
+                                    <p>{rowData.TransformX_API_Category1}</p>
+                                </Link></div>
+                        },
 
-                        { title: 'API', field: 'Vendor_API_Name', render: rowData => <div style={{ display: 'flex', justifyContent: 'justify', alignItems: 'center' }}>
-                        <Link to={`/apis/${rowData.TransformX_API_Id}`}>
-                            <p>{rowData.TransformX_API_Name}</p>
-                        </Link></div> },
+                        {
+                            title: 'API', field: 'Vendor_API_Name', render: rowData => <div style={{ display: 'flex', justifyContent: 'justify', alignItems: 'center' }}>
+                                <Link to={`/apis/${rowData.TransformX_API_Id}`}>
+                                    <p>{rowData.Vendor_API_Name}</p>
+                                </Link></div>
+                        },
 
-                        { title: 'API Description', field: 'TransformX_API_Description', cellStyle: {
-                            whiteSpace: 'nowrap'
-                           }, }
+                        {
+                            title: 'API Description', field: 'TransformX_API_Description', cellStyle: {
+                                whiteSpace: 'nowrap'
+                            }, render: rowData => <div style={{ display: 'flex', justifyContent: 'justify', alignItems: 'center' }}>
+                                <Link to={`/apis/${rowData.TransformX_API_Id}`}>
+                                    <p>{rowData.TransformX_API_Description}</p>
+                                </Link></div>
+                        }
                     ]}
                     key={this.state.apis.TransformX_API_Id}
                     data={this.state.apis}

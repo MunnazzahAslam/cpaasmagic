@@ -80,17 +80,23 @@ class Usecases extends React.Component {
                     style={{ fontFamily: 'Glacial Indifference', fontSize: 'clamp(0.8rem, 1vw, 1.4rem)', tableLayout: 'fixed' }}
                     columns={[
                         {
-                            title: 'Vendor', field: 'TransformX_Vendor_Name'
-                        },
-                        {
-                            title: 'Usecase', field: 'TransformX_Usecase_Name', render: rowData => <div style={{ display: 'flex', justifyContent: 'start' }}>
-                                <Link to={`/usecases/${rowData.TransformX_Usecase_Id}`}>
-                                    <p style={{ textAlign: 'justify' }}>{rowData.TransformX_Usecase_Name}</p>
+                            title: 'Vendor', field: 'TransformX_Vendor_Name', render: rowData => <div style={{ display: 'flex', justifyContent: 'start', alignItems: 'start' }}>
+                                <Link to={`/vendors/${rowData.TransformX_Vendor_Id}`}>
+                                    <p>{rowData.TransformX_Vendor_Name}</p>
                                 </Link></div>
-                        },
+                        },{ title: 'Usecase', field: 'TransformX_Usecase_Name', render: rowData => <div style={{ display: 'flex', justifyContent: 'start' }}>
+                        <Link to={`/usecases/${rowData.TransformX_Usecase_Id}`}>
+                            <p style={{ textAlign: 'justify' }}>{rowData.TransformX_Usecase_Name}</p>
+                        </Link></div> },
                         
-                        { title: 'Category', field: 'TransformX_Usecase_Category' },
-                        { title: 'Industry', field: 'TransformX_Usecase_Industry', },
+                        { title: 'Category', field: 'TransformX_Usecase_Category', render: rowData => <div style={{ display: 'flex', justifyContent: 'start' }}>
+                        <Link to={`/usecases/${rowData.TransformX_Usecase_Id}`}>
+                            <p style={{ textAlign: 'justify' }}>{rowData.TransformX_Usecase_Category}</p>
+                        </Link></div> }, 
+                        { title: 'Industry', field: 'TransformX_Usecase_Industry', render: rowData => <div style={{ display: 'flex', justifyContent: 'start' }}>
+                        <Link to={`/usecases/${rowData.TransformX_Usecase_Id}`}>
+                            <p style={{ textAlign: 'justify' }}>{rowData.TransformX_Usecase_Industry}</p>
+                        </Link></div> }, 
                     ]}
                     key={this.state.usecases.TransformX_API_Id}
                     data={this.state.usecases}
@@ -123,8 +129,8 @@ class Usecases extends React.Component {
                     <CardMedia
                         image={usecases}
                         className="cover"
-                        style={{margin: '0.5rem'}}
-                        
+                        style={{ margin: '0.5rem' }}
+
                     />
                     <CardContent>
                         <Link to="/register">

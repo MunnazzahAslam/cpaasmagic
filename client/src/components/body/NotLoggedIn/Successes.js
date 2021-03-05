@@ -81,10 +81,15 @@ class Successstories extends React.Component {
                     style={{ fontFamily: 'Glacial Indifference', fontSize: 'clamp(0.8rem, 1vw, 1.4rem)', tableLayout: 'fixed' }}
                     columns={[
                         {
-                            title: 'Vendor', field: 'TransformX_Vendor_Name'
+                            title: 'Vendor', field: 'TransformX_Vendor_Name', render: rowData => <div style={{ display: 'flex', justifyContent: 'start', alignItems: 'start' }}>
+                            <Link to={`/vendors/${rowData.TransformX_Vendor_Id}`}>
+                            <p>{rowData.TransformX_Vendor_Name}</p>  </Link></div>
                         },
                         {
-                            title: 'Client', field:'Vendor_Success_Story_Client_Name', filtering:false
+                            title: 'Client', field:'Vendor_Success_Story_Client_Name', filtering:false , render: rowData => <div>
+                            <Link to={`/successstories/${rowData.TransformX_Success_Story_Id}`}>
+                                <p>{rowData.Vendor_Success_Story_Client_Name}</p>
+                            </Link></div>
                         },
                         {
                             title: 'Story', field: 'TransformX_Success_Story_Name', filtering: false, cellStyle: {
@@ -96,8 +101,14 @@ class Successstories extends React.Component {
                         },
                         { title: 'Industry', field: 'TransformX_Success_Story_Industry', filtering: false , cellStyle: {
                             whiteSpace: 'nowrap'
-                           },},
-                        { title: 'Region', field: 'TransformX_Success_Story_Region', filtering: false, },
+                           }, render: rowData => <div>
+                           <Link to={`/successstories/${rowData.TransformX_Success_Story_Id}`}>
+                               <p>{rowData.TransformX_Success_Story_Industry}</p>
+                           </Link></div>},
+                        { title: 'Region', field: 'TransformX_Success_Story_Region', filtering: false, render: rowData => <div>
+                        <Link to={`/successstories/${rowData.TransformX_Success_Story_Id}`}>
+                            <p>{rowData.TransformX_Success_Story_Region}</p>
+                        </Link></div> },
                     ]}
                     key={this.state.successstories.TransformX_API_Id}
                     data={this.state.successstories}

@@ -84,15 +84,23 @@ class Usecases extends React.Component {
                                 'Alcatel-Lucent Enterprise': 'Alcatel-Lucent Enterprise', 'Avaya OneCloud': 'Avaya OneCloud', IntelePeer: 'IntelePeer',
                                 'Plum Voice': 'Plum Voice', Ytel: 'Ytel', 'AT&T': 'AT&T',
                                 Bandwidth: 'Bandwidth', 'CM.com': 'CM.com', IMImobile: 'IMImobile',
-                            }
+                            }, render: rowData => <div style={{ display: 'flex', justifyContent: 'start', alignItems: 'start' }}>
+                            <Link to={`/vendors/${rowData.TransformX_Vendor_Id}`}>
+                            <p>{rowData.TransformX_Vendor_Name}</p>  </Link></div>
                         },
                         { title: 'Usecase', field: 'TransformX_Usecase_Name', render: rowData => <div style={{ display: 'flex', justifyContent: 'start' }}>
                         <Link to={`/usecases/${rowData.TransformX_Usecase_Id}`}>
                             <p style={{ textAlign: 'justify' }}>{rowData.TransformX_Usecase_Name}</p>
                         </Link></div> },
                         
-                        { title: 'Category', field: 'TransformX_Usecase_Category' },
-                        { title: 'Industry', field: 'TransformX_Usecase_Industry', },
+                        { title: 'Category', field: 'TransformX_Usecase_Category', render: rowData => <div style={{ display: 'flex', justifyContent: 'start' }}>
+                        <Link to={`/usecases/${rowData.TransformX_Usecase_Id}`}>
+                            <p style={{ textAlign: 'justify' }}>{rowData.TransformX_Usecase_Category}</p>
+                        </Link></div> }, 
+                        { title: 'Industry', field: 'TransformX_Usecase_Industry', render: rowData => <div style={{ display: 'flex', justifyContent: 'start' }}>
+                        <Link to={`/usecases/${rowData.TransformX_Usecase_Id}`}>
+                            <p style={{ textAlign: 'justify' }}>{rowData.TransformX_Usecase_Industry}</p>
+                        </Link></div> }, 
                     ]}
                     key={this.state.usecases.TransformX_API_Id}
                     data={this.state.usecases}

@@ -33,11 +33,11 @@ export class API extends Component {
                          <br /><br />
                             <div>
                             <p style={{
-                                textAlign: 'left', fontSize: 'clamp(0.8em, 0.6vw, 0.4rem)',margin: '0 3rem', color:'#696969', letterSpacing:'1px', textTransform:'uppercase'}}>{api.TransformX_Vendor_Name} - {api.TransformX_API_Category1}</p>
+                                textAlign: 'left', fontSize: 'clamp(0.8em, 0.6vw, 0.4rem)',margin: '0 3rem', color:'#696969', letterSpacing:'1px', textTransform:'uppercase'}}>{api.TransformX_API_Category1}</p>
                             <h1 style={{
                                 textAlign: 'left', fontSize: 'clamp(2em, 1.8vw, 1.6rem)',
                                 margin: "0 auto", padding: "0em", fontWeight: "bold", margin: '0 3rem', color:'#1D217E'
-                            }}>{api.TransformX_API_Name}</h1><br />
+                            }}>{api.TransformX_Vendor_Name} - {api.TransformX_API_Name}</h1><br />
                             <p style={{ textAlign: 'left', fontSize: 'clamp(1.4rem, 1.2vw, 1rem)',margin: '0 3rem', }}>{api.TransformX_API_Description}</p><br />
                             </div>
                             <Card className="card" style={{ padding: '2rem', margin: '2rem' }}>

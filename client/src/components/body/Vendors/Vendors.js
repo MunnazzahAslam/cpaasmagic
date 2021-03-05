@@ -96,18 +96,30 @@ class Vendors extends React.Component {
                   </Link></div>
               },
               {
-                title: 'Type', field: 'Gartner_Vendor_Type'
+                title: 'Type', field: 'Gartner_Vendor_Type', render: rowData => <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                <Link to={`/vendors/${rowData.TransformX_Vendor_Id}`}>
+                <p>{rowData.Gartner_Vendor_Type}</p>
+                </Link></div>
               },
               {
-                title: 'Industry', field: 'LinkedIn_Vendor_Industry'
+                title: 'Industry', field: 'LinkedIn_Vendor_Industry', render: rowData => <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                <Link to={`/vendors/${rowData.TransformX_Vendor_Id}`}>
+                <p>{rowData.LinkedIn_Vendor_Industry}</p>
+                </Link></div>
               },
               {
-                title: 'Headquarters Region', field: 'TransformX_Vendor_Headquarter_Region'
+                title: 'Headquarters Region', field: 'TransformX_Vendor_Headquarter_Region', render: rowData => <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                <Link to={`/vendors/${rowData.TransformX_Vendor_Id}`}>
+                  <p>{rowData.TransformX_Vendor_Headquarter_Region}</p>
+                </Link></div>
               },
               {
                 title: 'Specialities', field: 'TransformX_Vendor_Unique_Sell_Point', cellStyle: {
                   width: '60%'
-                 },
+                 }, render: rowData => <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                 <Link to={`/vendors/${rowData.TransformX_Vendor_Id}`}>
+                   <p>{rowData.TransformX_Vendor_Unique_Sell_Point}</p>
+                 </Link></div>
               }
             ]}
           key={this.state.vendors.TransformX_Vendor_Id}

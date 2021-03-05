@@ -79,18 +79,27 @@ class APIs extends React.Component {
                     style={{ fontFamily: 'Glacial Indifference', fontSize: 'clamp(0.8rem, 1vw, 1.4rem)', tableLayout: 'fixed' }}
                     columns={[
                         {
-                            title: 'Vendor', field: 'TransformX_Vendor_Name'
+                            title: 'Vendor', field: 'TransformX_Vendor_Name', render: rowData => <div style={{ display: 'flex', justifyContent: 'start', alignItems: 'start' }}>
+                            <Link to={`/vendors/${rowData.TransformX_Vendor_Id}`}>
+                                <p>{rowData.TransformX_Vendor_Name}</p>
+                          </Link></div>
                         },
-                        { title: 'Category', field: 'TransformX_API_Category1' },
+                        { title: 'Category', field: 'TransformX_API_Category1' , render: rowData => <div style={{ display: 'flex', justifyContent: 'justify', alignItems: 'center' }}>
+                        <Link to={`/apis/${rowData.TransformX_API_Id}`}>
+                            <p>{rowData.TransformX_API_Category1}</p>
+                        </Link></div>},
                         {
                             title: 'API', field: 'Vendor_API_Name', render: rowData => <div style={{ display: 'flex', justifyContent: 'justify', alignItems: 'center' }}>
                                 <Link to={`/apis/${rowData.TransformX_API_Id}`}>
-                                    <p>{rowData.TransformX_API_Name}</p>
+                                    <p>{rowData.Vendor_API_Name}</p>
                                 </Link></div>
                         },
                         {title:'API Description', field:'TransformX_API_Description', cellStyle: {
                             whiteSpace: 'nowrap'
-                           },}
+                           }, render: rowData => <div style={{ display: 'flex', justifyContent: 'justify', alignItems: 'center' }}>
+                           <Link to={`/apis/${rowData.TransformX_API_Id}`}>
+                               <p>{rowData.TransformX_API_Description}</p>
+                           </Link></div>}
 
                     ]}
                     key={this.state.apis.TransformX_API_Id}
