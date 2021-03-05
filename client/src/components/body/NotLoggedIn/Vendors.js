@@ -108,7 +108,7 @@ class Vendors extends React.Component {
               },
               {
                 title: 'Specialities', field: 'TransformX_Vendor_Unique_Sell_Point', cellStyle: {
-                  width: '80%'
+                  width: '60%'
                  },
               }
             ]}
