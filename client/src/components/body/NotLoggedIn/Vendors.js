@@ -98,12 +98,6 @@ class Vendors extends React.Component {
                   </Link></div>
               },
               {
-                title: 'Type', field: 'Gartner_Vendor_Type', render: rowData => <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                <Link to={`/vendors/${rowData.TransformX_Vendor_Id}`}>
-                  <img src={rowData.TransformX_Vendor_Logo} style={{ width: '5rem', height: '5rem' }} alt="logo" />
-                </Link></div>
-              },
-              {
                 title: 'Type', field: 'Gartner_Vendor_Type', render: rowData => <div style={{ display: 'flex', justifyContent: 'start', alignItems: 'start' }}>
                 <Link to={`/vendors/${rowData.TransformX_Vendor_Id}`}>
                 <p>{rowData.Gartner_Vendor_Type}</p>
