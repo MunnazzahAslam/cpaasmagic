@@ -1,0 +1,15 @@
+.block{
+    height:'600px';
+    margin: 0.5rem;
+}
+.blockV{
+    height:'380px';
+}
+@media (max-width: 600px) {
+    .block{
+    height: auto;
+    }
+    .blockV{
+        height: auto;
+} 
+}

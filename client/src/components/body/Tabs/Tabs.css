@@ -1,0 +1,41 @@
+
+.react-tabs__tab-list {
+    font-size: clamp(0.8rem, 1vw, 1.2rem);
+    color:'#00BFA5';
+  }
+.icon{
+    font-size: clamp(0.8rem, 1vw, 1.4rem);
+    color:'#00BFA5';
+}
+.boxt{
+    margin: 2rem;
+}
+@media (max-width: 950px) {
+.boxt{
+    margin: 1rem;
+}
+}
+@media (max-width: 550px) {
+    .react-tabs__tab-list {
+        display: block;
+        overflow-y: hidden;
+        overflow-x: scroll;
+        margin: 0 auto;
+        font-size: clamp(0.8rem, 1vw, 1.4rem);
+        white-space: nowrap;
+        color:'#15202B';
+    }
+    .boxt{
+        margin: 0.5rem;
+    }
+    .react-tabs__tab-list {
+        -ms-overflow-style: none;  /* Internet Explorer 10+ */
+        scrollbar-width: none;  /* Firefox */
+    }
+    .react-tabs__tab-list::-webkit-scrollbar { 
+        display: none;  /* Safari and Chrome */
+    }
+    .icon{
+        font-size:clamp(0.8rem, 1vw, 1.4rem);
+    }
+  }

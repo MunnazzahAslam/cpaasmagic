@@ -1,0 +1,39 @@
+* {
+  padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  font-family:'Glacial Indifference', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.App{
+  width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+  overflow: hidden;
+}
+a{
+  text-decoration: none;
+}
+ul{
+  list-style: none;
+}
+button{
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+/* ----------------- Header ------------------- */
+@import url("./components/header/header.css");
+
+/* ----------------- Auth ------------------- */
+@import url("./components/body/auth/auth.css");
+
+/* ----------------- Profile ------------------- */
+@import url("./components/body/profile/profile.css");
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+@import url('https://fonts.cdnfonts.com/css/glacial-indifference-2');

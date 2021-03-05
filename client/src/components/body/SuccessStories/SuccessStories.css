@@ -1,0 +1,15 @@
+.main .box{
+    max-width: 1200;
+    background: #fff; 
+    color: #15202B;
+}
+.cover{
+    width:100%;
+    padding-top: 20%;
+    background-size: contain;
+}
+@media (max-width: 600px) {
+    .cover{
+        padding-top: 32%;
+       }
+}

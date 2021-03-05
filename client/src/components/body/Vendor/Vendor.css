@@ -1,0 +1,16 @@
+.main .box{
+    max-width: 1200;
+    background: #fff; 
+    color: #15202B;
+}
+h2{
+    text-align: center;
+    color:#15202B;
+    font-family: 'Glacial Indifference';
+}
+
+.cover{
+    width:100%;
+    padding-top: 32%;
+    background-size: contain;
+}

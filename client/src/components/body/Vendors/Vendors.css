@@ -1,0 +1,23 @@
+.main .box{
+    max-width: 1200;
+    background: #fff; 
+    color: #15202B;
+    font-size: 20px;
+}
+.cover{
+    width:100%;
+    padding-top: 20%;
+    background-size: contain;
+}
+@media (max-width: 600px) {
+    .table{
+        font-size: 1rem;
+    }
+    .cover{
+        padding-top: 32%;
+       }
+    .vendorLogo{
+        width: 'rem'; 
+        height: '3rem';
+    }
+}
