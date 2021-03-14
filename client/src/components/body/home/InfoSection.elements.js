@@ -67,9 +67,10 @@ export const TextWrapper = styled.div`
 export const Heading = styled.h1`
     text-align: center;
     margin-bottom: 24px;
-    font-size: 3rem;
+    font-size: 2rem;
+    margin:2.7rem;
     line-height: 1.1;
-    color: '#4b59f7';
+    color: '#fff';
     @media screen and (max-width: 960px){
     margin-bottom: 12px;
     font-size: 1.5rem;

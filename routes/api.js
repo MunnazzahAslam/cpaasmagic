@@ -1,9 +1,9 @@
-const express=require('express');
-const router=express.Router();
-const cpaas_apis= require('../models/apiModel');
+const express = require('express');
+const router = express.Router();
+const cpaas_apis = require('../models/apiModel');
 
 router.route('/').get((req, res) => {
-  cpaas_apis.find().populate('Vendor').exec(function(error, data) {
+  cpaas_apis.find().exec(function(error, data) {
     if (error) {
       return next(error)
     } else {
@@ -12,4 +12,4 @@ router.route('/').get((req, res) => {
   })
   })
 
-module.exports=router;
+module.exports = router;

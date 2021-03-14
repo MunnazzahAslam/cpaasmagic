@@ -3,12 +3,14 @@ import { useSelector } from 'react-redux';
 import svg5 from './svg5.svg';
 import svg6 from './svg6.svg';
 import svg8 from './svg8.svg';
+import bg2 from './bg2.svg';
 import './home.css';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import { Button, Container } from '../../../globalStyles';
 import { InfoSec, InfoRow, InfoColumn, TextWrapper, Heading, Subtitle, ImgWrapper, Img, Image, InfoColumnHalf } from './InfoSection.elements';
 import { Link } from 'react-router-dom';
+import Modal from './Modal';
 
 const Home = () => {
     const auth = useSelector(state => state.auth)
@@ -74,14 +76,14 @@ const Home = () => {
         <div>
         <div>
             <InfoSec>
-                <Container>
+                <Container style={{backgroundImage: 'bg2.svg'}}>
                 <InfoRow>
                     <InfoColumn>
                             <TextWrapper>
                                 <Heading style={{ marginTop: '30px' }}>CPaaS Intelligence at your Fingertips</Heading>
                                 <Subtitle>Our collective and up-to-date platform of CPaaS Vendors, APIs, Use cases and Successes empowers businesses to make better decisions.</Subtitle>
                                 <InfoRow style={{ display: 'flex', justifyContent: 'center' }}>
-                                    <Link to="/search/vendors/notloggedin">
+                                    <Link to="/search/vendors">
                                         <Card className="hover"  >
                                             <CardContent>
                                                 <Heading style={{ color: '#00BFA5' }}>20</Heading>
@@ -89,7 +91,7 @@ const Home = () => {
                                             </CardContent>
                                         </Card>
                                     </Link>
-                                    <Link to="/search/apis/notloggedin">
+                                    <Link to="/search/apis">
                                         <Card className="hover"  >
                                             <CardContent>
 
@@ -98,7 +100,7 @@ const Home = () => {
                                             </CardContent>
                                         </Card>
                                     </Link>
-                                    <Link to="/search/usecases/notloggedin">
+                                    <Link to="/search/usecases">
                                         <Card className="hover"  >
                                             <CardContent>
 
@@ -107,7 +109,7 @@ const Home = () => {
                                             </CardContent>
                                         </Card>
                                     </Link>
-                                    <Link to="/search/successes/notloggedin">
+                                    <Link to="/search/successes">
                                         <Card className="hover"  >
                                             <CardContent>
                                                 <Heading style={{ color: '#00BFA5' }}>342</Heading>

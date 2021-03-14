@@ -21,7 +21,7 @@ import CardMedia from '@material-ui/core/CardMedia';
 import vendorbanner from '../Vendors/vendorbanner.png';
 import { Link } from 'react-router-dom';
 import Vendorsb from './vendors.jpg';
-import { Button, Container } from '../../../globalStyles';
+import { Button } from '../../../globalStyles';
 import CardContent from '@material-ui/core/CardContent';
 import './nlg.css';
 const tableIcons = {
@@ -62,6 +62,7 @@ class Vendors extends React.Component {
       .then(response => response.json())
       .then(res => {
         this.setState({ vendors: res.slice(0, 5), loading: true })
+        console.log(res);
       })
       .catch(error => {
         console.log(error)
@@ -79,11 +80,11 @@ class Vendors extends React.Component {
 
         <MaterialTable
           icons={tableIcons}
-          style={{ fontFamily: 'Glacial Indifference', fontSize: 'clamp(0.8rem, 1vw, 1.4rem)', tableLayout: 'fixed' }}
+          style={{ fontSize: 'clamp(0.8rem, 1vw, 1.4rem)', tableLayout: 'fixed' }}
+          title="Vendors"
           columns={
             [
               {
-                title: 'Vendor',
                 field: 'TransformX_Vendor_Logo', filtering: false, cellStyle: {
                   width: 80,
                   maxWidth: 100
@@ -92,25 +93,31 @@ class Vendors extends React.Component {
                 headerStyle: {
                   width: 80,
                   maxWidth: 100
-                }, sorting: false, render: rowData => <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                }, filtering: false, render: rowData => <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                   <Link to={`/vendors/${rowData.TransformX_Vendor_Id}`}>
                     <img src={rowData.TransformX_Vendor_Logo} style={{ width: '5rem', height: '5rem' }} alt="logo" />
                   </Link></div>
               },
               {
-                title: 'Type', field: 'Gartner_Vendor_Type', render: rowData => <div style={{ display: 'flex', justifyContent: 'start', alignItems: 'start' }}>
+                title: 'Vendor', field: 'TransformX_Vendor_Name', filtering: false, render: rowData => <div style={{ display: 'flex', justifyContent: 'start', alignItems: 'start' }}>
+                <Link to={`/vendors/${rowData.TransformX_Vendor_Id}`}>
+                <p>{rowData.TransformX_Vendor_Name}</p>
+                </Link></div>
+              },
+              {
+                title: 'Type', field: 'Gartner_Vendor_Type', filtering: false, render: rowData => <div style={{ display: 'flex', justifyContent: 'start', alignItems: 'start' }}>
                 <Link to={`/vendors/${rowData.TransformX_Vendor_Id}`}>
                 <p>{rowData.Gartner_Vendor_Type}</p>
                 </Link></div>
               },
               {
-                title: 'Industry', field: 'LinkedIn_Vendor_Industry', render: rowData => <div style={{ display: 'flex', justifyContent: 'start', alignItems: 'start' }}>
+                title: 'Industry', field: 'LinkedIn_Vendor_Industry', filtering: false, render: rowData => <div style={{ display: 'flex', justifyContent: 'start', alignItems: 'start' }}>
                 <Link to={`/vendors/${rowData.TransformX_Vendor_Id}`}>
                 <p>{rowData.LinkedIn_Vendor_Industry}</p>
                 </Link></div>
               },
               {
-                title: 'Headquarters Region', field: 'TransformX_Vendor_Headquarter_Region', render: rowData => <div style={{ display: 'flex', justifyContent: 'start', alignItems: 'start' }}>
+                title: 'Headquarters Region', field: 'TransformX_Vendor_Headquarter_Region', filtering: false, render: rowData => <div style={{ display: 'flex', justifyContent: 'start', alignItems: 'start' }}>
                 <Link to={`/vendors/${rowData.TransformX_Vendor_Id}`}>
                   <p>{rowData.TransformX_Vendor_Headquarter_Region}</p>
                 </Link></div>
@@ -118,7 +125,7 @@ class Vendors extends React.Component {
               {
                 title: 'Specialities', field: 'TransformX_Vendor_Unique_Sell_Point', cellStyle: {
                   width: '60%'
-                 }, render: rowData => <div style={{ display: 'flex', justifyContent: 'start', alignItems: 'start' }}>
+                 },filtering: false, render: rowData => <div style={{ display: 'flex', justifyContent: 'start', alignItems: 'start' }}>
                  <Link to={`/vendors/${rowData.TransformX_Vendor_Id}`}>
                    <p>{rowData.TransformX_Vendor_Unique_Sell_Point}</p>
                  </Link></div>
@@ -137,9 +144,9 @@ class Vendors extends React.Component {
               fontSize: 'clamp(0.8rem, 1vw, 1.4rem)',
               padding: '0.3rem'
             },
-            exportButton: false,
-            showTitle: false,
-            search: false
+            exportButton: true,
+            showTitle: true,
+            search: true
           }
           }
           components={{

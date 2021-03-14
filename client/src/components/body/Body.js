@@ -23,6 +23,9 @@ import APIs from './NotLoggedIn/APIs'
 import Usecases from './NotLoggedIn/Usecases'
 import SuccessStories from './NotLoggedIn/Successes'
 import '../body/Tabs/Tabs.css'
+import InstaEmbed from '../body/Social/InstaEmbed'
+import Maps from '../body/Maps/Maps'
+import NewLayout from '../body/NewLayout/NewLayout'
 function Body() {
     const auth = useSelector(state => state.auth)
     const {isLogged} = auth
@@ -30,6 +33,9 @@ function Body() {
         <section>
             <Switch>
                 <Route path="/" component={Home} exact />
+                <Route path="/map" component={Maps} />
+                <Route path="/new" component={NewLayout} />
+                <Route path="/instagram" component={InstaEmbed} />
                 <Route path="/allvendors" component={VendorsPage} />
                 <Route path="/search/vendors/notloggedin" component={Vendors} />
                 <Route path="/search/apis/notloggedin" component={APIs} />

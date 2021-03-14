@@ -63,21 +63,22 @@ const Header = () => {
 
     const userLoggedNav = () => {
         return <>
-            <div>
-                <NavLogo to="/" onClick={handleClick}>
-                    <img alt="logo" className="logo" src={logo} />
-                </NavLogo>
-                <MobileIcon onClick={handleClick}>
-                    {click ? <FaTimes color="#1D217E" /> : <FaBars color="#1D217E" />}
-                </MobileIcon>
-                {/*<a href="/search"><TextField style={{ margin: '20px !imporant' }} id="outlined-search" type="search" variant="outlined" InputProps={{
-                    startAdornment: (
-                        <InputAdornment position="start">
-                            <SearchIcon />
-                        </InputAdornment>
-                    ),
-                }} /></a>*/}
-            </div>
+             <>
+                                    <NavLogo to="/" onClick={handleClick}>
+                                        cpaasmagic
+                                    </NavLogo>
+                                    <MobileIcon onClick={handleClick}>
+                                        {click ? <FaTimes color="#1D217E" /> : <FaBars color="#1D217E" />}
+                                    </MobileIcon>
+                                    {/*                    <a href="/search"><TextField style={{ margin: '20px !imporant' }} id="outlined-search" type="search" variant="outlined" InputProps={{
+                                                    startAdornment: (
+                                                        <InputAdornment position="start">
+                                                            <SearchIcon />
+                                                        </InputAdornment>
+                                                    ),
+                                                }} /></a>
+                                            */}
+                                </>
             <NavMenu onClick={handleClick} click={click}>
                 <NavItem>
                     <NavLinks to="/">
@@ -103,11 +104,6 @@ const Header = () => {
         </>
     }
 
-
-    const transForm = {
-        transform: isLogged ? "translateY(-5px)" : 0
-    }
-
     return (
         <IconContext.Provider value={{ color: '#fff' }}>
             <Nav>
@@ -118,7 +114,9 @@ const Header = () => {
                                 ? userLoggedNav()
                                 :
                                 <>
-                                    <a href="/" ><img alt="logo" className="logo" src={logo} /></a>
+                                    <NavLogo to="/" onClick={handleClick}>
+                                        cpaasmagic
+                                    </NavLogo>
                                     <MobileIcon onClick={handleClick}>
                                         {click ? <FaTimes color="#1D217E" /> : <FaBars color="#1D217E" />}
                                     </MobileIcon>

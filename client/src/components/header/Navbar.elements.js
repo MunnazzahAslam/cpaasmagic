@@ -3,16 +3,15 @@ import { Container } from '../../globalStyles';
 import { Link } from 'react-router-dom';
  
 export const Nav= styled.nav`
-background: #ffffff;
+background:  #1B2653;
 height: 80px;
 display:flex;
 justify-content: center;
-//align-items: center;
+align-items: center;
 font-size: 1.2rem;
 position: sticky;
 top:0;
 z-index: 999;
-box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034);
 `
 export const NavbarContainer=styled(Container)`
 display:flex;
@@ -27,6 +26,9 @@ ${Container}
 `;
 
 export const NavLogo=styled(Link)`
+font-size: 2rem;
+font-weight: 800;
+letter-spacing: 1.5px;
 color:#fff;
 justify-self:flex-start;
 cursor:pointer;
@@ -70,25 +72,36 @@ export const NavMenu= styled.ul`
 
 export const NavItem = styled.li`
 height:80px;
+color: #fff;
+opacity: '90';
 border-bottom: 2px solid transparent;
 &:hover{
-    opacity:'90';
+    opacity:'20';
+    color: #fff;
 }
 @media screen and (max-width: 960px){
     width:100%;
     &:hover{
-    border:none;
+    color: #fff;
     }
 } 
 `
 
 export const NavLinks = styled(Link)`
-color: #00BFA5;
+color:#fff;
+opacity: '90';
 display: flex;
 align-items: center;
 text-decoration: none;
 padding: 0.5rem 1rem;
+margin-right: 1rem;
+font-weight: 400;
 height: 100%;
+&:hover{
+    transition:all 0.3s ease-out;
+    opacity:'20';
+    transform: scale(1.1);
+}
 @media screen and (max-width:960px){
     text-align: center;
     padding: 2rem;

@@ -1,0 +1,8 @@
+.top{
+background:  #1B2653;
+height: auto;
+font-size: 1.2rem;
+position: sticky;
+top:0;
+box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034);
+}

@@ -1,7 +1,6 @@
 const mongoose = require('mongoose')
 
 const apiSchema = new mongoose.Schema({
-    Vendor:{type: mongoose.Schema.Types.ObjectId, ref:"cpaas_vendors"},
     TransformX_Vendor_Id: { type: String },
     TransformX_API_Id: { type: String },
     TransformX_API_Id: { type: String, },

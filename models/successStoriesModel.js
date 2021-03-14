@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 
 const successStoriesSchema = new mongoose.Schema({
-    TransformX_Vendor_Id: { type: String, ref:'cpaas_vendors'},
+    TransformX_Vendor_Id: { type: String },
     TransformX_Success_Story_Id: { type: String, },
     TransformX_Success_Story_Data_Source: { type: String, },
     TransformX_Success_Story_Post_Year: { type: String, },

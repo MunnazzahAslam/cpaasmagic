@@ -11,6 +11,7 @@ import Clear from '@material-ui/icons/Clear';
 import DeleteOutline from '@material-ui/icons/DeleteOutline';
 import Edit from '@material-ui/icons/Edit';
 import FilterList from '@material-ui/icons/FilterList';
+import VideocamSharpIcon from '@material-ui/icons/VideocamSharp';
 import FirstPage from '@material-ui/icons/FirstPage';
 import LastPage from '@material-ui/icons/LastPage';
 import Remove from '@material-ui/icons/Remove';
@@ -29,7 +30,7 @@ const tableIcons = {
     DetailPanel: forwardRef((props, ref) => <ChevronRight {...props} ref={ref} />),
     Edit: forwardRef((props, ref) => <Edit {...props} ref={ref} />),
     Export: forwardRef((props, ref) => <SaveAlt {...props} ref={ref} />),
-    Filter: forwardRef((props, ref) => <FilterList {...props} ref={ref} />),
+    Filter: forwardRef((props, ref) => <Search {...props} ref={ref} />),
     FirstPage: forwardRef((props, ref) => <FirstPage {...props} ref={ref} />),
     LastPage: forwardRef((props, ref) => <LastPage {...props} ref={ref} />),
     NextPage: forwardRef((props, ref) => <ChevronRight {...props} ref={ref} />),
@@ -58,7 +59,7 @@ class Successstories extends React.Component {
         fetch('/api/successstories') //data source
             .then(response => response.json())
             .then(res => {
-                this.setState({ successstories: res, loading: true, details: res.Vendor_Success_Story_Result })
+                this.setState({ successstories: res.slice(0, 172), loading: true, details: res.Vendor_Success_Story_Result })
             })
             .catch(error => {
                 console.log(error)
@@ -69,71 +70,56 @@ class Successstories extends React.Component {
 
         return (
             <div className="main">
-                <Card className="box">
-                    <CardMedia className="cover"
-                        image={successbanner}
-                    /></Card><MaterialTable
+                <MaterialTable
                     icons={tableIcons}
                     style={{ fontFamily: 'Glacial Indifference', fontSize: 'clamp(0.8rem, 1vw, 1.4rem)', tableLayout: 'fixed' }}
                     columns={[
+                        {  title:'Vendor', field: 'TransformX_Vendor_Name',lookup: {
+                            Vonage: 'Vonage',
+                            Twilio: 'Twilio',
+                            Infobip: 'Infobip',
+                            MessageBird: 'MessageBird',
+                            Plivo: 'Plivo',
+                        },   cellStyle: {
+                            whiteSpace: 'nowrap', textAlign: 'left'
+                           },render: rowData => <div style={{  }}>
+                               <Link to={`/vendors/${rowData.TransformX_Vendor_Id}`}>
+                              <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center'}}>
+                                <img src={rowData.TransformX_Vendor_Logo} style={{ width: '5rem', height: '5rem',margin: '0.5rem' }} alt="logo" />
+                                <p style={{color:'#212529', margin:'0.2rem', fontWeight: '400'}}>{rowData.TransformX_Vendor_Name}</p>
+                                </div>
+                              </Link></div>
+                          },
+
                         {
-                            title: 'Vendor', field: 'TransformX_Vendor_Name', lookup: {
-                                Vonage: 'Vonage',
-                                Twilio: 'Twilio',
-                                Infobip: 'Infobip',
-                                MessageBird: 'MessageBird',
-                                Plivo: 'Plivo',
-                                Sinch: 'Sinch',
-                                Kaleyra: 'Kaleyra',
-                                'Soprano Design': 'Soprano Design',
-                                TeleSign: 'TeleSign',
-                                Zenvia: 'Zenvia',
-                                'Alcatel-Lucent Enterprise': 'Alcatel-Lucent Enterprise',
-                                'Avaya OneCloud': 'Avaya OneCloud',
-                                IntelePeer: 'IntelePeer',
-                                'Plum Voice': 'Plum Voice',
-                                Ytel: 'Ytel',
-                                'AT&T': 'AT&T',
-                                Bandwidth: 'Bandwidth',
-                                'CM.com': 'CM.com',
-                                IMImobile: 'IMImobile',
-                                '8x8': '8x8',
-                                'RingCentral': 'RingCentral'
-                            }, render: rowData => <div style={{ display: 'flex', justifyContent: 'start', alignItems: 'start' }}>
-                            <Link to={`/vendors/${rowData.TransformX_Vendor_Id}`}>
-                            <p>{rowData.TransformX_Vendor_Name}</p>  </Link></div>
-                        },
-                        {
-                            title: 'Client', field:'Vendor_Success_Story_Client_Name', filtering:false , render: rowData => <div>
+                            title: 'Client', field:'Vendor_Success_Story_Client_Name',filterPlaceholder: 'Search by Name', render: rowData => <div>
                             <Link to={`/successstories/${rowData.TransformX_Success_Story_Id}`}>
                                 <p>{rowData.Vendor_Success_Story_Client_Name}</p>
                             </Link></div>
                         },
-                        { title: 'Story', field: 'TransformX_Success_Story_Name', filtering: false, cellStyle: {
+                        { title: 'Story', field: 'TransformX_Success_Story_Name',filterPlaceholder: 'Search by keyword',  cellStyle: {
                             whiteSpace: 'nowrap', textAlign: 'left'
                            }, render: rowData => <div>
                            <Link to={`/successstories/${rowData.TransformX_Success_Story_Id}`}>
                                <p>{rowData.TransformX_Success_Story_Name}</p>
                            </Link></div>},
-                        { title: 'Industry', field: 'TransformX_Success_Story_Industry', filtering: false,  cellStyle: {
+                        { title: 'Industry', field: 'TransformX_Success_Story_Industry',filterPlaceholder: 'Search by Industry',  cellStyle: {
                             whiteSpace: 'nowrap'
                            },  render: rowData => <div>
                            <Link to={`/successstories/${rowData.TransformX_Success_Story_Id}`}>
+                           <div style={{ display: 'flex', flexDirection: 'row'}}>
                                <p>{rowData.TransformX_Success_Story_Industry}</p>
-                           </Link></div>},
-                        { title: 'Region', field: 'TransformX_Success_Story_Region', filtering: false , render: rowData => <div>
-                        <Link to={`/successstories/${rowData.TransformX_Success_Story_Id}`}>
-                            <p>{rowData.TransformX_Success_Story_Region}</p>
-                        </Link></div>},
+                               </div>
+                           </Link></div>}
                     ]}
                     key={this.state.successstories.TransformX_API_Id}
                     data={this.state.successstories}
                     options={{
 
                         paging: true,
-                        pageSize: 20,       // make initial page size
+                        pageSize: 10,       // make initial page size
                         emptyRowsWhenPaging: true,   //to make page size fix in case of less data rows
-                        pageSizeOptions: [20, 40, 80],    // rows selection options
+                        pageSizeOptions: [10, 20, 30],    // rows selection options
 
                         filtering: true,
                         headerStyle: {
@@ -143,8 +129,7 @@ class Successstories extends React.Component {
                             backgroundColor: '#F6F9FC'
                         },
                         filterCellStyle: {
-                            fontSize: 'clamp(0.8rem, 1vw, 1.4rem)',
-                            padding: '0.3rem'
+                            fontSize: 'clamp(0.8rem, 1vw, 1.4rem)'
                         },
                         exportButton: false,
                         showTitle: false,

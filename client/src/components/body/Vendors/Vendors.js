@@ -31,7 +31,7 @@ const tableIcons = {
   DetailPanel: forwardRef((props, ref) => <ChevronRight {...props} ref={ref} />),
   Edit: forwardRef((props, ref) => <Edit {...props} ref={ref} />),
   Export: forwardRef((props, ref) => <SaveAlt {...props} ref={ref} />),
-  Filter: forwardRef((props, ref) => <FilterList {...props} ref={ref} />),
+  Filter: forwardRef((props, ref) => <Search {...props} ref={ref} />),
   FirstPage: forwardRef((props, ref) => <FirstPage {...props} ref={ref} />),
   LastPage: forwardRef((props, ref) => <LastPage {...props} ref={ref} />),
   NextPage: forwardRef((props, ref) => <ChevronRight {...props} ref={ref} />),
@@ -59,63 +59,69 @@ class Vendors extends React.Component {
     fetch('/api/vendors') //data source
       .then(response => response.json())
       .then(res => {
-        this.setState({ vendors: res, loading: true })
+        this.setState({ vendors: res.slice(0, 5), loading: true })
       })
       .catch(error => {
         console.log(error)
       })
+
   }
   render() {
     const { vendors } = this.context;
        
     return (
       <div className="main">
-        <Card className="box">
-          <CardMedia
-            image={vendorbanner}
-            className="cover"
-          /></Card>
+   
 
         <MaterialTable
+          style={{color:'#212529 !important'}}
           icons={tableIcons}
-          style={{ fontFamily: 'Glacial Indifference', fontSize: 'clamp(0.8rem, 1vw, 1.4rem)', tableLayout: 'fixed' }}
           columns={
             [
-              {
-                field: 'TransformX_Vendor_Logo', filtering: false, cellStyle: {
-                  width: 80,
-                  maxWidth: 100
-                }
-                ,
-                headerStyle: {
-                  width: 80,
-                  maxWidth: 100
-                }, sorting: false, render: rowData => <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                  <Link to={`/vendors/${rowData.TransformX_Vendor_Id}`}>
-                    <img src={rowData.TransformX_Vendor_Logo} style={{ width: '5rem', height: '5rem' }} alt="logo" />
-                  </Link></div>
+              {  title:'Vendor', field: 'TransformX_Vendor_Name',lookup: {
+                Vonage: 'Vonage',
+                Twilio: 'Twilio',
+                Infobip: 'Infobip',
+                MessageBird: 'MessageBird',
+                Plivo: 'Plivo',
+            },  cellStyle: {
+              whiteSpace: 'nowrap', textAlign: 'left'
+             }, render: rowData => <div style={{  }}>
+                   <Link to={`/vendors/${rowData.TransformX_Vendor_Id}`}>
+                              <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center'}}>
+                                <img src={rowData.TransformX_Vendor_Logo} style={{ width: '5rem', height: '5rem',margin: '0.5rem' }} alt="logo" />
+                                <p style={{color:'#212529', margin:'0.2rem', fontWeight: '400'}}>{rowData.TransformX_Vendor_Name}</p>
+                                </div>
+                              </Link></div>
               },
+             
               {
-                title: 'Type', field: 'Gartner_Vendor_Type', render: rowData => <div style={{ display: 'flex', justifyContent: 'start', alignItems: 'start' }}>
+                title: 'Type', field: 'Gartner_Vendor_Type',filterPlaceholder: 'Search by Type', cellStyle: {
+                  whiteSpace: 'nowrap', textAlign: 'left'
+                 }, render: rowData => <div style={{ display: 'flex', justifyContent: 'start', alignItems: 'start' }}>
                 <Link to={`/vendors/${rowData.TransformX_Vendor_Id}`}>
                 <p>{rowData.Gartner_Vendor_Type}</p>
                 </Link></div>
               },
               {
-                title: 'Industry', field: 'LinkedIn_Vendor_Industry', render: rowData => <div style={{ display: 'flex', justifyContent: 'start', alignItems: 'start' }}>
+                title: 'Industry', field: 'LinkedIn_Vendor_Industry', filterPlaceholder: 'Search by Industry',  cellStyle: {
+                  whiteSpace: 'nowrap', textAlign: 'left'
+                 },render: rowData => <div style={{ display: 'flex', justifyContent: 'start', alignItems: 'start' }}>
                 <Link to={`/vendors/${rowData.TransformX_Vendor_Id}`}>
                 <p>{rowData.LinkedIn_Vendor_Industry}</p>
                 </Link></div>
               },
               {
-                title: 'Headquarters Region', field: 'TransformX_Vendor_Headquarter_Region', render: rowData => <div style={{ display: 'flex', justifyContent: 'start', alignItems: 'start' }}>
+                title: 'Headquarters Region', field: 'TransformX_Vendor_Headquarter_Region', filterPlaceholder: 'Search by Region',  cellStyle: {
+                  whiteSpace: 'nowrap', textAlign: 'left'
+                 }, render: rowData => <div style={{ display: 'flex', justifyContent: 'start', alignItems: 'start' }}>
                 <Link to={`/vendors/${rowData.TransformX_Vendor_Id}`}>
                   <p>{rowData.TransformX_Vendor_Headquarter_Region}</p>
                 </Link></div>
               },
               {
-                title: 'Specialities', field: 'TransformX_Vendor_Unique_Sell_Point', cellStyle: {
-                  width: '60%'
+                title: 'Specialities', field: 'TransformX_Vendor_Unique_Sell_Point',filterPlaceholder: 'Search by keyword', cellStyle: {
+                  width: '45%'
                  }, render: rowData => <div style={{ display: 'flex', justifyContent: 'start', alignItems: 'start' }}>
                  <Link to={`/vendors/${rowData.TransformX_Vendor_Id}`}>
                    <p>{rowData.TransformX_Vendor_Unique_Sell_Point}</p>
@@ -126,9 +132,9 @@ class Vendors extends React.Component {
           data={this.state.vendors}
           options={{
             paging: true,
-            pageSize: 20,       // make initial page size
+            pageSize: 5,       // make initial page size
             emptyRowsWhenPaging: true,   //to make page size fix in case of less data rows
-            pageSizeOptions: [20, 25, 30],    // rows selection options
+            pageSizeOptions: [5, 25, 30],    // rows selection options
 
             filtering: true,
             headerStyle: {
@@ -136,8 +142,7 @@ class Vendors extends React.Component {
               backgroundColor: '#F6F9FC'
             },
             filterCellStyle: {
-              fontSize: 'clamp(0.8rem, 1vw, 1.4rem)',
-              padding: '0.3rem'
+              color: '#F6F9FC'
             },
             exportButton: false,
             showTitle: false,

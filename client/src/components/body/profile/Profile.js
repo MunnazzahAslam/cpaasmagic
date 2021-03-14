@@ -21,8 +21,6 @@ function Profile() {
     const auth = useSelector(state => state.auth)
     const token = useSelector(state => state.token)
 
-    const users = useSelector(state => state.users)
-
     const { user, isAdmin } = auth
     const [data, setData] = useState(initialState)
     const { name, lastname, password, cf_password, company, phoneno, err, success } = data

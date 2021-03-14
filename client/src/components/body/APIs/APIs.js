@@ -10,6 +10,7 @@ import ChevronRight from '@material-ui/icons/ChevronRight';
 import Clear from '@material-ui/icons/Clear';
 import DeleteOutline from '@material-ui/icons/DeleteOutline';
 import Edit from '@material-ui/icons/Edit';
+import VideocamSharpIcon from '@material-ui/icons/VideocamSharp';
 import FilterList from '@material-ui/icons/FilterList';
 import FirstPage from '@material-ui/icons/FirstPage';
 import LastPage from '@material-ui/icons/LastPage';
@@ -20,6 +21,7 @@ import ViewColumn from '@material-ui/icons/ViewColumn';
 import CardMedia from '@material-ui/core/CardMedia';
 import apibanner from './apibanner.png';
 import './APIs.css';
+
 import { Link } from 'react-router-dom'
 const tableIcons = {
     Add: forwardRef((props, ref) => <AddBox {...props} ref={ref} />),
@@ -29,7 +31,7 @@ const tableIcons = {
     DetailPanel: forwardRef((props, ref) => <ChevronRight {...props} ref={ref} />),
     Edit: forwardRef((props, ref) => <Edit {...props} ref={ref} />),
     Export: forwardRef((props, ref) => <SaveAlt {...props} ref={ref} />),
-    Filter: forwardRef((props, ref) => <FilterList {...props} ref={ref} />),
+    Filter: forwardRef((props, ref) => <Search {...props} ref={ref} />),
     FirstPage: forwardRef((props, ref) => <FirstPage {...props} ref={ref} />),
     LastPage: forwardRef((props, ref) => <LastPage {...props} ref={ref} />),
     NextPage: forwardRef((props, ref) => <ChevronRight {...props} ref={ref} />),
@@ -55,70 +57,63 @@ class APIs extends React.Component {
     componentDidMount() {
         this.setState({ loading: true })
         fetch('/api/apis') //data source
-            .then(response => response.json())
-            .then(res => {
-                this.setState({ apis: res, loading: true })
-            })
-            .catch(error => {
-                console.log(error)
-            })
-    }
+          .then(response => response.json())
+          .then(res => {
+            this.setState({ apis: res.slice(0, 80), loading: true })
+            console.log(this.state.apis);
+          })
+          .catch(error => {
+            console.log(error)
+          })
+      }
 
     render() {
+        const { apis } = this.context;
         return (
             <div className="main">
-                <Card className="box">
-                    <CardMedia className="cover"
-                        image={apibanner}
-                    /></Card>
+               
                 <MaterialTable
                     icons={tableIcons}
-                    style={{ fontFamily: 'Glacial Indifference', fontSize: 'clamp(0.8rem, 1vw, 1.4rem)', tableLayout: 'fixed' }}
+                    style={{ fontSize: 'clamp(0.8rem, 1vw, 1.4rem)', tableLayout: 'fixed' }}
                     columns={[
-                        {
-                            title: 'Vendor', field: 'TransformX_Vendor_Name', lookup: {
-                                Vonage: 'Vonage',
-                                Twilio: 'Twilio',
-                                Infobip: 'Infobip',
-                                MessageBird: 'MessageBird',
-                                Plivo: 'Plivo',
-                                Sinch: 'Sinch',
-                                Kaleyra: 'Kaleyra',
-                                'Soprano Design': 'Soprano Design',
-                                TeleSign: 'TeleSign',
-                                Zenvia: 'Zenvia',
-                                'Alcatel-Lucent Enterprise': 'Alcatel-Lucent Enterprise',
-                                'Avaya OneCloud': 'Avaya OneCloud',
-                                IntelePeer: 'IntelePeer',
-                                'Plum Voice': 'Plum Voice',
-                                Ytel: 'Ytel',
-                                'AT&T': 'AT&T',
-                                Bandwidth: 'Bandwidth',
-                                'CM.com': 'CM.com',
-                                IMImobile: 'IMImobile',
-                                '8x8': '8x8',
-                                'RingCentral': 'RingCentral'
-                            }, render: rowData => <div style={{ display: 'flex', justifyContent: 'start', alignItems: 'start' }}>
-                                <Link to={`/vendors/${rowData.TransformX_Vendor_Id}`}>
-                                    <p>{rowData.TransformX_Vendor_Name}</p> </Link></div>
-                        },
+                        {  title:'Vendor', field: 'TransformX_Vendor_Name',lookup: {
+                            Vonage: 'Vonage',
+                            Twilio: 'Twilio',
+                            Infobip: 'Infobip',
+                            MessageBird: 'MessageBird',
+                            Plivo: 'Plivo',
+                        },   cellStyle: {
+                            whiteSpace: 'nowrap', textAlign: 'left'
+                           },render: rowData => <div style={{  }}>
+                              <Link to={`/vendors/${rowData.TransformX_Vendor_Id}`}>
+                              <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center'}}>
+                                <img src={rowData.TransformX_Vendor_Logo} style={{ width: '5rem', height: '5rem',margin: '0.5rem' }} alt="logo" />
+                                <p style={{color:'#212529', margin:'0.2rem', fontWeight: '400'}}>{rowData.TransformX_Vendor_Name}</p>
+                                </div>
+                              </Link></div>
+                          },
 
                         {
-                            title: 'Category', field: 'TransformX_API_Category1', render: rowData => <div style={{ display: 'flex', justifyContent: 'justify', alignItems: 'center' }}>
+                            title: 'Category', field: 'TransformX_API_Category1',filterPlaceholder: 'Search by Category', render: rowData => <div style={{ display: 'flex', justifyContent: 'justify', alignItems: 'center' }}>
                                 <Link to={`/apis/${rowData.TransformX_API_Id}`}>
-                                    <p>{rowData.TransformX_API_Category1}</p>
+                                <div style={{ display: 'flex', flexDirection: 'row'}}>
+                                   <p>{rowData.TransformX_API_Category1}</p>
+                                </div>
                                 </Link></div>
                         },
 
                         {
-                            title: 'API', field: 'Vendor_API_Name', render: rowData => <div style={{ display: 'flex', justifyContent: 'justify', alignItems: 'center' }}>
+                            title: 'API', field: 'Vendor_API_Name',filterPlaceholder: 'Search by Name', render: rowData => <div>
                                 <Link to={`/apis/${rowData.TransformX_API_Id}`}>
+                                    <div style={{ display: 'flex', flexDirection: 'row'}}>
+                                    <img src={rowData.TransformX_API_Logo} style={{color:'#2dce89',marginRight:'0.3rem'}}/>
                                     <p>{rowData.Vendor_API_Name}</p>
+                                    </div>
                                 </Link></div>
                         },
 
                         {
-                            title: 'API Description', field: 'TransformX_API_Description', cellStyle: {
+                            title: 'API Description', field: 'TransformX_API_Description',filterPlaceholder: 'Search by keyword', cellStyle: {
                                 whiteSpace: 'nowrap'
                             }, render: rowData => <div style={{ display: 'flex', justifyContent: 'justify', alignItems: 'center' }}>
                                 <Link to={`/apis/${rowData.TransformX_API_Id}`}>
@@ -130,9 +125,9 @@ class APIs extends React.Component {
                     data={this.state.apis}
                     options={{
                         paging: true,
-                        pageSize: 20,       // make initial page size
+                        pageSize: 10,       // make initial page size
                         emptyRowsWhenPaging: true,   //to make page size fix in case of less data rows
-                        pageSizeOptions: [20, 40, 80],    // rows selection options
+                        pageSizeOptions: [10, 20, 30],    // rows selection options
 
                         filtering: true,
                         headerStyle: {
@@ -140,8 +135,7 @@ class APIs extends React.Component {
                             backgroundColor: '#F6F9FC'
                         },
                         filterCellStyle: {
-                            fontSize: 'clamp(0.8rem, 1vw, 1.4rem)',
-                            padding: '0.3rem'
+                            fontSize: 'clamp(0.8rem, 1vw, 1.4rem)'
                         },
                         exportButton: false,
                         showTitle: false,

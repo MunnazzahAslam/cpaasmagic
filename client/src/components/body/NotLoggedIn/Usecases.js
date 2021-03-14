@@ -20,9 +20,8 @@ import ViewColumn from '@material-ui/icons/ViewColumn';
 import usecasebanner from '../Usecases/usecasebanner.png';
 import CardMedia from '@material-ui/core/CardMedia';
 import { Link } from 'react-router-dom'
-import { DataContext } from '../reduxreactindex'
 import usecases from './usecases.jpg'
-import { Button, Container } from '../../../globalStyles';
+import { Button } from '../../../globalStyles';
 import CardContent from '@material-ui/core/CardContent';
 const tableIcons = {
     Add: forwardRef((props, ref) => <AddBox {...props} ref={ref} />),

@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 
 const usecasesSchema = new mongoose.Schema({
-    TransformX_Vendor_Id: { type: String, ref:'cpaas_vendors' },
+    TransformX_Vendor_Id: { type: String },
     TransformX_Usecase_Id: { type: String, },
     TransformX_Usecase_Data_Source: { type: String, },
     TransformX_Vendor_Name: { type: String, },

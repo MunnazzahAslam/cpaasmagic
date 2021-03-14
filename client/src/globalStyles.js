@@ -24,7 +24,7 @@ padding-left:50px;
 `
 export const Button = styled.button`
 border-radius: 4px;
-background: #1D217E;
+background: #00BFA5;
 white-space:no-wrap;
 padding:${({big})=>(big ? '12px 64px' : '10px 20px')};
 color:#fff;
@@ -35,9 +35,8 @@ cursor:pointer;
 &:hover{
     transition:all 0.3s ease-out;
     color: #fff;
-    background: #1D217E;
+    transform: scale(1.1);
 }
-
     `
 
 export default GlobalStyle;

@@ -9,19 +9,27 @@ import LocationCityIcon from '@material-ui/icons/LocationCity';
 import ExtensionIcon from '@material-ui/icons/Extension';
 import RateReviewIcon from '@material-ui/icons/RateReview';
 import ShowChartIcon from '@material-ui/icons/ShowChart';
+import {Button} from '../../../globalStyles';
 import './Tabs.css';
 
 export default () => (
-    <Tabs defaultIndex={0} className="boxt"  style={{color:'#00BFA5'}}>
-        <div className=".react-tabs__tab-list"  style={{color:'#00BFA5'}}>
-            <TabList style={{  margin:'0 1.2rem',color:'#00BFA5' }}>
-                <Tab  style={{color:'#00BFA5'}}><div style={{ display: 'flex', flexDirection: 'row' }}><LocationCityIcon fontSize='inherit' />Vendors</div></Tab>
-                <Tab  style={{color:'#00BFA5'}}><div style={{ display: 'flex', flexDirection: 'row' }}><ExtensionIcon fontSize='inherit' />APIS</div></Tab>
-                <Tab  style={{color:'#00BFA5'}}><div style={{ display: 'flex', flexDirection: 'row' }}><RateReviewIcon fontSize='inherit' />Use Cases</div></Tab>
-                <Tab  style={{color:'#00BFA5'}}><div style={{ display: 'flex', flexDirection: 'row' }}><ShowChartIcon fontSize='inherit' />Success Stories</div></Tab>
+    <>
+    <div style={{display:'flex', justifyContent:'space-between', margin:'2.3rem'}}>
+        <h2 style={{ fontSize: 'clamp(1.7rem, 1.5vw, 1.2rem)', fontWeight: '400', fontSize: '4rem' }}>Search Vendors</h2>
+        <Button>Save Search</Button>
+    </div>
+    <Tabs defaultIndex={0}>
+        <br/>
+        <br/>
+        <div className=".react-tabs__tab-list"  >
+            <TabList style={{  margin:'0 2rem',color: '#282828'}}>
+                <Tab style={{color: '#282828'}} ><div style={{ display: 'flex', flexDirection: 'row'}}><LocationCityIcon     style={{marginRight:'0.5rem',color: '#282828'}}/>Vendors</div></Tab>
+                <Tab style={{color: '#282828'}}><div style={{ display: 'flex', flexDirection: 'row' }}><ExtensionIcon    style={{marginRight:'0.5rem',color: '#282828'}} />APIs</div></Tab>
+                <Tab style={{color: '#282828'}}><div style={{ display: 'flex', flexDirection: 'row' }}><RateReviewIcon     style={{marginRight:'0.5rem',color: '#282828'}} />Use Cases</div></Tab>
+                <Tab style={{color: '#282828'}}><div style={{ display: 'flex', flexDirection: 'row' }}><ShowChartIcon     style={{marginRight:'0.5rem',color: '#282828'}}/>Success Stories</div></Tab>
             </TabList>
         </div>
-
+<div className="boxt">
         <TabPanel>
             <Vendors />
         </TabPanel >
@@ -34,5 +42,7 @@ export default () => (
         <TabPanel>
             <Successstories />
         </TabPanel>
+        </div>
     </Tabs>
+    </>
 );

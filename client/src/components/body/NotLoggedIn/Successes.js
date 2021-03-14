@@ -20,8 +20,7 @@ import ViewColumn from '@material-ui/icons/ViewColumn';
 import CardMedia from '@material-ui/core/CardMedia';
 import successbanner from '../SuccessStories/successbanner.png';
 import { Link } from 'react-router-dom'
-import { DataContext } from '../reduxreactindex'
-import { Button, Container } from '../../../globalStyles';
+import { Button } from '../../../globalStyles';
 import CardContent from '@material-ui/core/CardContent';
 import success from './success.jpg'
 import './nlg.css';

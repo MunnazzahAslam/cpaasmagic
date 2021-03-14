@@ -20,9 +20,8 @@ import ViewColumn from '@material-ui/icons/ViewColumn';
 import CardMedia from '@material-ui/core/CardMedia';
 import apibanner from '../APIs/apibanner.png';
 import { Link } from 'react-router-dom'
-import { DataContext } from '../reduxreactindex'
 import api from './api.jpg';
-import { Button, Container } from '../../../globalStyles';
+import { Button } from '../../../globalStyles';
 import CardContent from '@material-ui/core/CardContent';
 const tableIcons = {
     Add: forwardRef((props, ref) => <AddBox {...props} ref={ref} />),
@@ -61,6 +60,7 @@ class APIs extends React.Component {
             .then(response => response.json())
             .then(res => {
                 this.setState({ apis: res.slice(0, 5), loading: true })
+                console.log(res)
             })
             .catch(error => {
                 console.log(error)
@@ -78,6 +78,20 @@ class APIs extends React.Component {
                     icons={tableIcons}
                     style={{ fontFamily: 'Glacial Indifference', fontSize: 'clamp(0.8rem, 1vw, 1.4rem)', tableLayout: 'fixed' }}
                     columns={[
+                        {
+                            field: 'TransformX_Vendor_Logo', filtering: false, cellStyle: {
+                              width: 80,
+                              maxWidth: 100
+                            }
+                            ,
+                            headerStyle: {
+                              width: 80,
+                              maxWidth: 100
+                            }, sorting: false, render: rowData => <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                              <Link to={`/vendors/${rowData.TransformX_Vendor_Id}`}>
+                                <img src={rowData.images.info[0].TransformX_Vendor_Logo} style={{ width: '5rem', height: '5rem' }} alt="logo" />
+                              </Link></div>
+                          },
                         {
                             title: 'Vendor', field: 'TransformX_Vendor_Name', render: rowData => <div style={{ display: 'flex', justifyContent: 'start', alignItems: 'start' }}>
                             <Link to={`/vendors/${rowData.TransformX_Vendor_Id}`}>
