@@ -32,7 +32,7 @@ export class Usecase extends Component {
             <div >
                 {
                     usecases.map(usecase => (
-                        <div key={usecase.TransformX_Usecase_Id} >
+                        <div key={usecase.TransformX_Usecase_Id} style={{paddingRight:'5%', paddingLeft:'5%'}} >
                             <br /><br />
                             <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center',margin:'2rem 0' }}>
                                 <img style={{ margin: '0 2rem', borderRadius: '8px', width: '12vw', height: '12vw' }} src={usecase.TransformX_Vendor_Logo} alt="VendorProfile" />

@@ -23,12 +23,11 @@ padding-left:50px;
 }
 `
 export const Button = styled.button`
-border-radius: 4px;
+border-radius: 28px;
 background: #00BFA5;
 white-space:no-wrap;
-padding:${({big})=>(big ? '12px 64px' : '10px 20px')};
-color:#fff;
-font-size: ${({fontBig})=>(fontBig ? '22px': '18px')};
+padding: 6px 25px;
+color: #fff;
 outline:none;
 border:none;
 cursor:pointer;

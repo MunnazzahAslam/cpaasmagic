@@ -104,7 +104,7 @@ export class Vendor extends Component {
             <>
                 {
                     vendors.map(vendor => (
-                        <div key={vendor.TransformX_Vendor_Id}>
+                        <div key={vendor.TransformX_Vendor_Id} >
                             <br />
                             <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center',margin:'2rem 0' }}>
                                 <img style={{ margin: '0 2rem', borderRadius: '8px', width: '12vw', height: '12vw' }} src={vendor.TransformX_Vendor_Logo} alt="VendorProfile" />

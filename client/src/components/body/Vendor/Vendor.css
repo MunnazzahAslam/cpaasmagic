@@ -2,11 +2,12 @@
     max-width: 1200;
     background: #fff; 
     color: #15202B;
+    padding-left: 5%;
+    padding-right: 5%;
 }
 h2{
     text-align: center;
     color:#15202B;
-    font-family: 'Glacial Indifference';
 }
 
 .cover{

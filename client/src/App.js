@@ -1,8 +1,8 @@
-import React, {useEffect} from 'react';
-import {BrowserRouter as Router} from 'react-router-dom'
-import {useDispatch, useSelector} from 'react-redux'
-import {dispatchLogin, fetchUser, dispatchGetUser} from './redux/actions/authAction'
-import {DataProvider} from './components/body/reduxreactindex'
+import React, { useEffect } from 'react';
+import { BrowserRouter as Router } from 'react-router-dom'
+import { useDispatch, useSelector } from 'react-redux'
+import { dispatchLogin, fetchUser, dispatchGetUser } from './redux/actions/authAction'
+import { DataProvider } from './components/body/reduxreactindex'
 import Header from './components/header/Header'
 import Body from './components/body/Body'
 import axios from 'axios';
@@ -15,17 +15,17 @@ function App() {
 
   useEffect(() => {
     const firstLogin = localStorage.getItem('firstLogin')
-    if(firstLogin){
+    if (firstLogin) {
       const getToken = async () => {
         const res = await axios.post('/user/refresh_token', null)
-        dispatch({type: 'GET_TOKEN', payload: res.data.access_token})
+        dispatch({ type: 'GET_TOKEN', payload: res.data.access_token })
       }
       getToken()
     }
-  },[auth.isLogged, dispatch])
+  }, [auth.isLogged, dispatch])
 
   useEffect(() => {
-    if(token){
+    if (token) {
       const getUser = () => {
         dispatch(dispatchLogin())
 
@@ -35,18 +35,18 @@ function App() {
       }
       getUser()
     }
-  },[token, dispatch])
+  }, [token, dispatch])
 
 
   return (
     <DataProvider>
-    <Router>
-      <div className="App">
+      <Router>
         <Header />
-        <Body />
-      </div>
-      <Footer />
-    </Router>
+        <div className="App">
+          <Body />
+        </div>
+        <Footer />
+      </Router>
     </DataProvider>
   );
 }

@@ -25,14 +25,19 @@ import SuccessStories from './NotLoggedIn/Successes'
 import '../body/Tabs/Tabs.css'
 import InstaEmbed from '../body/Social/InstaEmbed'
 import Maps from '../body/Maps/Maps'
+import Hoome from '../body/home/Hoome'
 import NewLayout from '../body/NewLayout/NewLayout'
+import getStartedPage from '../body/home/getStartedPage';
+import Dashboard from '../body/Dashboard/Dashboard'
 function Body() {
     const auth = useSelector(state => state.auth)
     const {isLogged} = auth
     return (
         <section>
             <Switch>
-                <Route path="/" component={Home} exact />
+                <Route path="/" component={Hoome} exact />
+                <Route path="/sellerdashboard" component={Dashboard} />
+                <Route path="/getstarted" component={getStartedPage} />
                 <Route path="/map" component={Maps} />
                 <Route path="/new" component={NewLayout} />
                 <Route path="/instagram" component={InstaEmbed} />

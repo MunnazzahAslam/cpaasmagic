@@ -1,11 +1,16 @@
-.hover:hover{
-    transition:all 0.3s ease-out;
-    transform: scale(1.1);
-}
 .hover
-{
-    width: 12rem; 
-    margin: 2rem;
+{ 
+    width: 18rem;
+    height: 18rem;
+    margin: 1rem;
+    padding: 0.1rem;
+    
+}
+.smallCards{
+    width: 8rem;
+    height: 9rem;
+    margin-right: 1rem;
+    background-color: #F6F9FC;
 }
 .card{
     margin: 1rem;
@@ -33,3 +38,32 @@
         }
         }
 
+.topbar{
+    background-color: #F1F3FE; 
+    width:100%;
+    margin: 0 auto;
+    color: #1B2653;
+    padding: 1rem;
+    padding-left: 10%;
+}
+.Cards{
+    background-color: #fff;
+    width:100%;
+    font-weight: 700;
+    margin: 0 auto;
+    color: #1B2653;
+    padding: 2rem;
+    padding-left: 10%;
+}
+.cardContainer{
+    margin-top: -1rem;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 4rem;
+    align-items: center;
+}
+.banner{
+    background-image: linear-gradient(to right,#9AE3D9, #19C2AB);
+    color:#fff;
+}
+ 

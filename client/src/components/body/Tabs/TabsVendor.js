@@ -14,14 +14,14 @@ import './Tabs.css';
 
 export default () => (
     <>
-    <div style={{display:'flex', justifyContent:'space-between', margin:'2.3rem'}}>
+    <div style={{display:'flex', justifyContent:'space-around', margin:'2.3rem'}}>
         <h2 style={{ fontSize: 'clamp(1.7rem, 1.5vw, 1.2rem)', fontWeight: '400', fontSize: '4rem' }}>Search Vendors</h2>
-        <Button>Save Search</Button>
+        <Button style={{fontSize:'1rem'}}>Save Search</Button>
     </div>
     <Tabs defaultIndex={0}>
         <br/>
         <br/>
-        <div className=".react-tabs__tab-list"  >
+        <div className=".react-tabs__tab-list" style={{margin:'0 auto', width: '1400px'}} >
             <TabList style={{  margin:'0 2rem',color: '#282828'}}>
                 <Tab style={{color: '#282828'}} ><div style={{ display: 'flex', flexDirection: 'row'}}><LocationCityIcon     style={{marginRight:'0.5rem',color: '#282828'}}/>Vendors</div></Tab>
                 <Tab style={{color: '#282828'}}><div style={{ display: 'flex', flexDirection: 'row' }}><ExtensionIcon    style={{marginRight:'0.5rem',color: '#282828'}} />APIs</div></Tab>

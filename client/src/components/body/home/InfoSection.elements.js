@@ -67,34 +67,31 @@ export const TextWrapper = styled.div`
 export const Heading = styled.h1`
     text-align: center;
     margin-bottom: 24px;
-    font-size: 2rem;
-    margin:2.7rem;
+    font-size: 1rem;
+    font-weight: 800;
     line-height: 1.1;
     color: '#fff';
     @media screen and (max-width: 960px){
     margin-bottom: 12px;
-    font-size: 1.5rem;
+    font-size: 0.8rem;
     }
     @media screen and (max-width: 450px){
     margin-bottom: 12px;
-    font-size: 1.2rem;
+    font-size: 0.6rem;
     }
 `
 
 export const Subtitle= styled.p`
     margin-bottom:35px;
     text-align: center;
-    font-size: 1.4rem;
-    line-height: 3rem;
-    color:'#a9b3c1';
+    font-size:0.8rem;
     @media screen and (max-width: 960px){
     margin-bottom: 12px;
-    font-size: 1rem;
-    line-height: 1.3rem;
+    font-size: 0.6rem;
     }
     @media screen and (max-width: 450px){
     margin-bottom: 12px;
-    font-size: 1rem;
+    font-size: 0.2rem;
     line-height: 1.3rem;
     }
 `
@@ -103,7 +100,6 @@ export const ImgWrapper=styled.div`
     display:flex;
     justify-content:center;
     align-items: center;
-    margin-top: -30px;
 `
 
 export const Img=styled.img`

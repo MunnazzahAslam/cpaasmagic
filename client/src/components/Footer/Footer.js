@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button } from '../../globalStyles';
+import logo from './logo.png';
 import { FaFacebook, FaInstagram, FaGoodreads, FaTwitter, FaLinkedin } from 'react-icons/fa';
 import {FooterContainer, FooterLink, FooterLinkTitle, FooterLinksContainer, FooterLinksWrapper, FooterLinksItems, FooterSubscription, FooterSubHeading, FooterSubText, Form, FormInput, SocialMedia, SocialMediaWrap, SocialLogo, SocialIconLink, SocialIcons, WebsiteRights} from './Footer.elements';
 const Footer = () => {
@@ -7,9 +8,8 @@ const Footer = () => {
             <FooterContainer>
                 <SocialMedia>
                 <SocialMediaWrap>
-                    <SocialLogo to="/">cpaasmagic
+                    <SocialLogo to="/"><img src={logo} alt="logo" className="logo"/>
                     </SocialLogo>
-                    
                     <SocialIcons>
                         <SocialIconLink href="/" target="_blank" arial-label="Facebook">
                             <FaFacebook/>
@@ -33,51 +33,29 @@ const Footer = () => {
                 <FooterLinksContainer>
                     <FooterLinksWrapper>
                         <FooterLinksItems>
-                            <FooterLinkTitle>Resources</FooterLinkTitle>
-                            <FooterLink to="/signup">How it works</FooterLink>
-                            <FooterLink to="/about">Testimonials</FooterLink>
-                            <FooterLink to="/pricing">Careers</FooterLink>
-                            <FooterLink to="/services">Investors</FooterLink>
-                        </FooterLinksItems>
-                        <FooterLinksItems>
-                            <FooterLinkTitle>Offerings</FooterLinkTitle>
-                            <FooterLink to="/signup">How it works</FooterLink>
-                            <FooterLink to="/about">Testimonials</FooterLink>
-                            <FooterLink to="/pricing">Careers</FooterLink>
-                            <FooterLink to="/services">Investors</FooterLink>
+                            <FooterLinkTitle>Stay Connected</FooterLinkTitle>
+                            <FooterLink to="/signup">cpaasmagic News</FooterLink>
+                            <FooterLink to="/about">Contact Us</FooterLink>
+                            <FooterLink to="/pricing">Partner with Us</FooterLink>
                         </FooterLinksItems>
                         </FooterLinksWrapper>
                         <FooterLinksWrapper>
                         <FooterLinksItems>
-                            <FooterLinkTitle>Pricing</FooterLinkTitle>
-                            <FooterLink to="/signup">How it works</FooterLink>
-                            <FooterLink to="/about">Testimonials</FooterLink>
+                            <FooterLinkTitle>Who we are</FooterLinkTitle>
+                            <FooterLink to="/signup">Company</FooterLink>
+                            <FooterLink to="/about">Partners</FooterLink>
                             <FooterLink to="/pricing">Careers</FooterLink>
-                            <FooterLink to="/services">Investors</FooterLink>
                         </FooterLinksItems>
                         <FooterLinksItems>
-                            <FooterLinkTitle>About</FooterLinkTitle>
-                            <FooterLink to="/signup">How it works</FooterLink>
-                            <FooterLink to="/about">Testimonials</FooterLink>
-                            <FooterLink to="/pricing">Careers</FooterLink>
-                            <FooterLink to="/services">Investors</FooterLink>
+                            <FooterLinkTitle>What we do</FooterLinkTitle>
+                            <FooterLink to="/signup">cpaasmagic pro</FooterLink>
+                            <FooterLink to="/about">Data Licensing</FooterLink>
+                            <FooterLink to="/pricing">Pricing</FooterLink>
                         </FooterLinksItems>
                     </FooterLinksWrapper>
                 </FooterLinksContainer>
-                <FooterSubscription>
-                    <FooterSubHeading>
-                        Join our exclusive membership to receive the latest news and trends.
-                    </FooterSubHeading>
-                    <FooterSubText>
-                        You can subscribe at any time.
-                    </FooterSubText>
-                    <Form>
-                        <FormInput name="email" type="email" placeholder="Your Email"></FormInput>
-                            <Button style={{background:'#00BFA5'}}> Subscribe</Button>
-                    </Form>
-                </FooterSubscription>
                 <WebsiteRights>
-                        cpaasmagic©2020
+                        cpaasmagic | A product of TransformX
                     </WebsiteRights>
         </FooterContainer>
     )

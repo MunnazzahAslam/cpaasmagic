@@ -31,7 +31,7 @@ export class Success extends Component {
             <>
                 {
                     successstories.map(success => (
-                        <div key={success.TransformX_Success_Story_Id}>
+                        <div key={success.TransformX_Success_Story_Id} style={{paddingRight:'5%', paddingLeft:'5%'}}>
                             <br /><br />
                             <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center',margin:'2rem 0' }}>
                                 <img style={{ margin: '0 2rem', borderRadius: '8px', width: '12vw', height: '12vw' }} src={success.TransformX_Vendor_Logo} alt="VendorProfile" />

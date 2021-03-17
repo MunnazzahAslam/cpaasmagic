@@ -1,7 +1,11 @@
+
 .react-tabs{
   margin-top: -2rem;
 }
 .react-tabs__tab-list {
+  width: 1400px;
+  max-width: 1400px;
+  margin: 0 auto;
     cursor: pointer;
     color: '#ced4da !important';
     background-color: #fff;
@@ -22,6 +26,8 @@
   .main{
     color: '#ced4da !important';
     background-color: #F8F9FE;
+    padding-left: 5%;
+    padding-right: 5%;
   }
 .icon{
     color: '#ced4da !important';

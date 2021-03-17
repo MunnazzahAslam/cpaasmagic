@@ -2,11 +2,11 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { FaMagento } from 'react-icons/fa';
 export const FooterContainer = styled.div`
-    background: #1B2653;
+    background-image: linear-gradient(to right,#9AE3D9, #19C2AB);
     padding: 4rem 0 2rem 0;
     display:flex;
     flex-direction:column;
-    justify-content:center;
+    justify-content:space-between;
     align-items:center;
     bottom:0;
 
@@ -15,7 +15,7 @@ export const FooterContainer = styled.div`
 export const FooterSubscription = styled.section`
     display:flex;
     flex-direction:column;
-    justify-content:center;
+    justify-content:space-between;
     align-items:center;
     margin-bottom:24px;
     padding:24px;
@@ -101,7 +101,7 @@ export const FooterLinkTitle = styled.h3`
 
 export const FooterLink = styled.h3`
     font-weight: 200;
-    color: #7B8B9A;
+    color: #fff;
     text-decoration:none;
     margin-bottom:0.5rem;
     &:hover{
@@ -147,7 +147,7 @@ export const SocialIcon = styled(FaMagento)`
 `
 
 export const WebsiteRights = styled.h3`
-    color: #7B8B9A;
+    color: #fff;
     margin-bottom:16px;
     margin-bottom:24px;
     font-weight: 200;

@@ -37,7 +37,7 @@ function Login() {
             localStorage.setItem('firstLogin', true)
 
             dispatch(dispatchLogin())
-            history.push("/")
+            history.push("/sellerdashboard")
 
         } catch (err) {
             err.response.data.msg &&
@@ -53,7 +53,7 @@ function Login() {
             localStorage.setItem('firstLogin', true)
 
             dispatch(dispatchLogin())
-            history.push('/')
+            history.push('/sellerdashboard')
         } catch (err) {
             err.response.data.msg &&
                 setUser({ ...user, err: err.response.data.msg, success: '' })
@@ -69,7 +69,7 @@ function Login() {
             localStorage.setItem('firstLogin', true)
 
             dispatch(dispatchLogin())
-            history.push('/')
+            history.push('/sellerdashboard')
         } catch (err) {
             err.response.data.msg &&
                 setUser({ ...user, err: err.response.data.msg, success: '' })

@@ -31,7 +31,7 @@ export class API extends Component {
             <>
                 {
                     apis.map(api => (
-                        <div key={api.TransformX_API_Id}>
+                        <div key={api.TransformX_API_Id} style={{paddingRight:'5%', paddingLeft:'5%'}}>
                             <br />
                             <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
                                 <img style={{ margin: '0 2rem', borderRadius: '8px', width: '12vw', height: '12vw' }} src={api.TransformX_Vendor_Logo} alt="VendorProfile" />

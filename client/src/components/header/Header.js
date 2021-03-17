@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { IconContext } from 'react-icons/lib';
-import logo from './smallcpaas.png';
+import logo from './logo.png';
 import { Button } from '../../globalStyles';
 import { Link } from 'react-router-dom'
 import { useSelector } from 'react-redux'
@@ -65,7 +65,7 @@ const Header = () => {
         return <>
              <>
                                     <NavLogo to="/" onClick={handleClick}>
-                                        cpaasmagic
+                                    <img src={logo} className="logo"/>
                                     </NavLogo>
                                     <MobileIcon onClick={handleClick}>
                                         {click ? <FaTimes color="#1D217E" /> : <FaBars color="#1D217E" />}
@@ -115,7 +115,7 @@ const Header = () => {
                                 :
                                 <>
                                     <NavLogo to="/" onClick={handleClick}>
-                                        cpaasmagic
+                                    <img src={logo} className="logo"/>
                                     </NavLogo>
                                     <MobileIcon onClick={handleClick}>
                                         {click ? <FaTimes color="#1D217E" /> : <FaBars color="#1D217E" />}

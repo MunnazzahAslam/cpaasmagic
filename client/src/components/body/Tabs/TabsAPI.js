@@ -13,10 +13,13 @@ import './Tabs.css';
 
 export default () => (
     
-    <Tabs defaultIndex={1}>
+    <Tabs defaultIndex={1} style={{minHeight: '100vh',
+        margin: '0 auto',
+        overflow: 'hidden',
+        width: '1400px'}}>
         <br/>
         <br/>
-        <div className=".react-tabs__tab-list"  >
+        <div className=".react-tabs__tab-list" style={{margin:'0 auto', width: '1400px'}} >
             <TabList style={{  margin:'0 2rem',color: '#282828'}}>
                 <Tab style={{color: '#282828'}} ><div style={{ display: 'flex', flexDirection: 'row'}}><LocationCityIcon     style={{marginRight:'0.5rem',color: '#282828'}}/>Vendors</div></Tab>
                 <Tab style={{color: '#282828'}}><div style={{ display: 'flex', flexDirection: 'row' }}><ExtensionIcon    style={{marginRight:'0.5rem',color: '#282828'}} />APIs</div></Tab>
