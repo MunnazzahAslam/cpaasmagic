@@ -57,7 +57,7 @@ class RightPortion extends React.Component {
         fetch('/api/vendors') //data source
             .then(response => response.json())
             .then(res => {
-                this.setState({ vendors: res.slice(0, 5), loading: true })
+                this.setState({ vendors: res.slice(0, 3), loading: true })
                 console.log(this.state.vendors);
             })
             .catch(error => {
@@ -96,7 +96,7 @@ class RightPortion extends React.Component {
                     paging: false,
                     headerStyle: {
                         backgroundColor: '#F6F9FC',
-                        padding:'0.5rem',
+                        padding:'0.1rem',
                         color:'#19C2AB',
                         textAlign:'center',
                         fontWeight:'600'

@@ -77,8 +77,8 @@ class FeaturedSuccesses extends React.Component {
                         }, render: rowData => <div style={{}}>
                             <Link to={`/vendors/${rowData.TransformX_Vendor_Id}`}>
                                 <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
-                                    <img src={rowData.TransformX_Vendor_Logo} style={{ width: '2rem', height: '2rem', margin: '0.5rem' }} alt="logo" />
-                                    <p style={{ color: '#212529', fontWeight: '400' }}>{rowData.TransformX_Vendor_Name} - {rowData.TransformX_Success_Story_Name}</p>
+                                    <img src={rowData.TransformX_Vendor_Logo} style={{ width: '2rem', height: '2rem', marginRight: '0.2rem' }} alt="logo" />
+                                    <p style={{ color: '#212529', fontSize: '0.6rem' }}>{rowData.TransformX_Success_Story_Name}</p>
                                 </div>
                             </Link></div>
                     },
@@ -95,7 +95,6 @@ class FeaturedSuccesses extends React.Component {
                         fontWeight: '600'
                     },
                     cellStyle: {
-                        fontSize: 'clamp(0.4rem, 0.3vw, 0.2rem)',
                         backgroundColor: '#F6F9FC',
                         padding: '0.2rem'
                     },

@@ -13,10 +13,10 @@ import dollar from './dollar.png'
 function getStartedPage() {
     return (
         <div style={{ color: '#1B2653' }}>
-            <InfoRow style={{ backgroundColor: '#F1F3FE' }}>
+            <InfoRow style={{ backgroundColor: '#F1F3FE', height: '300px' }}>
                 <InfoColumn>
                     <TextWrapper>
-                        <Heading style={{ marginTop: '30px' }}>CPaaS Intelligence at your Fingertips</Heading>
+                        <Heading style={{ marginTop: '5%' }}>CPaaS Intelligence at your Fingertips</Heading>
                         <Subtitle style={{ maxWidth: '350px' }}>Discover industry trends, competitor insights, in-demand APIs, popular
                         use cases, trending success stories all within cpaasmagic seller dashboard.
                                 </Subtitle>
@@ -29,7 +29,7 @@ function getStartedPage() {
             <InfoRow style={{ backgroundColor: '#fff' }}>
                 <InfoColumn>
                     <TextWrapper>
-                        <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}>
+                        <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'space-between', height: '300px', margin: '2rem', padding: '2rem' }}>
                             <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
                                 <br /><br />
                                 <button style={{ color: '#fff', background: '#19C2AB', borderRadius: '50%', padding: '0.3rem 0.5rem' }}>1</button>
@@ -37,14 +37,20 @@ function getStartedPage() {
                                 <Subtitle style={{ maxWidth: '350px' }}>Start with industry insights and learn
                                 what your closest competitors are up to.
                                         </Subtitle>
-                                <ImgWrapper>
-                                    <Image style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }} src={api} />
-                                </ImgWrapper>
                             </div>
                             <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
                                 <ImgWrapper>
-                                    <Image style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }} src={search} />
+                                    <Image style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginLeft: '2rem' }} src={search} />
                                 </ImgWrapper>
+                            </div>
+                        </div>
+                        <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', height: '300px', margin: '2rem', marginTop: '0rem', padding: '2rem' }}>
+                            <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
+                                <ImgWrapper>
+                                    <Image style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginLeft: '2rem' }} src={api} />
+                                </ImgWrapper>
+                            </div>
+                            <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
                                 <br /><br />
                                 <button style={{ color: '#fff', background: '#19C2AB', borderRadius: '50%', padding: '0.3rem 0.5rem' }}>2</button>
                                 <Heading style={{ marginTop: '30px' }}>Compare Competitor Solutions</Heading>
@@ -53,7 +59,8 @@ function getStartedPage() {
                                         </Subtitle>
                             </div>
                         </div>
-                        <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}>
+
+                        <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', height: '300px', margin: '2rem', marginTop: '0rem', padding: '2rem' }}>
                             <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
                                 <br /><br />
                                 <button style={{ color: '#fff', background: '#19C2AB', borderRadius: '50%', padding: '0.3rem 0.5rem' }}>3</button>
@@ -61,14 +68,21 @@ function getStartedPage() {
                                 <Subtitle style={{ maxWidth: '350px' }}>Empower your internal research by
                                 knowing top challenges faced by your prospects.
                                         </Subtitle>
+                            </div>
+                            <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
+                                <ImgWrapper>
+                                    <Image style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginLeft: '2rem' }} src={graph} />
+                                </ImgWrapper>
+                            </div>
+                        </div>
+
+                        <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', height: '300px', margin: '2rem', marginTop: '0rem', padding: '2rem' }}>
+                            <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
                                 <ImgWrapper>
                                     <Image style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '1rem' }} src={flowchart} />
                                 </ImgWrapper>
                             </div>
                             <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
-                                <ImgWrapper>
-                                    <Image style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }} src={graph} />
-                                </ImgWrapper>
                                 <br /><br />
                                 <button style={{ color: '#fff', background: '#19C2AB', borderRadius: '50%', padding: '0.3rem 0.5rem' }}>4</button>
                                 <Heading style={{ marginTop: '30px' }}>Suggest Targeted Use Cases</Heading>
@@ -77,8 +91,10 @@ function getStartedPage() {
                                         </Subtitle>
                             </div>
                         </div>
-                        <div style={{ display: 'flex',flexDirection: 'column',}}>
-                            <div>
+
+                        <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', height: '300px', margin: '2rem', marginTop: '0rem', padding: '2rem' }}>
+
+                            <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
                                 <br /><br />
                                 <button style={{ color: '#fff', background: '#19C2AB', borderRadius: '50%', padding: '0.3rem 0.5rem' }}>5</button>
                                 <Heading style={{ marginTop: '30px' }}>Close More Deals</Heading>
@@ -86,24 +102,24 @@ function getStartedPage() {
                                 success stories along with outcomes achieved
                                         </Subtitle>
                             </div>
-                            <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+                            <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
                                 <ImgWrapper>
-                                    <Image src={dollar} />
+                                    <Image style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginLeft: '2rem' }} src={dollar} />
                                 </ImgWrapper>
-                                <br /><br />
                             </div>
                         </div>
-                        <div style={{marginTop:'2rem'}}>
+
+                        <div style={{ marginTop: '2rem' }}>
                             <Heading style={{ textAlign: 'center' }}>Cast your sales spell on your prospects, now:</Heading>
-                            <div style={{display:'flex', flexDirection:'row', justifyContent:'center'}}>
+                            <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center' }}>
                                 <Card className="hover" style={{ boxShadow: 'inset 1px 0.5px 2px 0.5px #d6fffa, 1px 1px 2.5px 0.5px #d6fffa' }}  >
                                     <CardContent style={{ textAlign: 'left' }}>
                                         <Heading style={{ color: '#00BFA5' }}>cpaasmagic Pro</Heading>
-                                        <Subtitle style={{ color: '#1D217E', textAlign:'center' }}>For those who would like to research directly
-                                        within the cpaasmagic web interface. Access:<br/><br/>
-                                        <Subtitle style={{textAlign:'left', marginLeft:'1rem'}}>• Advanced search<br/>
-                                        • Personalized alerts<br/>
-                                        • Data visualizations<br/>
+                                        <Subtitle style={{ color: '#1D217E', textAlign: 'center' }}>For those who would like to research directly
+                                        within the cpaasmagic web interface. Access:<br /><br />
+                                            <Subtitle style={{ textAlign: 'left', marginLeft: '1rem' }}>• Advanced search<br />
+                                        • Personalized alerts<br />
+                                        • Data visualizations<br />
                                         • CSV exports</Subtitle></Subtitle>
                                         <div style={{ display: 'flex', justifyContent: 'center' }}>
                                             <Link to="/register" ><Button style={{ marginRight: '0.5rem', background: '#FAD069', fontWeight: '700' }}>Start Free Trial ►</Button></Link>
@@ -113,11 +129,11 @@ function getStartedPage() {
                                 <Card className="hover" style={{ boxShadow: 'inset 1px 0.5px 2px 0.5px #d6fffa, 1px 1px 2.5px 0.5px #d6fffa' }}  >
                                     <CardContent>
                                         <Heading style={{ color: '#00BFA5' }}>cpaasmagic Enterprise</Heading>
-                                        <Subtitle style={{ color: '#1D217E', textAlign:'center' }}>Bring cpaasmagic data – from 100+ vendors across the globe – to your database. Get:<br/><br/><br/>
-                                        <Subtitle style={{textAlign:'left', marginLeft:'1rem'}}>• Actionable data for your sales reps<br/>
-                                        • Seamless integration with your systems<br/>
+                                        <Subtitle style={{ color: '#1D217E', textAlign: 'center' }}>Bring cpaasmagic data – from 100+ vendors across the globe – to your database. Get:<br /><br /><br />
+                                            <Subtitle style={{ textAlign: 'left', marginLeft: '1rem' }}>• Actionable data for your sales reps<br />
+                                        • Seamless integration with your systems<br />
                                         • Bulk exports via CSV or Excel data that’s updated automatically</Subtitle></Subtitle>
-                                        <div style={{ display: 'flex', justifyContent: 'center' }}><br/>
+                                        <div style={{ display: 'flex', justifyContent: 'center' }}><br />
                                             <Button style={{ marginRight: '0.5rem', background: '#FAD069', fontWeight: '700' }}>Coming Soon</Button>
                                         </div>
                                     </CardContent>
@@ -126,8 +142,8 @@ function getStartedPage() {
                         </div>
                     </TextWrapper>
                 </InfoColumn>
-            </InfoRow>
-        </div>
+            </InfoRow >
+        </div >
     )
 }
 

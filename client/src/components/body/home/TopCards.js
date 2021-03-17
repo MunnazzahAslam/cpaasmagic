@@ -59,7 +59,7 @@ class TopCards extends React.Component {
     render() {
 
         return (
-            <div style={{ display: 'flex', flexDirection: 'row',justifyContent:'space-between' }}>
+            <div style={{ display: 'flex', flexDirection: 'row',justifyContent:'space-between', marginTop:'-1.5rem' }}>
                 <Card className="smallCards" style={{  }}  >
                     <CardContent>
                         <Heading style={{ color: '#FAD069', fontWeight: '400', fontSize: '2rem', marginBottom: '0px' }}><img src={Picture4} /><br />21</Heading>

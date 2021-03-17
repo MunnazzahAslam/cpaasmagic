@@ -84,31 +84,24 @@ function Hoome() {
                     </div>
                 </div>
             </div>
-            <div className="Cards" style={{ backgroundColor: '#F1F3FE' }}>
+            <div className="Cards" style={{ backgroundColor: '#F1F3FE', paddingLeft:'4%' }}>
                 <Heading style={{ textAlign: 'left', marginLeft: '2rem' }}>cpaasmagic insights & analysis</Heading>
                 <div style={{ display: 'flex', flexDirection: 'row' }}>
                     <div style={{ width: '50%' }}>
                         <WordPress />
                     </div>
-                    <div style={{ width: '50%', paddingRight:'10%'}}>
+                    <div style={{ width: '50%', paddingRight:'4%'}}>
                     <Heading style={{ 
                             padding: '0.5rem',
                             color: '#19C2AB',
                             textAlign: 'center',
-                            fontWeight: '600',
-                            marginTop:'2rem'
+                            fontWeight: '600'
                             }}>This Week on cpaasmagic</Heading>
                         <TopCards />
                         <RightPortion />
+                        <FeaturedSuccesses />
                     </div>
                 </div>
-                <div  style={{ display: 'flex', justifyContent:'flex-end', paddingRight:'10%' }}>
-               
-                <div style={{ display: 'flex', flexDirection: 'column', width: '75%', marginTop:'1rem' }}>
-                    <FeaturedSuccesses />
-                </div>
-                </div>
-                
                 </div>
         </div>
     )
