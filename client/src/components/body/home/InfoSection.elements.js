@@ -67,7 +67,7 @@ export const TextWrapper = styled.div`
 export const Heading = styled.h1`
     text-align: center;
     margin-bottom: 24px;
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: 800;
     line-height: 1.1;
     color: '#fff';
@@ -84,7 +84,7 @@ export const Heading = styled.h1`
 export const Subtitle= styled.p`
     margin-bottom:35px;
     text-align: center;
-    font-size:0.8rem;
+    font-size:1rem;
     @media screen and (max-width: 960px){
     margin-bottom: 12px;
     font-size: 0.6rem;
