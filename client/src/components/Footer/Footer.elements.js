@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { FaMagento } from 'react-icons/fa';
 export const FooterContainer = styled.div`
     background-image: linear-gradient(to right,#9AE3D9, #19C2AB);
-    padding: 4rem 0 2rem 0;
+    padding: 2rem 0 2rem 0;
     display:flex;
     flex-direction:column;
     justify-content:space-between;
@@ -62,12 +62,12 @@ export const FormInput = styled.input`
 `
 
 export const FooterLinksContainer = styled.div`
-    width:100%;
-    max-width:1000px;
+   width:100%;
     display:flex;
-    justify-content:center;
-    @media screen and (max-width:820px){
-        padding-top: 32px;
+    justify-content: center;
+    @media screen and (max-width:620px){
+        padding: 32px;
+    justify-content: inherit;
     }
 `
 
@@ -100,10 +100,10 @@ export const FooterLinkTitle = styled.h3`
 `
 
 export const FooterLink = styled.h3`
-    font-weight: 200;
     color: #fff;
+    font-weight: 100;
+    font-size: 0.8rem;
     text-decoration:none;
-    margin-bottom:0.5rem;
     &:hover{
         color:#fff;
         cursor: pointer;

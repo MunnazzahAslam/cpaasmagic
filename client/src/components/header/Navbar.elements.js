@@ -3,7 +3,7 @@ import { Container } from '../../globalStyles';
 import { Link } from 'react-router-dom';
  
 export const Nav= styled.nav`
-background:  #1B2653;
+background:  #15202B;
 height: 60px;
 display:flex;
 justify-content: center;
@@ -40,14 +40,16 @@ align-items:center;
 export const MobileIcon = styled.div`
 display:none;
 @media screen and (max-width: 960px){
+    color:#fff !important;
     display:block;
     position:absolute;
-    margin: 30px;
+    margin: 22px;
+    margin-left: 25px;
     cursor:pointer;
     top:0;
     right:1.5rem;
-    transform:translated(-100,60%);
-    font-size:1.2rem;
+    transform:translated(-100,40%);
+    font-size:1rem;
 }
 `
 export const NavMenu= styled.ul`
@@ -61,12 +63,12 @@ export const NavMenu= styled.ul`
     align-items:center;
     width:100%;
     height: 100vh;
+    top: 10px;
     position:absolute;
-    top:80px;
     left:${({click})=>(click ? 0 : '-100%')};
     opacity:1;
     transition: all 0.5s ease;
-    background: #ffffff;
+    background:  #15202B;
     }
 `
 

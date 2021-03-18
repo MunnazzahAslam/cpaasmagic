@@ -57,7 +57,7 @@ class RightPortion extends React.Component {
         fetch('/api/vendors') //data source
             .then(response => response.json())
             .then(res => {
-                this.setState({ vendors: res.slice(0, 3), loading: true })
+                this.setState({ vendors: res.slice(0, 5), loading: true })
                 console.log(this.state.vendors);
             })
             .catch(error => {
@@ -68,7 +68,7 @@ class RightPortion extends React.Component {
         return (
                 <MaterialTable
                     icons={tableIcons}
-                    style={{ tableLayout: 'fixed', margin:'2rem 0' }}
+                    style={{ tableLayout: 'fixed', marginBottom:'2rem', boxShadow: 'none' }}
                     columns={[
                         {
                             title:'Trending Vendors',field: 'TransformX_Vendor_Name'
@@ -78,7 +78,7 @@ class RightPortion extends React.Component {
                                 <Link to={`/vendors/${rowData.TransformX_Vendor_Id}`}>
                                     <div style={{  display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between'}}>
                                     <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
-                                        <img src={rowData.TransformX_Vendor_Logo} style={{ width: '2rem', height: '2rem',marginRight:'0.5rem' }} alt="logo" />
+                                        <img src={rowData.TransformX_Vendor_Logo} style={{ width: '3rem', height: '3rem',marginRight:'0.5rem' }} alt="logo" />
                                         <p style={{ color: '#212529', fontWeight: '400' }}>{rowData.TransformX_Vendor_Name}</p>
                                     </div>
                                     <div>
@@ -96,10 +96,10 @@ class RightPortion extends React.Component {
                     paging: false,
                     headerStyle: {
                         backgroundColor: '#F6F9FC',
-                        padding:'0.1rem',
-                        color:'#19C2AB',
-                        textAlign:'center',
-                        fontWeight:'600'
+                        padding: '0.5rem',
+                        color: '#19C2AB',
+                        textAlign: 'center',
+                        fontWeight: '600'
                     },
                     cellStyle: {
                         fontSize: 'clamp(0.4rem, 0.3vw, 0.2rem)',

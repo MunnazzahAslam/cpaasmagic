@@ -11,10 +11,7 @@ function Dashboard() {
             <InfoRow style={{ backgroundColor: '#F1F3FE' }}>
                 <InfoColumn>
                     <TextWrapper>
-                        <Heading style={{ marginTop: '30px' }}>CPaaS Intelligence at your Fingertips</Heading>
-                        <Subtitle style={{ maxWidth: '350px' }}>Discover industry trends, competitor insights, in-demand APIs, popular
-                        use cases, trending success stories all within cpaasmagic seller dashboard.
-                                </Subtitle>
+                        <Heading style={{ marginTop: '30px' }}>Seller Dashboard</Heading>
                         <div style={{ display: 'flex', justifyContent: 'center' }}>
                             <Link to="/search/vendors" ><Button style={{ marginRight: '0.5rem', background: '#FAD069', fontWeight: '700', marginTop: '-1rem' }}>Get Started ►</Button></Link>
                         </div>

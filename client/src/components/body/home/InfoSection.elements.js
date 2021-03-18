@@ -66,33 +66,33 @@ export const TextWrapper = styled.div`
 
 export const Heading = styled.h1`
     text-align: center;
-    margin-bottom: 24px;
-    font-size: 1.2rem;
+    margin-bottom: 10px;
+    font-size: 1.6rem;
     font-weight: 800;
     line-height: 1.1;
     color: '#fff';
     @media screen and (max-width: 960px){
-    margin-bottom: 12px;
-    font-size: 0.8rem;
+    margin-bottom: 8px;
+    font-size: 1.2rem;
     }
     @media screen and (max-width: 450px){
-    margin-bottom: 12px;
-    font-size: 0.6rem;
+    margin-bottom: 4px;
+    font-size: 1rem;
     }
 `
 
 export const Subtitle= styled.p`
+    padding-top: 5px;
     margin-bottom:35px;
     text-align: center;
-    font-size:1rem;
+    font-size: 1rem;
     @media screen and (max-width: 960px){
     margin-bottom: 12px;
-    font-size: 0.6rem;
+    font-size: 0.9rem;
     }
     @media screen and (max-width: 450px){
     margin-bottom: 12px;
-    font-size: 0.2rem;
-    line-height: 1.3rem;
+    font-size: 0.8rem;
     }
 `
 

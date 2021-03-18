@@ -1,14 +1,13 @@
 .hover
 { 
-    width: 18rem;
-    height: 18rem;
+    width: 280px;
+    height: 320px;
     margin: 1rem;
-    padding: 0.1rem;
+    padding: 0.2rem;
     
 }
 .smallCards{
     width: 8rem;
-    height: 9rem;
     margin-right: 1rem;
     background-color: #F6F9FC;
 }
@@ -16,54 +15,109 @@
     margin: 1rem;
 }  
 
-@media screen and (max-width: 1100px){
-.hover{
- width: 9rem;
- margin: 1.5rem;
-}
-}
-
-@media screen and (max-width: 800px){
-    .hover{
-     width: 8rem;
-     margin: 1rem;
-    }
-    
-    }
-
-    @media screen and (max-width: 670px){
-        .hover{
-         width: 7rem;
-         margin: 1rem;
-        }
-        }
-
 .topbar{
     background-color: #F1F3FE; 
     width:100%;
-    margin: 0 auto;
     color: #1B2653;
-    padding: 1rem;
+    width: 100%;
+    text-align: center;
+    height: 170px;
+    padding: 30px ;
     padding-left: 10%;
 }
 .Cards{
-    background-color: #fff;
     width:100%;
     font-weight: 700;
     margin: 0 auto;
     color: #1B2653;
-    padding: 2rem;
+    padding: 30px ;
     padding-left: 10%;
 }
-.cardContainer{
-    margin-top: -1rem;
+.bottomCards{
+    width:100%;
+    font-weight: 700;
+    margin: 0 auto;
+    color: #1B2653;
+    padding: 30px ;
+}
+@media screen and (max-width: 1100px){
+
+}
+.left{
+    width:50%;
+}
+.right{
+    width: 50%;
+}
+.table{
+    margin-right: 2rem;
+}
+@media screen and (max-width: 950px){
+    .cardContainer{
+        display: flex;
+        flex-direction:column;
+    }
+    .col{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .widgets{
+        flex-direction: column;
+    }
+    .left{
+        width: 100%;
+    }
+    .right{
+        width: 100%;
+    }
+    .table{
+        margin-right: 0rem;
+    }
+    .topbar{
+       padding-left: 5%;
+    }
+    .hover
+{ 
+    width: 280px;
+    height: 300px;
+    margin: 1rem;
+    padding: 0.2rem;
+    
+}
+.Cards{
+    padding-left: 5%;
+}
+    }
+
+    @media screen and (max-width: 670px){
+       .Cards{
+           display: flex;
+           flex-direction: column;
+       }
+       .widgets{
+           flex-direction: column;
+       }
+       .topbar{
+        padding-left: 30px;
+     }
+     .Cards{
+        padding-left: 30px;
+    }
+        }
+
+
+
+.widgets{
     display: flex;
-    justify-content: flex-start;
-    margin-left: 4rem;
+}
+.cardContainer{
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
 .banner{
     background-image: linear-gradient(to right,#9AE3D9, #19C2AB);
     color:#fff;
+    height: auto;
 }
- 

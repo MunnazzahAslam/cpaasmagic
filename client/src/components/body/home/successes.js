@@ -68,17 +68,17 @@ class FeaturedSuccesses extends React.Component {
         return (
             <MaterialTable
                 icons={tableIcons}
-                style={{ tableLayout: 'fixed' }}
+                style={{ tableLayout: 'fixed', boxShadow: 'none'}}
                 columns={[
                     {
                         title: 'Featured Successes', field: 'TransformX_Vendor_Name'
                         , cellStyle: {
-                            whiteSpace: 'nowrap', textAlign: 'left'
+                             textAlign: 'left'
                         }, render: rowData => <div style={{}}>
                             <Link to={`/vendors/${rowData.TransformX_Vendor_Id}`}>
                                 <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
-                                    <img src={rowData.TransformX_Vendor_Logo} style={{ width: '2rem', height: '2rem', marginRight: '0.2rem' }} alt="logo" />
-                                    <p style={{ color: '#212529', fontSize: '0.6rem' }}>{rowData.TransformX_Success_Story_Name}</p>
+                                    <img src={rowData.TransformX_Vendor_Logo} style={{ width: '3rem', height: '3rem', marginRight: '0.5rem' }} alt="logo" />
+                                    <p style={{ color: '#212529', fontWeight:'200' }}>{rowData.TransformX_Success_Story_Name}</p>
                                 </div>
                             </Link></div>
                     },
@@ -93,10 +93,6 @@ class FeaturedSuccesses extends React.Component {
                         color: '#19C2AB',
                         textAlign: 'center',
                         fontWeight: '600'
-                    },
-                    cellStyle: {
-                        backgroundColor: '#F6F9FC',
-                        padding: '0.2rem'
                     },
                     exportButton: false,
                     showTitle: false,

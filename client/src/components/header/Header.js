@@ -68,7 +68,7 @@ const Header = () => {
                                     <img src={logo} className="logo"/>
                                     </NavLogo>
                                     <MobileIcon onClick={handleClick}>
-                                        {click ? <FaTimes color="#1D217E" /> : <FaBars color="#1D217E" />}
+                                        {click ? <FaTimes color="#fff" /> : <FaBars color="#fff" />}
                                     </MobileIcon>
                                     {/*                    <a href="/search"><TextField style={{ margin: '20px !imporant' }} id="outlined-search" type="search" variant="outlined" InputProps={{
                                                     startAdornment: (
@@ -118,7 +118,7 @@ const Header = () => {
                                     <img src={logo} className="logo"/>
                                     </NavLogo>
                                     <MobileIcon onClick={handleClick}>
-                                        {click ? <FaTimes color="#1D217E" /> : <FaBars color="#1D217E" />}
+                                        {click ? <FaTimes color="#fff" /> : <FaBars color="#fff" />}
                                     </MobileIcon>
                                     {/*                    <a href="/search"><TextField style={{ margin: '20px !imporant' }} id="outlined-search" type="search" variant="outlined" InputProps={{
                                                     startAdornment: (
