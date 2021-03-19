@@ -67,17 +67,17 @@ export const TextWrapper = styled.div`
 export const Heading = styled.h1`
     text-align: center;
     margin-bottom: 10px;
-    font-size: 1.6rem;
+    font-size: 1.6em;
     font-weight: 800;
     line-height: 1.1;
     color: '#fff';
     @media screen and (max-width: 960px){
     margin-bottom: 8px;
-    font-size: 1.2rem;
+    font-size: 1.4em;
     }
     @media screen and (max-width: 450px){
     margin-bottom: 4px;
-    font-size: 1rem;
+    font-size: 1.2em;
     }
 `
 
@@ -85,14 +85,14 @@ export const Subtitle= styled.p`
     padding-top: 5px;
     margin-bottom:35px;
     text-align: center;
-    font-size: 1rem;
+    font-size: 1.1em;
     @media screen and (max-width: 960px){
     margin-bottom: 12px;
-    font-size: 0.9rem;
+    font-size: 0.9em;
     }
     @media screen and (max-width: 450px){
     margin-bottom: 12px;
-    font-size: 0.8rem;
+    font-size: 0.8em;
     }
 `
 
