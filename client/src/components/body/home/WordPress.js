@@ -22,14 +22,14 @@ export class WordPress extends Component {
                              <Table.Body key={post.id}>
                              <Link to={`/blog/${post.id}`}>
                             <Table.Row  height="auto">
-                                <Table.TextCell flexBasis={200} flexShrink={0} flexGrow={0} style={{margin:'0.2rem'}} >
+                                <Table.TextCell flexBasis={140} flexShrink={0} flexGrow={0} style={{margin:'0.2rem'}} >
                                 <img src={post.featured_images} style={{width:'5rem', height:'5rem',border:'none'}}/>
                                 </Table.TextCell>
                             
                                 <Table.TextCell flexBasis={660} flexShrink={0} flexGrow={0} style={{padding:'1rem', paddingLeft:'0rem'}}>
-                                <span style={{ color: '#66788A', fontSize: '0.7rem', paddingTop: '1rem' }}>{post.date}</span><br />
-                                    <span style={{ color: '#234361', cursor: 'pointer', fontWeight: '400'}}>{post.title.rendered}</span><br />
-                                    <span style={{ color: '#66788A', fontSize: '0.7rem' }}>TransformX</span>
+                                <span style={{ color: '#66788A', fontSize: '0.7em', paddingTop: '1rem' }}>{post.date}</span><br />
+                                    <span style={{ color: '#234361', cursor: 'pointer', fontWeight: '400', fontSize:'1.2em'}}>{post.title.rendered}</span><br />
+                                    <span style={{ color: '#66788A', fontSize: '0.7em' }}>TransformX</span>
                                 </Table.TextCell>
                             </Table.Row>
                             </Link>
