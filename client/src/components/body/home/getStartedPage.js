@@ -23,7 +23,7 @@ function getStartedPage() {
                     <Link to="/register" ><Button style={{ marginRight: '0.5rem', background: '#FAD069', fontWeight: '700', marginTop: '-1rem' }}>Get Started ►</Button></Link>
                 </div>
             </div>
-            <div style={{ height: '250px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            <div style={{ height: '300px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'flex-end', padding: '2rem' }}>
                     <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
                         <br /><br />
@@ -41,7 +41,7 @@ function getStartedPage() {
                 </div>
             </div>
 
-            <div style={{ height: '250px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            <div style={{ height: '300px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <div style={{ display: 'flex', flexDirection: 'row', backgroundColor: '#fff', justifyContent: 'space-between', alignItems: 'flex-end', padding: '2rem' }}>
                     <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
                         <ImgWrapper>
@@ -60,7 +60,7 @@ function getStartedPage() {
             </div>
 
 
-            <div style={{ height: '250px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            <div style={{ height: '300px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <div style={{ display: 'flex', flexDirection: 'row', backgroundColor: '#fff', justifyContent: 'space-between', alignItems: 'flex-end', padding: '2rem' }}>
                     <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
                         <br /><br />
@@ -79,7 +79,7 @@ function getStartedPage() {
             </div>
 
 
-            <div style={{ height: '250px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            <div style={{ height: '300px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <div style={{ display: 'flex', flexDirection: 'row', backgroundColor: '#fff', justifyContent: 'space-between', alignItems: 'flex-end', padding: '2rem' }}>
                     <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
                         <ImgWrapper>
@@ -97,7 +97,7 @@ function getStartedPage() {
                 </div>
             </div>
 
-            <div style={{ height: '250px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            <div style={{ height: '300px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <div style={{ display: 'flex', flexDirection: 'row', backgroundColor: '#fff', justifyContent: 'space-between', alignItems: 'flex-end', padding: '2rem' }}>
                     <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
                         <br /><br />
