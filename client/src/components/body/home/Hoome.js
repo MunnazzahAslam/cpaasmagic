@@ -24,10 +24,10 @@ function Hoome() {
             <div className="topbar">
                 <Heading style={{ textAlign: 'left' }}>Discover APIs and the companies behind them</Heading>
                 <div style={{ display: 'flex', justifyContent: 'flex-start', flexWrap: 'wrap' }}>
-                    <Link to="/register" ><Button className="small" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginRight: '0.5em', marginTop: '0.5em',padding:'0.7em', background: '#fff', color: '#1B2653', fontSize: '0.8em' }}><img src={Picture4} style={{ marginRight: '0.3rem', color: '#04C0A6', width: '1.2rem', height: '1.2rem' }} />Vendors</Button></Link>
-                    <Link to="/register" ><Button className="small" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginRight: '0.5em', marginTop: '0.5em',padding:'0.7em', background: '#fff', color: '#1B2653', fontSize: '0.8em'  }}><img src={Picture5} style={{ marginRight: '0.3rem', color: '#04C0A6', width: '1.2rem', height: '1.2rem' }} />APIs</Button></Link>
-                    <Link to="/register" ><Button className="small" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginRight: '0.5em', marginTop: '0.5em',padding:'0.7em', background: '#fff', color: '#1B2653', fontSize: '0.8em'  }}><img src={Picture6} style={{ marginRight: '0.3rem', color: '#04C0A6', width: '1.2rem', height: '1.2rem' }} />Use Cases</Button></Link>
-                    <Link to="/register" ><Button  className="small" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginRight: '0.5em', marginTop: '0.5em',padding:'0.7em', background: '#fff', color: '#1B2653', fontSize: '0.8em'  }}><img src={Picture7} style={{ marginRight: '0.3rem', color: '#04C0A6', width: '1.2rem', height: '1.2rem' }} />Successes</Button></Link>
+                    <Link to="/register" ><Button className="small" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginRight: '0.5em', marginTop: '0.5em', padding: '0.7em', background: '#fff', color: '#1B2653', fontSize: '0.8em' }}><img src={Picture4} style={{ marginRight: '0.3rem', color: '#04C0A6', width: '1.2rem', height: '1.2rem' }} />Vendors</Button></Link>
+                    <Link to="/register" ><Button className="small" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginRight: '0.5em', marginTop: '0.5em', padding: '0.7em', background: '#fff', color: '#1B2653', fontSize: '0.8em' }}><img src={Picture5} style={{ marginRight: '0.3rem', color: '#04C0A6', width: '1.2rem', height: '1.2rem' }} />APIs</Button></Link>
+                    <Link to="/register" ><Button className="small" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginRight: '0.5em', marginTop: '0.5em', padding: '0.7em', background: '#fff', color: '#1B2653', fontSize: '0.8em' }}><img src={Picture6} style={{ marginRight: '0.3rem', color: '#04C0A6', width: '1.2rem', height: '1.2rem' }} />Use Cases</Button></Link>
+                    <Link to="/register" ><Button className="small" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginRight: '0.5em', marginTop: '0.5em', padding: '0.7em', background: '#fff', color: '#1B2653', fontSize: '0.8em' }}><img src={Picture7} style={{ marginRight: '0.3rem', color: '#04C0A6', width: '1.2rem', height: '1.2rem' }} />Successes</Button></Link>
                 </div>
             </div>
             <div className="Cards">
@@ -68,21 +68,22 @@ function Hoome() {
                     </Card>
                 </div>
             </div>
-            <div className="topbar banner">
+            <div className="topbar banner" >
                 <div className="col">
                     <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
                         <Heading style={{ textAlign: 'left' }}>Elevate your search with cpaasmagic Pro</Heading>
-                        <Subtitle style={{ textAlign: 'left', maxWidth: '750px' }}>Intelligently search and target the right opportunities with advanced search filters, analysis tools, and company alerts.</Subtitle>
+                        <Subtitle style={{ textAlign: 'left', maxWidth: '550px' }}>Intelligently search and target the right opportunities with advanced search filters, analysis tools, and company alerts.</Subtitle>
                         <div style={{ display: 'flex', justifyContent: 'flex-start' }}>
                             <Link to="/register" ><Button style={{ marginRight: '0.5rem', background: '#FAD069', fontWeight: '700' }}>Start Free Trial ►</Button></Link>
                         </div>
                     </div>
-                    <div>
-                        <ImgWrapper>
-                            <Image src={Picture3} className="laptop" style={{ alignSelf: 'left' }} />
-                        </ImgWrapper>
-                    </div>
                 </div>
+                <div>
+                    <ImgWrapper>
+                        <Image src={Picture3} className="laptop" style={{ margin:'0rem'}} />
+                    </ImgWrapper>
+                </div>
+
             </div>
             <div className="bottomCards" style={{ backgroundColor: '#F1F3FE' }}>
                 <div className="Cards"><Heading style={{ textAlign: 'left', marginLeft: '2rem', marginBottom: '2rem' }}>cpaasmagic insights & analysis</Heading>

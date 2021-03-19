@@ -40,6 +40,14 @@
     color: #1B2653;
     padding: 30px ;
 }
+.banner{
+    background-image: linear-gradient(to right,#9AE3D9, #19C2AB);
+    color:#fff;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+}
+
 @media screen and (max-width: 1100px){
 
 }
@@ -115,9 +123,4 @@
     display: flex;
     justify-content: center;
     align-items: center;
-}
-.banner{
-    background-image: linear-gradient(to right,#9AE3D9, #19C2AB);
-    color:#fff;
-    height: auto;
 }
