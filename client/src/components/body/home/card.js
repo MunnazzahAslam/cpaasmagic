@@ -75,8 +75,7 @@ class RightPortion extends React.Component {
                             , cellStyle: {
                                 whiteSpace: 'nowrap', textAlign: 'left'
                             }, render: rowData => <div style={{margin:'0.1rem'}}>
-                                <Link to={`/vendors/${rowData.TransformX_Vendor_Id}`}>
-                                    <div style={{  display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between'}}>
+                                   <div style={{  display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between'}}>
                                     <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
                                         <img src={rowData.TransformX_Vendor_Logo} style={{ width: '3rem', height: '3rem',marginRight:'0.5rem' }} alt="logo" />
                                         <p style={{ color: '#212529', fontWeight: '400' }}>{rowData.TransformX_Vendor_Name}</p>
@@ -84,8 +83,7 @@ class RightPortion extends React.Component {
                                     <div>
                                         <Button style={{ textAlign: 'right' }}>View Profile</Button>
                                     </div>
-                                     </div>
-                                </Link></div>
+                                     </div></div>
                         },
 
 

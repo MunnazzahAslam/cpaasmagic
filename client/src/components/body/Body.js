@@ -29,6 +29,7 @@ import Hoome from '../body/home/Hoome'
 import NewLayout from '../body/NewLayout/NewLayout'
 import getStartedPage from '../body/home/getStartedPage';
 import Dashboard from '../body/Dashboard/Dashboard'
+import Articles from '../body/Articles/Articles' 
 function Body() {
     const auth = useSelector(state => state.auth)
     const {isLogged} = auth
@@ -40,6 +41,7 @@ function Body() {
                 <Route path="/getstarted" component={getStartedPage} />
                 <Route path="/map" component={Maps} />
                 <Route path="/new" component={NewLayout} />
+                <Route path="/blog/:id" component={Articles} />
                 <Route path="/instagram" component={InstaEmbed} />
                 <Route path="/allvendors" component={VendorsPage} />
                 <Route path="/search/vendors/notloggedin" component={Vendors} />

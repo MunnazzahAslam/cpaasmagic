@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-
+import axios from "axios";
+ 
 export const DataContext = React.createContext();
 
 export class DataProvider extends Component {
@@ -8,7 +9,8 @@ export class DataProvider extends Component {
         vendors: [],
         apis: [],
         usecases: [],
-        successstories: []
+        successstories: [],
+        posts:[]
     };
 
     //Fetching data from API and updating cart values according to the user selection
@@ -18,6 +20,12 @@ export class DataProvider extends Component {
             .then(vendorsList => {
                 this.setState({ vendors: vendorsList });
             });
+            axios.get('https://www.transformx.io/wp-json/wp/v2/posts?categories=135&categories=54&categories=155')
+            .then(res => this.setState({
+                posts: res.data,
+                isLoaded: true
+            }))
+            .catch(err => console.log(err))
         fetch('/api/apis')
             .then((response) => response.json())
             .then(apisList => {
@@ -37,11 +45,11 @@ export class DataProvider extends Component {
 
 
     render() {
-        const { vendors, apis, usecases, successstories } = this.state;
+        const { vendors, apis, usecases, successstories, posts } = this.state;
         return (
             //Passing values as props to the consuming components
             <DataContext.Provider
-                value={{ vendors, apis, usecases, successstories }}>
+                value={{ vendors, apis, usecases, successstories, posts }}>
                 {this.props.children}
             </DataContext.Provider>
         )
