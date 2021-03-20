@@ -23,13 +23,15 @@ padding-left:50px;
 }
 `
 export const Button = styled.button`
-border-radius: 28px;
+border-radius: 35px;
 background: #00BFA5;
 white-space:no-wrap;
-padding: 6px 25px;
+padding: 12px 25px;
 color: #fff;
 outline:none;
 border:none;
+font-size:1em;
+letter-spacing:1.2px;
 cursor:pointer;
 &:hover{
     transition:all 0.3s ease-out;
