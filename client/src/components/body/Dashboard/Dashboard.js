@@ -4,21 +4,41 @@ import CardContent from '@material-ui/core/CardContent';
 import { Button, Container } from '../../../globalStyles';
 import { InfoSec, InfoRow, InfoColumn, TextWrapper, Heading, Subtitle, ImgWrapper, Img, Image, InfoColumnHalf } from '../home/InfoSection.elements';
 import { Link } from 'react-router-dom';
+import Vendors from '../Dashboard/Vendors'
+import APIs from '../Dashboard/APIs'
+import Usecases from '../Dashboard/Usecases'
+import SuccessStories from '../Dashboard/SuccessStories'
+import '../Dashboard/Dashboard.css';
 
 function Dashboard() {
     return (
-        <div style={{ color: '#1B2653' }}>
-            <InfoRow style={{ backgroundColor: '#F1F3FE' }}>
-                <InfoColumn>
-                    <TextWrapper>
-                        <Heading style={{ marginTop: '30px' }}>Seller Dashboard</Heading>
-                        <div style={{ display: 'flex', justifyContent: 'center' }}>
-                            <Link to="/search/vendors" ><Button style={{ marginRight: '0.5rem', background: '#FAD069', fontWeight: '700', marginTop: '-1rem' }}>Get Started ►</Button></Link>
-                        </div>
-                    </TextWrapper>
-                </InfoColumn>
-            </InfoRow>
+        <div style={{ color: '#1B2653'}} className="main">
+            <div style={{ display: 'flex', justifyContent: 'center' }}>
+                <Card className="card1" style={{boxShadow: 'none'}}>
+                    <CardContent style={{color:'#fff'}}>
+                    <span style={{fontSize:'0.8em', fontWeight:'300', marginRight:'0.5rem',marginLeft:'0.5rem'}}>Vendors</span>21 
+                    <br/><Link to="/search/vendors" style={{color:'#fff', fontWeight:'400'}}><u>View All</u></Link>
+                    </CardContent>
+                </Card>
+            <Card  className="card2" style={{boxShadow: 'none'}}><CardContent style={{color:'#fff'}}>
+            <span style={{fontSize:'0.8em', fontWeight:'300', marginRight:'0.5rem'}}>Communication APIs</span>141 <br/><Link to="/search/apis" style={{color:'#fff', fontWeight:'400'}}><u>View All</u></Link>
+                   </CardContent></Card>
+            <Card  className="card3"  style={{boxShadow: 'none'}}><CardContent style={{color:'#fff'}}>
+            <span style={{fontSize:'0.8em', fontWeight:'300', marginRight:'0.5rem'}}>Use Cases</span>425 <br/><Link to="/search/usecases" style={{color:'#fff', fontWeight:'400'}}><u>View All</u></Link>
+                   </CardContent></Card>
+            <Card  className="card4"  style={{boxShadow: 'none'}}><CardContent style={{color:'#fff'}}>
+            <span style={{fontSize:'0.8em', fontWeight:'300', marginRight:'0.5rem'}}>Successes</span>342 <br/><Link to="/search/successes" style={{color:'#fff', fontWeight:'400'}}><u>View All</u></Link>
+                   </CardContent></Card>
         </div>
+        <div style={{ display: 'flex', justifyContent: 'center' }}>
+            <Vendors/>
+            <APIs/>
+        </div>
+        <div style={{ display: 'flex', justifyContent: 'center'}}>
+            <Usecases/>
+            <SuccessStories/>
+        </div>
+        </div >
     )
 }
 export default Dashboard

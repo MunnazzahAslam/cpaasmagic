@@ -61,7 +61,7 @@ function Hoome() {
                             <ImgWrapper>
                                 <Image style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }} src={Picture2} />
                             </ImgWrapper><Heading style={{ color: '#00BFA5', fontSize: '1.2em' }}>Learn CPaaS</Heading>
-                            <Subtitle style={{ color: '#1D217E' }}>Get latest insights or enroll in our trainings that help you get up to speed with CPaaS<span style={{color:'#fff'}}>speed with CPaaS</span> </Subtitle>
+                            <Subtitle style={{ color: '#1D217E' }}>Get latest insights or enroll in our trainings that help you get up to speed with CPaaS </Subtitle>
                             <div style={{ display: 'flex', justifyContent: 'center' }}>
                                 <Button style={{ background: '#FAD069', fontWeight: '500' }}>Coming Soon</Button>
                             </div>              </CardContent>
