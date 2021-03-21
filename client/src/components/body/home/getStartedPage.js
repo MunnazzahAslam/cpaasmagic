@@ -127,8 +127,8 @@ function getStartedPage() {
                                         • Personalized alerts<br />
                                         • Data visualizations<br />
                                         • CSV exports</Subtitle>
-                            <div style={{ display: 'flex', justifyContent: 'justify' }}>
-                                <Link to="/register" ><Button style={{ marginRight: '0.5rem', background: '#FAD069', fontWeight: '700' }}>Start Free Trial ►</Button></Link>
+                            <div style={{ display: 'flex', justifyContent: 'center' }}>
+                                <Link to="/register" ><Button style={{ marginRight: '0.5rem', background: '#FAD069', fontWeight: '500' }}>Start Free Trial</Button></Link>
                             </div>
                         </CardContent>
                     </Card>
@@ -139,7 +139,7 @@ function getStartedPage() {
                                 • Actionable data for your sales reps<br />
                                         • Seamless integration with your systems<br /></Subtitle><br/>
                             <div style={{ display: 'flex', justifyContent: 'center' }}><br />
-                                <Button style={{ marginRight: '0.5rem', background: '#FAD069', fontWeight: '700' }}>Coming Soon</Button>
+                                <Button style={{ marginRight: '0.5rem', background: '#FAD069', fontWeight: '500' }}>Coming Soon</Button>
                             </div>
                         </CardContent>
                     </Card>
