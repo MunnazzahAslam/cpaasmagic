@@ -356,15 +356,7 @@ export class Vendor extends Component {
                                                                     <p>{rowData.TransformX_Success_Story_Region}</p>
                                                                 </div>
                                                             </Link></div>
-                                                    },
-                                                    { title: 'Success Region', field: 'TransformX_Success_Story_Region',filterPlaceholder: 'Search by Industry',  cellStyle: {
-                                                        whiteSpace: 'nowrap'
-                                                       },  render: rowData => <div>
-                                                       <Link to={`/successstories/${rowData.TransformX_Success_Story_Id}`}>
-                                                       <div style={{ display: 'flex', flexDirection: 'row'}}>
-                                                           <p>{rowData.TransformX_Success_Story_Country}</p>
-                                                           </div>
-                                                       </Link></div>}
+                                                    }
                                                 ]}
                                                 key={this.state.successstories.TransformX_API_Id}
                                                 data={this.state.successstories}
