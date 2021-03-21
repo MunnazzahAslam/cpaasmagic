@@ -63,14 +63,14 @@ const Header = () => {
 
     const userLoggedNav = () => {
         return <>
-             <>
-                                    <NavLogo to="/" onClick={handleClick}>
-                                    <img src={logo} className="logo"/>
-                                    </NavLogo>
-                                    <MobileIcon onClick={handleClick}>
-                                        {click ? <FaTimes color="#fff" /> : <FaBars color="#fff" />}
-                                    </MobileIcon>
-                                    {/*                    <a href="/search"><TextField style={{ margin: '20px !imporant' }} id="outlined-search" type="search" variant="outlined" InputProps={{
+            <>
+                <NavLogo to="/" onClick={handleClick}>
+                    <img src={logo} className="logo" />
+                </NavLogo>
+                <MobileIcon onClick={handleClick}>
+                    {click ? <FaTimes color="#fff" /> : <FaBars color="#fff" />}
+                </MobileIcon>
+                {/*                    <a href="/search"><TextField style={{ margin: '20px !imporant' }} id="outlined-search" type="search" variant="outlined" InputProps={{
                                                     startAdornment: (
                                                         <InputAdornment position="start">
                                                             <SearchIcon />
@@ -78,8 +78,13 @@ const Header = () => {
                                                     ),
                                                 }} /></a>
                                             */}
-                                </>
+            </>
             <NavMenu onClick={handleClick} click={click}>
+                <NavItem>
+                    <NavLinks to="/sellerdashboard">
+                        Seller Dashboard
+                        </NavLinks>
+                </NavItem>
                 <NavItem>
                     <NavLinks to="/">
                         Offerings
@@ -115,7 +120,7 @@ const Header = () => {
                                 :
                                 <>
                                     <NavLogo to="/" onClick={handleClick}>
-                                    <img src={logo} className="logo"/>
+                                        <img src={logo} className="logo" />
                                     </NavLogo>
                                     <MobileIcon onClick={handleClick}>
                                         {click ? <FaTimes color="#fff" /> : <FaBars color="#fff" />}

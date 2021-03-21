@@ -32,7 +32,12 @@ import Search from '@material-ui/icons/Search';
 import ViewColumn from '@material-ui/icons/ViewColumn';
 import InstaEmbed from '../Social/InstaEmbed';
 import Maps from '../Maps/Maps';
+import Picture4 from '../home/Picture4.png';
+import Picture5 from '../home/Picture5.png';
+import Picture6 from '../home/Picture6.png';
+import Picture7 from '../home/Picture7.png';
 import { Link } from 'react-router-dom';
+import '../Tabs/Tabs.css';
 import { Button } from '../../../globalStyles';
 var { SocialIcon } = require('react-social-icons');
 const tableIcons = {
@@ -104,50 +109,48 @@ export class Vendor extends Component {
             <>
                 {
                     vendors.map(vendor => (
-                        <div key={vendor.TransformX_Vendor_Id} >
+                        <div key={vendor.TransformX_Vendor_Id}  >
                             <br />
-                            <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center',margin:'2rem 0' }}>
-                                <img style={{ margin: '0 2rem', borderRadius: '8px', width: '12vw', height: '12vw' }} src={vendor.TransformX_Vendor_Logo} alt="VendorProfile" />
+                            <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', margin: '2rem 0',paddingLeft: '5%', }}>
+                                <img style={{ margin: '0 2rem', borderRadius: '8px', width: '8vw', height: '8vw', marginLeft: '2rem' }} src={vendor.TransformX_Vendor_Logo} alt="VendorProfile" />
                                 <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
                                     <p style={{ color: '#ced4da', fontSize: '1.5rem' }}>Vendor</p>
-                                    <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center'  }}>
                                     <h2 style={{ fontSize: 'clamp(1.7rem, 1.5vw, 1.2rem)', fontWeight: '400', fontSize: '4rem' }}>{vendor.TransformX_Vendor_Name}</h2>
-                                      <div style={{marginLeft:'0.5rem', marginTop:'0.5rem'}}>
-                                        <SocialIcon network="linkedin" style={{ height: 35, width: 35, marginRight: '1rem' }} />
-                                        <SocialIcon network="youtube" style={{ height: 35, width: 35, marginRight: '1rem' }} />
-                                        <SocialIcon network="facebook" style={{ height: 35, width: 35, marginRight: '1rem' }} />
-                                        <SocialIcon network="twitter" style={{ height: 35, width: 35, marginRight: '1rem' }} />
+                                    <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
+                                        <div style={{ marginLeft: '0.5rem', marginTop: '0.5rem' }}>
+                                            <SocialIcon network="linkedin" style={{ height: 35, width: 35, marginRight: '1rem' }} />
+                                            <SocialIcon network="youtube" style={{ height: 35, width: 35, marginRight: '1rem' }} />
+                                            <SocialIcon network="facebook" style={{ height: 35, width: 35, marginRight: '1rem' }} />
+                                            <SocialIcon network="twitter" style={{ height: 35, width: 35, marginRight: '1rem' }} />
                                         </div>
-                                    </div>
-                                    <div style={{ display: 'flex', flexDirection: 'row', margin:'1rem 0' }}>
-                                        <Button>Compare</Button>
-                                        <Button style={{ color: '#00BFA5', background: '#fff' }}>Visit Website</Button>
                                     </div>
                                 </div>
                             </div>
                             <Tabs defaultIndex={0}>
                                 <br />
                                 <br />
-                                <div className=".react-tabs__tab-list"  >
-                                    <TabList style={{ margin: '0 2.5rem', color: '#282828' }}>
-                                        <Tab style={{ color: '#282828' }} ><div style={{ display: 'flex', flexDirection: 'row' }}><LocationCityIcon style={{ marginRight: '0.5rem', color: '#282828' }} />About</div></Tab>
-                                        <Tab style={{ color: '#282828' }}><div style={{ display: 'flex', flexDirection: 'row' }}><ExtensionIcon style={{ marginRight: '0.5rem', color: '#282828' }} />APIs</div></Tab>
-                                        <Tab style={{ color: '#282828' }}><div style={{ display: 'flex', flexDirection: 'row' }}><RateReviewIcon style={{ marginRight: '0.5rem', color: '#282828' }} />Use Cases</div></Tab>
-                                        <Tab style={{ color: '#282828' }}><div style={{ display: 'flex', flexDirection: 'row' }}><ShowChartIcon style={{ marginRight: '0.5rem', color: '#282828' }} />Success Stories</div></Tab>
+                                <div className=".react-tabs__tab-list" style={{ marginLeft: '4rem', width: '1400px' }} >
+                                    <TabList style={{ color: '#282828', paddingLeft: '5%', }}>
+                                        <Tab style={{ color: '#282828' }} ><div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}><img src={Picture4} style={{ width: '2rem', height: '2rem', borderRadius: '0px', transform: 'translateY(0px)', marginRight: '0.5em' }} />About</div></Tab>
+                                        <Tab style={{ color: '#282828' }}><div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}><img src={Picture5} style={{ width: '2rem', height: '2rem', borderRadius: '0px', transform: 'translateY(0px)', marginRight: '0.5em' }} />APIs</div></Tab>
+                                        <Tab style={{ color: '#282828' }}><div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}><img src={Picture6} style={{ width: '2rem', height: '2rem', borderRadius: '0px', transform: 'translateY(0px)', marginRight: '0.5em' }} />Use Cases</div></Tab>
+                                        <Tab style={{ color: '#282828' }}><div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}><img src={Picture7} style={{ width: '2rem', height: '2rem', borderRadius: '0px', transform: 'translateY(0px)', marginRight: '0.5em' }} />Successes</div></Tab>
                                     </TabList>
                                 </div>
                                 <div className="boxt">
                                     <TabPanel>
-                                        <div style={{ display: 'flex', flexDirection: 'row', marginTop: '1rem' }}>
-                                            <Card className="card" style={{ padding: '2rem', margin: '0 2rem', width: '70%' }}>
+                                        <div style={{ display: 'flex', flexDirection: 'row', marginTop: '1rem', paddingLeft:'5%' }}>
+                                            <Card className="card" style={{ padding: '2rem', margin: '0 2rem', width: '60%' }}>
                                                 {/* <Button variant="contained" style={{ background: "#00B0F0", color: '#fff', borderRadius: '0.5rem', marginLeft: 'auto', padding: '0.6rem' }}>
                                                         Pure Player
                                                         </Button>
                                                     <Button variant="contained" style={{ background: "#002060", color: '#fff', borderRadius: '0.5rem', marginLeft:'4px', padding: '0.6rem' }}>
                                                         Top Choice
                                                     </Button>*/}
-                                                <br />
-                                                <h2 style={{ fontSize: 'clamp(1.7rem, 1.5vw, 1.2rem)', margin: '1.5rem 0', fontWeight: '700' }}><LocationCityIcon style={{ marginRight: '0.5rem', color: '#282828' }} />About</h2>
+                                                <div style={{display: 'flex', flexDirection:'row', justifyContent:'flex-start'}}>
+                                                    <Button style={{marginRight:'0.5rem', backgroundImage: 'linear-gradient(45deg,#6DCDF2,#1EB5ED )'}}>Pure Player</Button>
+                                                    <Button style={{backgroundImage: 'linear-gradient(45deg,#62A6D9,#1F7FC4 )'}}>Top Vendors</Button>
+                                                </div>
                                                 <p style={{ textAlign: 'justify', fontSize: 'clamp(0.8rem, 1vw, 1.4rem)' }}>{vendor.LinkedIn_Vendor_Overview}</p>
                                                 <br />
                                                 <p style={{ textAlign: 'justify', fontSize: 'clamp(0.8rem, 1vw, 1.4rem)' }}>Founders <br /> <span style={{ color: "#002060" }}>{vendor.Crunchbase_Vendor_Founders}</span></p>
@@ -168,204 +171,223 @@ export class Vendor extends Component {
                                         </div>
                                     </TabPanel >
                                     <TabPanel>
-                                        <h2 style={{ fontSize: 'clamp(1.7rem, 1.5vw, 1.2rem)', margin: '2rem', fontWeight: '700' }}>  <ExtensionIcon style={{ marginRight: '0.5rem', color: '#282828' }} />APIs</h2>
-                                        <div style={{ display: 'flex', flexDirection: 'row', marginTop: '2rem' }}>
+                                        <div style={{ display: 'flex', flexDirection: 'row', marginTop: '2rem', marginLeft: '2rem',paddingLeft:'5%', width:'100%' }}>
                                             <MaterialTable
+                                                title={<h1 style={{ color: '#1D217E' }}>APIs</h1>}
                                                 icons={tableIcons}
-                                                style={{ width: '70%', fontSize: 'clamp(0.8rem, 1vw, 1.4rem)', tableLayout: 'fixed', margin: '0 2rem' }}
+                                                style={{ fontSize: 'clamp(0.8rem, 1vw, 1.4rem)', tableLayout: 'fixed' }}
                                                 columns={[
+
                                                     {
-                                                        title: 'API', field: 'Vendor_API_Name',filterPlaceholder: 'Search by Keyword', render: rowData => <div style={{ display: 'flex', justifyContent: 'justify', alignItems: 'center' }}>
+                                                        title: 'API Name', field: 'Vendor_API_Name', filterPlaceholder: 'Search by Name', render: rowData => <div>
                                                             <Link to={`/apis/${rowData.TransformX_API_Id}`}>
-                                                                <p>{rowData.Vendor_API_Name}</p>
+                                                                <div style={{ display: 'flex', flexDirection: 'row' }}>
+                                                                    <img src={rowData.TransformX_API_Logo} style={{ color: '#2dce89', marginRight: '0.3rem' }} />
+                                                                    <p>{rowData.Vendor_API_Name}</p>
+                                                                </div>
                                                             </Link></div>
                                                     },
                                                     {
-                                                        title: 'Category', field: 'TransformX_API_Category1',filterPlaceholder: 'Search by Keyword', render: rowData => <div style={{ display: 'flex', justifyContent: 'justify', alignItems: 'center' }}>
+                                                        title: 'API Category', field: 'TransformX_API_Category1', filterPlaceholder: 'Search by Category', render: rowData => <div style={{ display: 'flex', justifyContent: 'justify', alignItems: 'center' }}>
                                                             <Link to={`/apis/${rowData.TransformX_API_Id}`}>
-                                                                <p>{rowData.TransformX_API_Category1}</p>
+                                                                <div style={{ display: 'flex', flexDirection: 'row' }}>
+                                                                    <p>{rowData.TransformX_API_Category1}</p>
+                                                                </div>
+                                                            </Link></div>
+                                                    },
+
+
+                                                    {
+                                                        title: 'API Description', field: 'TransformX_API_Description', filterPlaceholder: 'Search by keyword', cellStyle: {
+                                                            whiteSpace: 'nowrap'
+                                                        }, render: rowData => <div style={{ display: 'flex', justifyContent: 'justify', alignItems: 'center' }}>
+                                                            <Link to={`/apis/${rowData.TransformX_API_Id}`}>
+                                                                <p>{rowData.TransformX_API_Description}</p>
                                                             </Link></div>
                                                     }
                                                 ]}
-                                                key={apis.TransformX_API_Id}
-                                                data={apis}
+                                                key={this.state.apis.TransformX_API_Id}
+                                                data={this.state.apis}
                                                 options={{
+                                                    selection: true,
                                                     paging: true,
-                                                    pageSize: 10,       // make initial page size
-                                                    emptyRowsWhenPaging: false,   //to make page size fix in case of less data rows
-                                                    pageSizeOptions: [10, 15, 20],    // rows selection options                                   
+                                                    pageSize: 5,       // make initial page size
+                                                    emptyRowsWhenPaging: true,   //to make page size fix in case of less data rows
+                                                    pageSizeOptions: [5, 10, 15],    // rows selection options
 
                                                     filtering: true,
                                                     headerStyle: {
                                                         fontSize: 'clamp(0.8rem, 1vw, 1.4rem)',
                                                         backgroundColor: '#F6F9FC'
                                                     },
-                                                    cellStyle: {
-                                                        textAlign: 'center'
-                                                    },
                                                     filterCellStyle: {
                                                         fontSize: 'clamp(0.8rem, 1vw, 1.4rem)'
                                                     },
-                                                    exportButton: false,
-                                                    showTitle: false,
-                                                    search: false
+                                                    exportButton: true,
+                                                    showTitle: true,
+                                                    search: true
                                                 }
                                                 }
                                                 components={{
                                                     Toolbar: props => (
-                                                        <div style={{ height: '0px' }}>
+                                                        <div style={{ height: '60px' }}>
                                                             <MTableToolbar {...props} />
                                                         </div>
                                                     ),
                                                 }}
-                                                localization={{ toolbar: { searchPlaceholder: 'Search here..' } }}
                                             />
-                                            <Card style={{ height: '480px', width: '504px' }}>
-                                                <GoogleMapReact
-                                                    bootstrapURLKeys={{ key: 'AIzaSyD9LDJdrqc0aDzNu3IpJ3tuS5d9pW_XE_I' }}
-                                                    defaultCenter={this.props.center}
-                                                    defaultZoom={this.props.zoom}
-                                                >
-                                                    <div
-                                                        lat={59.955190}
-                                                        lng={30.33789}
-                                                    ></div>
-                                                </GoogleMapReact>
-                                            </Card>
                                         </div>
                                     </TabPanel>
                                     <TabPanel>
-                                        <h2 style={{ fontSize: 'clamp(1.7rem, 1.5vw, 1.2rem)', margin: '2rem', fontWeight: '700' }}><RateReviewIcon style={{ marginRight: '0.5rem', color: '#282828' }} />Use Cases</h2>
-                                        <div style={{ display: 'flex', flexDirection: 'row', marginTop: '2rem' }}>
+                                        <div style={{ display: 'flex', flexDirection: 'row', marginTop: '2rem', marginLeft: '2rem',paddingLeft:'5%', width:'100%' }}>
                                             <MaterialTable
+                                                title={<h1 style={{ color: '#1D217E' }}>Use Cases</h1>}
                                                 icons={tableIcons}
-                                                style={{ width: '70%', fontSize: 'clamp(0.8rem, 1vw, 1.4rem)', tableLayout: 'fixed', margin: '2rem' }}
+                                                style={{ fontSize: 'clamp(0.8rem, 1vw, 1.4rem)', tableLayout: 'fixed', color: '#32325d !important' }}
                                                 columns={[
+
+
                                                     {
-                                                        title: 'Usecase', field: 'TransformX_Usecase_Name',filterPlaceholder: 'Search by Keyword', render: rowData => <div style={{ display: 'flex', justifyContent: 'start' }}>
+                                                        title: 'Use Case Name', field: 'TransformX_Usecase_Name', filterPlaceholder: 'Search by keyword', cellStyle: {
+                                                            whiteSpace: 'nowrap', textAlign: 'left'
+                                                        }, render: rowData => <div style={{ display: 'flex', justifyContent: 'start' }}>
                                                             <Link to={`/usecases/${rowData.TransformX_Usecase_Id}`}>
                                                                 <p style={{ textAlign: 'justify' }}>{rowData.TransformX_Usecase_Name}</p>
                                                             </Link></div>
                                                     },
+
+                                                    /* { title: 'Category', field: 'TransformX_Usecase_Category',filterPlaceholder: 'Search by Category', cellStyle: {
+                                                         whiteSpace: 'nowrap', textAlign: 'left'
+                                                        }, render: rowData => <div style={{ display: 'flex', justifyContent: 'start' }}>
+                                                     <Link to={`/usecases/${rowData.TransformX_Usecase_Id}`}>
+                                                         <p style={{ textAlign: 'justify' }}>{rowData.TransformX_Usecase_Category}</p>
+                                                     </Link></div> }, */
                                                     {
-                                                        title: 'Industry', field: 'TransformX_Usecase_Industry',filterPlaceholder: 'Search by Keyword', render: rowData => <div style={{ display: 'flex', justifyContent: 'start' }}>
+                                                        title: 'Use Case Industry', field: 'TransformX_Usecase_Industry', filterPlaceholder: 'Search by Industry', cellStyle: {
+                                                            whiteSpace: 'nowrap', textAlign: 'left'
+                                                        }, render: rowData => <div style={{ display: 'flex', justifyContent: 'start' }}>
                                                             <Link to={`/usecases/${rowData.TransformX_Usecase_Id}`}>
                                                                 <p style={{ textAlign: 'justify' }}>{rowData.TransformX_Usecase_Industry}</p>
                                                             </Link></div>
                                                     },
+
                                                     {
-                                                        title: 'Category', field: 'TransformX_Usecase_Category',filterPlaceholder: 'Search by Keyword', render: rowData => <div style={{ display: 'flex', justifyContent: 'start' }}>
+                                                        title: 'Use Case Industry', field: 'TransformX_Usecase_Industry', filterPlaceholder: 'Search by Industry', cellStyle: {
+                                                            whiteSpace: 'nowrap', textAlign: 'left'
+                                                        }, render: rowData => <div style={{ display: 'flex', justifyContent: 'start' }}>
+                                                            <Link to={`/usecases/${rowData.TransformX_Usecase_Id}`}>
+                                                                <p style={{ textAlign: 'justify' }}>{rowData.TransformX_Usecase_Industry}</p>
+                                                            </Link></div>
+                                                    },
+
+                                                    {
+                                                        title: 'Use Case Category', field: 'TransformX_Usecase_Category', filterPlaceholder: 'Search by keyword', cellStyle: {
+                                                            width: '40%'
+                                                        }, render: rowData => <div style={{ display: 'flex', justifyContent: 'start' }}>
                                                             <Link to={`/usecases/${rowData.TransformX_Usecase_Id}`}>
                                                                 <p style={{ textAlign: 'justify' }}>{rowData.TransformX_Usecase_Category}</p>
                                                             </Link></div>
                                                     },
+
                                                 ]}
-                                                key={usecases.TransformX_API_Id}
-                                                data={usecases}
+                                                key={this.state.usecases.TransformX_API_Id}
+                                                data={this.state.usecases}
                                                 options={{
+                                                    selection: true,
                                                     paging: true,
-                                                    pageSize: 10,       // make initial page size
+                                                    pageSize: 5,       // make initial page size
                                                     emptyRowsWhenPaging: true,   //to make page size fix in case of less data rows
-                                                    pageSizeOptions: [10, 15, 20],    // rows selection options                                   
+                                                    pageSizeOptions: [5, 10, 15],    // rows selection options
 
                                                     filtering: true,
                                                     headerStyle: {
                                                         fontSize: 'clamp(0.8rem, 1vw, 1.4rem)',
                                                         backgroundColor: '#F6F9FC'
                                                     },
-                                                    cellStyle: {
-                                                        textAlign: 'left'
-                                                    },
                                                     filterCellStyle: {
                                                         fontSize: 'clamp(0.8rem, 1vw, 1.4rem)'
                                                     },
-                                                    exportButton: false,
-                                                    showTitle: false,
-                                                    search: false
+                                                    exportButton: true,
+                                                    showTitle: true,
+                                                    search: true
                                                 }
 
                                                 }
                                                 components={{
                                                     Toolbar: props => (
-                                                        <div style={{ height: '0px' }}>
+                                                        <div style={{ height: '60px' }}>
                                                             <MTableToolbar {...props} />
                                                         </div>
                                                     ),
                                                 }}
                                             />
-                                            <Card style={{ width: '504px', height: '600px',marginTop:'2rem' }}>
-                                                <TwitterTimelineEmbed
-                                                    sourceType="profile"
-                                                    screenName={vendor.TransformX_Vendor_Name}
-                                                    options={{ height: 600, width: 600 }}
-                                                />
-                                            </Card>
                                         </div>
                                     </TabPanel>
                                     <TabPanel>
-                                        <h2 style={{ fontSize: 'clamp(1.7rem, 1.5vw, 1.2rem)', margin: '2rem', fontWeight: '700' }} ><ShowChartIcon style={{ marginRight: '0.5rem', color: '#282828' }} />Successes</h2>
-                                        <div style={{ display: 'flex', flexDirection: 'row', margin: '2rem 0' }}>
+                                        <div style={{ display: 'flex', flexDirection: 'row', margin: '2rem 0', marginLeft: '2rem',paddingLeft:'5%', width:'100%'}}>
                                             <MaterialTable
+                                                title={<h1 style={{ color: '#1D217E' }}>Successes</h1>}
                                                 icons={tableIcons}
-                                                style={{ width: '70%', fontSize: 'clamp(0.8rem, 1vw, 1.4rem)', tableLayout: 'fixed', margin: '2rem' }}
+                                                style={{ fontFamily: 'Glacial Indifference', fontSize: 'clamp(0.8rem, 1vw, 1.4rem)', tableLayout: 'fixed' }}
                                                 columns={[
+
                                                     {
-                                                        title: 'Story', field: 'Vendor_Success_Story_Client_Name', filterPlaceholder: 'Search by Keyword',render: rowData => <div>
+                                                        title: 'Client Name', field: 'Vendor_Success_Story_Client_Name', filterPlaceholder: 'Search by Name', render: rowData => <div>
                                                             <Link to={`/successstories/${rowData.TransformX_Success_Story_Id}`}>
                                                                 <p>{rowData.Vendor_Success_Story_Client_Name}</p>
                                                             </Link></div>
                                                     },
                                                     {
-                                                        title: 'Story', field: 'TransformX_Success_Story_Name',filterPlaceholder: 'Search by Keyword', render: rowData => <div>
+                                                        title: 'Success Title', field: 'TransformX_Success_Story_Name', filterPlaceholder: 'Search by keyword', cellStyle: {
+                                                            whiteSpace: 'nowrap', textAlign: 'left'
+                                                        }, render: rowData => <div>
                                                             <Link to={`/successstories/${rowData.TransformX_Success_Story_Id}`}>
                                                                 <p>{rowData.TransformX_Success_Story_Name}</p>
                                                             </Link></div>
                                                     },
                                                     {
-                                                        title: 'Industry', field: 'TransformX_Success_Story_Industry',filterPlaceholder: 'Search by Keyword', render: rowData => <div>
+                                                        title: 'Success Region', field: 'TransformX_Success_Story_Region', filterPlaceholder: 'Search by Industry', cellStyle: {
+                                                            whiteSpace: 'nowrap'
+                                                        }, render: rowData => <div>
                                                             <Link to={`/successstories/${rowData.TransformX_Success_Story_Id}`}>
-                                                                <p>{rowData.TransformX_Success_Story_Industry}</p>
+                                                                <div style={{ display: 'flex', flexDirection: 'row' }}>
+                                                                    <p>{rowData.TransformX_Success_Story_Region}</p>
+                                                                </div>
                                                             </Link></div>
-                                                    },
+                                                    }
                                                 ]}
-                                                key={successstories.TransformX_Success_Story_Id}
-                                                data={successstories}
+                                                key={this.state.successstories.TransformX_API_Id}
+                                                data={this.state.successstories}
                                                 options={{
+                                                    selection: true,
                                                     paging: true,
-                                                    pageSize: 10,       // make initial page size
+                                                    pageSize: 5,       // make initial page size
                                                     emptyRowsWhenPaging: true,   //to make page size fix in case of less data rows
-                                                    pageSizeOptions: [10, 15, 20],    // rows selection options                                   
+                                                    pageSizeOptions: [5, 10, 15],    // rows selection options
+
                                                     filtering: true,
                                                     headerStyle: {
+                                                        color: 'Black',
+                                                        whiteSpace: 'nowrap',
                                                         fontSize: 'clamp(0.8rem, 1vw, 1.4rem)',
                                                         backgroundColor: '#F6F9FC'
-                                                    },
-                                                    cellStyle: {
-                                                        textAlign: 'left'
                                                     },
                                                     filterCellStyle: {
                                                         fontSize: 'clamp(0.8rem, 1vw, 1.4rem)'
                                                     },
-                                                    exportButton: false,
-                                                    showTitle: false,
-                                                    search: false
+                                                    exportButton: true,
+                                                    showTitle: true,
+                                                    search: true
                                                 }
                                                 }
                                                 components={{
                                                     Toolbar: props => (
-                                                        <div style={{ height: '0px' }}>
+                                                        <div style={{ height: '60px' }}>
                                                             <MTableToolbar {...props} />
                                                         </div>
                                                     ),
                                                 }}
                                             />
-                                            <Card style={{ width: '504px', height: '600px',marginTop:'2rem' }}>
-                                                <TwitterTimelineEmbed
-                                                    sourceType="profile"
-                                                    screenName={vendor.TransformX_Vendor_Name}
-                                                    options={{ height: 600, width: 600 }}
-                                                />
-                                            </Card>
                                         </div>
                                     </TabPanel>
                                 </div>
