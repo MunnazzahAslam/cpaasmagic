@@ -109,7 +109,7 @@ class Successstories extends React.Component {
                            },  render: rowData => <div>
                            <Link to={`/successstories/${rowData.TransformX_Success_Story_Id}`}>
                            <div style={{ display: 'flex', flexDirection: 'row'}}>
-                               <p>{rowData.TransformX_Success_Story_Industry}</p>
+                               <p>{rowData.TransformX_Success_Story_Region}</p>
                                </div>
                            </Link></div>},
                            { title: 'Success Region', field: 'TransformX_Success_Story_Region',filterPlaceholder: 'Search by Industry',  cellStyle: {
@@ -117,7 +117,7 @@ class Successstories extends React.Component {
                            },  render: rowData => <div>
                            <Link to={`/successstories/${rowData.TransformX_Success_Story_Id}`}>
                            <div style={{ display: 'flex', flexDirection: 'row'}}>
-                               <p>{rowData.TransformX_Success_Story_Region}</p>
+                               <p>{rowData.TransformX_Success_Story_Country}</p>
                                </div>
                            </Link></div>}
                     ]}
