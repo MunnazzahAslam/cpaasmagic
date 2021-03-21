@@ -121,13 +121,13 @@ function getStartedPage() {
                     <Card className="hover" style={{ width: '320px', boxShadow: 'inset 1px 0.5px 2px 0.5px #d6fffa, 1px 1px 2.5px 0.5px #d6fffa' }}  >
                         <CardContent style={{ textAlign: 'left' }}>
                             <Heading style={{ color: '#00BFA5', fontSize: '1.2em' }}>cpaasmagic Pro</Heading>
-                            <Subtitle style={{ color: '#1D217E', textAlign: 'center' }}>For those who would like to research directly
-                                        within the cpaasmagic web interface. Access:<br /><br />
-                                <Subtitle style={{ textAlign: 'left', marginLeft: '1rem' }}>• Advanced search<br />
+                            <Subtitle style={{ color: '#1D217E', textAlign: 'justify' }}>For those who would like to research directly
+                                        within the cpaasmagic web interface. Access:<br /><br/>
+                                        • Advanced search<br />
                                         • Personalized alerts<br />
                                         • Data visualizations<br />
-                                        • CSV exports</Subtitle></Subtitle>
-                            <div style={{ display: 'flex', justifyContent: 'center' }}>
+                                        • CSV exports</Subtitle>
+                            <div style={{ display: 'flex', justifyContent: 'justify' }}>
                                 <Link to="/register" ><Button style={{ marginRight: '0.5rem', background: '#FAD069', fontWeight: '700' }}>Start Free Trial ►</Button></Link>
                             </div>
                         </CardContent>
@@ -136,8 +136,8 @@ function getStartedPage() {
                         <CardContent>
                             <Heading style={{ color: '#00BFA5', fontSize: '1.2em' }}>cpaasmagic Enterprise</Heading>
                             <Subtitle style={{ color: '#1D217E', textAlign: 'center' }}>Bring cpaasmagic data – from 100+ vendors across the globe – to your database. Get:<br /><br />
-                                <Subtitle style={{ textAlign: 'left', marginLeft: '1rem' }}>• Actionable data for your sales reps<br />
-                                        • Seamless integration with your systems<br /></Subtitle></Subtitle>
+                                • Actionable data for your sales reps<br />
+                                        • Seamless integration with your systems<br /></Subtitle><br/>
                             <div style={{ display: 'flex', justifyContent: 'center' }}><br />
                                 <Button style={{ marginRight: '0.5rem', background: '#FAD069', fontWeight: '700' }}>Coming Soon</Button>
                             </div>

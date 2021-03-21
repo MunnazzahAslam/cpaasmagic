@@ -24,10 +24,10 @@ function Hoome() {
             <div className="topbar">
                 <Heading style={{ textAlign: 'left' }}>Discover APIs and the companies behind them</Heading>
                 <div style={{ display: 'flex', justifyContent: 'flex-start', flexWrap: 'wrap' }}>
-                    <Link to="/register" ><Button className="small" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginRight: '0.8em', marginTop: '1em', padding: '0.9em', background: '#fff', color: '#1B2653', fontSize: '1em' }}><img src={Picture4} style={{ marginRight: '0.3rem', color: '#04C0A6', width: '1.2rem', height: '1.2rem' }} />Vendors</Button></Link>
-                    <Link to="/register" ><Button className="small" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginRight: '0.8em', marginTop: '1em', padding: '0.9em', background: '#fff', color: '#1B2653', fontSize: '1em' }}><img src={Picture5} style={{ marginRight: '0.3rem', color: '#04C0A6', width: '1.2rem', height: '1.2rem' }} />APIs</Button></Link>
-                    <Link to="/register" ><Button className="small" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginRight: '0.8em', marginTop: '1em', padding: '0.9em', background: '#fff', color: '#1B2653', fontSize: '1em' }}><img src={Picture6} style={{ marginRight: '0.3rem', color: '#04C0A6', width: '1.2rem', height: '1.2rem' }} />Use Cases</Button></Link>
-                    <Link to="/register" ><Button className="small" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginRight: '0.8em', marginTop: '1em', padding: '0.9em', background: '#fff', color: '#1B2653', fontSize: '1em' }}><img src={Picture7} style={{ marginRight: '0.3rem', color: '#04C0A6', width: '1.2rem', height: '1.2rem' }} />Successes</Button></Link>
+                    <Link to="/search/vendors" ><Button className="small" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginRight: '0.8em', marginTop: '1em', padding: '0.9em', background: '#fff', color: '#1B2653', fontSize: '1em' }}><img src={Picture4} style={{ marginRight: '0.3rem', color: '#04C0A6', width: '1.2rem', height: '1.2rem' }} />Vendors</Button></Link>
+                    <Link to="/search/apis" ><Button className="small" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginRight: '0.8em', marginTop: '1em', padding: '0.9em', background: '#fff', color: '#1B2653', fontSize: '1em' }}><img src={Picture5} style={{ marginRight: '0.3rem', color: '#04C0A6', width: '1.2rem', height: '1.2rem' }} />APIs</Button></Link>
+                    <Link to="/search/usecases" ><Button className="small" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginRight: '0.8em', marginTop: '1em', padding: '0.9em', background: '#fff', color: '#1B2653', fontSize: '1em' }}><img src={Picture6} style={{ marginRight: '0.3rem', color: '#04C0A6', width: '1.2rem', height: '1.2rem' }} />Use Cases</Button></Link>
+                    <Link to="/search/successes" ><Button className="small" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginRight: '0.8em', marginTop: '1em', padding: '0.9em', background: '#fff', color: '#1B2653', fontSize: '1em' }}><img src={Picture7} style={{ marginRight: '0.3rem', color: '#04C0A6', width: '1.2rem', height: '1.2rem' }} />Successes</Button></Link>
                 </div>
             </div>
             <div className="Cards">
@@ -61,7 +61,7 @@ function Hoome() {
                             <ImgWrapper>
                                 <Image style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }} src={Picture2} />
                             </ImgWrapper><Heading style={{ color: '#00BFA5', fontSize: '1.2em' }}>Learn CPaaS</Heading>
-                            <Subtitle style={{ color: '#1D217E' }}>Get latest insights or enroll in our trainings that help you get up to speed with CPaaS </Subtitle>
+                            <Subtitle style={{ color: '#1D217E' }}>Get latest insights or enroll yourself in our trainings that help you get up to speed with CPaaS </Subtitle>
                             <div style={{ display: 'flex', justifyContent: 'center' }}>
                                 <Button style={{ background: '#FAD069', fontWeight: '500' }}>Coming Soon</Button>
                             </div>              </CardContent>
