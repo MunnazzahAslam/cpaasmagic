@@ -24,10 +24,10 @@ export class WordPress extends Component {
                                 <Table.Row height="auto">
                                     <Table.TextCell style={{ margin: '0.2rem' }} >
                                         <img src={post._embedded['wp:featuredmedia']['0'].source_url
-                                        } style={{ width: '20em', height: '20em', border: 'none', margin:'1rem' }} />
+                                        } style={{ width: '22em', height: '22em', border: 'none', margin:'1rem' }} />
                                     </Table.TextCell>
 
-                                    <Table.TextCell flexBasis={520} flexShrink={0} flexGrow={0} style={{ padding: '1rem', paddingLeft: '0rem' }}>
+                                    <Table.TextCell flexBasis={500} flexShrink={0} flexGrow={0} style={{ padding: '1rem', paddingLeft: '0rem' }}>
                                         <span style={{ color: '#66788A', fontSize: '1em', paddingTop: '1rem' }}>{post.date}</span><br />
                                         <span style={{ color: '#234361', cursor: 'pointer', fontWeight: '400', fontSize: '1.6em' }}>{post.title.rendered}</span><br />
                                         <span style={{ color: '#66788A', fontSize: '1em' }}>TransformX</span>

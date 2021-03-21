@@ -12,6 +12,7 @@ import flowchart from './flowchart.png'
 import dollar from './dollar.png'
 import './home.css'
 function getStartedPage() {
+    
     return (
         <div style={{ color: '#1B2653' }}>
             <div className="topbar" style={{ paddingLeft:'0%',height: '250px', display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
