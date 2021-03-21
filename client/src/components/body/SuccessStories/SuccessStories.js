@@ -71,6 +71,7 @@ class Successstories extends React.Component {
         return (
             <div className="main">
                 <MaterialTable
+                    title={<h1 style={{color:'#1D217E'}}>Discover Successes</h1>}
                     icons={tableIcons}
                     style={{ fontFamily: 'Glacial Indifference', fontSize: 'clamp(0.8rem, 1vw, 1.4rem)', tableLayout: 'fixed' }}
                     columns={[
@@ -92,30 +93,38 @@ class Successstories extends React.Component {
                           },
 
                         {
-                            title: 'Client', field:'Vendor_Success_Story_Client_Name',filterPlaceholder: 'Search by Name', render: rowData => <div>
+                            title: 'Client Name', field:'Vendor_Success_Story_Client_Name',filterPlaceholder: 'Search by Name', render: rowData => <div>
                             <Link to={`/successstories/${rowData.TransformX_Success_Story_Id}`}>
                                 <p>{rowData.Vendor_Success_Story_Client_Name}</p>
                             </Link></div>
                         },
-                        { title: 'Story', field: 'TransformX_Success_Story_Name',filterPlaceholder: 'Search by keyword',  cellStyle: {
+                        { title: 'Success Title', field: 'TransformX_Success_Story_Name',filterPlaceholder: 'Search by keyword',  cellStyle: {
                             whiteSpace: 'nowrap', textAlign: 'left'
                            }, render: rowData => <div>
                            <Link to={`/successstories/${rowData.TransformX_Success_Story_Id}`}>
                                <p>{rowData.TransformX_Success_Story_Name}</p>
                            </Link></div>},
-                        { title: 'Industry', field: 'TransformX_Success_Story_Industry',filterPlaceholder: 'Search by Industry',  cellStyle: {
+                        { title: 'Success Industry', field: 'TransformX_Success_Story_Industry',filterPlaceholder: 'Search by Industry',  cellStyle: {
                             whiteSpace: 'nowrap'
                            },  render: rowData => <div>
                            <Link to={`/successstories/${rowData.TransformX_Success_Story_Id}`}>
                            <div style={{ display: 'flex', flexDirection: 'row'}}>
                                <p>{rowData.TransformX_Success_Story_Industry}</p>
                                </div>
+                           </Link></div>},
+                           { title: 'Success Region', field: 'TransformX_Success_Story_Region',filterPlaceholder: 'Search by Industry',  cellStyle: {
+                            whiteSpace: 'nowrap'
+                           },  render: rowData => <div>
+                           <Link to={`/successstories/${rowData.TransformX_Success_Story_Id}`}>
+                           <div style={{ display: 'flex', flexDirection: 'row'}}>
+                               <p>{rowData.TransformX_Success_Story_Region}</p>
+                               </div>
                            </Link></div>}
                     ]}
                     key={this.state.successstories.TransformX_API_Id}
                     data={this.state.successstories}
                     options={{
-
+                        selection: true,
                         paging: true,
                         pageSize: 10,       // make initial page size
                         emptyRowsWhenPaging: true,   //to make page size fix in case of less data rows
@@ -131,14 +140,14 @@ class Successstories extends React.Component {
                         filterCellStyle: {
                             fontSize: 'clamp(0.8rem, 1vw, 1.4rem)'
                         },
-                        exportButton: false,
-                        showTitle: false,
-                        search: false
+                        exportButton: true,
+                        showTitle: true,
+                        search: true
                     }
                     }
                     components={{
                         Toolbar: props => (
-                            <div style={{ height: '0px' }}>
+                            <div style={{ height: '60px' }}>
                                 <MTableToolbar {...props} />
                             </div>
                         ),

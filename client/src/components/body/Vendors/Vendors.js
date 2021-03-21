@@ -68,69 +68,72 @@ class Vendors extends React.Component {
   }
   render() {
     const { vendors } = this.context;
-       
+
     return (
       <div className="main">
-   
+
 
         <MaterialTable
-          style={{color:'#212529 !important'}}
+          title={<h1 style={{color:'#1D217E', fontSize:'30.4px'}}>Discover Vendors</h1>}
+          style={{ color: '#212529 !important' }}
           icons={tableIcons}
           columns={
             [
-              {  title:'Vendor', field: 'TransformX_Vendor_Name',lookup: {
-                Vonage: 'Vonage',
-                Twilio: 'Twilio',
-                Infobip: 'Infobip',
-                MessageBird: 'MessageBird',
-                Plivo: 'Plivo',
-            },  cellStyle: {
-              whiteSpace: 'nowrap', textAlign: 'left'
-             }, render: rowData => <div style={{  }}>
-                   <Link to={`/vendors/${rowData.TransformX_Vendor_Id}`}>
-                              <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center'}}>
-                                <img src={rowData.TransformX_Vendor_Logo} style={{ width: '5rem', height: '5rem',margin: '0.5rem' }} alt="logo" />
-                                <p style={{color:'#212529', margin:'0.2rem', fontWeight: '400'}}>{rowData.TransformX_Vendor_Name}</p>
-                                </div>
-                              </Link></div>
-              },
-             
               {
-                title: 'Type', field: 'Gartner_Vendor_Type',filterPlaceholder: 'Search by Type', cellStyle: {
+                title: 'Vendor', field: 'TransformX_Vendor_Name', lookup: {
+                  Vonage: 'Vonage',
+                  Twilio: 'Twilio',
+                  Infobip: 'Infobip',
+                  MessageBird: 'MessageBird',
+                  Plivo: 'Plivo',
+                }, cellStyle: {
                   whiteSpace: 'nowrap', textAlign: 'left'
-                 }, render: rowData => <div style={{ display: 'flex', justifyContent: 'start', alignItems: 'start' }}>
-                <Link to={`/vendors/${rowData.TransformX_Vendor_Id}`}>
-                <p>{rowData.Gartner_Vendor_Type}</p>
-                </Link></div>
+                }, render: rowData => <div style={{}}>
+                  <Link to={`/vendors/${rowData.TransformX_Vendor_Id}`}>
+                    <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
+                      <img src={rowData.TransformX_Vendor_Logo} style={{ width: '5rem', height: '5rem', margin: '0.5rem' }} alt="logo" />
+                      <p style={{ color: '#212529', margin: '0.2rem', fontWeight: '400' }}>{rowData.TransformX_Vendor_Name}</p>
+                    </div>
+                  </Link></div>
               },
+
               {
-                title: 'Industry', field: 'LinkedIn_Vendor_Industry', filterPlaceholder: 'Search by Industry',  cellStyle: {
+                title: 'Vendor Type', field: 'Gartner_Vendor_Type', filterPlaceholder: 'Search by Type', cellStyle: {
                   whiteSpace: 'nowrap', textAlign: 'left'
-                 },render: rowData => <div style={{ display: 'flex', justifyContent: 'start', alignItems: 'start' }}>
-                <Link to={`/vendors/${rowData.TransformX_Vendor_Id}`}>
-                <p>{rowData.LinkedIn_Vendor_Industry}</p>
-                </Link></div>
+                }, render: rowData => <div style={{ display: 'flex', justifyContent: 'start', alignItems: 'start' }}>
+                  <Link to={`/vendors/${rowData.TransformX_Vendor_Id}`}>
+                    <p>{rowData.Gartner_Vendor_Type}</p>
+                  </Link></div>
               },
               {
-                title: 'Headquarters Region', field: 'TransformX_Vendor_Headquarter_Region', filterPlaceholder: 'Search by Region',  cellStyle: {
+                title: 'Vendor Founders', field: 'Crunchbase_Vendor_Founders', filterPlaceholder: 'Search by Industry', cellStyle: {
                   whiteSpace: 'nowrap', textAlign: 'left'
-                 }, render: rowData => <div style={{ display: 'flex', justifyContent: 'start', alignItems: 'start' }}>
-                <Link to={`/vendors/${rowData.TransformX_Vendor_Id}`}>
-                  <p>{rowData.TransformX_Vendor_Headquarter_Region}</p>
-                </Link></div>
+                }, render: rowData => <div style={{ display: 'flex', justifyContent: 'start', alignItems: 'start' }}>
+                  <Link to={`/vendors/${rowData.TransformX_Vendor_Id}`}>
+                    <p>{rowData.Crunchbase_Vendor_Founders}</p>
+                  </Link></div>
               },
               {
-                title: 'Specialities', field: 'TransformX_Vendor_Unique_Sell_Point',filterPlaceholder: 'Search by keyword', cellStyle: {
+                title: 'Headquarter Region', field: 'TransformX_Vendor_Founders', filterPlaceholder: 'Search by Region', cellStyle: {
+                  whiteSpace: 'nowrap', textAlign: 'left'
+                }, render: rowData => <div style={{ display: 'flex', justifyContent: 'start', alignItems: 'start' }}>
+                  <Link to={`/vendors/${rowData.TransformX_Vendor_Id}`}>
+                    <p>{rowData.TransformX_Vendor_Headquarter_Region}</p>
+                  </Link></div>
+              },
+              {
+                title: 'Unique Sell Point​', field: 'TransformX_Vendor_Unique_Sell_Point', filterPlaceholder: 'Search by keyword', cellStyle: {
                   width: '45%'
-                 }, render: rowData => <div style={{ display: 'flex', justifyContent: 'start', alignItems: 'start' }}>
-                 <Link to={`/vendors/${rowData.TransformX_Vendor_Id}`}>
-                   <p>{rowData.TransformX_Vendor_Unique_Sell_Point}</p>
-                 </Link></div>
+                }, render: rowData => <div style={{ display: 'flex', justifyContent: 'start', alignItems: 'start' }}>
+                  <Link to={`/vendors/${rowData.TransformX_Vendor_Id}`}>
+                    <p>{rowData.TransformX_Vendor_Unique_Sell_Point}</p>
+                  </Link></div>
               }
             ]}
           key={this.state.vendors.TransformX_Vendor_Id}
           data={this.state.vendors}
           options={{
+            selection: true,
             paging: true,
             pageSize: 5,       // make initial page size
             emptyRowsWhenPaging: true,   //to make page size fix in case of less data rows
@@ -144,14 +147,14 @@ class Vendors extends React.Component {
             filterCellStyle: {
               color: '#F6F9FC'
             },
-            exportButton: false,
-            showTitle: false,
-            search: false
+            exportButton: true,
+            showTitle: true,
+            search: true
           }
           }
           components={{
             Toolbar: props => (
-              <div style={{ height: '0px' }}>
+              <div style={{ height: '60px' }}>
                 <MTableToolbar {...props} />
               </div>
             ),

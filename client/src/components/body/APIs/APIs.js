@@ -57,63 +57,64 @@ class APIs extends React.Component {
     componentDidMount() {
         this.setState({ loading: true })
         fetch('/api/apis') //data source
-          .then(response => response.json())
-          .then(res => {
-            this.setState({ apis: res.slice(0, 80), loading: true })
-            console.log(this.state.apis);
-          })
-          .catch(error => {
-            console.log(error)
-          })
-      }
+            .then(response => response.json())
+            .then(res => {
+                this.setState({ apis: res.slice(0, 80), loading: true })
+                console.log(this.state.apis);
+            })
+            .catch(error => {
+                console.log(error)
+            })
+    }
 
     render() {
         const { apis } = this.context;
         return (
             <div className="main">
-               
+
                 <MaterialTable
+                    title={<h1 style={{color:'#1D217E'}}>Discover APIs</h1>}
                     icons={tableIcons}
                     style={{ fontSize: 'clamp(0.8rem, 1vw, 1.4rem)', tableLayout: 'fixed' }}
                     columns={[
-                        {  title:'Vendor', field: 'TransformX_Vendor_Name',lookup: {
-                            Vonage: 'Vonage',
-                            Twilio: 'Twilio',
-                            Infobip: 'Infobip',
-                            MessageBird: 'MessageBird',
-                            Plivo: 'Plivo',
-                        },   cellStyle: {
-                            whiteSpace: 'nowrap', textAlign: 'left'
-                           },render: rowData => <div style={{  }}>
-                              <Link to={`/vendors/${rowData.TransformX_Vendor_Id}`}>
-                              <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center'}}>
-                                <img src={rowData.TransformX_Vendor_Logo} style={{ width: '5rem', height: '5rem',margin: '0.5rem' }} alt="logo" />
-                                <p style={{color:'#212529', margin:'0.2rem', fontWeight: '400'}}>{rowData.TransformX_Vendor_Name}</p>
-                                </div>
-                              </Link></div>
-                          },
-
                         {
-                            title: 'Category', field: 'TransformX_API_Category1',filterPlaceholder: 'Search by Category', render: rowData => <div style={{ display: 'flex', justifyContent: 'justify', alignItems: 'center' }}>
-                                <Link to={`/apis/${rowData.TransformX_API_Id}`}>
-                                <div style={{ display: 'flex', flexDirection: 'row'}}>
-                                   <p>{rowData.TransformX_API_Category1}</p>
-                                </div>
+                            title: 'Vendor', field: 'TransformX_Vendor_Name', lookup: {
+                                Vonage: 'Vonage',
+                                Twilio: 'Twilio',
+                                Infobip: 'Infobip',
+                                MessageBird: 'MessageBird',
+                                Plivo: 'Plivo',
+                            }, cellStyle: {
+                                whiteSpace: 'nowrap', textAlign: 'left'
+                            }, render: rowData => <div style={{}}>
+                                <Link to={`/vendors/${rowData.TransformX_Vendor_Id}`}>
+                                    <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
+                                        <img src={rowData.TransformX_Vendor_Logo} style={{ width: '5rem', height: '5rem', margin: '0.5rem' }} alt="logo" />
+                                        <p style={{ color: '#212529', margin: '0.2rem', fontWeight: '400' }}>{rowData.TransformX_Vendor_Name}</p>
+                                    </div>
                                 </Link></div>
                         },
-
                         {
-                            title: 'API', field: 'Vendor_API_Name',filterPlaceholder: 'Search by Name', render: rowData => <div>
+                            title: 'API Name', field: 'Vendor_API_Name', filterPlaceholder: 'Search by Name', render: rowData => <div>
                                 <Link to={`/apis/${rowData.TransformX_API_Id}`}>
-                                    <div style={{ display: 'flex', flexDirection: 'row'}}>
-                                    <img src={rowData.TransformX_API_Logo} style={{color:'#2dce89',marginRight:'0.3rem'}}/>
-                                    <p>{rowData.Vendor_API_Name}</p>
+                                    <div style={{ display: 'flex', flexDirection: 'row' }}>
+                                        <img src={rowData.TransformX_API_Logo} style={{ color: '#2dce89', marginRight: '0.3rem' }} />
+                                        <p>{rowData.Vendor_API_Name}</p>
+                                    </div>
+                                </Link></div>
+                        },
+                        {
+                            title: 'API Category', field: 'TransformX_API_Category1', filterPlaceholder: 'Search by Category', render: rowData => <div style={{ display: 'flex', justifyContent: 'justify', alignItems: 'center' }}>
+                                <Link to={`/apis/${rowData.TransformX_API_Id}`}>
+                                    <div style={{ display: 'flex', flexDirection: 'row' }}>
+                                        <p>{rowData.TransformX_API_Category1}</p>
                                     </div>
                                 </Link></div>
                         },
 
+
                         {
-                            title: 'API Description', field: 'TransformX_API_Description',filterPlaceholder: 'Search by keyword', cellStyle: {
+                            title: 'API Description', field: 'TransformX_API_Description', filterPlaceholder: 'Search by keyword', cellStyle: {
                                 whiteSpace: 'nowrap'
                             }, render: rowData => <div style={{ display: 'flex', justifyContent: 'justify', alignItems: 'center' }}>
                                 <Link to={`/apis/${rowData.TransformX_API_Id}`}>
@@ -124,6 +125,7 @@ class APIs extends React.Component {
                     key={this.state.apis.TransformX_API_Id}
                     data={this.state.apis}
                     options={{
+                        selection: true,
                         paging: true,
                         pageSize: 10,       // make initial page size
                         emptyRowsWhenPaging: true,   //to make page size fix in case of less data rows
@@ -137,14 +139,14 @@ class APIs extends React.Component {
                         filterCellStyle: {
                             fontSize: 'clamp(0.8rem, 1vw, 1.4rem)'
                         },
-                        exportButton: false,
-                        showTitle: false,
-                        search: false
+                        exportButton: true,
+                        showTitle: true,
+                        search: true
                     }
                     }
                     components={{
                         Toolbar: props => (
-                            <div style={{ height: '0px' }}>
+                            <div style={{ height: '60px' }}>
                                 <MTableToolbar {...props} />
                             </div>
                         ),

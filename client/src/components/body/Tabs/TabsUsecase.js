@@ -13,16 +13,16 @@ import './Tabs.css';
 
 export default () => (
     <Tabs defaultIndex={2}>
-        <br/>
-        <br/>
-        <div className=".react-tabs__tab-list"  >
-            <TabList style={{  margin:'0 2rem',color: '#282828'}}>
-                <Tab style={{color: '#282828'}} ><div style={{ display: 'flex', flexDirection: 'row'}}><LocationCityIcon     style={{marginRight:'0.5rem',color: '#282828'}}/>Vendors</div></Tab>
-                <Tab style={{color: '#282828'}}><div style={{ display: 'flex', flexDirection: 'row' }}><ExtensionIcon    style={{marginRight:'0.5rem',color: '#282828'}} />APIs</div></Tab>
-                <Tab style={{color: '#282828'}}><div style={{ display: 'flex', flexDirection: 'row' }}><RateReviewIcon     style={{marginRight:'0.5rem',color: '#282828'}} />Use Cases</div></Tab>
-                <Tab style={{color: '#282828'}}><div style={{ display: 'flex', flexDirection: 'row' }}><ShowChartIcon     style={{marginRight:'0.5rem',color: '#282828'}}/>Success Stories</div></Tab>
-            </TabList>
-        </div>
+         <br />
+            <br />
+            <div className=".react-tabs__tab-list" style={{ margin:'0 auto', marginTop: '4rem', width: '1400px' }} >
+                <TabList style={{ margin: '0 2rem', color: '#282828' }}>
+                    <Tab style={{ color: '#282828' }} ><div style={{ display: 'flex', flexDirection: 'row' }}><LocationCityIcon style={{ marginRight: '0.5rem', color: '#282828' }} />Vendors</div></Tab>
+                    <Tab style={{ color: '#282828' }}><div style={{ display: 'flex', flexDirection: 'row' }}><ExtensionIcon style={{ marginRight: '0.5rem', color: '#282828' }} />APIs</div></Tab>
+                    <Tab style={{ color: '#282828' }}><div style={{ display: 'flex', flexDirection: 'row' }}><RateReviewIcon style={{ marginRight: '0.5rem', color: '#282828' }} />Use Cases</div></Tab>
+                    <Tab style={{ color: '#282828' }}><div style={{ display: 'flex', flexDirection: 'row' }}><ShowChartIcon style={{ marginRight: '0.5rem', color: '#282828' }} />Success Stories</div></Tab>
+                </TabList>
+            </div>
 <div className="boxt">
         <TabPanel>
             <Vendors />

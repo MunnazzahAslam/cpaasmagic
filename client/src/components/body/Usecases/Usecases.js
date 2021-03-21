@@ -69,57 +69,75 @@ class Usecases extends React.Component {
         return (
             <div className="main">
                 <MaterialTable
+                    title={<h1 style={{color:'#1D217E'}}>Discover Use Cases</h1>}
                     icons={tableIcons}
-                    style={{  fontSize: 'clamp(0.8rem, 1vw, 1.4rem)', tableLayout: 'fixed', color:'#32325d !important' }}
+                    style={{ fontSize: 'clamp(0.8rem, 1vw, 1.4rem)', tableLayout: 'fixed', color: '#32325d !important' }}
                     columns={[
-                        {  title:'Vendor', field: 'TransformX_Vendor_Name',lookup: {
-                            Vonage: 'Vonage',
-                            Twilio: 'Twilio',
-                            Infobip: 'Infobip',
-                            MessageBird: 'MessageBird',
-                            Plivo: 'Plivo',
-                        },  cellStyle: {
-                            whiteSpace: 'nowrap', textAlign: 'left'
-                           }, render: rowData => <div style={{  }}>
-                               <Link to={`/vendors/${rowData.TransformX_Vendor_Id}`}>
-                              <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center'}}>
-                                <img src={rowData.TransformX_Vendor_Logo} style={{ width: '5rem', height: '5rem',margin: '0.5rem' }} alt="logo" />
-                                <p style={{color:'#212529', margin:'0.2rem', fontWeight: '400'}}>{rowData.TransformX_Vendor_Name}</p>
-                                </div>
-                              </Link></div>
-                          },
+                        {
+                            title: 'Vendor', field: 'TransformX_Vendor_Name', lookup: {
+                                Vonage: 'Vonage',
+                                Twilio: 'Twilio',
+                                Infobip: 'Infobip',
+                                MessageBird: 'MessageBird',
+                                Plivo: 'Plivo',
+                            }, cellStyle: {
+                                whiteSpace: 'nowrap', textAlign: 'left'
+                            }, render: rowData => <div style={{}}>
+                                <Link to={`/vendors/${rowData.TransformX_Vendor_Id}`}>
+                                    <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
+                                        <img src={rowData.TransformX_Vendor_Logo} style={{ width: '5rem', height: '5rem', margin: '0.5rem' }} alt="logo" />
+                                        <p style={{ color: '#212529', margin: '0.2rem', fontWeight: '400' }}>{rowData.TransformX_Vendor_Name}</p>
+                                    </div>
+                                </Link></div>
+                        },
 
-                        { title: 'Usecase', field: 'TransformX_Usecase_Name',filterPlaceholder: 'Search by keyword',  cellStyle: {
-                            whiteSpace: 'nowrap', textAlign: 'left'
-                           }, render: rowData => <div style={{ display: 'flex', justifyContent: 'start' }}>
-                        <Link to={`/usecases/${rowData.TransformX_Usecase_Id}`}>
-                            <p style={{ textAlign: 'justify' }}>{rowData.TransformX_Usecase_Name}</p>
-                        </Link></div> },
-                        
-                       /* { title: 'Category', field: 'TransformX_Usecase_Category',filterPlaceholder: 'Search by Category', cellStyle: {
-                            whiteSpace: 'nowrap', textAlign: 'left'
-                           }, render: rowData => <div style={{ display: 'flex', justifyContent: 'start' }}>
-                        <Link to={`/usecases/${rowData.TransformX_Usecase_Id}`}>
-                            <p style={{ textAlign: 'justify' }}>{rowData.TransformX_Usecase_Category}</p>
-                        </Link></div> }, */
-                        { title: 'Industry', field: 'TransformX_Usecase_Industry',filterPlaceholder: 'Search by Industry',  cellStyle: {
-                            whiteSpace: 'nowrap', textAlign: 'left'
-                           }, render: rowData => <div style={{ display: 'flex', justifyContent: 'start' }}>
-                        <Link to={`/usecases/${rowData.TransformX_Usecase_Id}`}>
-                            <p style={{ textAlign: 'justify' }}>{rowData.TransformX_Usecase_Industry}</p>
-                        </Link></div> }, 
-                        { title: 'Description', field: 'TransformX_Usecase_Description',filterPlaceholder: 'Search by keyword',  cellStyle: {
-                            width:'40%'
-                           }, render: rowData => <div style={{ display: 'flex', justifyContent: 'start' }}>
-                        <Link to={`/usecases/${rowData.TransformX_Usecase_Id}`}>
-                            <p style={{ textAlign: 'justify' }}>{rowData.TransformX_Usecase_Description}</p>
-                        </Link></div> }, 
-                        
+                        {
+                            title: 'Use Case Name', field: 'TransformX_Usecase_Name', filterPlaceholder: 'Search by keyword', cellStyle: {
+                                whiteSpace: 'nowrap', textAlign: 'left'
+                            }, render: rowData => <div style={{ display: 'flex', justifyContent: 'start' }}>
+                                <Link to={`/usecases/${rowData.TransformX_Usecase_Id}`}>
+                                    <p style={{ textAlign: 'justify' }}>{rowData.TransformX_Usecase_Name}</p>
+                                </Link></div>
+                        },
+
+                        /* { title: 'Category', field: 'TransformX_Usecase_Category',filterPlaceholder: 'Search by Category', cellStyle: {
+                             whiteSpace: 'nowrap', textAlign: 'left'
+                            }, render: rowData => <div style={{ display: 'flex', justifyContent: 'start' }}>
+                         <Link to={`/usecases/${rowData.TransformX_Usecase_Id}`}>
+                             <p style={{ textAlign: 'justify' }}>{rowData.TransformX_Usecase_Category}</p>
+                         </Link></div> }, */
+                        {
+                            title: 'Use Case Industry', field: 'TransformX_Usecase_Industry', filterPlaceholder: 'Search by Industry', cellStyle: {
+                                whiteSpace: 'nowrap', textAlign: 'left'
+                            }, render: rowData => <div style={{ display: 'flex', justifyContent: 'start' }}>
+                                <Link to={`/usecases/${rowData.TransformX_Usecase_Id}`}>
+                                    <p style={{ textAlign: 'justify' }}>{rowData.TransformX_Usecase_Industry}</p>
+                                </Link></div>
+                        },
+
+                        {
+                            title: 'Use Case Industry', field: 'TransformX_Usecase_Industry', filterPlaceholder: 'Search by Industry', cellStyle: {
+                                whiteSpace: 'nowrap', textAlign: 'left'
+                            }, render: rowData => <div style={{ display: 'flex', justifyContent: 'start' }}>
+                                <Link to={`/usecases/${rowData.TransformX_Usecase_Id}`}>
+                                    <p style={{ textAlign: 'justify' }}>{rowData.TransformX_Usecase_Industry}</p>
+                                </Link></div>
+                        },
+
+                        {
+                            title: 'Use Case Category', field: 'TransformX_Usecase_Category', filterPlaceholder: 'Search by keyword', cellStyle: {
+                                width: '40%'
+                            }, render: rowData => <div style={{ display: 'flex', justifyContent: 'start' }}>
+                                <Link to={`/usecases/${rowData.TransformX_Usecase_Id}`}>
+                                    <p style={{ textAlign: 'justify' }}>{rowData.TransformX_Usecase_Category}</p>
+                                </Link></div>
+                        },
+
                     ]}
                     key={this.state.usecases.TransformX_API_Id}
                     data={this.state.usecases}
                     options={{
-
+                        selection: true,
                         paging: true,
                         pageSize: 10,       // make initial page size
                         emptyRowsWhenPaging: true,   //to make page size fix in case of less data rows
@@ -131,16 +149,17 @@ class Usecases extends React.Component {
                             backgroundColor: '#F6F9FC'
                         },
                         filterCellStyle: {
-                            fontSize: 'clamp(0.8rem, 1vw, 1.4rem)'                        },
-                        exportButton: false,
-                        showTitle: false,
-                        search: false
+                            fontSize: 'clamp(0.8rem, 1vw, 1.4rem)'
+                        },
+                        exportButton: true,
+                        showTitle: true,
+                        search: true
                     }
 
                     }
                     components={{
                         Toolbar: props => (
-                            <div style={{ height: '0px' }}>
+                            <div style={{ height: '60px' }}>
                                 <MTableToolbar {...props} />
                             </div>
                         ),
