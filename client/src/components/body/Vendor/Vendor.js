@@ -151,6 +151,8 @@ export class Vendor extends Component {
                                                     <Button style={{marginRight:'0.5rem', backgroundImage: 'linear-gradient(45deg,#6DCDF2,#1EB5ED )'}}>Pure Player</Button>
                                                     <Button style={{backgroundImage: 'linear-gradient(45deg,#62A6D9,#1F7FC4 )'}}>Top Vendors</Button>
                                                 </div>
+                                                <br/><br/>
+                                                <br/>
                                                 <p style={{ textAlign: 'justify', fontSize: 'clamp(0.8rem, 1vw, 1.4rem)' }}>{vendor.LinkedIn_Vendor_Overview}</p>
                                                 <br />
                                                 <p style={{ textAlign: 'justify', fontSize: 'clamp(0.8rem, 1vw, 1.4rem)' }}>Founders <br /> <span style={{ color: "#002060" }}>{vendor.Crunchbase_Vendor_Founders}</span></p>
@@ -171,7 +173,7 @@ export class Vendor extends Component {
                                         </div>
                                     </TabPanel >
                                     <TabPanel>
-                                        <div style={{ display: 'flex', flexDirection: 'row', marginTop: '2rem', marginLeft: '2rem',paddingLeft:'5%', width:'100%' }}>
+                                        <div style={{ display: 'flex', flexDirection: 'row', marginTop: '2rem', marginLeft: '2rem',paddingLeft:'5%', width:'100%',paddingRight:'5%' }}>
                                             <MaterialTable
                                                 title={<h1 style={{ color: '#1D217E' }}>APIs</h1>}
                                                 icons={tableIcons}
@@ -239,7 +241,7 @@ export class Vendor extends Component {
                                         </div>
                                     </TabPanel>
                                     <TabPanel>
-                                        <div style={{ display: 'flex', flexDirection: 'row', marginTop: '2rem', marginLeft: '2rem',paddingLeft:'5%', width:'100%' }}>
+                                        <div style={{ display: 'flex', flexDirection: 'row', marginTop: '2rem', marginLeft: '2rem',paddingLeft:'5%', width:'100%',paddingRight:'5%' }}>
                                             <MaterialTable
                                                 title={<h1 style={{ color: '#1D217E' }}>Use Cases</h1>}
                                                 icons={tableIcons}
@@ -324,7 +326,7 @@ export class Vendor extends Component {
                                         </div>
                                     </TabPanel>
                                     <TabPanel>
-                                        <div style={{ display: 'flex', flexDirection: 'row', margin: '2rem 0', marginLeft: '2rem',paddingLeft:'5%', width:'100%'}}>
+                                        <div style={{ display: 'flex', flexDirection: 'row', margin: '2rem 0', marginLeft: '2rem',paddingLeft:'5%',paddingRight:'5%', width:'100%'}}>
                                             <MaterialTable
                                                 title={<h1 style={{ color: '#1D217E' }}>Successes</h1>}
                                                 icons={tableIcons}
@@ -346,7 +348,7 @@ export class Vendor extends Component {
                                                             </Link></div>
                                                     },
                                                     {
-                                                        title: 'Success Region', field: 'TransformX_Success_Story_Region', filterPlaceholder: 'Search by Industry', cellStyle: {
+                                                        title: 'Success Industry', field: 'TransformX_Success_Story_Region', filterPlaceholder: 'Search by Industry', cellStyle: {
                                                             whiteSpace: 'nowrap'
                                                         }, render: rowData => <div>
                                                             <Link to={`/successstories/${rowData.TransformX_Success_Story_Id}`}>
