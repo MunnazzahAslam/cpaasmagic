@@ -133,7 +133,10 @@ class Successstories extends React.Component {
                         filterCellStyle: {
                             fontSize: 'clamp(0.8rem, 1vw, 1.4rem)'
                         },
-                        exportButton: true,
+                        exportButton: {
+                            csv: true,
+                            pdf: false
+                          },
                         showTitle: true,
                         search: true
                     }

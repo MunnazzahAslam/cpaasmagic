@@ -111,7 +111,7 @@ export class Vendor extends Component {
                     vendors.map(vendor => (
                         <div key={vendor.TransformX_Vendor_Id}  >
                             <br />
-                            <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', margin: '2rem 0',paddingLeft: '5%', }}>
+                            <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', margin: '2rem 0', paddingLeft: '5%', }}>
                                 <img style={{ margin: '0 2rem', borderRadius: '8px', width: '8vw', height: '8vw', marginLeft: '2rem' }} src={vendor.TransformX_Vendor_Logo} alt="VendorProfile" />
                                 <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
                                     <p style={{ color: '#ced4da', fontSize: '1.5rem' }}>Vendor</p>
@@ -139,7 +139,7 @@ export class Vendor extends Component {
                                 </div>
                                 <div className="boxt">
                                     <TabPanel>
-                                        <div style={{ display: 'flex', flexDirection: 'row', marginTop: '1rem', paddingLeft:'5%' }}>
+                                        <div style={{ display: 'flex', flexDirection: 'row', marginTop: '1rem', paddingLeft: '5%' }}>
                                             <Card className="card" style={{ padding: '2rem', margin: '0 2rem', width: '60%' }}>
                                                 {/* <Button variant="contained" style={{ background: "#00B0F0", color: '#fff', borderRadius: '0.5rem', marginLeft: 'auto', padding: '0.6rem' }}>
                                                         Pure Player
@@ -147,12 +147,12 @@ export class Vendor extends Component {
                                                     <Button variant="contained" style={{ background: "#002060", color: '#fff', borderRadius: '0.5rem', marginLeft:'4px', padding: '0.6rem' }}>
                                                         Top Choice
                                                     </Button>*/}
-                                                <div style={{display: 'flex', flexDirection:'row', justifyContent:'flex-start'}}>
-                                                    <Button style={{marginRight:'0.5rem', backgroundImage: 'linear-gradient(45deg,#6DCDF2,#1EB5ED )'}}>Pure Player</Button>
-                                                    <Button style={{backgroundImage: 'linear-gradient(45deg,#62A6D9,#1F7FC4 )'}}>Top Vendors</Button>
+                                                <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'flex-start' }}>
+                                                    <Button style={{ marginRight: '0.5rem', backgroundImage: 'linear-gradient(45deg,#6DCDF2,#1EB5ED )' }}>Pure Player</Button>
+                                                    <Button style={{ backgroundImage: 'linear-gradient(45deg,#62A6D9,#1F7FC4 )' }}>Top Vendors</Button>
                                                 </div>
-                                                <br/><br/>
-                                                <br/>
+                                                <br /><br />
+                                                <br />
                                                 <p style={{ textAlign: 'justify', fontSize: 'clamp(0.8rem, 1vw, 1.4rem)' }}>{vendor.LinkedIn_Vendor_Overview}</p>
                                                 <br />
                                                 <p style={{ textAlign: 'justify', fontSize: 'clamp(0.8rem, 1vw, 1.4rem)' }}>Founders <br /> <span style={{ color: "#002060" }}>{vendor.Crunchbase_Vendor_Founders}</span></p>
@@ -173,7 +173,7 @@ export class Vendor extends Component {
                                         </div>
                                     </TabPanel >
                                     <TabPanel>
-                                        <div style={{ display: 'flex', flexDirection: 'row', marginTop: '2rem', marginLeft: '2rem',paddingLeft:'5%', width:'100%',paddingRight:'5%' }}>
+                                        <div style={{ display: 'flex', flexDirection: 'row', marginTop: '2rem', marginLeft: '2rem', paddingLeft: '5%', width: '100%', paddingRight: '5%' }}>
                                             <MaterialTable
                                                 title={<h1 style={{ color: '#1D217E' }}>APIs</h1>}
                                                 icons={tableIcons}
@@ -225,7 +225,10 @@ export class Vendor extends Component {
                                                     filterCellStyle: {
                                                         fontSize: 'clamp(0.8rem, 1vw, 1.4rem)'
                                                     },
-                                                    exportButton: true,
+                                                    exportButton: {
+                                                        csv: true,
+                                                        pdf: false
+                                                    },
                                                     showTitle: true,
                                                     search: true
                                                 }
@@ -241,7 +244,7 @@ export class Vendor extends Component {
                                         </div>
                                     </TabPanel>
                                     <TabPanel>
-                                        <div style={{ display: 'flex', flexDirection: 'row', marginTop: '2rem', marginLeft: '2rem',paddingLeft:'5%', width:'100%',paddingRight:'5%' }}>
+                                        <div style={{ display: 'flex', flexDirection: 'row', marginTop: '2rem', marginLeft: '2rem', paddingLeft: '5%', width: '100%', paddingRight: '5%' }}>
                                             <MaterialTable
                                                 title={<h1 style={{ color: '#1D217E' }}>Use Cases</h1>}
                                                 icons={tableIcons}
@@ -309,7 +312,10 @@ export class Vendor extends Component {
                                                     filterCellStyle: {
                                                         fontSize: 'clamp(0.8rem, 1vw, 1.4rem)'
                                                     },
-                                                    exportButton: true,
+                                                    exportButton: {
+                                                        csv: true,
+                                                        pdf: false
+                                                    },
                                                     showTitle: true,
                                                     search: true
                                                 }
@@ -326,7 +332,7 @@ export class Vendor extends Component {
                                         </div>
                                     </TabPanel>
                                     <TabPanel>
-                                        <div style={{ display: 'flex', flexDirection: 'row', margin: '2rem 0', marginLeft: '2rem',paddingLeft:'5%',paddingRight:'5%', width:'100%'}}>
+                                        <div style={{ display: 'flex', flexDirection: 'row', margin: '2rem 0', marginLeft: '2rem', paddingLeft: '5%', paddingRight: '5%', width: '100%' }}>
                                             <MaterialTable
                                                 title={<h1 style={{ color: '#1D217E' }}>Successes</h1>}
                                                 icons={tableIcons}
@@ -377,7 +383,10 @@ export class Vendor extends Component {
                                                     filterCellStyle: {
                                                         fontSize: 'clamp(0.8rem, 1vw, 1.4rem)'
                                                     },
-                                                    exportButton: true,
+                                                    exportButton: {
+                                                        csv: true,
+                                                        pdf: false
+                                                    },
                                                     showTitle: true,
                                                     search: true
                                                 }

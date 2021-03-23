@@ -73,7 +73,7 @@ class APIs extends React.Component {
             <div className="main">
 
                 <MaterialTable
-                    title={<h1 style={{color:'#1D217E'}}>Discover APIs</h1>}
+                    title={<h1 style={{ color: '#1D217E' }}>Discover APIs</h1>}
                     icons={tableIcons}
                     style={{ fontSize: 'clamp(0.8rem, 1vw, 1.4rem)', tableLayout: 'fixed' }}
                     columns={[
@@ -138,8 +138,10 @@ class APIs extends React.Component {
                         },
                         filterCellStyle: {
                             fontSize: 'clamp(0.8rem, 1vw, 1.4rem)'
+                        }, exportButton: {
+                            csv: true,
+                            pdf: false
                         },
-                        exportButton: true,
                         showTitle: true,
                         search: true
                     }

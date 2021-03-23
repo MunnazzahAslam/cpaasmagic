@@ -147,7 +147,10 @@ class Vendors extends React.Component {
             filterCellStyle: {
               color: '#F6F9FC'
             },
-            exportButton: true,
+            exportButton: {
+              csv: true,
+              pdf: false
+            },
             showTitle: true,
             search: true
           }
