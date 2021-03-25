@@ -14,7 +14,7 @@ function Dashboard() {
     return (
         <div style={{ color: '#1B2653' }} className="main">
             <div style={{ display: 'flex', justifyContent: 'center' }}>
-            <iframe class="airtable-embed" src="https://airtable.com/embed/shrHkYaVbBXJZ3Di5?backgroundColor=cyan" frameborder="0" onmousewheel="" width="150%" height="833" style={{background: 'transparent', border: '1px solid #ccc'}}></iframe> 
+                <iframe class="airtable-embed" src="https://airtable.com/embed/shrHkYaVbBXJZ3Di5?backgroundColor=cyan" frameborder="0" onmousewheel="" width="150%" height="833" style={{ background: 'transparent', border: '1px solid #ccc' }}></iframe>
             </div>
             <div style={{ display: 'flex', justifyContent: 'center' }}>
                 <Card className="card1" style={{ boxShadow: 'none' }}>
@@ -33,8 +33,8 @@ function Dashboard() {
                     <span style={{ fontSize: '0.8em', fontWeight: '300', marginRight: '0.5rem' }}>Successes</span>342 <br /><Link to="/search/successes" style={{ color: '#fff', fontWeight: '400' }}><u>View All</u></Link>
                 </CardContent></Card>
             </div>
-            
-            <div style={{ display: 'flex', justifyContent: 'center' }}>
+
+            { /* <div style={{ display: 'flex', justifyContent: 'center' }}>
                 <Vendors />
                 <APIs />
             </div>
@@ -42,6 +42,8 @@ function Dashboard() {
                 <Usecases />
                 <SuccessStories />
             </div>
+
+    */}
         </div >
     )
 }
