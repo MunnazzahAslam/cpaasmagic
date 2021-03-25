@@ -13,7 +13,7 @@ import '../Dashboard/Dashboard.css';
 function Dashboard() {
     return (
         <div style={{ color: '#1B2653' }}>
-            <iframe className="airtable-embed" src="https://airtable.com/embed/shrHkYaVbBXJZ3Di5?backgroundColor=cyan" frameborder="0" onmousewheel="" width="100%" height="1200" style={{background: 'transparent', border: '1px solid #ccc',left:'0',right:'0', bottom:'0'}}></iframe> 
+            <iframe className="airtable-embed" src="https://airtable.com/embed/shrHkYaVbBXJZ3Di5?backgroundColor=teal&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="1200" style={{background: 'transparent', border: '1px solid #ccc',left:'0',right:'0', bottom:'0'}}></iframe> 
            {/* <div style={{ display: 'flex', justifyContent: 'center' }}>
                 <Card className="card1" style={{ boxShadow: 'none' }}>
                     <CardContent style={{ color: '#fff' }}>
