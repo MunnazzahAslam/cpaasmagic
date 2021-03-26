@@ -40,12 +40,12 @@ function Body() {
         <section>
             <Switch>
                 <Route path="/" component={AdminLogin} exact/>
-                <ProtectedRoute path="/home" component={isAdmin ? NotFound : Hoome} />
-                <ProtectedRoute path="/sellerdashboard" component={isAdmin ? NotFound : Dashboard} />
-                <ProtectedRoute path="/getstarted" component={isAdmin ? NotFound : getStartedPage} />
-                <ProtectedRoute path="/map" component={isAdmin ? NotFound : Maps} />
-                <ProtectedRoute path="/new" component={isAdmin ? NotFound : NewLayout} />
-                <ProtectedRoute path="/blog/:id" component={isAdmin ? NotFound : Articles} />
+                <ProtectedRoute path="/home" component={Hoome} />
+                <ProtectedRoute path="/sellerdashboard" component={Dashboard} />
+                <ProtectedRoute path="/getstarted" component={getStartedPage} />
+                <ProtectedRoute path="/map" component={Maps} />
+                <ProtectedRoute path="/new" component={NewLayout} />
+                <Route path="/blog/:id" component={Articles} />
                 <ProtectedRoute path="/instagram" component={InstaEmbed} />
                 <ProtectedRoute path="/allvendors" component={VendorsPage} />
                 <ProtectedRoute path="/search/vendors/notloggedin" component={Vendors} />
