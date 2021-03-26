@@ -37,8 +37,7 @@ function Body() {
     return (
         <section>
             <Switch>
-                <Route path="/" component={Admin} exact />
-                <Route path="/home" component={Hoome}  />
+                <Route path="/" component={Hoome} exact/>
                 <Route path="/sellerdashboard" component={Dashboard} />
                 <Route path="/getstarted" component={getStartedPage} />
                 <Route path="/map" component={Maps} />
