@@ -16,7 +16,7 @@ export default function Articles(props) {
     <div>
       {post && (
         <div>
-          <div style={{backgroundColor:'#EDEFF9', width:'100%'}}><h1 style={{minWidth:'1000px',maxWidth:'1000px',color: '#1D217E', textAlign: 'center',fontWeight:'700',fontSize:'2rem',margin: '0 auto',paddingTop: '44px',paddingBottom:'44px'}}>{post.title.rendered}</h1>
+          <div style={{backgroundColor:'#EDEFF9', width:'100%'}}><h1 style={{minWidth:'1000px',maxWidth:'1000px',color: '#1D217E', textAlign: 'center',margin: '0 auto',paddingTop: '44px',paddingBottom:'44px'}}>{post.title.rendered}</h1>
           <div style={{display:'flex', flexDirection:'row', justifyContent:'center', paddingBottom:'44px'}}>
             <Button style={{background:'#FA6396', marginRight:'1rem'}}>Article</Button>
             <Button style={{background:'#14C0A9', marginRight:'1rem'}}>{post.date}</Button>
