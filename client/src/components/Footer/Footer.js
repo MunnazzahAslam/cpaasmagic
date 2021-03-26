@@ -5,7 +5,7 @@ import { FaFacebook, FaInstagram, FaGoodreads, FaTwitter, FaLinkedin } from 'rea
 import {FooterContainer, FooterLink, FooterLinkTitle, FooterLinksContainer, FooterLinksWrapper, FooterLinksItems, FooterSubscription, FooterSubHeading, FooterSubText, Form, FormInput, SocialMedia, SocialMediaWrap, SocialLogo, SocialIconLink, SocialIcons, WebsiteRights} from './Footer.elements';
 const Footer = () => {
     return (
-            <FooterContainer>
+            <FooterContainer style={{marginTop:'2rem'}}>
                 <SocialMedia>
                 <SocialMediaWrap>
                     <SocialLogo to="/home"><img src={logo} alt="logo" className="logo"/>
