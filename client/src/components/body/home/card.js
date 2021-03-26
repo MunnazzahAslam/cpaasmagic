@@ -58,8 +58,7 @@ class RightPortion extends React.Component {
             .then(response => response.json())
             .then(res => {
                 this.setState({ vendors: res.slice(0, 5), loading: true })
-                console.log(this.state.vendors);
-            })
+           })
             .catch(error => {
                 console.log(error)
             })

@@ -58,7 +58,6 @@ class FeaturedSuccesses extends React.Component {
             .then(response => response.json())
             .then(res => {
                 this.setState({ successes: res.slice(0, 5), loading: true })
-                console.log(this.state.successes);
             })
             .catch(error => {
                 console.log(error)
