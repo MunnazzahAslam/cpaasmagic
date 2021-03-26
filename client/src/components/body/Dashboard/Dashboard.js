@@ -13,7 +13,7 @@ import '../Dashboard/Dashboard.css';
 function Dashboard() {
     return (
         <div style={{ color: '#1B2653' }}>
-           <iframe class="airtable-embed" src="https://airtable.com/embed/shrHkYaVbBXJZ3Di5?backgroundColor=purple" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe> 
+           <iframe class="airtable-embed" src="https://airtable.com/embed/shrHkYaVbBXJZ3Di5?backgroundColor=purple" frameborder="0" onmousewheel="" width="100%" height="533" style={{background: 'transparent', border: '1px solid #ccc'}}></iframe> 
            {/*<iframe src="https://x.formito.com/app/F2FPYp0OzqtnPsJ9xcwJ" width="480" height="840" frameBorder="0" style="border:1px solid #eee"></iframe>
             <div style={{ display: 'flex', justifyContent: 'center' }}>
                 <Card className="card1" style={{ boxShadow: 'none' }}>

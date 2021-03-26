@@ -13,14 +13,14 @@ export class DataProvider extends Component {
         posts:[]
     };
 
-    //Fetching data from API and updating cart values according to the user selectionhttps://enterpriseinnovation.org/wp-json/wp/v2/posts?_embed
+    //Fetching data from API and updating cart values according to the user selection
     componentDidMount() {
         fetch('/api/vendors')
             .then((response) => response.json())
             .then(vendorsList => {
                 this.setState({ vendors: vendorsList });
             });
-            axios.get('https://www.transformx.io/wp-json/wp/v2/posts?_embed')
+            axios.get('https://enterpriseinnovation.org/wp-json/wp/v2/posts?_embed')
             .then(res => this.setState({
                 posts: res.data,
                 isLoaded: true
