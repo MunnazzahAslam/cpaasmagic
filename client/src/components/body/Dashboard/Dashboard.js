@@ -13,8 +13,9 @@ import '../Dashboard/Dashboard.css';
 function Dashboard() {
     return (
         <div style={{ color: '#1B2653' }}>
-            <iframe className="airtable-embed" src="https://airtable.com/embed/shrHkYaVbBXJZ3Di5?backgroundColor=teal&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="1200" style={{background: 'transparent', border: '1px solid #ccc',left:'0',right:'0', bottom:'0'}}></iframe> 
-           {/* <div style={{ display: 'flex', justifyContent: 'center' }}>
+           <iframe class="airtable-embed" src="https://airtable.com/embed/shrHkYaVbBXJZ3Di5?backgroundColor=purple" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe> 
+           {/*<iframe src="https://x.formito.com/app/F2FPYp0OzqtnPsJ9xcwJ" width="480" height="840" frameBorder="0" style="border:1px solid #eee"></iframe>
+            <div style={{ display: 'flex', justifyContent: 'center' }}>
                 <Card className="card1" style={{ boxShadow: 'none' }}>
                     <CardContent style={{ color: '#fff' }}>
                         <span style={{ fontSize: '0.8em', fontWeight: '300', marginRight: '0.5rem', marginLeft: '0.5rem' }}>Vendors</span>21
