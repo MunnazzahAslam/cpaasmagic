@@ -8,7 +8,7 @@ const Footer = () => {
             <FooterContainer>
                 <SocialMedia>
                 <SocialMediaWrap>
-                    <SocialLogo to="/"><img src={logo} alt="logo" className="logo"/>
+                    <SocialLogo to="/home"><img src={logo} alt="logo" className="logo"/>
                     </SocialLogo>
                     <SocialIcons>
                         <SocialIconLink href="/" target="_blank" arial-label="Facebook">

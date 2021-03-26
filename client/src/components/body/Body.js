@@ -1,6 +1,7 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 import Login from './auth/Login'
+import AdminLogin from './auth/AdminLogin'
 import Register from './auth/Register'
 import ActivationEmail from './auth/ActivationEmail'
 import NotFound from '../utils/NotFound/NotFound'
@@ -30,40 +31,42 @@ import NewLayout from '../body/NewLayout/NewLayout'
 import getStartedPage from '../body/home/getStartedPage';
 import Dashboard from '../body/Dashboard/Dashboard'
 import Articles from '../body/Articles/Articles'
-import Admin from '../Admin/Admin'
+import ProtectedRoute from './ProtectedRoute';
 function Body() {
     const auth = useSelector(state => state.auth)
     const { isLogged } = auth
+    const { isAdmin } = auth
     return (
         <section>
             <Switch>
-                <Route path="/" component={Hoome} exact/>
-                <Route path="/sellerdashboard" component={Dashboard} />
-                <Route path="/getstarted" component={getStartedPage} />
-                <Route path="/map" component={Maps} />
-                <Route path="/new" component={NewLayout} />
-                <Route path="/blog/:id" component={Articles} />
-                <Route path="/instagram" component={InstaEmbed} />
-                <Route path="/allvendors" component={VendorsPage} />
-                <Route path="/search/vendors/notloggedin" component={Vendors} />
-                <Route path="/search/apis/notloggedin" component={APIs} />
-                <Route path="/search/usecases/notloggedin" component={Usecases} />
-                <Route path="/search/successes/notloggedin" component={SuccessStories} />
-                <Route path="/search/vendors" component={TabsVendor} />
-                <Route path="/search/apis" component={TabsAPI} />
-                <Route path="/search/usecases" component={TabsUsecase} />
-                <Route path="/search/successes" component={TabsSuccess} />
-                <Route path="/successstories/:TransformX_Success_Story_Id" component={Success} />
-                <Route path="/usecases/:TransformX_Usecase_Id" component={Usecase} />
-                <Route path="/apis/:TransformX_API_Id" component={API} />
-                <Route path="/vendors/:TransformX_Vendor_Id" component={Vendor} />
-                <Route path="/login" component={isLogged ? NotFound : Login} />
-                <Route path="/register" component={isLogged ? NotFound : Register} />
-                <Route path="/vendors" component={Vendors} />
-                <Route path="/forgot_password" component={isLogged ? NotFound : ForgotPass} />
-                <Route path="/user/reset/:token" component={isLogged ? NotFound : ResetPass} />
-                <Route path="/user/activate/:activation_token" component={ActivationEmail} />
-                <Route path="/profile" component={isLogged ? Profile : NotFound} />
+                <Route path="/" component={AdminLogin} exact/>
+                <ProtectedRoute path="/home" component={isAdmin ? NotFound : Hoome} />
+                <ProtectedRoute path="/sellerdashboard" component={isAdmin ? NotFound : Dashboard} />
+                <ProtectedRoute path="/getstarted" component={isAdmin ? NotFound : getStartedPage} />
+                <ProtectedRoute path="/map" component={isAdmin ? NotFound : Maps} />
+                <ProtectedRoute path="/new" component={isAdmin ? NotFound : NewLayout} />
+                <ProtectedRoute path="/blog/:id" component={isAdmin ? NotFound : Articles} />
+                <ProtectedRoute path="/instagram" component={InstaEmbed} />
+                <ProtectedRoute path="/allvendors" component={VendorsPage} />
+                <ProtectedRoute path="/search/vendors/notloggedin" component={Vendors} />
+                <ProtectedRoute path="/search/apis/notloggedin" component={APIs} />
+                <ProtectedRoute path="/search/usecases/notloggedin" component={Usecases} />
+                <ProtectedRoute path="/search/successes/notloggedin" component={SuccessStories} />
+                <ProtectedRoute path="/search/vendors" component={TabsVendor} />
+                <ProtectedRoute path="/search/apis" component={TabsAPI} />
+                <ProtectedRoute path="/search/usecases" component={TabsUsecase} />
+                <ProtectedRoute path="/search/successes" component={TabsSuccess} />
+                <ProtectedRoute path="/successstories/:TransformX_Success_Story_Id" component={Success} />
+                <ProtectedRoute path="/usecases/:TransformX_Usecase_Id" component={Usecase} />
+                <ProtectedRoute path="/apis/:TransformX_API_Id" component={API} />
+                <ProtectedRoute path="/vendors/:TransformX_Vendor_Id" component={Vendor} />
+                <ProtectedRoute path="/login" component={isLogged ? NotFound : Login} />
+                <ProtectedRoute path="/register" component={isLogged ? NotFound : Register} />
+                <ProtectedRoute path="/vendors" component={Vendors} />
+                <ProtectedRoute path="/forgot_password" component={isLogged ? NotFound : ForgotPass} />
+                <ProtectedRoute path="/user/reset/:token" component={isLogged ? NotFound : ResetPass} />
+                <ProtectedRoute path="/user/activate/:activation_token" component={ActivationEmail} />
+                <ProtectedRoute path="/profile" component={isLogged ? Profile : NotFound} />
             </Switch>
         </section>
     )

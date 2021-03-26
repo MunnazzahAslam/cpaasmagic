@@ -64,7 +64,7 @@ const Header = () => {
     const userLoggedNav = () => {
         return <>
             <>
-                <NavLogo to="/" onClick={handleClick}>
+                <NavLogo to="/home" onClick={handleClick}>
                     <img src={logo} className="logo" />
                 </NavLogo>
                 <MobileIcon onClick={handleClick}>
@@ -91,17 +91,17 @@ const Header = () => {
                         </NavLinks>
                 </NavItem>
                 <NavItem>
-                    <NavLinks to="/services">
+                    <NavLinks to="/">
                         Resources
                         </NavLinks>
                 </NavItem>
                 <NavItem>
-                    <NavLinks to="/pricing">
+                    <NavLinks to="/">
                         Pricing
                         </NavLinks>
                 </NavItem>
                 <NavItem>
-                    <NavLinks to="/about">
+                    <NavLinks to="/">
                         About
                         </NavLinks>
                 </NavItem>
@@ -119,7 +119,7 @@ const Header = () => {
                                 ? userLoggedNav()
                                 :
                                 <>
-                                    <NavLogo to="/" onClick={handleClick}>
+                                    <NavLogo to="/home" onClick={handleClick}>
                                         <img src={logo} className="logo" />
                                     </NavLogo>
                                     <MobileIcon onClick={handleClick}>
@@ -148,17 +148,17 @@ const Header = () => {
                         </NavLinks>
                                         </NavItem>
                                         <NavItem>
-                                            <NavLinks to="/services">
+                                            <NavLinks to="/">
                                                 Resources
                         </NavLinks>
                                         </NavItem>
                                         <NavItem>
-                                            <NavLinks to="/pricing">
+                                            <NavLinks to="/">
                                                 Pricing
                         </NavLinks>
                                         </NavItem>
                                         <NavItem>
-                                            <NavLinks to="/about">
+                                            <NavLinks to="/">
                                                 About
                         </NavLinks>
                                         </NavItem>
