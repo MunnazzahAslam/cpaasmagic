@@ -90,10 +90,10 @@ function Hoome() {
                 </div>
                 <div className="widgets">
                     <div className="left">
-                       {/* <WordPress /> */}
+                       <WordPress /> 
                     </div>
                     <div className="right">
-                    <iframe class="airtable-embed" src="https://airtable.com/embed/shrPpVm5IdbY6qKvn?backgroundColor=purple&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="533" style={{background: 'transparent', border: '1px solid #ccc'}}></iframe><RightPortion />
+                        <RightPortion />
                         <FeaturedSuccesses />
                     </div>
                 </div>

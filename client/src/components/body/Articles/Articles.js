@@ -4,7 +4,7 @@ export default function Articles(props) {
   const [post, setPost] = useState(null);
 
   useEffect(() => {
-    Axios.get("https://enterpriseinnovation.org/wp-json/wp/v2/posts/"+ props.match.params.id).then(
+    Axios.get("https://www.innovationaudit.org/cpaasmagic/wp-json/wp/v2/posts/"+ props.match.params.id).then(
       response => {
         setPost(response.data);
       }

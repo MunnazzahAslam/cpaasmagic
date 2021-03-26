@@ -20,7 +20,7 @@ export class DataProvider extends Component {
             .then(vendorsList => {
                 this.setState({ vendors: vendorsList });
             });
-            axios.get('https://enterpriseinnovation.org/wp-json/wp/v2/posts?_embed')
+            axios.get('https://www.innovationaudit.org/cpaasmagic/wp-json/wp/v2/posts?_embed')
             .then(res => this.setState({
                 posts: res.data,
                 isLoaded: true
