@@ -52,7 +52,7 @@ function Hoome() {
                             </ImgWrapper> <Heading style={{ color: '#00BFA5', fontSize: '1.2em' }}>Buy CPaaS</Heading>
                             <Subtitle style={{ color: '#1D217E' }}>Assess CPaaS Solutions from 100+ vendors across key parameters that assist in your buying decision</Subtitle>
                             <div style={{ display: 'flex', justifyContent: 'center' }}>
-                                <Button style={{ background: '#FAD069', fontWeight: '500' }}>Coming Soon</Button>
+                                <Link to="/getstarted" ><Button style={{ background: '#FAD069', fontWeight: '500', fontSize:'1em' }}>Learn More</Button></Link>
                             </div>
                         </CardContent>
                     </Card>
@@ -98,6 +98,7 @@ function Hoome() {
                     </div>
                 </div>
             </div>
+            <div data-formito-id="Via9siQjZtVQ4DAXB0rx" data-trigger="fab"></div>
         </div >
     )
 }

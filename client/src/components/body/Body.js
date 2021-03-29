@@ -32,15 +32,16 @@ import getStartedPage from '../body/home/getStartedPage';
 import Dashboard from '../body/Dashboard/Dashboard'
 import Articles from '../body/Articles/Articles'
 import ProtectedRoute from './ProtectedRoute';
+import Resources from '../body/Resources/Resources'
 function Body() {
     const auth = useSelector(state => state.auth)
-    const { isLogged } = auth
-    const { isAdmin } = auth
+    const { isLogged, isAdmin, isBuyer, isSeller } = auth
     return (
         <section>
             <Switch>
-                <Route path="/" component={AdminLogin} exact/>
+                <Route path="/" component={AdminLogin} exact />
                 <ProtectedRoute path="/home" component={Hoome} />
+                <ProtectedRoute path="/resources" component={Resources} />
                 <ProtectedRoute path="/sellerdashboard" component={Dashboard} />
                 <ProtectedRoute path="/getstarted" component={getStartedPage} />
                 <ProtectedRoute path="/map" component={Maps} />

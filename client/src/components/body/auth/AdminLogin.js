@@ -35,7 +35,7 @@ function AdminLogin() {
             localStorage.setItem('firstLogin', true)
 
             dispatch(dispatchLogin())
-            history.push("/sellerdashboard")
+            history.push("/sellerdahsboard")
 
         } catch (err) {
             err.response.data.msg &&

@@ -32,6 +32,7 @@
     "express-fileupload": "^1.2.1",
     "feather-icons": "^4.28.0",
     "framer": "^1.2.26",
+    "gatsby-theme-blog": "^2.0.5",
     "google-map-react": "^2.1.9",
     "googleapis": "^61.0.0",
     "http2": "^3.3.7",

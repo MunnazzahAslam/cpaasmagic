@@ -91,7 +91,7 @@ const Header = () => {
                         </NavLinks>
                 </NavItem>
                 <NavItem>
-                    <NavLinks to="/">
+                    <NavLinks to="/resources">
                         Resources
                         </NavLinks>
                 </NavItem>
@@ -148,7 +148,7 @@ const Header = () => {
                         </NavLinks>
                                         </NavItem>
                                         <NavItem>
-                                            <NavLinks to="/">
+                                            <NavLinks to="/resources">
                                                 Resources
                         </NavLinks>
                                         </NavItem>
