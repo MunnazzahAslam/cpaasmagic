@@ -21,7 +21,7 @@ const Header = () => {
     const auth = useSelector(state => state.auth)
 
     const { user, isLogged } = auth
-    const isSeller = localStorage.getItem('isSeller');
+    const isUser = localStorage.getItem('isUser');
       
     const handleLogout = async () => {
         try {
@@ -68,7 +68,7 @@ const Header = () => {
     const userLoggedNav = () => {
         return <>
             <>
-                <NavLogo to={isLogged? isSeller ? "/sellerdashboard": "/buyerdashboard" : "/home"} onClick={handleClick}>
+                <NavLogo to={isLogged? isUser=='1' ? "/sellerdashboard": "/buyerdashboard" : "/home"} onClick={handleClick}>
                     <img src={logo} className="logo" />
                 </NavLogo>
                 <MobileIcon onClick={handleClick}>
@@ -85,8 +85,8 @@ const Header = () => {
             </>
             <NavMenu onClick={handleClick} click={click}>
                 <NavItem>
-                    <NavLinks to={isSeller ? "/sellerdashboard" : "/buyerdashboard"}>
-                        {isSeller ? "Seller Dashboard" : "Buyer Dashboard"}
+                    <NavLinks to={isUser=='1' ? "/sellerdashboard" : "/buyerdashboard"}>
+                        {isUser=='1' ? "Seller Dashboard" : "Buyer Dashboard"}
                         </NavLinks>
                 </NavItem>
                 <NavItem>
@@ -123,7 +123,7 @@ const Header = () => {
                                 ? userLoggedNav()
                                 :
                                 <>
-                                    <NavLogo to={isLogged? isSeller ? "/sellerdashboard": "/buyerdashboard" : "/home"} onClick={handleClick}>
+                                    <NavLogo to={isLogged? isUser=='1' ? "/sellerdashboard": "/buyerdashboard" : "/home"} onClick={handleClick}>
                                         <img src={logo} className="logo" />
                                     </NavLogo>
                                     <MobileIcon onClick={handleClick}>

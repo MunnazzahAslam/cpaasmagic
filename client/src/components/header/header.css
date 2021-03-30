@@ -41,7 +41,7 @@ li img{
     position: absolute;
     background: #f4f5f7;
     text-align: center;
-    width: calc(30% + 50px);
+    width: calc(60% + 50px);
     border-radius: 8px;
     top: 50px;
     display: none;
