@@ -40,7 +40,7 @@ function Body() {
     return (
         <section>
             <Switch>
-                <Route path="/" component={AdminLogin} exact />
+                <Route path="/" component={isLogged ? Home : AdminLogin} exact />
                 <ProtectedRoute path="/home" component={Hoome} />
                 <ProtectedRoute path="/resources" component={Resources} />
                 <ProtectedRoute path="/sellerdashboard" component={Dashboard} />
@@ -63,13 +63,13 @@ function Body() {
                 <ProtectedRoute path="/usecases/:TransformX_Usecase_Id" component={Usecase} />
                 <ProtectedRoute path="/apis/:TransformX_API_Id" component={API} />
                 <ProtectedRoute path="/vendors/:TransformX_Vendor_Id" component={Vendor} />
-                <ProtectedRoute path="/login" component={isLogged ? NotFound : Login} />
-                <ProtectedRoute path="/register" component={isLogged ? NotFound : Register} />
+                <ProtectedRoute path="/login" component={isLogged ? Home : Login} />
+                <ProtectedRoute path="/register" component={isLogged ? Home : Register} />
                 <ProtectedRoute path="/vendors" component={Vendors} />
                 <ProtectedRoute path="/forgot_password" component={isLogged ? NotFound : ForgotPass} />
                 <ProtectedRoute path="/user/reset/:token" component={isLogged ? NotFound : ResetPass} />
                 <ProtectedRoute path="/user/activate/:activation_token" component={ActivationEmail} />
-                <ProtectedRoute path="/profile" component={isLogged ? Profile : NotFound} />
+                <ProtectedRoute path="/profile" component={isLogged ? Profile : Home} />
             </Switch>
         </section>
     )
