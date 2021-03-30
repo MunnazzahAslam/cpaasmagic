@@ -17,6 +17,10 @@ const GetStartedPage = () => {
 
     const { user, isLogged } = auth
 
+    const onClick = event => {
+        localStorage.setItem('isBuyer', true)
+    }
+
     return (
         <div style={{ color: '#1B2653' }}>
             <div className="topbar" style={{ paddingLeft:'0%',height: '250px', display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
@@ -25,7 +29,7 @@ const GetStartedPage = () => {
                 use cases, trending success stories all within cpaasmagic seller dashboard.
                                 </Subtitle>
                 <div style={{ display: 'flex', justifyContent: 'center' }}>
-                    <Link to={isLogged? "/sellerdashboard": "/register"} ><Button style={{ marginRight: '0.5rem', background: '#FAD069', fontWeight: '700', marginTop: '-1rem' }}>Get Started</Button></Link>
+                    <Link to={isLogged? "/sellerdashboard": "/register"} ><Button onClick={onClick} style={{ marginRight: '0.5rem', background: '#FAD069', fontWeight: '700', marginTop: '-1rem' }}>Get Started</Button></Link>
                 </div>
             </div>
             <div style={{ height: '300px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
@@ -133,7 +137,7 @@ const GetStartedPage = () => {
                                         • Data visualizations<br />
                                         • CSV exports</Subtitle>
                             <div style={{ display: 'flex', justifyContent: 'center' }}>
-                                <Link to="/register" ><Button style={{ marginRight: '0.5rem', background: '#FAD069', fontWeight: '500' }}>Start Free Trial</Button></Link>
+                                <Link to="/register" ><Button onClick={onClick} style={{ marginRight: '0.5rem', background: '#FAD069', fontWeight: '500' }}>Start Free Trial</Button></Link>
                             </div>
                         </CardContent>
                     </Card>

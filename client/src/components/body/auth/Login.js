@@ -20,7 +20,7 @@ function Login() {
     const [user, setUser] = useState(initialState)
     const dispatch = useDispatch()
     const history = useHistory()
-
+    const isSeller = localStorage.getItem('isSeller');
     const { email, password, err, success } = user
 
     const handleChangeInput = e => {
@@ -38,7 +38,7 @@ function Login() {
             localStorage.setItem('firstLogin', true)
 
             dispatch(dispatchLogin())
-            history.push("/sellerdashboard")
+            history.push(isSeller?"/sellerdashboard":"/buyerdashboard")
 
         } catch (err) {
             err.response.data.msg &&
@@ -54,7 +54,7 @@ function Login() {
             localStorage.setItem('firstLogin', true)
 
             dispatch(dispatchLogin())
-            history.push('/sellerdashboard')
+            history.push(isSeller?"/sellerdashboard":"/buyerdashboard")
         } catch (err) {
             err.response.data.msg &&
                 setUser({ ...user, err: err.response.data.msg, success: '' })
@@ -70,7 +70,7 @@ function Login() {
             localStorage.setItem('firstLogin', true)
 
             dispatch(dispatchLogin())
-            history.push('/sellerdashboard')
+            history.push(isSeller?"/sellerdashboard":"/buyerdashboard")
         } catch (err) {
             err.response.data.msg &&
                 setUser({ ...user, err: err.response.data.msg, success: '' })
