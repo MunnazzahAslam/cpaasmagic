@@ -12,7 +12,7 @@ import flowchart from './flowchart.png'
 import dollar from './dollar.png'
 import { useSelector } from 'react-redux'
 import './home.css'
-const GetStartedPage = () => { 
+const BuyergetStartedPage = () => { 
     const auth = useSelector(state => state.auth)
 
     const { user, isLogged } = auth
@@ -154,4 +154,4 @@ const GetStartedPage = () => {
     )
 }
 
-export default GetStartedPage
+export default BuyergetStartedPage

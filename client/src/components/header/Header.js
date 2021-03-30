@@ -94,7 +94,7 @@ const Header = () => {
                         </NavLinks>
                 </NavItem>
                 <NavItem>
-                    <NavLinks to="/resources">
+                    <NavLinks to={isLogged?"/resources":"/register"}>
                         Resources
                         </NavLinks>
                 </NavItem>
@@ -151,7 +151,7 @@ const Header = () => {
                         </NavLinks>
                                         </NavItem>
                                         <NavItem>
-                                            <NavLinks to="/resources">
+                                            <NavLinks to={isLogged?"/resources":"/register"}>
                                                 Resources
                         </NavLinks>
                                         </NavItem>

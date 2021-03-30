@@ -28,7 +28,8 @@ import InstaEmbed from '../body/Social/InstaEmbed'
 import Maps from '../body/Maps/Maps'
 import Hoome from '../body/home/Hoome'
 import NewLayout from '../body/NewLayout/NewLayout'
-import getStartedPage from '../body/home/getStartedPage';
+import GetStartedPage from './home/getStartedPage';
+import BuyergetStartedPage from './home/BuyergetStartedPage';
 import Dashboard from '../body/Dashboard/Dashboard'
 import Articles from '../body/Articles/Articles'
 import ProtectedRoute from './ProtectedRoute';
@@ -43,7 +44,8 @@ function Body() {
                 <ProtectedRoute path="/home" component={Hoome} />
                 <ProtectedRoute path="/resources" component={Resources} />
                 <ProtectedRoute path="/sellerdashboard" component={Dashboard} />
-                <ProtectedRoute path="/getstarted" component={getStartedPage} />
+                <ProtectedRoute path="/getstarted/seller" component={GetStartedPage} />
+                <ProtectedRoute path="/getstarted/buyer" component={BuyergetStartedPage} />
                 <ProtectedRoute path="/map" component={Maps} />
                 <ProtectedRoute path="/new" component={NewLayout} />
                 <Route path="/blog/:id" component={Articles} />

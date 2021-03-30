@@ -41,7 +41,7 @@ function Hoome() {
                             <Heading style={{ color: '#00BFA5', fontSize: '1.2em' }}>Sell CPaaS</Heading>
                             <Subtitle style={{ color: '#1D217E' }}>Explore how your sales reps and marketing wizards can sell better through our platform</Subtitle>
                             <div style={{ display: 'flex', justifyContent: 'center' }}>
-                                <Link to="/getstarted" ><Button style={{ background: '#FAD069', fontWeight: '500', fontSize:'1em' }}>Learn More</Button></Link>
+                                <Link to="/getstarted/seller" ><Button style={{ background: '#FAD069', fontWeight: '500', fontSize:'1em' }}>Learn More</Button></Link>
                             </div>
                         </CardContent>
                     </Card>
@@ -52,7 +52,7 @@ function Hoome() {
                             </ImgWrapper> <Heading style={{ color: '#00BFA5', fontSize: '1.2em' }}>Buy CPaaS</Heading>
                             <Subtitle style={{ color: '#1D217E' }}>Assess CPaaS Solutions from 100+ vendors across key parameters that assist in your buying decision</Subtitle>
                             <div style={{ display: 'flex', justifyContent: 'center' }}>
-                                <Link to="/getstarted" ><Button style={{ background: '#FAD069', fontWeight: '500', fontSize:'1em' }}>Learn More</Button></Link>
+                                <Link to="/getstarted/buyer" ><Button style={{ background: '#FAD069', fontWeight: '500', fontSize:'1em' }}>Learn More</Button></Link>
                             </div>
                         </CardContent>
                     </Card>

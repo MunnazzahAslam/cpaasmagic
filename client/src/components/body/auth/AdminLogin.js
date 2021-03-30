@@ -31,10 +31,8 @@ function AdminLogin() {
         try {
             const res = await axios.post('/user/login', { email, password })
             setUser({ ...user, err: '', success: res.data.msg })
-
             localStorage.setItem('firstLogin', true)
             history.push("/home")
-
         } catch (err) {
             err.response.data.msg &&
                 setUser({ ...user, err: err.response.data.msg, success: '' })

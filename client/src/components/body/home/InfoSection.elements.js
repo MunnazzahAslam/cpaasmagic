@@ -70,7 +70,7 @@ export const Heading = styled.h1`
     font-size: 1.8em;
     font-weight: 700;
     line-height: 1.1;
-    color: '#1283DA';
+    color: '#fff';
     @media screen and (max-width: 960px){
     margin-bottom: 8px;
     font-size: 1.6em;
