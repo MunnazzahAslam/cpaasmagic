@@ -12,7 +12,8 @@ const initialState = {
     email: '',
     password: '',
     err: '',
-    success: ''
+    success: '',
+    isSeller:''
 }
 
 function Login() {

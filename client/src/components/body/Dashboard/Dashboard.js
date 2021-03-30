@@ -12,8 +12,8 @@ import '../Dashboard/Dashboard.css';
 
 function Dashboard() {
     return (
-        <div style={{ color: '#1B2653' }}>
-         <iframe className="airtable-embed" src="https://airtable.com/embed/shrG809ltLoLwuy9i?backgroundColor=blue" width="100%" height="2833" style={{background: 'transparent'}}></iframe> {/*<iframe src="https://x.formito.com/app/F2FPYp0OzqtnPsJ9xcwJ" width="480" height="840" frameBorder="0" style="border:1px solid #eee"></iframe>
+        <div style={{ color: '#1B2653',marginBottom:'-2rem' }}>
+         <iframe class="airtable-embed" src="https://airtable.com/embed/shrG809ltLoLwuy9i?backgroundColor=blue" frameborder="0" onmousewheel="" width="100%" height="2833" style={{background: 'transparent',border: 'none'}}></iframe> {/*<iframe src="https://x.formito.com/app/F2FPYp0OzqtnPsJ9xcwJ" width="480" height="840" frameBorder="0" style="border:1px solid #eee"></iframe>
             <div style={{ display: 'flex', justifyContent: 'center' }}>
                 <Card className="card1" style={{ boxShadow: 'none' }}>
                     <CardContent style={{ color: '#fff' }}>
