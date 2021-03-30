@@ -20,7 +20,7 @@ const BuyergetStartedPage = () => {
     return (
         <div style={{ color: '#1B2653' }}>
             <div className="topbar" style={{ paddingLeft:'0%',height: '250px', display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
-                <Heading>CPaaS Intelligence at your Fingertips</Heading>
+                <Heading>Buyer - CPaaS Intelligence at your Fingertips</Heading>
                 <Subtitle style={{ textAlign: 'center' }}>Discover industry trends, competitor insights, in-demand APIs, popular
                 use cases, trending success stories all within cpaasmagic seller dashboard.
                                 </Subtitle>

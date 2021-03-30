@@ -39,7 +39,7 @@ function Hoome() {
                                 <Image style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }} src={sell} />
                             </ImgWrapper>
                             <Heading style={{ color: '#00BFA5', fontSize: '1.2em' }}>Sell CPaaS</Heading>
-                            <Subtitle style={{ color: '#1D217E' }}>Explore how your sales reps and marketing wizards can sell better through our platform</Subtitle>
+                            <Subtitle style={{ color: '#666666' }}>Explore how your sales reps and marketing wizards can sell better through our platform</Subtitle>
                             <div style={{ display: 'flex', justifyContent: 'center' }}>
                                 <Link to="/getstarted/seller" ><Button style={{ background: '#FAD069', fontWeight: '500', fontSize:'1em' }}>Learn More</Button></Link>
                             </div>
@@ -50,7 +50,7 @@ function Hoome() {
                             <ImgWrapper>
                                 <Image style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }} src={Picture1} />
                             </ImgWrapper> <Heading style={{ color: '#00BFA5', fontSize: '1.2em' }}>Buy CPaaS</Heading>
-                            <Subtitle style={{ color: '#1D217E' }}>Assess CPaaS Solutions from 100+ vendors across key parameters that assist in your buying decision</Subtitle>
+                            <Subtitle style={{ color: '#666666' }}>Assess CPaaS Solutions from 100+ vendors across key parameters that assist in your buying decision</Subtitle>
                             <div style={{ display: 'flex', justifyContent: 'center' }}>
                                 <Link to="/getstarted/buyer" ><Button style={{ background: '#FAD069', fontWeight: '500', fontSize:'1em' }}>Learn More</Button></Link>
                             </div>
@@ -61,7 +61,7 @@ function Hoome() {
                             <ImgWrapper>
                                 <Image style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }} src={Picture2} />
                             </ImgWrapper><Heading style={{ color: '#00BFA5', fontSize: '1.2em' }}>Learn CPaaS</Heading>
-                            <Subtitle style={{ color: '#1D217E' }}>Get latest insights or enroll yourself in our trainings that help you get up to speed with CPaaS </Subtitle>
+                            <Subtitle style={{ color: '#666666' }}>Get latest insights or enroll yourself in our trainings that help you get up to speed with CPaaS </Subtitle>
                             <div style={{ display: 'flex', justifyContent: 'center' }}>
                                 <Button style={{ background: '#FAD069', fontWeight: '500' }}>Coming Soon</Button>
                             </div>              </CardContent>
