@@ -86,7 +86,7 @@ function Hoome() {
 
             </div>
             <div className="bottomCards" style={{ backgroundColor: '#F1F3FE' }}>
-                <div className="Cards"><Heading style={{ textAlign: 'left', marginLeft: '2rem', marginBottom: '2rem' }}>cpaasmagic insights & analysis</Heading>
+                <div className="Cards"><Heading style={{ textAlign: 'left', marginBottom: '2rem' }}>cpaasmagic insights & analysis</Heading>
                 </div>
                 <div className="widgets">
                     <div className="left">

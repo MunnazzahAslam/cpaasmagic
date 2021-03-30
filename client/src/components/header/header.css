@@ -1,7 +1,7 @@
 
 .logo{
-    height: 2rem;
-    width: 10rem;
+    height: 1.4rem;
+    width: 7rem;
     cursor:pointer;
 }
 a{
@@ -19,9 +19,9 @@ ul li:hover{
 }
 li img{
     border: none;
-    width: 2.5rem;
-    height: 2.5rem;
-    transform: translateY(1rem);
+    width: 1.7rem;
+    height: 1.7rem;
+    transform: translateY(1.5rem);
     border-radius: 50%;
 }
 /* --------- Dropdown ---------- */

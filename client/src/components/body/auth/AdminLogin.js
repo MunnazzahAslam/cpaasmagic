@@ -33,9 +33,7 @@ function AdminLogin() {
             setUser({ ...user, err: '', success: res.data.msg })
 
             localStorage.setItem('firstLogin', true)
-
-            dispatch(dispatchLogin())
-            history.push("/sellerdahsboard")
+            history.push("/home")
 
         } catch (err) {
             err.response.data.msg &&
@@ -68,7 +66,7 @@ function AdminLogin() {
                     <div className="row">
                         <button type="submit" className="bob-on-hover">Sign in</button>
                     </div>
-                </form>       
+                </form>
             </div>
         </div>
     )

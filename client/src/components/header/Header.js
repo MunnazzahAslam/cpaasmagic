@@ -164,7 +164,7 @@ const Header = () => {
                                         </NavItem>
                                         <NavItemBtn>
                                             <NavBtnLink to="/register">
-                                                <Button>Sign Up</Button>
+                                                <Button style={{padding:'8px', fontSize:'1rem'}}>Sign Up</Button>
                                             </NavBtnLink>
                                         </NavItemBtn>
                                         <NavItem>

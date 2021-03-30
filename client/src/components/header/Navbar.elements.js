@@ -3,12 +3,12 @@ import { Container } from '../../globalStyles';
 import { Link } from 'react-router-dom';
  
 export const Nav= styled.nav`
-background:  #15202B;
-height: 60px;
+background:  #1283DA;
+height: 65px;
 display:flex;
 justify-content: center;
 align-items: center;
-font-size: 1.2rem;
+font-size: 0.8rem;
 position: sticky;
 top:0;
 z-index: 999;
@@ -76,11 +76,13 @@ export const NavItem = styled.li`
 height:80px;
 color: #fff;
 opacity: '90';
+font-size:'0.6rem';
 border-bottom: 2px solid transparent;
 &:hover{
     opacity:'20';
     color: #fff;
 }
+
 @media screen and (max-width: 960px){
     width:100%;
     &:hover{
@@ -98,6 +100,7 @@ text-decoration: none;
 padding: 0.5rem 1rem;
 margin-right: 1rem;
 font-weight: 400;
+font-size: 1rem;
 height: 100%;
 &:hover{
     transition:all 0.3s ease-out;
