@@ -17,7 +17,9 @@ import { Button } from '../../../globalStyles';
 import './Tabs.css';
 
 export default () => (
-    <>
+    <div style={{marginBottom:'-2rem'}}>
+    <iframe class="airtable-embed" src="https://airtable.com/embed/shrnxE09RLcA9bh2J?backgroundColor=blue&viewControls=on" width="100%" height="1533" style={{background: 'transparent', border: 'none'}}></iframe>
+    {/*
         <Tabs defaultIndex={0}>
             <br />
             <br />
@@ -43,6 +45,7 @@ export default () => (
                     <Successstories />
                 </TabPanel>
             </div>
-        </Tabs>
-    </>
+        </Tabs> */}
+    </div>
+   
 );

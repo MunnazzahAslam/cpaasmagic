@@ -27,7 +27,7 @@ export class WordPress extends Component {
                                         } style={{ width: '20em', height: '20em', border: 'none', margin:'1rem', marginRight:'-1rem' }} />
                                     </Table.TextCell>
 
-                                    <Table.TextCell flexBasis={500} flexShrink={0} flexGrow={0} style={{ padding: '1rem', paddingLeft: '0rem' }}>
+                                    <Table.TextCell flexBasis={530} flexShrink={0} flexGrow={0} style={{ padding: '1rem', paddingLeft: '0rem' }}>
                                         <span style={{ color: '#66788A', fontSize: '1em', paddingTop: '1rem' }}>{post.date}</span><br />
                                         <span style={{ color: '#234361', cursor: 'pointer', fontWeight: '400', fontSize: '1.6em' }}>{post.title.rendered}</span><br />
                                         <span style={{ color: '#66788A', fontSize: '1em' }}>TransformX</span>

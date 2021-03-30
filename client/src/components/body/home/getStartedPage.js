@@ -18,7 +18,7 @@ const GetStartedPage = () => {
     const { user, isLogged } = auth
 
     const onClick = event => {
-        localStorage.setItem('isBuyer', true)
+        localStorage.setItem('isSeller', true)
     }
 
     return (

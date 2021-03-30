@@ -15,7 +15,6 @@ const initialState = {
 
 function AdminLogin() {
     const [user, setUser] = useState(initialState)
-    const dispatch = useDispatch()
     const history = useHistory()
 
     const { email, password, err, success } = user
@@ -30,8 +29,7 @@ function AdminLogin() {
         e.preventDefault()
         try {
             const res = await axios.post('/user/login', { email, password })
-            setUser({ ...user, err: '', success: res.data.msg })
-            localStorage.setItem('firstLogin', true)
+            localStorage.setItem('admin', true)
             history.push("/home")
         } catch (err) {
             err.response.data.msg &&

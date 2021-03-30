@@ -24,14 +24,14 @@ function Hoome() {
             <div className="topbar">
                 <Heading style={{ textAlign: 'left' }}>Discover APIs and the companies behind them</Heading>
                 <div style={{ display: 'flex', justifyContent: 'flex-start', flexWrap: 'wrap' }}>
-                    <Link to="/search/vendors" ><Button className="small" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginRight: '0.8em', marginTop: '1em', padding: '0.9em', background: '#fff', color: '#1B2653', fontSize: '1em' }}><img src={Picture4} style={{ marginRight: '0.3rem', color: '#04C0A6', width: '1.2rem', height: '1.2rem' }} />Vendors</Button></Link>
-                    <Link to="/search/apis" ><Button className="small" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginRight: '0.8em', marginTop: '1em', padding: '0.9em', background: '#fff', color: '#1B2653', fontSize: '1em' }}><img src={Picture5} style={{ marginRight: '0.3rem', color: '#04C0A6', width: '1.2rem', height: '1.2rem' }} />APIs</Button></Link>
-                    <Link to="/search/usecases" ><Button className="small" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginRight: '0.8em', marginTop: '1em', padding: '0.9em', background: '#fff', color: '#1B2653', fontSize: '1em' }}><img src={Picture6} style={{ marginRight: '0.3rem', color: '#04C0A6', width: '1.2rem', height: '1.2rem' }} />Use Cases</Button></Link>
-                    <Link to="/search/successes" ><Button className="small" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginRight: '0.8em', marginTop: '1em', padding: '0.9em', background: '#fff', color: '#1B2653', fontSize: '1em' }}><img src={Picture7} style={{ marginRight: '0.3rem', color: '#04C0A6', width: '1.2rem', height: '1.2rem' }} />Successes</Button></Link>
+                    <Link to="/search/vendors" ><Button className="small" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginRight: '0.8em', marginTop: '1em', padding: '0.8em', background: '#fff', color: '#666666', fontSize: '1rem' }}><img src={Picture4} style={{ marginRight: '0.3rem', color: '#666666', width: '1.2rem', height: '1.2rem' }} />Vendors</Button></Link>
+                    <Link to="/search/apis" ><Button className="small" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginRight: '0.8em', marginTop: '1em', padding: '0.8em', background: '#fff', color: '#666666', fontSize: '1rem' }}><img src={Picture5} style={{ marginRight: '0.3rem', color: '#666666', width: '1.2rem', height: '1.2rem' }} />APIs</Button></Link>
+                    <Link to="/search/usecases" ><Button className="small" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginRight: '0.8em', marginTop: '1em', padding: '0.8em', background: '#fff', color: '#666666', fontSize: '1rem' }}><img src={Picture6} style={{ marginRight: '0.3rem', color: '#666666', width: '1.2rem', height: '1.2rem' }} />Use Cases</Button></Link>
+                    <Link to="/search/successes" ><Button className="small" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginRight: '0.8em', marginTop: '1em', padding: '0.8em', background: '#fff', color: '#666666', fontSize: '1rem' }}><img src={Picture7} style={{ marginRight: '0.3rem', color: '#666666', width: '1.2rem', height: '1.2rem' }} />Successes</Button></Link>
                 </div>
             </div>
             <div className="Cards">
-                <Heading style={{ textAlign: 'left' }}>Do even more with cpaasmagic</Heading>
+                <Heading style={{ textAlign: 'left',color:'#17B0B9' }}>Do even more with cpaasmagic</Heading>
                 <div className="cardContainer">
                     <Card className="hover" style={{ boxShadow: 'inset 1px 0.5px 2px 0.5px #d6fffa, 1px 1px 2.5px 0.5px #d6fffa' }}  >
                         <CardContent>

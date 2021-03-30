@@ -21,7 +21,8 @@ const Header = () => {
     const auth = useSelector(state => state.auth)
 
     const { user, isLogged } = auth
-
+    const isSeller = localStorage.getItem('isSeller');
+      
     const handleLogout = async () => {
         try {
             await axios.get('/user/logout')
@@ -67,7 +68,7 @@ const Header = () => {
     const userLoggedNav = () => {
         return <>
             <>
-                <NavLogo to="/home" onClick={handleClick}>
+                <NavLogo to={isLogged? isSeller ? "/sellerdashboard": "/buyerdashboard" : "/home"} onClick={handleClick}>
                     <img src={logo} className="logo" />
                 </NavLogo>
                 <MobileIcon onClick={handleClick}>
@@ -84,8 +85,8 @@ const Header = () => {
             </>
             <NavMenu onClick={handleClick} click={click}>
                 <NavItem>
-                    <NavLinks to="/sellerdashboard">
-                        Seller Dashboard
+                    <NavLinks to={isSeller ? "/sellerdashboard" : "/buyerdashboard"}>
+                        {isSeller ? "Seller Dashboard" : "Buyer Dashboard"}
                         </NavLinks>
                 </NavItem>
                 <NavItem>
@@ -122,7 +123,7 @@ const Header = () => {
                                 ? userLoggedNav()
                                 :
                                 <>
-                                    <NavLogo to="/home" onClick={handleClick}>
+                                    <NavLogo to={isLogged? isSeller ? "/sellerdashboard": "/buyerdashboard" : "/home"} onClick={handleClick}>
                                         <img src={logo} className="logo" />
                                     </NavLogo>
                                     <MobileIcon onClick={handleClick}>
@@ -167,7 +168,7 @@ const Header = () => {
                                         </NavItem>
                                         <NavItemBtn>
                                             <NavBtnLink to="/register">
-                                                <Button style={{padding:'8px', fontSize:'1rem'}}>Sign Up</Button>
+                                                <Button style={{padding:'12px', fontSize:'1rem',background:'#FAD069',fontWeight:'700'}}>Sign Up</Button>
                                             </NavBtnLink>
                                         </NavItemBtn>
                                         <NavItem>

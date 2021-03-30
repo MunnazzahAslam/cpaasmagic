@@ -18,7 +18,7 @@ const BuyergetStartedPage = () => {
     const { user, isLogged } = auth
 
     const onClick = event => {
-        localStorage.setItem('isSeller', true)
+        localStorage.setItem('isSeller', false)
     }
     return (
         <div style={{ color: '#1B2653' }}>

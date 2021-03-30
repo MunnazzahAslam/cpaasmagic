@@ -44,6 +44,7 @@ function Body() {
                 <ProtectedRoute path="/home" component={Hoome} />
                 <ProtectedRoute path="/resources" component={Resources} />
                 <ProtectedRoute path="/sellerdashboard" component={Dashboard} />
+                <ProtectedRoute path="/buyerdashboard" component={Dashboard} />
                 <ProtectedRoute path="/getstarted/seller" component={GetStartedPage} />
                 <ProtectedRoute path="/getstarted/buyer" component={BuyergetStartedPage} />
                 <ProtectedRoute path="/map" component={Maps} />
