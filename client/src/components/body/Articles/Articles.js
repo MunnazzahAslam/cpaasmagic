@@ -15,7 +15,7 @@ export default function Articles(props) {
   return (
     <div>
       {post && (
-        <div>
+        <div style={{marginBottom:'2rem'}}>
           <div style={{backgroundColor:'#EDEFF9', width:'100%'}}><h1 style={{minWidth:'1000px',maxWidth:'1000px',color: '#1D217E', textAlign: 'center',margin: '0 auto',paddingTop: '44px',paddingBottom:'44px'}}>{post.title.rendered}</h1>
           <div style={{display:'flex', flexDirection:'row', justifyContent:'center', paddingBottom:'44px'}}>
             <Button style={{background:'#FA6396', marginRight:'1rem'}}>Article</Button>
