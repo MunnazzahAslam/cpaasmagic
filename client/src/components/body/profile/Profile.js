@@ -86,8 +86,8 @@ function Profile() {
         if (password) updatePassword()
     }
     return (
-        <>
-            <h2 style={{ textAlign: 'center',marginTop:'3rem' }}>Hello user, update your Profile</h2>
+        <div style={{background:'#F7FAFC'}}>
+            <h2 style={{ textAlign: 'center', paddingTop:'3rem',background:'#F7FAFC' }}>Hello user, update your Profile</h2>
             <br />
             <div>
                         {err && showErrMsg(err)}
@@ -129,7 +129,7 @@ function Profile() {
                 </div>
 
             </div>
-        </>
+        </div>
     )
 }
 

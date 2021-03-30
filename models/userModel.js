@@ -2,11 +2,7 @@ const mongoose = require('mongoose')
 
 
 const userSchema = new mongoose.Schema({
-    firstname: {
-        type: String,
-        trim: true
-    },
-    lastname: {
+    name: {
         type: String,
         trim: true
     },
@@ -26,11 +22,11 @@ const userSchema = new mongoose.Schema({
     },
     company: {
         type: String,
-        default: "TransformX"
+        default: ""
     },
     phoneno: {
         type: Number,
-        default: 0
+        default: ""
     },
     avatar: {
         type: String,

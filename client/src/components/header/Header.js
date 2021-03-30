@@ -50,7 +50,10 @@ const Header = () => {
         return <ul>
             <li className="drop-nav">
                 <Link to="#" className="avatar">
+                    <div style={{display:'flex', flexDirection:'row', justifyContent:'center', alignItems:'center', transform: 'translateY(1.3rem)' }}>
                     <img src={user.avatar} alt="" /><i className="fas fa-angle-down"></i>
+                    <p style={{color:'#fff'}}>{user.name}</p>
+                    </div>
                 </Link>
                 <ul className="dropdown">
                     <li><Link to="/profile">Profile</Link></li>
