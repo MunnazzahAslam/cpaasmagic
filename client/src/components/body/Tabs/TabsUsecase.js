@@ -21,7 +21,7 @@ import './Tabs.css';
 
 export default () => (
     <div>
-        <div style={{ color: '#1B2653' }}>
+        <div style={{ color: '#444444' }}>
             <p style={{margin:'1rem', marginLeft:'3.2rem', fontWeight:'bold'}}>Discover Use Cases</p>
             <iframe class="airtable-embed" src="https://airtable.com/embed/shrVihKMlBvjlquZR?backgroundColor=blue&viewControls=on" width="100%" height="800" style={{ background: 'transparent', border: 'none' }}></iframe>
         </div>
