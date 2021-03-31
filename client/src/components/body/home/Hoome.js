@@ -31,17 +31,17 @@ function Hoome() {
                 </div>
             </div>
             <div className="Cards">
-                <Heading style={{ textAlign: 'left',color:'#17B0B9' }}>Do even more with cpaasmagic</Heading>
+                <Heading style={{ textAlign: 'left', color: '#282828' }}>Do even more with cpaasmagic</Heading>
                 <div className="cardContainer">
                     <Card className="hover" style={{ boxShadow: 'inset 1px 0.5px 2px 0.5px #d6fffa, 1px 1px 2.5px 0.5px #d6fffa' }}  >
                         <CardContent>
                             <ImgWrapper>
                                 <Image style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }} src={sell} />
                             </ImgWrapper>
-                            <Heading style={{ color: '#00BFA5', fontSize: '1.2em' }}>Sell CPaaS</Heading>
+                            <Heading style={{ color: '#282828', fontSize: '1.2em' }}>Sell CPaaS</Heading>
                             <Subtitle style={{ color: '#666666' }}>Explore how your sales reps and marketing wizards can sell better through our platform</Subtitle>
                             <div style={{ display: 'flex', justifyContent: 'center' }}>
-                                <Link to="/getstarted/seller" ><Button style={{ background: '#FAD069', fontWeight: '500', fontSize:'1em' }}>Learn More</Button></Link>
+                                <Link to="/getstarted/seller" ><Button style={{ background:'#FAD069', fontWeight: '500', fontSize: '1em' }}>Learn More</Button></Link>
                             </div>
                         </CardContent>
                     </Card>
@@ -49,10 +49,10 @@ function Hoome() {
                         <CardContent style={{ textAlign: 'left' }}>
                             <ImgWrapper>
                                 <Image style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }} src={Picture1} />
-                            </ImgWrapper> <Heading style={{ color: '#00BFA5', fontSize: '1.2em' }}>Buy CPaaS</Heading>
+                            </ImgWrapper> <Heading style={{ color: '#282828', fontSize: '1.2em' }}>Buy CPaaS</Heading>
                             <Subtitle style={{ color: '#666666' }}>Assess CPaaS Solutions from 100+ vendors across key parameters that assist in your buying decision</Subtitle>
                             <div style={{ display: 'flex', justifyContent: 'center' }}>
-                                <Link to="/getstarted/buyer" ><Button style={{ background: '#FAD069', fontWeight: '500', fontSize:'1em' }}>Learn More</Button></Link>
+                                <Link to="/getstarted/buyer" ><Button style={{ background: '#FAD069', fontWeight: '500', fontSize: '1em' }}>Learn More</Button></Link>
                             </div>
                         </CardContent>
                     </Card>
@@ -60,7 +60,7 @@ function Hoome() {
                         <CardContent>
                             <ImgWrapper>
                                 <Image style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }} src={Picture2} />
-                            </ImgWrapper><Heading style={{ color: '#00BFA5', fontSize: '1.2em' }}>Learn CPaaS</Heading>
+                            </ImgWrapper><Heading style={{ color: '#282828', fontSize: '1.2em' }}>Learn CPaaS</Heading>
                             <Subtitle style={{ color: '#666666' }}>Get latest insights or enroll yourself in our trainings that help you get up to speed with CPaaS </Subtitle>
                             <div style={{ display: 'flex', justifyContent: 'center' }}>
                                 <Button style={{ background: '#FAD069', fontWeight: '500' }}>Coming Soon</Button>
@@ -74,20 +74,33 @@ function Hoome() {
                         <Heading style={{ textAlign: 'left' }}>Elevate your search with cpaasmagic Pro</Heading>
                         <Subtitle style={{ textAlign: 'left', maxWidth: '550px' }}>Intelligently search and target the right opportunities with advanced search filters, analysis tools, and company alerts.</Subtitle>
                         <div style={{ display: 'flex', justifyContent: 'flex-start' }}>
-                            <Link to="/register" ><Button style={{background: '#FAD069', fontWeight: '500' }}>Start Free Trial</Button></Link>
+                            <Link to="/register" ><Button style={{ background: '#FAD069', fontWeight: '500' }}>Start Free Trial</Button></Link>
                         </div>
                     </div>
                 </div>
                 <div>
                     <ImgWrapper>
-                        <Image src={Picture3} className="laptop" style={{ margin:'0rem'}} />
+                        <Image src={Picture3} className="laptop" style={{ margin: '0rem' }} />
                     </ImgWrapper>
                 </div>
 
             </div>
-            <div className="bottomCards" style={{ backgroundColor: '#F1F3FE' }}>
-                <div className="Cards"><Heading style={{ textAlign: 'left', marginBottom: '2rem' }}>cpaasmagic insights & analysis</Heading>
+            <div className="bottomCards" style={{ backgroundColor: '#EFEFEF' }}>
+                <div className="Cards"><Heading style={{ textAlign: 'left', marginBottom: '2rem',color:'#282828' }}>cpaasmagic insights & analysis</Heading>
                 </div>
+                <div style={{padding:'0px',margin:'0px'}}>
+                    <Heading style={{color:'#319CEE'}}>Latest insights and analysis</Heading>
+                    <iframe class="airtable-embed" src="https://airtable.com/embed/shrKaeRkBMjxOx0si?backgroundColor=blue" frameborder="0" onmousewheel="" width="100%" height="533" style={{ background: 'transparent',marginBottom:'-5rem', border: 'none',marginBottom:'2rem' }}></iframe>
+                    <Heading style={{margin:'2rem',color:'#319CEE'}}>Trending Vendors</Heading>
+                    <iframe class="airtable-embed" src="https://airtable.com/embed/shrXI89Sm8eu3ICxY?backgroundColor=blue" frameborder="0" onmousewheel="" width="100%" height="533" style={{ background: 'transparent', border: 'none',marginBottom:'2rem' }}></iframe>
+                    <Heading style={{margin:'2rem',color:'#319CEE'}}>Trending APIs</Heading>
+                    <iframe class="airtable-embed" src="https://airtable.com/embed/shrjRGsrTVofgqLNO?backgroundColor=blue" frameborder="0" onmousewheel="" width="100%" height="533" style={{ background: 'transparent', border: 'none',marginBottom:'2rem' }}></iframe>
+                    <Heading style={{margin:'2rem',color:'#319CEE'}}>Trending Use Cases</Heading>
+                    <iframe class="airtable-embed" src="https://airtable.com/embed/shrSOckpTxkS7zBEJ?backgroundColor=blue" frameborder="0" onmousewheel="" width="100%" height="533" style={{ background: 'transparent', border: 'none',marginBottom:'2rem' }}></iframe>
+                    <Heading style={{margin:'2rem',color:'#319CEE'}}>Trending Successes</Heading>
+                    <iframe class="airtable-embed" src="https://airtable.com/embed/shrvYPpPNLTiI7ojM?backgroundColor=blue" frameborder="0" onmousewheel="" width="100%" height="533" style={{ background: 'transparent', border: 'none',marginBottom:'2rem' }}></iframe>
+                </div>
+                {/*
                 <div className="widgets">
                     <div className="left">
                        <WordPress /> 
@@ -97,6 +110,7 @@ function Hoome() {
                         <FeaturedSuccesses />
                     </div>
                 </div>
+                */}
             </div>
             <div data-formito-id="Via9siQjZtVQ4DAXB0rx" data-trigger="fab"></div>
         </div >
