@@ -31,7 +31,7 @@ function Hoome() {
                 </div>
             </div>
             <div className="Cards">
-                <Heading style={{ textAlign: 'left', color: '#282828' }}>Do even more with cpaasmagic</Heading>
+                <Heading style={{ textAlign: 'left', color: '#282828', paddingLeft: '10%' }}>Do even more with cpaasmagic</Heading>
                 <div className="cardContainer">
                     <Card className="hover" style={{ boxShadow: 'inset 1px 0.5px 2px 0.5px #d6fffa, 1px 1px 2.5px 0.5px #d6fffa' }}  >
                         <CardContent>
@@ -41,7 +41,7 @@ function Hoome() {
                             <Heading style={{ color: '#282828', fontSize: '1.2em' }}>Sell CPaaS</Heading>
                             <Subtitle style={{ color: '#666666' }}>Explore how your sales reps and marketing wizards can sell better through our platform</Subtitle>
                             <div style={{ display: 'flex', justifyContent: 'center' }}>
-                                <Link to="/getstarted/seller" ><Button style={{ background:'#FAD069', fontWeight: '500', fontSize: '1em' }}>Learn More</Button></Link>
+                                <Link to="/getstarted/seller" ><Button style={{ background: '#FAD069', fontWeight: '500', fontSize: '1em' }}>Learn More</Button></Link>
                             </div>
                         </CardContent>
                     </Card>
@@ -68,9 +68,9 @@ function Hoome() {
                     </Card>
                 </div>
             </div>
-            <div className="topbar banner" >
-                <div className="col">
-                    <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+            <div className="topbar banner Cards" style={{ paddingLeft: '0%', justifyContent: 'center' }} >
+                <div>
+                    <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', paddingTop: '15%' }}>
                         <Heading style={{ textAlign: 'left' }}>Elevate your search with cpaasmagic Pro</Heading>
                         <Subtitle style={{ textAlign: 'left', maxWidth: '550px' }}>Intelligently search and target the right opportunities with advanced search filters, analysis tools, and company alerts.</Subtitle>
                         <div style={{ display: 'flex', justifyContent: 'flex-start' }}>
@@ -85,20 +85,31 @@ function Hoome() {
                 </div>
 
             </div>
-            <div className="bottomCards" style={{ backgroundColor: '#EFEFEF' }}>
-                <div className="Cards"><Heading style={{ textAlign: 'left', marginBottom: '2rem',color:'#282828' }}>cpaasmagic insights & analysis</Heading>
+            <div className="bottomCards" style={{ backgroundColor: '#EFEFEF', paddingTop: '2rem' }}>
+                <div className="widgets">
+                    <div className="left" style={{ marginRight: '4rem', marginLeft: '4rem' }}>
+                        <Heading style={{ margin: '2rem', color: '#319CEE', backgroundColor: '#EFEFEF' }}>Trending Vendors</Heading>
+                        <iframe class="airtable-embed" src="https://airtable.com/embed/shra4R8yzDdirGV0S?backgroundColor=blue" frameborder="0" onmousewheel="" width="100%" height="533" style={{ background: 'transparent', border: 'none', marginBottom: '2rem' }}></iframe>
+                        <div style={{ backgroundColor: '#EFEFEF', marginTop: '-4rem', overflow: 'overlay', height: '100px' }}>
+                        </div>
+                        <Heading style={{ margin: '2rem', color: '#319CEE',marginTop:'0rem'  }}>Trending Use Cases</Heading>
+                        <iframe class="airtable-embed" src="https://airtable.com/embed/shrSOckpTxkS7zBEJ?backgroundColor=blue" frameborder="0" onmousewheel="" width="100%" height="533" style={{ background: 'transparent', border: 'none', marginBottom: '2rem' }}></iframe>
+                    </div>
+                    <div className="right" style={{ marginRight: '4rem' }}>
+                        <Heading style={{ margin: '2rem', color: '#319CEE' }}>Trending APIs</Heading>
+                        <iframe class="airtable-embed" src="https://airtable.com/embed/shrjRGsrTVofgqLNO?backgroundColor=blue" frameborder="0" onmousewheel="" width="100%" height="533" style={{ background: 'transparent', border: 'none', marginBottom: '2rem' }}></iframe>
+                        <div style={{ backgroundColor: '#EFEFEF', marginTop: '-4rem', overflow: 'overlay', height: '100px' }}>
+                        </div>
+                        <Heading style={{ margin: '2rem', color: '#319CEE',marginTop:'0rem' }}>Trending Successes</Heading>
+                        <iframe class="airtable-embed" src="https://airtable.com/embed/shrvYPpPNLTiI7ojM?backgroundColor=blue" frameborder="0" onmousewheel="" width="100%" height="533" style={{ background: 'transparent', border: 'none', marginBottom: '2rem' }}></iframe>
+                    </div>
                 </div>
-                <div style={{padding:'0px',margin:'0px'}}>
-                    <Heading style={{color:'#319CEE'}}>Latest insights and analysis</Heading>
-                    <iframe class="airtable-embed" src="https://airtable.com/embed/shrKaeRkBMjxOx0si?backgroundColor=blue" frameborder="0" onmousewheel="" width="100%" height="533" style={{ background: 'transparent',marginBottom:'-5rem', border: 'none',marginBottom:'2rem' }}></iframe>
-                    <Heading style={{margin:'2rem',color:'#319CEE'}}>Trending Vendors</Heading>
-                    <iframe class="airtable-embed" src="https://airtable.com/embed/shrXI89Sm8eu3ICxY?backgroundColor=blue" frameborder="0" onmousewheel="" width="100%" height="533" style={{ background: 'transparent', border: 'none',marginBottom:'2rem' }}></iframe>
-                    <Heading style={{margin:'2rem',color:'#319CEE'}}>Trending APIs</Heading>
-                    <iframe class="airtable-embed" src="https://airtable.com/embed/shrjRGsrTVofgqLNO?backgroundColor=blue" frameborder="0" onmousewheel="" width="100%" height="533" style={{ background: 'transparent', border: 'none',marginBottom:'2rem' }}></iframe>
-                    <Heading style={{margin:'2rem',color:'#319CEE'}}>Trending Use Cases</Heading>
-                    <iframe class="airtable-embed" src="https://airtable.com/embed/shrSOckpTxkS7zBEJ?backgroundColor=blue" frameborder="0" onmousewheel="" width="100%" height="533" style={{ background: 'transparent', border: 'none',marginBottom:'2rem' }}></iframe>
-                    <Heading style={{margin:'2rem',color:'#319CEE'}}>Trending Successes</Heading>
-                    <iframe class="airtable-embed" src="https://airtable.com/embed/shrvYPpPNLTiI7ojM?backgroundColor=blue" frameborder="0" onmousewheel="" width="100%" height="533" style={{ background: 'transparent', border: 'none',marginBottom:'2rem' }}></iframe>
+                <div style={{ backgroundColor: '#EFEFEF', marginTop: '-4rem', overflow: 'overlay', height: '100px' }}>
+                </div>
+                <Heading style={{ color: '#319CEE' }}>Latest insights and analysis</Heading>
+                <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginBottom: '-4rem' }}>
+                    <iframe class="airtable-embed" src="https://airtable.com/embed/shrKaeRkBMjxOx0si?backgroundColor=blue" frameborder="0" onmousewheel="" width="100%" height="533" style={{ background: 'transparent', border: 'none', marginBottom: '2rem', paddingLeft: '15%' }}></iframe>
+
                 </div>
                 {/*
                 <div className="widgets">
