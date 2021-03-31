@@ -85,32 +85,37 @@ function Hoome() {
                 </div>
 
             </div>
-            <div className="bottomCards" style={{ backgroundColor: '#EFEFEF', paddingTop: '2rem' }}>
+            <div className="bottomCards" style={{ backgroundColor: '#EFEFEF', paddingTop: '4rem' }}>
+                <Heading style={{ color: '#319CEE' }}>Latest insights and analysis</Heading>
+                <div style={{
+                    margin: 'auto',
+                    width: '60%'
+                }}>
+                    <iframe class="airtable-embed" src="https://airtable.com/embed/shrKaeRkBMjxOx0si?backgroundColor=blue" frameborder="0" onmousewheel="" width="100%" height="533" style={{ background: 'transparent', border: 'none', marginBottom: '2rem'}}></iframe>
+                </div>
+                <div style={{ backgroundColor: '#EFEFEF', marginTop: '-6rem', overflow: 'overlay', height: '100px' }}>
+                </div>
                 <div className="widgets">
                     <div className="left" style={{ marginRight: '4rem', marginLeft: '4rem' }}>
-                        <Heading style={{ margin: '2rem', color: '#319CEE', backgroundColor: '#EFEFEF' }}>Trending Vendors</Heading>
+                        <Heading style={{ margin: '2rem', marginTop: '0rem', color: '#319CEE', backgroundColor: '#EFEFEF' }}>Trending Vendors</Heading>
                         <iframe class="airtable-embed" src="https://airtable.com/embed/shra4R8yzDdirGV0S?backgroundColor=blue" frameborder="0" onmousewheel="" width="100%" height="533" style={{ background: 'transparent', border: 'none', marginBottom: '2rem' }}></iframe>
                         <div style={{ backgroundColor: '#EFEFEF', marginTop: '-4rem', overflow: 'overlay', height: '100px' }}>
                         </div>
-                        <Heading style={{ margin: '2rem', color: '#319CEE',marginTop:'0rem'  }}>Trending Use Cases</Heading>
+                        <Heading style={{ margin: '2rem', color: '#319CEE', marginTop: '0rem' }}>Trending Use Cases</Heading>
                         <iframe class="airtable-embed" src="https://airtable.com/embed/shrSOckpTxkS7zBEJ?backgroundColor=blue" frameborder="0" onmousewheel="" width="100%" height="533" style={{ background: 'transparent', border: 'none', marginBottom: '2rem' }}></iframe>
                     </div>
                     <div className="right" style={{ marginRight: '4rem' }}>
-                        <Heading style={{ margin: '2rem', color: '#319CEE' }}>Trending APIs</Heading>
+                        <Heading style={{ margin: '2rem', color: '#319CEE', marginTop: '0rem' }}>Trending APIs</Heading>
                         <iframe class="airtable-embed" src="https://airtable.com/embed/shrjRGsrTVofgqLNO?backgroundColor=blue" frameborder="0" onmousewheel="" width="100%" height="533" style={{ background: 'transparent', border: 'none', marginBottom: '2rem' }}></iframe>
                         <div style={{ backgroundColor: '#EFEFEF', marginTop: '-4rem', overflow: 'overlay', height: '100px' }}>
                         </div>
-                        <Heading style={{ margin: '2rem', color: '#319CEE',marginTop:'0rem' }}>Trending Successes</Heading>
+                        <Heading style={{ margin: '2rem', color: '#319CEE', marginTop: '0rem' }}>Trending Successes</Heading>
                         <iframe class="airtable-embed" src="https://airtable.com/embed/shrvYPpPNLTiI7ojM?backgroundColor=blue" frameborder="0" onmousewheel="" width="100%" height="533" style={{ background: 'transparent', border: 'none', marginBottom: '2rem' }}></iframe>
                     </div>
                 </div>
                 <div style={{ backgroundColor: '#EFEFEF', marginTop: '-4rem', overflow: 'overlay', height: '100px' }}>
                 </div>
-                <Heading style={{ color: '#319CEE' }}>Latest insights and analysis</Heading>
-                <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginBottom: '-4rem' }}>
-                    <iframe class="airtable-embed" src="https://airtable.com/embed/shrKaeRkBMjxOx0si?backgroundColor=blue" frameborder="0" onmousewheel="" width="100%" height="533" style={{ background: 'transparent', border: 'none', marginBottom: '2rem', paddingLeft: '15%' }}></iframe>
 
-                </div>
                 {/*
                 <div className="widgets">
                     <div className="left">
