@@ -87,7 +87,7 @@ function Profile() {
     }
     return (
         <div style={{background:'#F7FAFC'}}>
-            <h2 style={{ textAlign: 'center', paddingTop:'3rem',background:'#F7FAFC' }}>Hello user, update your Profile</h2>
+            <h2 style={{ textAlign: 'center', paddingTop:'3rem',background:'#F7FAFC' }}>Hello {user.name}, update your Profile</h2>
             <br />
             <div>
                         {err && showErrMsg(err)}

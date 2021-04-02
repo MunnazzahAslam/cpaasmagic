@@ -24,10 +24,10 @@ function Hoome() {
             <div className="topbar">
                 <Heading style={{ textAlign: 'left' }}>Discover APIs and the companies behind them</Heading>
                 <div style={{ display: 'flex', justifyContent: 'flex-start', flexWrap: 'wrap' }}>
-                    <Link to="/search/vendors" ><Button className="small" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginRight: '0.8em', marginTop: '1em', padding: '0.8em', background: '#fff', color: '#666666', fontSize: '1rem' }}><img src={Picture4} style={{ marginRight: '0.3rem', color: '#666666', width: '1.2rem', height: '1.2rem' }} />Vendors</Button></Link>
-                    <Link to="/search/apis" ><Button className="small" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginRight: '0.8em', marginTop: '1em', padding: '0.8em', background: '#fff', color: '#666666', fontSize: '1rem' }}><img src={Picture5} style={{ marginRight: '0.3rem', color: '#666666', width: '1.2rem', height: '1.2rem' }} />APIs</Button></Link>
-                    <Link to="/search/usecases" ><Button className="small" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginRight: '0.8em', marginTop: '1em', padding: '0.8em', background: '#fff', color: '#666666', fontSize: '1rem' }}><img src={Picture6} style={{ marginRight: '0.3rem', color: '#666666', width: '1.2rem', height: '1.2rem' }} />Use Cases</Button></Link>
-                    <Link to="/search/successes" ><Button className="small" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginRight: '0.8em', marginTop: '1em', padding: '0.8em', background: '#fff', color: '#666666', fontSize: '1rem' }}><img src={Picture7} style={{ marginRight: '0.3rem', color: '#666666', width: '1.2rem', height: '1.2rem' }} />Successes</Button></Link>
+                    <Link to="/search" ><Button className="small" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginRight: '0.8em', marginTop: '1em', padding: '0.8em', background: '#fff', color: '#666666', fontSize: '1rem' }}><img src={Picture4} style={{ marginRight: '0.3rem', color: '#666666', width: '1.2rem', height: '1.2rem' }} />Vendors</Button></Link>
+                    <Link to="/search" ><Button className="small" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginRight: '0.8em', marginTop: '1em', padding: '0.8em', background: '#fff', color: '#666666', fontSize: '1rem' }}><img src={Picture5} style={{ marginRight: '0.3rem', color: '#666666', width: '1.2rem', height: '1.2rem' }} />APIs</Button></Link>
+                    <Link to="/search" ><Button className="small" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginRight: '0.8em', marginTop: '1em', padding: '0.8em', background: '#fff', color: '#666666', fontSize: '1rem' }}><img src={Picture6} style={{ marginRight: '0.3rem', color: '#666666', width: '1.2rem', height: '1.2rem' }} />Use Cases</Button></Link>
+                    <Link to="/search" ><Button className="small" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginRight: '0.8em', marginTop: '1em', padding: '0.8em', background: '#fff', color: '#666666', fontSize: '1rem' }}><img src={Picture7} style={{ marginRight: '0.3rem', color: '#666666', width: '1.2rem', height: '1.2rem' }} />Successes</Button></Link>
                 </div>
             </div>
             <div className="Cards">
@@ -41,7 +41,7 @@ function Hoome() {
                             <Heading style={{ color: '#282828', fontSize: '1.2em' }}>Sell CPaaS</Heading>
                             <Subtitle style={{ color: '#666666' }}>Explore how your sales reps and marketing wizards can sell better through our platform</Subtitle>
                             <div style={{ display: 'flex', justifyContent: 'center' }}>
-                                <Link to="/getstarted/seller" ><Button style={{ background: '#FAD069', fontWeight: '500', fontSize: '1em' }}>Learn More</Button></Link>
+                                <Link to="/getstarted" ><Button style={{ background: '#FAD069', fontWeight: '500', fontSize: '1em' }}>Learn More</Button></Link>
                             </div>
                         </CardContent>
                     </Card>
@@ -52,7 +52,7 @@ function Hoome() {
                             </ImgWrapper> <Heading style={{ color: '#282828', fontSize: '1.2em' }}>Buy CPaaS</Heading>
                             <Subtitle style={{ color: '#666666' }}>Assess CPaaS Solutions from 100+ vendors across key parameters that assist in your buying decision</Subtitle>
                             <div style={{ display: 'flex', justifyContent: 'center' }}>
-                                <Link to="/getstarted/buyer" ><Button style={{ background: '#FAD069', fontWeight: '500', fontSize: '1em' }}>Learn More</Button></Link>
+                                <Link to="/getstarted" ><Button style={{ background: '#FAD069', fontWeight: '500', fontSize: '1em' }}>Learn More</Button></Link>
                             </div>
                         </CardContent>
                     </Card>
@@ -87,12 +87,9 @@ function Hoome() {
             </div>
             <div className="bottomCards" style={{ backgroundColor: '#EFEFEF', paddingTop: '4rem' }}>
                 <Heading style={{ color: '#319CEE' }}>Latest insights and analysis</Heading>
-                <div style={{
-                    margin: 'auto',
-                    width: '60%'
-                }}>
-                    <iframe class="airtable-embed" src="https://airtable.com/embed/shrKaeRkBMjxOx0si?backgroundColor=blue" frameborder="0" onmousewheel="" width="100%" height="533" style={{ background: 'transparent', border: 'none', marginBottom: '2rem'}}></iframe>
-                </div>
+                <div style={{width: '80%',marginLeft: 'auto',   /* Automatic margin from left */marginRight: 'auto', /* Automatic margin from right */}}>
+                    <iframe class="airtable-embed" src="https://airtable.com/embed/shrKaeRkBMjxOx0si?backgroundColor=blue" frameborder="0" onmousewheel="" width="100%" height="533" style={{ background: 'transparent', border: 'none', marginBottom: '2rem' }}></iframe>
+               </div>
                 <div style={{ backgroundColor: '#EFEFEF', marginTop: '-6rem', overflow: 'overlay', height: '100px' }}>
                 </div>
                 <div className="widgets">

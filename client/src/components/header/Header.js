@@ -21,8 +21,8 @@ const Header = () => {
     const auth = useSelector(state => state.auth)
 
     const { user, isLogged } = auth
-    const isUser = localStorage.getItem('isUser');
-      
+    const isSuperUser = localStorage.getItem('isSuperUser');
+
     const handleLogout = async () => {
         try {
             await axios.get('/user/logout')
@@ -51,13 +51,15 @@ const Header = () => {
         return <ul>
             <li className="drop-nav">
                 <Link to="#" className="avatar">
-                    <div style={{display:'flex', flexDirection:'row', justifyContent:'center', alignItems:'center', transform: 'translateY(1.3rem)' }}>
-                    <img src={user.avatar} alt="" /><i className="fas fa-angle-down"></i>
-                    <p style={{color:'#fff'}}>{user.name}</p>
+                    <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', transform: 'translateY(1.3rem)' }}>
+                        <img src={user.avatar} alt="" /><i className="fas fa-angle-down"></i>
+                        <p style={{ color: '#fff' }}>{user.name}</p>
                     </div>
                 </Link>
                 <ul className="dropdown">
                     <li><Link to="/profile">Profile</Link></li>
+                    <li><Link to="/profile">Privacy</Link></li>
+                    <li><Link to="/profile">Payments</Link></li>
                     <li><Link to="/" onClick={handleLogout}>Logout</Link></li>
                     <br />
                 </ul>
@@ -68,7 +70,7 @@ const Header = () => {
     const userLoggedNav = () => {
         return <>
             <>
-                <NavLogo to={isLogged? isUser=='1' ? "/sellerdashboard": "/buyerdashboard" : "/home"} onClick={handleClick}>
+                <NavLogo to={isLogged ? isSuperUser ?"/dashboardpro" : "/dashboard" : "/home"} onClick={handleClick}>
                     <img src={logo} className="logo" />
                 </NavLogo>
                 <MobileIcon onClick={handleClick}>
@@ -85,27 +87,32 @@ const Header = () => {
             </>
             <NavMenu onClick={handleClick} click={click}>
                 <NavItem>
-                    <NavLinks to={isUser=='1' ? "/sellerdashboard" : "/buyerdashboard"}>
-                        {isUser=='1' ? "Seller Dashboard" : "Buyer Dashboard"}
+                    <NavLinks to={isSuperUser ? "/dashboardpro" : "/dashboard"}>
+                        {isSuperUser ? "Dashboard Pro" : "Dashboard"}
+                    </NavLinks>
+                </NavItem>
+                <NavItem>
+                    <NavLinks to={isLogged ? "/templates" : "/register"}>
+                        Templates
                         </NavLinks>
                 </NavItem>
                 <NavItem>
-                    <NavLinks to="/">
+                    <NavLinks to="/offerings">
                         Offerings
                         </NavLinks>
                 </NavItem>
                 <NavItem>
-                    <NavLinks to={isLogged?"/resources":"/register"}>
+                    <NavLinks to={isLogged ? "/resources" : "/register"}>
                         Resources
                         </NavLinks>
                 </NavItem>
                 <NavItem>
-                    <NavLinks to="/">
+                    <NavLinks to="/pricing">
                         Pricing
                         </NavLinks>
                 </NavItem>
                 <NavItem>
-                    <NavLinks to="/">
+                    <NavLinks to="/about">
                         About
                         </NavLinks>
                 </NavItem>
@@ -123,7 +130,7 @@ const Header = () => {
                                 ? userLoggedNav()
                                 :
                                 <>
-                                    <NavLogo to={isLogged? isUser=='1' ? "/sellerdashboard": "/buyerdashboard" : "/home"} onClick={handleClick}>
+                                    <NavLogo to={isLogged ? isSuperUser ?"/dashboardpro" : "/dashboard" : "/home"} onClick={handleClick}>
                                         <img src={logo} className="logo" />
                                     </NavLogo>
                                     <MobileIcon onClick={handleClick}>
@@ -147,28 +154,33 @@ const Header = () => {
                                 : <>
                                     <NavMenu onClick={handleClick} click={click}>
                                         <NavItem>
-                                            <NavLinks to="/">
+                                            <NavLinks to="/offerings">
                                                 Offerings
                         </NavLinks>
                                         </NavItem>
                                         <NavItem>
-                                            <NavLinks to={isLogged?"/resources":"/register"}>
+                                            <NavLinks to={isLogged ? "/resources" : "/register"}>
                                                 Resources
                         </NavLinks>
                                         </NavItem>
                                         <NavItem>
-                                            <NavLinks to="/">
+                                            <NavLinks to={isLogged ? "/templates" : "/register"}>
+                                                Templates
+                        </NavLinks>
+                                        </NavItem>
+                                        <NavItem>
+                                            <NavLinks to="/pricing">
                                                 Pricing
                         </NavLinks>
                                         </NavItem>
                                         <NavItem>
-                                            <NavLinks to="/">
+                                            <NavLinks to="/about">
                                                 About
                         </NavLinks>
                                         </NavItem>
                                         <NavItemBtn>
                                             <NavBtnLink to="/register">
-                                                <Button style={{padding:'12px', fontSize:'1rem',background:'#FAD069',fontWeight:'700'}}>Sign Up</Button>
+                                                <Button style={{ padding: '12px', fontSize: '1rem', background: '#FAD069', fontWeight: '700' }}>Sign Up</Button>
                                             </NavBtnLink>
                                         </NavItemBtn>
                                         <NavItem>

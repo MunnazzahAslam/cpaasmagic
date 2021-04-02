@@ -9,12 +9,30 @@ import APIs from '../Dashboard/APIs'
 import Usecases from '../Dashboard/Usecases'
 import SuccessStories from '../Dashboard/SuccessStories'
 import '../Dashboard/Dashboard.css';
-
+import Picture3 from '../home/Picture3.png';
 function Dashboard() {
     return (
-        <div style={{ color: '#1B2653',marginBottom:'-2rem' }}>
-         <iframe class="airtable-embed" src="https://airtable.com/embed/shrG809ltLoLwuy9i?backgroundColor=blue" frameborder="0" onmousewheel="" width="100%" height="1500" style={{background: 'transparent',border: 'none'}}></iframe> {/*<iframe src="https://x.formito.com/app/F2FPYp0OzqtnPsJ9xcwJ" width="480" height="840" frameBorder="0" style="border:1px solid #eee"></iframe>
-            <div style={{ display: 'flex', justifyContent: 'center' }}>
+        <div style={{ color: '#1B2653', marginBottom: '-2rem' }}>
+            <iframe class="airtable-embed" src="https://airtable.com/embed/shrNmx5n35cvR6gsM?backgroundColor=blue" frameborder="0" onmousewheel="" width="100%" height="800" style={{ background: 'transparent', border: 'none' }}></iframe>
+            <div className="topbar banner Cards" style={{ paddingLeft: '0%', justifyContent: 'center', overflow: 'overlay', marginTop: '-2rem' }} >
+                <div>
+                    <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', paddingTop: '15%' }}>
+                        <Heading style={{ textAlign: 'left' }}>Elevate your search with cpaasmagic Pro</Heading>
+                        <Subtitle style={{ textAlign: 'left', maxWidth: '550px' }}>Intelligently search and target the right opportunities with advanced search filters, analysis tools, and company alerts.</Subtitle>
+                        <div style={{ display: 'flex', justifyContent: 'flex-start' }}>
+                            <Link to="/payment" ><Button style={{ background: '#FAD069', fontWeight: '500' }}>Upgrade to Pro</Button></Link>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <ImgWrapper>
+                        <Image src={Picture3} className="laptop" style={{ margin: '0rem' }} />
+                    </ImgWrapper>
+                </div>
+            </div>
+            {/*<iframe src="https://x.formito.com/app/F2FPYp0OzqtnPsJ9xcwJ" width="480" height="840" frameBorder="0" style="border:1px solid #eee"></iframe>
+          
+          <div style={{ display: 'flex', justifyContent: 'center' }}>
                 <Card className="card1" style={{ boxShadow: 'none' }}>
                     <CardContent style={{ color: '#fff' }}>
                         <span style={{ fontSize: '0.8em', fontWeight: '300', marginRight: '0.5rem', marginLeft: '0.5rem' }}>Vendors</span>21

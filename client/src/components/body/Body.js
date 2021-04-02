@@ -29,6 +29,8 @@ import Maps from '../body/Maps/Maps'
 import Hoome from '../body/home/Hoome'
 import NewLayout from '../body/NewLayout/NewLayout'
 import GetStartedPage from './home/getStartedPage';
+import Payment from './ProUser/Payment'
+import ProDashboard from './ProUser/ProDashboard'
 import BuyergetStartedPage from './home/BuyergetStartedPage';
 import Dashboard from '../body/Dashboard/Dashboard'
 import BuyerDashboard from '../body/Dashboard/BuyerDashboard'
@@ -41,13 +43,16 @@ function Body() {
     return (
         <section>
             <Switch>
-                <Route path="/" component={isLogged ? Hoome : AdminLogin} exact />
+                <Route path="/" component={isLogged ? Dashboard : AdminLogin} exact />
                 <ProtectedRoute path="/home" component={Hoome} />
                 <ProtectedRoute path="/resources" component={Resources} />
-                <ProtectedRoute path="/sellerdashboard" component={Dashboard} />
-                <ProtectedRoute path="/buyerdashboard" component={BuyerDashboard} />
-                <ProtectedRoute path="/getstarted/seller" component={GetStartedPage} />
-                <ProtectedRoute path="/getstarted/buyer" component={BuyergetStartedPage} />
+                <ProtectedRoute path="/dashboard" component={isLogged ? Dashboard : Register} />
+                {/*  <ProtectedRoute path="/buyerdashboard" component={BuyerDashboard} />
+                 <ProtectedRoute path="/getstarted/buyer" component={BuyergetStartedPage} />
+                */}
+                <ProtectedRoute path="/payment" component={Payment} />
+                <ProtectedRoute path="/dashboardpro" component={ProDashboard} />
+                <ProtectedRoute path="/getstarted" component={GetStartedPage} />
                 <ProtectedRoute path="/map" component={Maps} />
                 <ProtectedRoute path="/new" component={NewLayout} />
                 <Route path="/blog/:id" component={Articles} />
@@ -57,7 +62,7 @@ function Body() {
                 <ProtectedRoute path="/search/apis/notloggedin" component={APIs} />
                 <ProtectedRoute path="/search/usecases/notloggedin" component={Usecases} />
                 <ProtectedRoute path="/search/successes/notloggedin" component={SuccessStories} />
-                <ProtectedRoute path="/search/vendors" component={TabsVendor} />
+                <ProtectedRoute path="/search" component={TabsVendor} />
                 <ProtectedRoute path="/search/apis" component={TabsAPI} />
                 <ProtectedRoute path="/search/usecases" component={TabsUsecase} />
                 <ProtectedRoute path="/search/successes" component={TabsSuccess} />
