@@ -39,7 +39,9 @@ import ProtectedRoute from './ProtectedRoute';
 import Resources from '../body/Resources/Resources'
 function Body() {
     const auth = useSelector(state => state.auth)
-    const { isLogged, isAdmin, isBuyer, isSeller } = auth
+    const { isLogged } = auth
+    const isSuperUser = localStorage.getItem('isSuperUser');
+
     return (
         <section>
             <Switch>

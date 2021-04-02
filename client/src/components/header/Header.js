@@ -27,6 +27,8 @@ const Header = () => {
         try {
             await axios.get('/user/logout')
             localStorage.removeItem('firstLogin')
+            localStorage.removeItem('admin')
+            localStorage.removeItem('isSuperUser')
             window.location.href = "/";
         } catch (err) {
             window.location.href = "/";
@@ -70,7 +72,7 @@ const Header = () => {
     const userLoggedNav = () => {
         return <>
             <>
-                <NavLogo to={isLogged ? isSuperUser ?"/dashboardpro" : "/dashboard" : "/home"} onClick={handleClick}>
+                <NavLogo to={isLogged ? isSuperUser == '1' ? "/dashboardpro" : "/dashboard" : "/home"} onClick={handleClick}> 
                     <img src={logo} className="logo" />
                 </NavLogo>
                 <MobileIcon onClick={handleClick}>
@@ -87,8 +89,8 @@ const Header = () => {
             </>
             <NavMenu onClick={handleClick} click={click}>
                 <NavItem>
-                    <NavLinks to={isSuperUser ? "/dashboardpro" : "/dashboard"}>
-                        {isSuperUser ? "Dashboard Pro" : "Dashboard"}
+                    <NavLinks to={isSuperUser == '1' ? "/dashboardpro" : "/dashboard"}>
+                        {isSuperUser == '1' ? "Dashboard Pro" : "Dashboard"}
                     </NavLinks>
                 </NavItem>
                 <NavItem>
@@ -130,8 +132,8 @@ const Header = () => {
                                 ? userLoggedNav()
                                 :
                                 <>
-                                    <NavLogo to={isLogged ? isSuperUser ?"/dashboardpro" : "/dashboard" : "/home"} onClick={handleClick}>
-                                        <img src={logo} className="logo" />
+                                    <NavLogo to={isLogged ? isSuperUser == '1' ? "/dashboardpro" : "/dashboard" : "/home"} onClick={handleClick}>    
+                                    <img src={logo} className="logo" />
                                     </NavLogo>
                                     <MobileIcon onClick={handleClick}>
                                         {click ? <FaTimes color="#fff" /> : <FaBars color="#fff" />}
@@ -139,7 +141,7 @@ const Header = () => {
                                     {/*                    <a href="/search"><TextField style={{ margin: '20px !imporant' }} id="outlined-search" type="search" variant="outlined" InputProps={{
                                                     startAdornment: (
                                                         <InputAdornment position="start">
-                                                            <SearchIcon />
+                                                         <SearchIcon />
                                                         </InputAdornment>
                                                     ),
                                                 }} /></a>
