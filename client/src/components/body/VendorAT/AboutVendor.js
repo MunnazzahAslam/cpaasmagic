@@ -4,15 +4,16 @@ import Card from '@material-ui/core/Card';
 import { TwitterTimelineEmbed, TwitterShareButton, TwitterFollowButton, TwitterHashtagButton, TwitterMentionButton, TwitterTweetEmbed, TwitterMomentShare, TwitterDMButton, TwitterVideoEmbed, TwitterOnAirButton } from 'react-twitter-embed';
 import { Button } from '../../../globalStyles';
 var { SocialIcon } = require('react-social-icons');
-export default function Articles(props) {
+export default function AboutVendor(props) {
     const [post, setPost] = useState(null);
 
     useEffect(() => {
 
-        Axios.get("https://api.airtable.com/v0/appoeKXbjQKluRn8y/CPaaS%20Vendors%20(Table)/recuwoqLtKl0dV4G8?api_key=keyIRsjrVlk0Wnz9b").then(
+        Axios.get("https://api.airtable.com/v0/appoeKXbjQKluRn8y/CPaaS%20Vendors%20(Table)/"+props.match.params.id+"?api_key=keyIRsjrVlk0Wnz9b").then(
             response => {
                 setPost(response.data);
                 console.log(response.data);
+                console.log(props.match.params.id);
             }
         );
     }, [setPost]);

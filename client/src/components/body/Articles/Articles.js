@@ -8,6 +8,7 @@ export default function Articles(props) {
     Axios.get("https://www.innovationaudit.org/cpaasmagic/wp-json/wp/v2/posts/"+ props.match.params.id).then(
       response => {
         setPost(response.data);
+        console.log(response.data);
       }
     );
   }, [setPost]);

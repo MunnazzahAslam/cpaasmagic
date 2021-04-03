@@ -48,7 +48,7 @@ function Body() {
             <Switch>
                 <Route path="/" component={isLogged ? Dashboard : AdminLogin} exact />
                 <ProtectedRoute path="/home" component={Hoome} />
-                <ProtectedRoute path="/vendor/:id" component={AboutVendor} />
+                <Route path="/vendor/:id" component={AboutVendor} />
                 <ProtectedRoute path="/resources" component={Resources} />
                 <ProtectedRoute path="/dashboard" component={isLogged ? Dashboard : Register} />
                 {/*  <ProtectedRoute path="/buyerdashboard" component={BuyerDashboard} />
