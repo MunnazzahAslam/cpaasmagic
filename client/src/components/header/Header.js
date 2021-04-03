@@ -19,9 +19,9 @@ import {
 } from './Navbar.elements';
 const Header = () => {
     const auth = useSelector(state => state.auth)
-
+    const [value,setValue] = useState();
     const { user, isLogged } = auth
-    const isSuperUser = localStorage.getItem('isSuperUser');
+    const isSuperUser = JSON.parse(localStorage.getItem('isSuperUser'));
 
     const handleLogout = async () => {
         try {
@@ -72,7 +72,7 @@ const Header = () => {
     const userLoggedNav = () => {
         return <>
             <>
-                <NavLogo to={isLogged ? isSuperUser == '1' ? "/dashboardpro" : "/dashboard" : "/home"} onClick={handleClick}> 
+                <NavLogo to={isLogged ? "" : "/home"} onClick={handleClick}> 
                     <img src={logo} className="logo" />
                 </NavLogo>
                 <MobileIcon onClick={handleClick}>
@@ -90,7 +90,7 @@ const Header = () => {
             <NavMenu onClick={handleClick} click={click}>
                 <NavItem>
                     <NavLinks to={isSuperUser == '1' ? "/dashboardpro" : "/dashboard"}>
-                        {isSuperUser == '1' ? "Dashboard Pro" : "Dashboard"}
+                        {isSuperUser == '1' ? "Dashboard" : "Dashboard"}
                     </NavLinks>
                 </NavItem>
                 <NavItem>
@@ -132,7 +132,7 @@ const Header = () => {
                                 ? userLoggedNav()
                                 :
                                 <>
-                                    <NavLogo to={isLogged ? isSuperUser == '1' ? "/dashboardpro" : "/dashboard" : "/home"} onClick={handleClick}>    
+                                    <NavLogo to={isLogged ?  "" : "/home"} onClick={handleClick}>    
                                     <img src={logo} className="logo" />
                                     </NavLogo>
                                     <MobileIcon onClick={handleClick}>
