@@ -38,6 +38,10 @@ import Articles from '../body/Articles/Articles'
 import ProtectedRoute from './ProtectedRoute';
 import Resources from '../body/Resources/Resources'
 import AboutVendor from '../body/VendorAT/AboutVendor'
+import APIAT from '../body/APIAT/APIAT'
+import UsecaseAT from '../body/UsecaseAT/UsecaseAT'
+import SuccessAT from '../body/SucccessAT/SuccessAT'
+
 function Body() {
     const auth = useSelector(state => state.auth)
     const { isLogged } = auth
@@ -49,6 +53,9 @@ function Body() {
                 <Route path="/" component={isLogged ? Dashboard : AdminLogin} exact />
                 <ProtectedRoute path="/home" component={Hoome} />
                 <Route path="/vendor/:id" component={AboutVendor} />
+                <Route path="/api/:id" component={APIAT} />
+                <Route path="/usecase/:id" component={UsecaseAT} />
+                <Route path="/success/:id" component={SuccessAT} />
                 <ProtectedRoute path="/resources" component={Resources} />
                 <ProtectedRoute path="/dashboard" component={isLogged ? Dashboard : Register} />
                 {/*  <ProtectedRoute path="/buyerdashboard" component={BuyerDashboard} />
