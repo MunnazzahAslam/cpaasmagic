@@ -36,8 +36,8 @@ export default function AboutVendor(props) {
                                 */}
                             </div>
                         </div>
-                        <div style={{ display: 'flex', flexDirection: 'row', marginTop: '1rem', marginLeft: '2rem', marginRight: '2rem' }}>
-                             <div className="card" style={{ padding: '0rem', paddingTop: '0.5rem', margin: '0 2rem', width: '66%' }}>
+                        <div style={{ display: 'flex', flexDirection: 'row', marginTop: '-2rem', marginLeft: '2rem', marginRight: '2rem' }}>
+                             <div className="card" style={{ padding: '0rem', paddingTop: '0.5rem', margin: '0 2rem', minWidth: '800px', maxWidth: '800px', textAlign: 'justify', marginLeft: '10%' }}>
                                                             <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'flex-start' }}>
                                     <Button style={{ marginRight: '0.5rem',marginTop: '1rem', background: '#CFDFFF', color: '#111', padding: '14px' }}>Pure Player</Button>
                                     <Button style={{ marginTop: '1rem', background: '#CFDFFF', color: '#111', padding: '14px' }}>Top Vendors</Button>
