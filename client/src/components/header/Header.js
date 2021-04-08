@@ -87,38 +87,6 @@ const Header = () => {
                                                 }} /></a>
                                             */}
             </>
-            <NavMenu onClick={handleClick} click={click}>
-                <NavItem>
-                    <NavLinks to={isSuperUser == '1' ? "/dashboardpro" : "/dashboard"}>
-                        {isSuperUser == '1' ? "Dashboard" : "Dashboard"}
-                    </NavLinks>
-                </NavItem>
-                <NavItem>
-                    <NavLinks to={isLogged ? "/templates" : "/register"}>
-                        Templates
-                        </NavLinks>
-                </NavItem>
-                <NavItem>
-                    <NavLinks to="/offerings">
-                        Offerings
-                        </NavLinks>
-                </NavItem>
-                <NavItem>
-                    <NavLinks to={isLogged ? "/resources" : "/register"}>
-                        Resources
-                        </NavLinks>
-                </NavItem>
-                <NavItem>
-                    <NavLinks to="/pricing">
-                        Pricing
-                        </NavLinks>
-                </NavItem>
-                <NavItem>
-                    <NavLinks to="/about">
-                        About
-                        </NavLinks>
-                </NavItem>
-            </NavMenu>
         </>
     }
 
@@ -157,17 +125,7 @@ const Header = () => {
                                     <NavMenu onClick={handleClick} click={click}>
                                         <NavItem>
                                             <NavLinks to="/offerings">
-                                                Offerings
-                        </NavLinks>
-                                        </NavItem>
-                                        <NavItem>
-                                            <NavLinks to={isLogged ? "/resources" : "/register"}>
-                                                Resources
-                        </NavLinks>
-                                        </NavItem>
-                                        <NavItem>
-                                            <NavLinks to={isLogged ? "/templates" : "/register"}>
-                                                Templates
+                                                Insights
                         </NavLinks>
                                         </NavItem>
                                         <NavItem>
@@ -182,7 +140,7 @@ const Header = () => {
                                         </NavItem>
                                         <NavItemBtn>
                                             <NavBtnLink to="/register">
-                                                <Button style={{ padding: '12px', fontSize: '1rem', background: '#FAD069', fontWeight: '700' }}>Sign Up</Button>
+                                                <Button style={{ padding: '8px', fontSize: '1rem', background: '#FAD069', fontWeight: '700' }}>Sign Up</Button>
                                             </NavBtnLink>
                                         </NavItemBtn>
                                         <NavItem>
