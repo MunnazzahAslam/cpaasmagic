@@ -23,13 +23,13 @@ export default function AboutVendor(props) {
     return (
         <div>
             {post && (
-                <div style={{ marginBottom: '2rem' }}>
+                <div>
                     <div style={{ width: '100%' }}>
-                        <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', padding: '2rem 0', paddingLeft: '2rem',background:'#1283DA' }}>
-                            <img style={{ margin: '0 2rem', borderRadius: '8px', width: '6vw', height: '6vw', marginLeft: '2rem',background:'#fff' }} src={post.fields.Airtable_Vendor_Logo[0].url} alt="VendorProfile" />
+                        <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', padding: '2rem 0', paddingLeft: '8rem',  background: '#1283DA' }}>
+                            <img style={{ margin: '0 3rem', borderRadius: '8px', width: '6vw', height: '6vw', marginLeft: '2rem', background: '#fff' }} src={post.fields.Airtable_Vendor_Logo[0].url} alt="VendorProfile" />
                             <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
                                 <p style={{ color: '#E4E7EB', fontSize: '16px', marginBottom: '-0.5rem' }}>Vendor</p>
-                                <h2 style={{ fontSize: '40px', fontWeight: '500', color:'#fff' }}>{post.fields.Vendor_Name}</h2>
+                                <h2 style={{ fontSize: '40px', fontWeight: '500', color: '#fff' }}>{post.fields.Vendor_Name}</h2>
                                 {/*<div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
                                     <div style={{ marginTop: '0.5rem' }}>
                                         <SocialIcon network="linkedin" style={{ height: 35, width: 35, marginRight: '0.5rem' }} />
@@ -45,7 +45,7 @@ export default function AboutVendor(props) {
                             <br />
                             <br />
                             <div className=".react-tabs__tab-list" >
-                                <TabList style={{ paddingLeft: '4rem', }}>
+                                <TabList style={{ paddingLeft: '10rem', }}>
                                     <Tab><div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>About</div></Tab>
                                     <Tab><div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>APIs</div></Tab>
                                     <Tab><div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>Use Cases</div></Tab>
@@ -53,9 +53,9 @@ export default function AboutVendor(props) {
                                 </TabList>
                             </div>
                             <TabPanel>
-                                <div style={{ display: 'flex', flexDirection: 'row', marginTop: '-1rem', marginLeft: '2rem', marginRight: '2rem' }}>
+                                <div style={{ display: 'flex', flexDirection: 'row', marginTop: '-1rem', marginLeft: '8rem', width:'60%', height:'600px'}}>
                                     <div className="card" style={{ padding: '0rem', paddingTop: '0.5rem', margin: '0 2rem' }}>
-                                        <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'flex-start', marginTop:'2rem' }}>
+                                        <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'flex-start', marginTop: '2rem' }}>
                                             <Button style={{ marginRight: '0.5rem', marginTop: '1rem', background: '#CFDFFF', color: '#111', padding: '10px' }}>Pure Player</Button>
                                             <Button style={{ marginTop: '1rem', background: '#CFDFFF', color: '#111', padding: '10px' }}>Top Vendors</Button>
                                         </div>
@@ -70,7 +70,6 @@ export default function AboutVendor(props) {
                                         <br />
                                         <p style={{ textAlign: 'justify', fontSize: '16px' }}>Company Size <br /> <span style={{ color: "#002060" }}>{post.fields.Vendor_Company_Size}</span></p>
                                     </div>
-                                    <br /><br /><br />
                                     {/* {   </Card>
                             <Card style={{ width: '490px', height: '450px' }}>
                                 <TwitterTimelineEmbed
@@ -85,18 +84,18 @@ export default function AboutVendor(props) {
 
                             <div style={{ display: 'flex', flexDirection: 'column' }}>
                                 <TabPanel>
-                                    <iframe className="airtable-embed" src={`https://airtable.com/embed/shrJFXIT0ZWH3JIv9/tblrZZDI120IzezHW?filter_Vendor_Name=${post.fields.Vendor_Name}&viewControls=on`} frameborder="0" onmousewheel="" width="100%" height="500" style={{ background: 'transparent', border: 'none', marginBottom: '0rem', paddingTop: '2rem'}}></iframe>
-                                    <div style={{ backgroundColor: '#fff', marginTop: '-2rem', overflow: 'overlay', height: '100px' }}>
+                                    <iframe className="airtable-embed" src={`https://airtable.com/embed/shrJFXIT0ZWH3JIv9/tblrZZDI120IzezHW?filter_Vendor_Name=${post.fields.Vendor_Name}&viewControls=on`} frameborder="0" onmousewheel="" width="80%" height="500" style={{ background: 'transparent', border: 'none', marginBottom: '0rem', paddingTop: '0.5rem', marginLeft: '10rem', marginRight: '10rem' }}></iframe>
+                                    <div style={{ backgroundColor: '#fff', marginTop: '-2rem', overflow: 'overlay', height: '50px' }}>
                                     </div>
                                 </TabPanel>
                                 <TabPanel>
-                                    <iframe className="airtable-embed" src={`https://airtable.com/embed/shrrzXsxpROZjNZOl/tbl44sysddBnhShw7?filter_Vendor_Name=${post.fields.Vendor_Name}&viewControls=on`} frameborder="0" onmousewheel="" width="100%" height="500" style={{ background: 'transparent', border: 'none', marginBottom: '0rem', paddingTop: '2rem'}}></iframe>
-                                    <div style={{ backgroundColor: '#fff', marginTop: '-2rem', overflow: 'overlay', height: '100px' }}>
+                                    <iframe className="airtable-embed" src={`https://airtable.com/embed/shrrzXsxpROZjNZOl/tbl44sysddBnhShw7?filter_Vendor_Name=${post.fields.Vendor_Name}&viewControls=on`} frameborder="0" onmousewheel="" width="80%" height="500" style={{ background: 'transparent', border: 'none', marginBottom: '0rem', paddingTop: '0.5rem', marginLeft: '10rem', marginRight: '10rem'  }}></iframe>
+                                    <div style={{ backgroundColor: '#fff', marginTop: '-2rem', overflow: 'overlay', height: '50px' }}>
                                     </div>
                                 </TabPanel>
                                 <TabPanel>
-                                    <iframe className="airtable-embed" src={`https://airtable.com/embed/shrBZLziN8jWec6Ff/tblHmjfaRjjnZPh3r?filter_Vendor_Name=${post.fields.Vendor_Name}&viewControls=on`} frameborder="0" onmousewheel="" width="100%" height="500" style={{ background: 'transparent', border: 'none', marginBottom: '0rem', paddingTop: '2rem'}}></iframe>
-                                    <div style={{ backgroundColor: '#fff', marginTop: '-2rem', overflow: 'overlay', height: '100px' }}>
+                                    <iframe className="airtable-embed" src={`https://airtable.com/embed/shrBZLziN8jWec6Ff/tblHmjfaRjjnZPh3r?filter_Vendor_Name=${post.fields.Vendor_Name}&viewControls=on`} frameborder="0" onmousewheel="" width="80%" height="500" style={{ background: 'transparent', border: 'none', marginBottom: '0rem', paddingTop: '0.5rem', marginLeft: '10rem', marginRight: '10rem'  }}></iframe>
+                                    <div style={{ backgroundColor: '#fff', marginTop: '-2rem', overflow: 'overlay', height: '50px' }}>
                                     </div>
                                 </TabPanel>
                             </div>

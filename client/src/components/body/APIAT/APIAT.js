@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Axios from "axios";
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import Card from '@material-ui/core/Card';
 import { TwitterTimelineEmbed, TwitterShareButton, TwitterFollowButton, TwitterHashtagButton, TwitterMentionButton, TwitterTweetEmbed, TwitterMomentShare, TwitterDMButton, TwitterVideoEmbed, TwitterOnAirButton } from 'react-twitter-embed';
 import { Button } from '../../../globalStyles';
@@ -19,13 +20,13 @@ export default function APIAT(props) {
     return (
         <div>
             {post && (
-                <div style={{ marginBottom: '2rem' }}>
-                    <div style={{ width: '100%', height: '100%' }}>
-                        <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', margin: '2rem 0', marginLeft: '2rem', marginRight: '2rem',background:'#1283DA' }}>
+                <div>
+                    <div style={{ width: '100%' }}>
+                        <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', padding: '2rem 0', paddingLeft: '10rem', paddingRight: '2rem', background: '#1283DA' }}>
                             {/*    <img style={{ margin: '0 2rem', borderRadius: '8px', width: '6vw', height: '6vw', marginLeft: '2rem' }} src={post.fields.Airtable_API_Logo[0].url} alt="VendorProfile" />
                            */} <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-                                <p style={{ color: '#ced4da', fontSize: '16px', marginBottom: '-0.5rem' }}>{post.fields.Vendor_Name} - API</p>
-                                <h2 style={{ fontSize: '40px', fontWeight: '500' }}>{post.fields.API_Name}</h2>
+                                <p style={{ color: '#E4E7EB', fontSize: '16px', marginBottom: '-0.5rem' }}>{post.fields.Vendor_Name} - API</p>
+                                <h2 style={{ fontSize: '40px', fontWeight: '500', color: '#fff' }}>{post.fields.API_Name}</h2>
                                 {/*<div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
                                     <div style={{ marginTop: '0.5rem' }}>
                                         <SocialIcon network="linkedin" style={{ height: 35, width: 35, marginRight: '0.5rem' }} />
@@ -67,37 +68,56 @@ export default function APIAT(props) {
                                 />
                             </Card>
                             </Card> */}
-                        <div style={{ display: 'flex', flexDirection: 'row', marginTop: '-2rem', marginLeft: '2rem', marginRight: '2rem' }}>
-                            <div className="card" style={{ padding: '0rem', paddingTop: '0.5rem', margin: '0 2rem', minWidth: '800px', maxWidth: '800px', textAlign: 'justify', marginLeft: '11rem' }}>
-                                <Button style={{ background: '#CFDFFF', color: '#111', padding: '14px' }} >{post.fields.API_Category}</Button><br />
-                                <br />
-                                <br />
-                                <p style={{ textAlign: 'justify', fontSize: 'clamp(1.4rem, 1.2vw, 1rem)', color: '#383838' }}><b>Description</b><br /></p><br />
-                                <br /><p>{post.fields.API_Description}</p><br /><br />
-                                <p style={{ textAlign: 'justify', fontSize: 'clamp(1.4rem, 1.2vw, 1rem)', color: '#383838' }}><b>Features</b><br /></p>
-                                <br /><p>{post.fields.API_Feature_1}</p><br />
-                                <p>{post.fields.API_Feature_Description_1}</p><br />
-                                <p>{post.fields.API_Feature_2}</p><br />
-                                <p>{post.fields.API_Feature_Description_2}</p><br />
-                                <p>{post.fields.API_Feature_3}</p><br />
-                                <p>{post.fields.API_Feature_Description_3}</p><br />
-                                <p>{post.fields.API_Feature_4}</p><br />
-                                <p>{post.fields.API_Feature_Description_4}</p><br />
-                                <p>{post.fields.API_Feature_5}</p><br />
-                                <p>{post.fields.API_Feature_Description_5}</p><br />
-                                <p>{post.fields.API_Feature_6}</p><br />
-                                <p>{post.fields.API_Feature_Description_6}</p><br />
-                                <p>{post.fields.API_Feature_7}</p><br />
-                                <p>{post.fields.API_Feature_Description_7}</p><br />
-                                <p>{post.fields.API_Feature_8}</p><br />
-                                <p>{post.fields.API_Feature_Description_8}</p><br />
-                                <p>{post.fields.API_Feature_9}</p><br />
-                                <p>{post.fields.API_Feature_Description_9}</p><br />
-                                <p>{post.fields.API_Feature_10}</p><br />
-                                <p>{post.fields.API_Feature_Description_10}</p><br />
+                        <Tabs defaultIndex={0}>
+                            <br />
+                            <br />
+                            <div className=".react-tabs__tab-list" >
+                                <TabList style={{ paddingLeft: '10rem', }}>
+                                    <Tab><div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>About</div></Tab>
+                                    <Tab><div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>Similar APIs</div></Tab>
+                                    <Tab><div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>Use Cases</div></Tab>
+                                    <Tab><div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>Successes</div></Tab>
+                                </TabList>
                             </div>
-                        </div>
+                            <TabPanel>
+                                <div style={{ display: 'flex', flexDirection: 'row', marginLeft: '8rem', marginRight: '2rem' }}>
+                                    <div className="card" style={{ padding: '0rem', paddingTop: '0.5rem', margin: '0 2rem', }}><br />
+                                        <p style={{ textAlign: 'justify', fontSize: 'clamp(1.4rem, 1.2vw, 1rem)', color: '#383838' }}><b>Description</b><br /></p>
+                                        <br /><p>{post.fields.API_Description}</p><br />
+                                        <p style={{ textAlign: 'justify', fontSize: 'clamp(1.4rem, 1.2vw, 1rem)', color: '#383838' }}><b>Features</b><br /></p>
+                                        <br /><p><b>1- {post.fields.API_Feature_1}</b></p><br />
+                                        <p>{post.fields.API_Feature_Description_1}</p><br />
+                                        <p><b>2- {post.fields.API_Feature_2}</b></p><br />
+                                        <p>{post.fields.API_Feature_Description_2}</p><br />
+                                        <p><b>3- {post.fields.API_Feature_3}</b></p><br />
+                                        <p>{post.fields.API_Feature_Description_3}</p><br />
+                                        <p><b>4- {post.fields.API_Feature_4}</b></p><br />
+                                        <p>{post.fields.API_Feature_Description_4}</p><br />
+                                        <p><b>5- {post.fields.API_Feature_5}</b></p><br />
+                                        <p>{post.fields.API_Feature_Description_5}</p><br />
+                                    </div>
+                                </div>
 
+                                {/* {   </Card>
+                            <Card style={{ width: '490px', height: '450px' }}>
+                                <TwitterTimelineEmbed
+                                    sourceType="profile"
+                                    screenName={post.fields.TransformX_Vendor_Name}
+                                    options={{ height: 550, width: 550 }}
+                                />
+                            </Card>
+                             */}
+                            </TabPanel>
+
+                            <div style={{ display: 'flex', flexDirection: 'column' }}>
+                                <TabPanel>
+                                 </TabPanel>
+                                <TabPanel>
+                                 </TabPanel>
+                                <TabPanel>
+                                </TabPanel>
+                            </div>
+                        </Tabs>
                     </div>
                 </div>
             )}
