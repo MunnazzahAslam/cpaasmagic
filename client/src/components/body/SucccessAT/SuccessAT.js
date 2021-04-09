@@ -26,7 +26,7 @@ export default function SuccessAT(props) {
                         <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', padding: '2rem 0', paddingLeft: '10rem', paddingRight: '2rem', background: '#1283DA', color: '#fff' }}>{/*
                             <img style={{ margin: '0 2rem', borderRadius: '8px', width: '6vw', height: '6vw', marginLeft: '2rem' }} src={post.fields.Airtable_Success_Logo[0].url} alt="VendorProfile" />*/}
                             <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-                                <p style={{ color: '#E4E7EB', fontSize: '16px', marginBottom: '-0.3rem' }}>{post.fields.Vendor_Name}/{post.fields.Success_Client_Name} - Success</p>
+                                <p style={{ color: '#E4E7EB', fontSize: '16px', marginBottom: '-0rem' }}>{post.fields.Vendor_Name}/{post.fields.Success_Client_Name} - Success</p>
                                 <h2 style={{ fontSize: '30px', fontWeight: '500', color: '#fff' }}>{post.fields.Success_Name}</h2>
                                 {/*<div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
                                  <div style={{ marginTop: '0.5rem' }}>
