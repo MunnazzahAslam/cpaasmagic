@@ -9,7 +9,7 @@ export default function APIAT(props) {
 
     useEffect(() => {
 
-        Axios.get("https://api.airtable.com/v0/appX0cUWA9Pu6oveS/CPaaS%20APIs%20(Table)/" + props.match.params.id + "?api_key=keyIRsjrVlk0Wnz9b").then(
+        Axios.get("https://api.airtable.com/v0/appDrjzV9YZk6MRQA/CPaaS%20APIs%20(Synced)/" + props.match.params.id + "?api_key=keyIRsjrVlk0Wnz9b").then(
             response => {
                 setPost(response.data);
             }
@@ -21,11 +21,11 @@ export default function APIAT(props) {
             {post && (
                 <div style={{ marginBottom: '2rem' }}>
                     <div style={{ width: '100%', height: '100%' }}>
-                        <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', margin: '2rem 0', marginLeft: '2rem', marginRight: '2rem' }}>
-                            <img style={{ margin: '0 2rem', borderRadius: '8px', width: '6vw', height: '6vw', marginLeft: '2rem' }} src={post.fields.TransformX_API_Logo[0].url} alt="VendorProfile" />
-                            <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-                                <p style={{ color: '#ced4da', fontSize: '16px', marginBottom: '-0.5rem' }}>{post.fields.TransformX_Vendor_Name} - API</p>
-                                <h2 style={{ fontSize: '40px', fontWeight: '500' }}>{post.fields.Vendor_API_Name}</h2>
+                        <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', margin: '2rem 0', marginLeft: '2rem', marginRight: '2rem',background:'#1283DA' }}>
+                            {/*    <img style={{ margin: '0 2rem', borderRadius: '8px', width: '6vw', height: '6vw', marginLeft: '2rem' }} src={post.fields.Airtable_API_Logo[0].url} alt="VendorProfile" />
+                           */} <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+                                <p style={{ color: '#ced4da', fontSize: '16px', marginBottom: '-0.5rem' }}>{post.fields.Vendor_Name} - API</p>
+                                <h2 style={{ fontSize: '40px', fontWeight: '500' }}>{post.fields.API_Name}</h2>
                                 {/*<div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
                                     <div style={{ marginTop: '0.5rem' }}>
                                         <SocialIcon network="linkedin" style={{ height: 35, width: 35, marginRight: '0.5rem' }} />
@@ -69,14 +69,32 @@ export default function APIAT(props) {
                             </Card> */}
                         <div style={{ display: 'flex', flexDirection: 'row', marginTop: '-2rem', marginLeft: '2rem', marginRight: '2rem' }}>
                             <div className="card" style={{ padding: '0rem', paddingTop: '0.5rem', margin: '0 2rem', minWidth: '800px', maxWidth: '800px', textAlign: 'justify', marginLeft: '11rem' }}>
+                                <Button style={{ background: '#CFDFFF', color: '#111', padding: '14px' }} >{post.fields.API_Category}</Button><br />
                                 <br />
-                                <p style={{ textAlign: 'justify', fontSize: 'clamp(1.4rem, 1.2vw, 1rem)', color: '#383838' }}><b>Description</b><br /></p><br/>
-                                <Button style={{background: '#CFDFFF', color: '#111', padding: '14px' }} >{post.fields.TransformX_API_Name}</Button><br/>
-                                <br /><p>{post.fields.TransformX_API_Description}</p><br /><br />
+                                <br />
+                                <p style={{ textAlign: 'justify', fontSize: 'clamp(1.4rem, 1.2vw, 1rem)', color: '#383838' }}><b>Description</b><br /></p><br />
+                                <br /><p>{post.fields.API_Description}</p><br /><br />
                                 <p style={{ textAlign: 'justify', fontSize: 'clamp(1.4rem, 1.2vw, 1rem)', color: '#383838' }}><b>Features</b><br /></p>
-                                <br /><p>- {post.fields.Vendor_api_feature_1}</p><br />
-                                <p>- {post.fields.Vendor_api_feature_2}</p><br />
-                                <p>- {post.fields.Vendor_api_feature_3}</p><br /><br />
+                                <br /><p>{post.fields.API_Feature_1}</p><br />
+                                <p>{post.fields.API_Feature_Description_1}</p><br />
+                                <p>{post.fields.API_Feature_2}</p><br />
+                                <p>{post.fields.API_Feature_Description_2}</p><br />
+                                <p>{post.fields.API_Feature_3}</p><br />
+                                <p>{post.fields.API_Feature_Description_3}</p><br />
+                                <p>{post.fields.API_Feature_4}</p><br />
+                                <p>{post.fields.API_Feature_Description_4}</p><br />
+                                <p>{post.fields.API_Feature_5}</p><br />
+                                <p>{post.fields.API_Feature_Description_5}</p><br />
+                                <p>{post.fields.API_Feature_6}</p><br />
+                                <p>{post.fields.API_Feature_Description_6}</p><br />
+                                <p>{post.fields.API_Feature_7}</p><br />
+                                <p>{post.fields.API_Feature_Description_7}</p><br />
+                                <p>{post.fields.API_Feature_8}</p><br />
+                                <p>{post.fields.API_Feature_Description_8}</p><br />
+                                <p>{post.fields.API_Feature_9}</p><br />
+                                <p>{post.fields.API_Feature_Description_9}</p><br />
+                                <p>{post.fields.API_Feature_10}</p><br />
+                                <p>{post.fields.API_Feature_Description_10}</p><br />
                             </div>
                         </div>
 
