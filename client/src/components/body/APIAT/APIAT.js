@@ -25,7 +25,7 @@ export default function APIAT(props) {
                         <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', padding: '2rem 0', paddingLeft: '10rem', paddingRight: '2rem', background: '#1283DA' }}>
                             {/*    <img style={{ margin: '0 2rem', borderRadius: '8px', width: '6vw', height: '6vw', marginLeft: '2rem' }} src={post.fields.Airtable_API_Logo[0].url} alt="VendorProfile" />
                            */} <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-                                <p style={{ color: '#E4E7EB', fontSize: '16px', marginBottom: '-0.5rem' }}>{post.fields.Vendor_Name} - API</p>
+                                <p style={{ color: '#E4E7EB', fontSize: '16px', marginBottom: '-0.5rem' }}>API</p>
                                 <h2 style={{ fontSize: '40px', fontWeight: '500', color: '#fff' }}>{post.fields.API_Name}</h2>
                                 {/*<div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
                                     <div style={{ marginTop: '0.5rem' }}>
@@ -73,15 +73,15 @@ export default function APIAT(props) {
                             <br />
                             <div className=".react-tabs__tab-list" >
                                 <TabList style={{ paddingLeft: '10rem', }}>
-                                    <Tab><div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>About</div></Tab>
-                                    <Tab><div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>Similar APIs</div></Tab>
-                                    <Tab><div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>Use Cases</div></Tab>
-                                    <Tab><div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>Successes</div></Tab>
+                                    <Tab><div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>API Description</div></Tab>
+                                    <Tab><div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>API Vendor</div></Tab>
+                                    <Tab><div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>API Use Cases</div></Tab>
+                                    <Tab><div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>API Successes</div></Tab>
                                 </TabList>
                             </div>
                             <TabPanel>
                                 <div style={{ display: 'flex', flexDirection: 'row', marginLeft: '8rem', marginRight: '2rem' }}>
-                                    <div className="card" style={{ padding: '0rem', paddingTop: '0.5rem', margin: '0 2rem', }}><br />
+                                    <div className="card" style={{ padding: '0rem', paddingTop: '0.5rem', margin: '0 2rem', width: '45%' }}><br />
                                         <p style={{ textAlign: 'justify', fontSize: 'clamp(1.4rem, 1.2vw, 1rem)', color: '#383838' }}><b>Description</b><br /></p>
                                         <br /><p>{post.fields.API_Description}</p><br />
                                         <p style={{ textAlign: 'justify', fontSize: 'clamp(1.4rem, 1.2vw, 1rem)', color: '#383838' }}><b>Features</b><br /></p>
@@ -94,8 +94,15 @@ export default function APIAT(props) {
                                         <p><b>4- {post.fields.API_Feature_4}</b></p><br />
                                         <p>{post.fields.API_Feature_Description_4}</p><br />
                                         <p><b>5- {post.fields.API_Feature_5}</b></p><br />
-                                        <p>{post.fields.API_Feature_Description_5}</p><br />
+                                        <p>{post.fields.API_Feature_Description_5}</p><br /><br />
                                     </div>
+                                    <Card style={{ width: '490px', height: '450px', margin: '1.5rem', marginLeft: '12rem', marginTop:'8rem' }}>
+                                        <TwitterTimelineEmbed
+                                            sourceType="profile"
+                                            screenName={post.fields.Vendor_Name}
+                                            options={{ height: 550, width: 550 }}
+                                        />
+                                    </Card>
                                 </div>
 
                                 {/* {   </Card>
@@ -111,9 +118,9 @@ export default function APIAT(props) {
 
                             <div style={{ display: 'flex', flexDirection: 'column' }}>
                                 <TabPanel>
-                                 </TabPanel>
+                                </TabPanel>
                                 <TabPanel>
-                                 </TabPanel>
+                                </TabPanel>
                                 <TabPanel>
                                 </TabPanel>
                             </div>

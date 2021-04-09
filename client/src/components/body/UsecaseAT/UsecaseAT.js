@@ -26,7 +26,7 @@ export default function UsecaseAT(props) {
                         <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', padding: '2rem 0', paddingLeft: '10rem', paddingRight: '2rem', background: '#1283DA' }}>{/*
                             <img style={{ margin: '0 2rem', borderRadius: '8px', width: '6vw', height: '6vw', marginLeft: '2rem' }} src={post.fields.Airtable_Usecase_Logo[0].url} alt="VendorProfile" />*/}
                             <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-                                <p style={{ color: '#E4E7EB', fontSize: '16px', marginBottom: '-0.5rem' }}>{post.fields.Vendor_Name} - Use Case</p>
+                                <p style={{ color: '#E4E7EB', fontSize: '16px', marginBottom: '-0.5rem' }}>Use Case</p>
                                 <h2 style={{ fontSize: '40px', fontWeight: '500', color: '#fff' }}>{post.fields.Usecase_Name}</h2>
                                 {/*<div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
                                 <div style={{ marginTop: '0.5rem' }}>
@@ -86,15 +86,15 @@ export default function UsecaseAT(props) {
                             <br />
                             <div className=".react-tabs__tab-list" >
                                 <TabList style={{ paddingLeft: '10rem', }}>
-                                    <Tab><div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>About</div></Tab>
-                                    <Tab><div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>APIs</div></Tab>
-                                    <Tab><div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>Similar Use Cases</div></Tab>
-                                    <Tab><div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>Successes</div></Tab>
+                                    <Tab><div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>Use Case Description</div></Tab>
+                                    <Tab><div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>Use Case Vendor</div></Tab>
+                                    <Tab><div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>Use Case APIs</div></Tab>
+                                    <Tab><div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>Use Case Successes</div></Tab>
                                 </TabList>
                             </div>
                             <TabPanel>
-                                <div style={{ display: 'flex', flexDirection: 'row', marginLeft: '9rem', marginRight: '2rem' }}>
-                                    <div className="card" style={{ padding: '0rem', paddingTop: '0.5rem' }}>
+                                <div style={{ display: 'flex', flexDirection: 'row', marginLeft: '9rem' }}>
+                                    <div className="card" style={{ padding: '0rem', paddingTop: '0.5rem', margin: '0 2rem', width: '45%' }}>
                                         {/*  <br />
                                         <Button style={{ marginTop: '1rem', background: '#CFDFFF', color: '#111', padding: '14px', marginRight: '0.5rem' }}>{post.fields.Usecase_Category}</Button>
                                         <Button style={{ marginTop: '1rem', background: '#CFDFFF', color: '#111', padding: '14px' }}>{post.fields.Usecase_Industry}</Button>
@@ -111,11 +111,16 @@ export default function UsecaseAT(props) {
                                         <p>- {post.fields.Usecase_Value_Generated_2}</p><br />
                                         <p>- {post.fields.Usecase_Value_Generated_3}</p><br />
                                         <p>- {post.fields.Usecase_Value_Generated_4}</p><br />
-                                        <p>- {post.fields.Usecase_Value_Generated_5}</p><br />
-                                        <br />
+                                        <p>- {post.fields.Usecase_Value_Generated_5}</p>
                                     </div>
+                                    <Card style={{ width: '490px', height: '450px', margin: '1.5rem', marginLeft: '12rem', marginTop:'5rem' }}>
+                                        <TwitterTimelineEmbed
+                                            sourceType="profile"
+                                            screenName={post.fields.Vendor_Name}
+                                            options={{ height: 550, width: 550 }}
+                                        />
+                                    </Card>
                                 </div>
-
                                 {/* {   </Card>
                             <Card style={{ width: '490px', height: '450px' }}>
                                 <TwitterTimelineEmbed
