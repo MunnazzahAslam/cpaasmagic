@@ -96,7 +96,7 @@ export default function APIAT(props) {
                                         <p><b>5- {post.fields.API_Feature_5}</b></p><br />
                                         <p>{post.fields.API_Feature_Description_5}</p><br /><br />
                                     </div>
-                                    <Card style={{ width: '490px', height: '450px', margin: '1.5rem', marginLeft: '12rem', marginTop:'8rem' }}>
+                                    <Card style={{ width: '490px', height: '450px', margin: '1.5rem', marginLeft: '12rem', marginTop: '8rem' }}>
                                         <TwitterTimelineEmbed
                                             sourceType="profile"
                                             screenName={post.fields.Vendor_Name}
@@ -118,10 +118,17 @@ export default function APIAT(props) {
 
                             <div style={{ display: 'flex', flexDirection: 'column' }}>
                                 <TabPanel>
+
                                 </TabPanel>
                                 <TabPanel>
+                                    <iframe className="airtable-embed" src={`https://airtable.com/embed/shrrzXsxpROZjNZOl/tbl44sysddBnhShw7?filter_API_Id=${post.fields.API_Id}&viewControls=on`} frameborder="0" onmousewheel="" width="80%" height="600" style={{ background: 'transparent', border: 'none', marginBottom: '0rem', paddingTop: '0.5rem', marginLeft: '10rem', marginRight: '10rem' }}></iframe>
+                                    <div style={{ backgroundColor: '#fff', marginTop: '-2rem', overflow: 'overlay', height: '50px' }}>
+                                    </div>
                                 </TabPanel>
                                 <TabPanel>
+                                    <iframe className="airtable-embed" src={`https://airtable.com/embed/shrBZLziN8jWec6Ff/tblHmjfaRjjnZPh3r?filter_API_Id=${post.fields.API_Id}&viewControls=on`} frameborder="0" onmousewheel="" width="80%" height="600" style={{ background: 'transparent', border: 'none', marginBottom: '0rem', paddingTop: '0.5rem', marginLeft: '10rem', marginRight: '10rem' }}></iframe>
+                                    <div style={{ backgroundColor: '#fff', marginTop: '-2rem', overflow: 'overlay', height: '50px' }}>
+                                    </div>
                                 </TabPanel>
                             </div>
                         </Tabs>
