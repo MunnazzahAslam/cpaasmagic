@@ -10,7 +10,7 @@ export default function APIAT(props) {
 
     useEffect(() => {
 
-        Axios.get("https://api.airtable.com/v0/appDrjzV9YZk6MRQA/CPaaS%20APIs%20(Synced)/" + props.match.params.id + "?api_key=keyIRsjrVlk0Wnz9b").then(
+        Axios.get("https://api.airtable.com/v0/appDrjzV9YZk6MRQA/cpaas%20APIs%20(Synced)/" + props.match.params.id + "?api_key=keyIRsjrVlk0Wnz9b").then(
             response => {
                 setPost(response.data);
             }
@@ -118,7 +118,40 @@ export default function APIAT(props) {
 
                             <div style={{ display: 'flex', flexDirection: 'column' }}>
                                 <TabPanel>
-
+                                    <div style={{ display: 'flex', flexDirection: 'row', marginLeft: '8rem', }}>
+                                        <div className="card" style={{ padding: '0rem', paddingTop: '0.5rem', margin: '0 2rem', width: '45%' }}>
+                                            {/*   <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'flex-start', marginTop: '2rem' }}>
+                                            <Button style={{ marginRight: '0.5rem', marginTop: '1rem', background: '#CFDFFF', color: '#111', padding: '10px' }}>Pure Player</Button>
+                                            <Button style={{ marginTop: '1rem', background: '#CFDFFF', color: '#111', padding: '10px' }}>Top Vendors</Button>
+                                        </div>*/}
+                                            <br />
+                                            <p style={{ textAlign: 'justify', fontSize: '16px' }}>Description <br />{post.fields.Vendor_Overview}</p>
+                                            <br />
+                                            <p style={{ textAlign: 'justify', fontSize: '16px' }}>Founders <br /> <span style={{ color: "#002060" }}>{post.fields.Vendor_Founders}</span></p>
+                                            <br />
+                                            <p style={{ textAlign: 'justify', fontSize: '16px' }}>Founded in <br /> <span style={{ color: "#002060" }}>{post.fields.Vendor_Founded_Year}</span></p>
+                                            <br />
+                                            <p style={{ textAlign: 'justify', fontSize: '16px' }}>Industry <br /> <span style={{ color: "#002060" }}>{post.fields.Vendor_Industry}</span></p>
+                                            <br />
+                                            <p style={{ textAlign: 'justify', fontSize: '16px' }}>Company Size <br /> <span style={{ color: "#002060" }}>{post.fields.Vendor_Company_Size}</span></p>
+                                        </div>
+                                        <Card style={{ width: '490px', height: '450px', margin: '1.5rem', marginLeft: '12rem' }}>
+                                            <TwitterTimelineEmbed
+                                                sourceType="profile"
+                                                screenName={post.fields.Vendor_Name}
+                                                options={{ height: 550, width: 550 }}
+                                            />
+                                        </Card>
+                                        {/* {   </Card>
+                            <Card style={{ width: '490px', height: '450px' }}>
+                                <TwitterTimelineEmbed
+                                    sourceType="profile"
+                                    screenName={post.fields.TransformX_Vendor_Name}
+                                    options={{ height: 550, width: 550 }}
+                                />
+                            </Card>
+                             */}
+                                    </div>
                                 </TabPanel>
                                 <TabPanel>
                                     <iframe className="airtable-embed" src={`https://airtable.com/embed/shrrzXsxpROZjNZOl/tbl44sysddBnhShw7?filter_API_Id=${post.fields.API_Id}&viewControls=on`} frameborder="0" onmousewheel="" width="80%" height="600" style={{ background: 'transparent', border: 'none', marginBottom: '0rem', paddingTop: '0.5rem', marginLeft: '10rem', marginRight: '10rem' }}></iframe>

@@ -11,7 +11,7 @@ export default function SuccessAT(props) {
 
     useEffect(() => {
 
-        Axios.get("https://api.airtable.com/v0/appDrjzV9YZk6MRQA/CPaaS%20Successes%20(Synced)/" + props.match.params.id + "?api_key=keyIRsjrVlk0Wnz9b").then(
+        Axios.get("https://api.airtable.com/v0/appDrjzV9YZk6MRQA/cpaas%20Successes%20(Synced)/" + props.match.params.id + "?api_key=keyIRsjrVlk0Wnz9b").then(
             response => {
                 setPost(response.data);
             }
@@ -97,15 +97,15 @@ export default function SuccessAT(props) {
                                         <br /><p>{post.fields.Success_Solution}</p><br /><br />
                                         <p style={{ textAlign: 'justify', fontSize: 'clamp(1.4rem, 1.2vw, 1rem)', color: '#383838' }}><b>Result</b></p><br /><p>{post.fields.Success_Result}</p>
                                     </div>
-                                    <Card style={{ width: '490px', height: '450px', margin: '1.5rem', marginLeft: '12rem', marginTop:'4rem' }}>
-                                    <TwitterTimelineEmbed
-                                        sourceType="profile"
-                                        screenName={post.fields.Vendor_Name}
-                                        options={{ height: 550, width: 550 }}
-                                    />
-                                </Card>
+                                    <Card style={{ width: '490px', height: '450px', margin: '1.5rem', marginLeft: '12rem', marginTop: '4rem' }}>
+                                        <TwitterTimelineEmbed
+                                            sourceType="profile"
+                                            screenName={post.fields.Vendor_Name}
+                                            options={{ height: 550, width: 550 }}
+                                        />
+                                    </Card>
                                 </div>
-  
+
                                 {/* {   </Card>
                             <Card style={{ width: '490px', height: '450px' }}>
                                 <TwitterTimelineEmbed
@@ -121,8 +121,14 @@ export default function SuccessAT(props) {
                                 <TabPanel>
                                 </TabPanel>
                                 <TabPanel>
+                                    <iframe className="airtable-embed" src={`https://airtable.com/embed/shrJFXIT0ZWH3JIv9/tblrZZDI120IzezHW?filter_Success_Id=${post.fields.Success_Id}&viewControls=on`} frameborder="0" onmousewheel="" width="80%" height="600" style={{ background: 'transparent', border: 'none', marginBottom: '0rem', paddingTop: '0.5rem', marginLeft: '10rem', marginRight: '10rem' }}></iframe>
+                                    <div style={{ backgroundColor: '#fff', marginTop: '-2rem', overflow: 'overlay', height: '50px' }}>
+                                    </div>
                                 </TabPanel>
                                 <TabPanel>
+                                    <iframe className="airtable-embed" src={`https://airtable.com/embed/shrrzXsxpROZjNZOl/tbl44sysddBnhShw7?filter_Success_Id=${post.fields.Success_Id}&viewControls=on`} frameborder="0" onmousewheel="" width="80%" height="600" style={{ background: 'transparent', border: 'none', marginBottom: '0rem', paddingTop: '0.5rem', marginLeft: '10rem', marginRight: '10rem' }}></iframe>
+                                    <div style={{ backgroundColor: '#fff', marginTop: '-2rem', overflow: 'overlay', height: '50px' }}>
+                                    </div>
                                 </TabPanel>
                             </div>
                         </Tabs>
