@@ -88,7 +88,7 @@ function Hoome() {
             <div className="bottomCards" style={{ backgroundColor: '#EFEFEF', paddingTop: '4rem' }}>
                 <Heading style={{ color: '#319CEE' }}>Latest insights and analysis</Heading>
                 <div style={{minWidth:'1000px',maxWidth:'1000px',margin: '0 auto',padding: '20px'}}>
-                    <iframe class="airtable-embed" src="https://airtable.com/embed/shrKaeRkBMjxOx0si?backgroundColor=blue" frameborder="0" onmousewheel="" width="100%" height="533" style={{ background: 'transparent', border: 'none', marginBottom: '2rem' }}></iframe>
+                    <iframe class="airtable-embed" src="https://airtable.com/embed/shryOk2MnNXSgEIGm?backgroundColor=blue" frameborder="0" onmousewheel="" width="100%" height="533" style={{ background: 'transparent', border: 'none', marginBottom: '2rem' }}></iframe>
                </div>
                 <div style={{ backgroundColor: '#EFEFEF', marginTop: '-8rem', overflow: 'overlay', height: '100px' }}>
                 </div>
