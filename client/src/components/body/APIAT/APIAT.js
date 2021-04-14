@@ -55,7 +55,7 @@ export default function APIAT(props) {
             */}
                             </div>
                         </div>
-                        {/* { <Card className="card" style={{ padding: '2rem', paddingTop: '0.5rem', margin: '0 2rem', width: '66%' }}>
+                        {/* { <Card className="card" style={{ padding: '2rem', paddingTop: '0rem', margin: '0 2rem', width: '66%' }}>
                                                                 <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'flex-start' }}>
                                     <Button style={{ marginRight: '0.5rem', backgroundImage: 'linear-gradient(45deg,#6DCDF2,#1EB5ED )' }}>Pure Player</Button>
                                     <Button style={{ backgroundImage: 'linear-gradient(45deg,#62A6D9,#1F7FC4 )' }}>Top Vendors</Button>
@@ -81,7 +81,7 @@ export default function APIAT(props) {
                             </div>
                             <TabPanel>
                                 <div style={{ display: 'flex', flexDirection: 'row', marginLeft: '8rem', marginRight: '2rem' }}>
-                                    <div className="card" style={{ padding: '0rem', paddingTop: '0.5rem', margin: '0 2rem', width: '45%' }}><br />
+                                    <div className="card" style={{ padding: '0rem', paddingTop: '0rem', margin: '0 2rem', width: '45%' }}><br />
                                         <p style={{ textAlign: 'justify', fontSize: 'clamp(1.4rem, 1.2vw, 1rem)', color: '#383838' }}><b>Description</b><br /></p>
                                         <br /><p>{post.fields.API_Description}</p><br />
                                         <p style={{ textAlign: 'justify', fontSize: 'clamp(1.4rem, 1.2vw, 1rem)', color: '#383838' }}><b>Features</b><br /></p>
@@ -118,49 +118,16 @@ export default function APIAT(props) {
 
                             <div style={{ display: 'flex', flexDirection: 'column' }}>
                                 <TabPanel>
-                                    <div style={{ display: 'flex', flexDirection: 'row', marginLeft: '8rem', }}>
-                                        <div className="card" style={{ padding: '0rem', paddingTop: '0.5rem', margin: '0 2rem', width: '45%' }}>
-                                            {/*   <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'flex-start', marginTop: '2rem' }}>
-                                            <Button style={{ marginRight: '0.5rem', marginTop: '1rem', background: '#CFDFFF', color: '#111', padding: '10px' }}>Pure Player</Button>
-                                            <Button style={{ marginTop: '1rem', background: '#CFDFFF', color: '#111', padding: '10px' }}>Top Vendors</Button>
-                                        </div>*/}
-                                            <br />
-                                            <p style={{ textAlign: 'justify', fontSize: '16px' }}>Description <br />{post.fields.Vendor_Overview}</p>
-                                            <br />
-                                            <p style={{ textAlign: 'justify', fontSize: '16px' }}>Founders <br /> <span style={{ color: "#002060" }}>{post.fields.Vendor_Founders}</span></p>
-                                            <br />
-                                            <p style={{ textAlign: 'justify', fontSize: '16px' }}>Founded in <br /> <span style={{ color: "#002060" }}>{post.fields.Vendor_Founded_Year}</span></p>
-                                            <br />
-                                            <p style={{ textAlign: 'justify', fontSize: '16px' }}>Industry <br /> <span style={{ color: "#002060" }}>{post.fields.Vendor_Industry}</span></p>
-                                            <br />
-                                            <p style={{ textAlign: 'justify', fontSize: '16px' }}>Company Size <br /> <span style={{ color: "#002060" }}>{post.fields.Vendor_Company_Size}</span></p>
-                                        </div>
-                                        <Card style={{ width: '490px', height: '450px', margin: '1.5rem', marginLeft: '12rem' }}>
-                                            <TwitterTimelineEmbed
-                                                sourceType="profile"
-                                                screenName={post.fields.Vendor_Name}
-                                                options={{ height: 550, width: 550 }}
-                                            />
-                                        </Card>
-                                        {/* {   </Card>
-                            <Card style={{ width: '490px', height: '450px' }}>
-                                <TwitterTimelineEmbed
-                                    sourceType="profile"
-                                    screenName={post.fields.TransformX_Vendor_Name}
-                                    options={{ height: 550, width: 550 }}
-                                />
-                            </Card>
-                             */}
+                                    
+                                </TabPanel>
+                                <TabPanel style={{background:'#F5F5F5'}}>
+                                    <iframe className="airtable-embed" src={`https://airtable.com/embed/shrrzXsxpROZjNZOl/tbl44sysddBnhShw7?filter_API_Id=${post.fields.API_Id}&viewControls=on`} frameborder="0" onmousewheel="" width="80%" height="600" style={{ background: 'transparent', border: 'none', marginBottom: '0rem', paddingTop: '0rem', marginLeft: '10rem', marginRight: '10rem' }}></iframe>
+                                    <div style={{ backgroundColor: '#F5F5F5', marginTop: '-2rem', overflow: 'overlay', height: '50px' }}>
                                     </div>
                                 </TabPanel>
-                                <TabPanel>
-                                    <iframe className="airtable-embed" src={`https://airtable.com/embed/shrrzXsxpROZjNZOl/tbl44sysddBnhShw7?filter_API_Id=${post.fields.API_Id}&viewControls=on`} frameborder="0" onmousewheel="" width="80%" height="600" style={{ background: 'transparent', border: 'none', marginBottom: '0rem', paddingTop: '0.5rem', marginLeft: '10rem', marginRight: '10rem' }}></iframe>
-                                    <div style={{ backgroundColor: '#fff', marginTop: '-2rem', overflow: 'overlay', height: '50px' }}>
-                                    </div>
-                                </TabPanel>
-                                <TabPanel>
-                                    <iframe className="airtable-embed" src={`https://airtable.com/embed/shrBZLziN8jWec6Ff/tblHmjfaRjjnZPh3r?filter_API_Id=${post.fields.API_Id}&viewControls=on`} frameborder="0" onmousewheel="" width="80%" height="600" style={{ background: 'transparent', border: 'none', marginBottom: '0rem', paddingTop: '0.5rem', marginLeft: '10rem', marginRight: '10rem' }}></iframe>
-                                    <div style={{ backgroundColor: '#fff', marginTop: '-2rem', overflow: 'overlay', height: '50px' }}>
+                                <TabPanel style={{background:'#F5F5F5'}}>
+                                    <iframe className="airtable-embed" src={`https://airtable.com/embed/shrBZLziN8jWec6Ff/tblHmjfaRjjnZPh3r?filter_API_Id=${post.fields.API_Id}&viewControls=on`} frameborder="0" onmousewheel="" width="80%" height="600" style={{ background: 'transparent', border: 'none', marginBottom: '0rem', paddingTop: '0rem', marginLeft: '10rem', marginRight: '10rem' }}></iframe>
+                                    <div style={{ backgroundColor: '#F5F5F5', marginTop: '-2rem', overflow: 'overlay', height: '50px' }}>
                                     </div>
                                 </TabPanel>
                             </div>
