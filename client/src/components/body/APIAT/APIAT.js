@@ -121,14 +121,10 @@ export default function APIAT(props) {
                                     
                                 </TabPanel>
                                 <TabPanel style={{background:'#F5F5F5'}}>
-                                    <iframe className="airtable-embed" src={`https://airtable.com/embed/shrrzXsxpROZjNZOl?filter_API_Id=${post.fields.API_Id}&viewControls=on`} frameborder="0" onmousewheel="" width="80%" height="600" style={{ background: 'transparent', border: 'none', marginBottom: '0rem', paddingTop: '0rem', marginLeft: '10rem', marginRight: '10rem' }}></iframe>
-                                    <div style={{ backgroundColor: '#F5F5F5', marginTop: '-2rem', overflow: 'overlay', height: '50px' }}>
-                                    </div>
+                                    <iframe className="airtable-embed" src={`https://airtable.com/embed/shrrzXsxpROZjNZOl?filter_API_Id=${post.fields.API_Id}&viewControls=on`} frameborder="0" onmousewheel="" width="100%" height="510" style={{ background: 'transparent', border: 'none', marginBottom: '-2rem', paddingTop: '0rem', marginRight: '10rem' }}></iframe>
                                 </TabPanel>
                                 <TabPanel style={{background:'#F5F5F5'}}>
-                                    <iframe className="airtable-embed" src={`https://airtable.com/embed/shrBZLziN8jWec6Ff?filter_API_Id=${post.fields.API_Id}&viewControls=on`} frameborder="0" onmousewheel="" width="80%" height="600" style={{ background: 'transparent', border: 'none', marginBottom: '0rem', paddingTop: '0rem', marginLeft: '10rem', marginRight: '10rem' }}></iframe>
-                                    <div style={{ backgroundColor: '#F5F5F5', marginTop: '-2rem', overflow: 'overlay', height: '50px' }}>
-                                    </div>
+                                    <iframe className="airtable-embed" src={`https://airtable.com/embed/shrBZLziN8jWec6Ff?filter_API_Id=${post.fields.API_Id}&viewControls=on`} frameborder="0" onmousewheel="" width="100%" height="510" style={{ background: 'transparent', border: 'none', marginBottom: '-2rem', paddingTop: '0rem', marginRight: '10rem' }}></iframe>
                                 </TabPanel>
                             </div>
                         </Tabs>
