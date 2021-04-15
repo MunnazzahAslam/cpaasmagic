@@ -59,7 +59,7 @@ export default function AboutVendor(props) {
                                             <Button style={{ marginRight: '0.5rem', marginTop: '1rem', background: '#CFDFFF', color: '#111', padding: '10px' }}>Pure Player</Button>
                                             <Button style={{ marginTop: '1rem', background: '#CFDFFF', color: '#111', padding: '10px' }}>Top Vendors</Button>
                                         </div>*/}
-                                        <br />
+                                        <br /><br/>
                                         <p style={{ textAlign: 'justify', fontSize: '16px' }}>Description <br /><span style={{ color: "#002060" }}>{post.fields.Vendor_Overview}</span></p>
                                         <br />
                                         <p style={{ textAlign: 'justify', fontSize: '16px' }}>Founders <br /> <span style={{ color: "#002060" }}>{post.fields.Vendor_Founders}</span></p>
