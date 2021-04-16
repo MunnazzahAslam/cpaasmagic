@@ -50,12 +50,12 @@ export default function AboutVendor(props) {
                             </div>
                             <TabPanel>
                                 <div style={{ display: 'flex', flexDirection: 'row', marginLeft: '8rem', }}>
-                                    <div className="card" style={{ padding: '0rem', paddingTop: '0rem', margin: '0 2rem', width: '45%' }}>
+                                    <div className="card" style={{ padding: '0rem', paddingTop: '0.5rem', margin: '0 2rem', width: '45%' }}>
                                         {/*   <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'flex-start', marginTop: '2rem' }}>
                                             <Button style={{ marginRight: '0.5rem', marginTop: '1rem', background: '#CFDFFF', color: '#111', padding: '10px' }}>Pure Player</Button>
                                             <Button style={{ marginTop: '1rem', background: '#CFDFFF', color: '#111', padding: '10px' }}>Top Vendors</Button>
                                         </div>*/}
-                                        <br /><br/>
+                                        <br />
                                         <p style={{ textAlign: 'justify', fontSize: '16px' }}>Description <br /><span style={{ color: "#002060" }}>{post.fields.Vendor_Overview}</span></p>
                                         <br />
                                         <p style={{ textAlign: 'justify', fontSize: '16px' }}>Founders <br /> <span style={{ color: "#002060" }}>{post.fields.Vendor_Founders}</span></p>
@@ -87,15 +87,15 @@ export default function AboutVendor(props) {
 
                             <div style={{ display: 'flex', flexDirection: 'column' }}>
                                 <TabPanel style={{background:'#Fff'}}>
-                                    <iframe className="airtable-embed" src={`https://airtable.com/embed/shrJFXIT0ZWH3JIv9?filter_Vendor_Id=${post.fields.Vendor_Id}&viewControls=on`} frameborder="0" onmousewheel="" width="100%" height="510" style={{ background: 'transparent', border: 'none', marginBottom: '-2rem', paddingTop: '0rem',  marginRight: '10rem' }}></iframe>
+                                    <iframe className="airtable-embed" src={`https://airtable.com/embed/shrJFXIT0ZWH3JIv9?filter_Vendor_Id=${post.fields.Vendor_Id}&viewControls=on`} frameborder="0" onmousewheel="" width="100%" height="610" style={{ background: 'transparent', border: 'none', marginBottom: '-2rem', paddingTop: '0rem',  marginRight: '10rem' }}></iframe>
                                   
                                 </TabPanel>
                                 <TabPanel style={{background:'#Fff'}}>
-                                    <iframe className="airtable-embed" src={`https://airtable.com/embed/shrrzXsxpROZjNZOl?filter_Vendor_Id=${post.fields.Vendor_Id}&viewControls=on`} frameborder="0" onmousewheel="" width="100%" height="510" style={{ background: 'transparent', border: 'none', marginBottom: '-2rem', paddingTop: '0rem',  marginRight: '10rem' }}></iframe>
+                                    <iframe className="airtable-embed" src={`https://airtable.com/embed/shrrzXsxpROZjNZOl?filter_Vendor_Id=${post.fields.Vendor_Id}&viewControls=on`} frameborder="0" onmousewheel="" width="100%" height="610" style={{ background: 'transparent', border: 'none', marginBottom: '-2rem', paddingTop: '0rem',  marginRight: '10rem' }}></iframe>
                                     
                                 </TabPanel>
                                 <TabPanel style={{background:'#Fff'}}>
-                                       <iframe className="airtable-embed" src={`https://airtable.com/embed/shrBZLziN8jWec6Ff?filter_Vendor_Id=${post.fields.Vendor_Id}&viewControls=on`} onmousewheel="" width="100%" height="510" style={{ background: 'transparent', border:'none', marginBottom: '-2rem', paddingTop: '0rem', marginRight: '10rem' }}></iframe>
+                                       <iframe className="airtable-embed" src={`https://airtable.com/embed/shrBZLziN8jWec6Ff?filter_Vendor_Id=${post.fields.Vendor_Id}&viewControls=on`} onmousewheel="" width="100%" height="610" style={{ background: 'transparent', border:'none', marginBottom: '-2rem', paddingTop: '0rem', marginRight: '10rem' }}></iframe>
                                        
                                 </TabPanel>
                             </div>

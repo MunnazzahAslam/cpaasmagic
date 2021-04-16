@@ -22,8 +22,8 @@ export default function APIAT(props) {
                 <div>
                     <div style={{ width: '100%' }}>
                         <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', padding: '2rem 0', paddingLeft: '10rem', paddingRight: '2rem', background: '#1283DA' }}>
-                            {/*    <img style={{ margin: '0 2rem', borderRadius: '8px', width: '6vw', height: '6vw', marginLeft: '2rem' }} src={post.fields.Airtable_API_Logo[0].url} alt="VendorProfile" />
-                           */} <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+                            <img style={{ margin: '0 2rem', borderRadius: '8px', width: '6vw', height: '6vw', marginLeft: '2rem' }} src={post.fields.Airtable_API_Logo[0].url} alt="VendorProfile" />
+                            <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
                                 <p style={{ color: '#E4E7EB', fontSize: '16px', marginBottom: '-0.5rem' }}>API</p>
                                 <h2 style={{ fontSize: '40px', fontWeight: '500', color: '#fff' }}>{post.fields.API_Name}</h2>
                                 {/*<div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
@@ -80,20 +80,20 @@ export default function APIAT(props) {
                             </div>
                             <TabPanel>
                                 <div style={{ display: 'flex', flexDirection: 'row', marginLeft: '8rem', marginRight: '2rem' }}>
-                                    <div className="card" style={{ padding: '0rem', paddingTop: '0rem', margin: '0 2rem', width: '45%' }}><br />
+                                    <div className="card" style={{ padding: '0rem', paddingTop: '0.5rem', margin: '0 2rem', width: '45%' }}><br />
                                         <p style={{ textAlign: 'justify', fontSize: '16px' }}>Description <br /><span style={{ color: "#002060" }}>{post.fields.API_Description}</span></p>
                                         <br />
                                         <p style={{ textAlign: 'justify', fontSize: '16px' }}>Features <br /></p>
                                         <br />
-                                        <p style={{ textAlign: 'justify', fontSize: '14px' }}>{post.fields.API_Feature_1}<br /><br /> <span style={{ color: "#002060" }}>{post.fields.API_Feature_Description_1}</span></p>
+                                        <p style={{ textAlign: 'justify', fontSize: '14px' }}>{post.fields.API_Feature_1}<br /> <span style={{ color: "#002060" }}>{post.fields.API_Feature_Description_1}</span></p>
                                         <br />
-                                        <p style={{ textAlign: 'justify', fontSize: '14px' }}>{post.fields.API_Feature_2}<br /><br /> <span style={{ color: "#002060" }}>{post.fields.API_Feature_Description_2}</span></p>
+                                        <p style={{ textAlign: 'justify', fontSize: '14px' }}>{post.fields.API_Feature_2}<br /> <span style={{ color: "#002060" }}>{post.fields.API_Feature_Description_2}</span></p>
                                         <br />
-                                        <p style={{ textAlign: 'justify', fontSize: '14px' }}>{post.fields.API_Feature_3}<br /><br /> <span style={{ color: "#002060" }}>{post.fields.API_Feature_Description_3}</span></p>
+                                        <p style={{ textAlign: 'justify', fontSize: '14px' }}>{post.fields.API_Feature_3}<br /> <span style={{ color: "#002060" }}>{post.fields.API_Feature_Description_3}</span></p>
                                         <br />
-                                        <p style={{ textAlign: 'justify', fontSize: '14px' }}>{post.fields.API_Feature_2}<br /><br /> <span style={{ color: "#002060" }}>{post.fields.API_Feature_Description_2}</span></p>
+                                        <p style={{ textAlign: 'justify', fontSize: '14px' }}>{post.fields.API_Feature_2}<br /> <span style={{ color: "#002060" }}>{post.fields.API_Feature_Description_2}</span></p>
                                         <br />
-                                        <p style={{ textAlign: 'justify', fontSize: '14px' }}>{post.fields.API_Feature_3}<br /><br /> <span style={{ color: "#002060" }}>{post.fields.API_Feature_Description_3}</span></p>
+                                        <p style={{ textAlign: 'justify', fontSize: '14px' }}>{post.fields.API_Feature_3}<br /> <span style={{ color: "#002060" }}>{post.fields.API_Feature_Description_3}</span></p>
                                     </div>
                                     <Card style={{ width: '490px', height: '450px', margin: '1.5rem', marginLeft: '12rem', marginTop: '8rem' }}>
                                         <TwitterTimelineEmbed
@@ -120,10 +120,10 @@ export default function APIAT(props) {
 
                                 </TabPanel>
                                 <TabPanel style={{ background: '#F5F5F5' }}>
-                                    <iframe className="airtable-embed" src={`https://airtable.com/embed/shrrzXsxpROZjNZOl?filter_API_Id=${post.fields.API_Id}&viewControls=on`} frameborder="0" onmousewheel="" width="100%" height="510" style={{ background: 'transparent', border: 'none', marginBottom: '-4rem', paddingTop: '0rem', marginRight: '10rem' }}></iframe>
+                                    <iframe className="airtable-embed" src={`https://airtable.com/embed/shrrzXsxpROZjNZOl?filter_API_Id=${post.fields.API_Id}&viewControls=on`} frameborder="0" onmousewheel="" width="100%" height="610" style={{ background: 'transparent', border: 'none', marginBottom: '-2rem', paddingTop: '0rem', marginRight: '10rem' }}></iframe>
                                 </TabPanel>
                                 <TabPanel style={{ background: '#F5F5F5' }}>
-                                    <iframe className="airtable-embed" src={`https://airtable.com/embed/shrBZLziN8jWec6Ff?filter_API_Id=${post.fields.API_Id}&viewControls=on`} frameborder="0" onmousewheel="" width="100%" height="510" style={{ background: 'transparent', border: 'none', marginBottom: '-4rem', paddingTop: '0rem', marginRight: '10rem' }}></iframe>
+                                    <iframe className="airtable-embed" src={`https://airtable.com/embed/shrBZLziN8jWec6Ff?filter_API_Id=${post.fields.API_Id}&viewControls=on`} frameborder="0" onmousewheel="" width="100%" height="610" style={{ background: 'transparent', border: 'none', marginBottom: '-2rem', paddingTop: '0rem', marginRight: '10rem' }}></iframe>
                                 </TabPanel>
                             </div>
                         </Tabs>
