@@ -13,7 +13,7 @@ import Picture3 from '../home/Picture3.png';
 function Dashboard() {
     return (
         <div style={{ color: '#1B2653', marginBottom: '-2rem' }}>
-            <iframe class="airtable-embed" src="https://airtable.com/embed/shr7EfMe6WsbBJhE5?backgroundColor=blue" frameborder="0" onmousewheel="" width="100%" height="610" style={{ background: 'transparent', border: 'none', marginBottom: '0rem' }}></iframe>
+            <iframe class="airtable-embed" src="https://airtable.com/embed/shr7EfMe6WsbBJhE5?backgroundColor=blue" frameborder="0" onmousewheel="" width="100%" height="810" style={{ background: 'transparent', border: 'none', marginBottom: '0rem' }}></iframe>
             <div className="topbar banner Cards" style={{ paddingLeft: '0%', justifyContent: 'center', overflow: 'overlay', marginTop: '-2rem' }} >
                 <div>
                     <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', paddingTop: '15%' }}>

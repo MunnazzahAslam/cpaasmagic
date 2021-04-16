@@ -8,16 +8,33 @@ var { SocialIcon } = require('react-social-icons');
 
 export default function UsecaseAT(props) {
     const [post, setPost] = useState(null);
-    const [vendor, setVendor] = useState(null);
+
     useEffect(() => {
 
         Axios.get("https://api.airtable.com/v0/appDrjzV9YZk6MRQA/cpaas%20Usecases%20(Synced)/" + props.match.params.id + "?api_key=keyIRsjrVlk0Wnz9b").then(
             response => {
                 setPost(response.data);
+                console.log(response.data);
             }
         );
     }, [setPost]);
 
+    async function fetchData() {
+        try {
+            const responsePost = await Axios.get("https://api.airtable.com/v0/appDrjzV9YZk6MRQA/cpaas%20Usecases%20(Synced)/" + props.match.params.id + "?api_key=keyIRsjrVlk0Wnz9b");
+            const res = responsePost.data;
+            console.log(res);
+
+            const responseVendor = await Axios.get(`https://airtable.com/shrJqJKEkBFkSlEfQ?filter_Usecase_Id=${res.fields.Usecase_Id}`);
+            const resV = responseVendor.data;
+            console.log(resV);
+        }
+        catch (error) {
+            console.log(error)
+        }
+    }
+    
+    fetchData();
 
     return (
         <div>
