@@ -17,7 +17,7 @@ export default function UsecaseAT(props) {
             }
         );
     }, [setPost]);
-    
+
 
     return (
         <div>
@@ -135,11 +135,12 @@ export default function UsecaseAT(props) {
 
                             <div style={{ display: 'flex', flexDirection: 'column' }}>
                                 <TabPanel>
+                                    <iframe className="airtable-embed" src={`https://airtable.com/embed/shrJqJKEkBFkSlEfQ?filter_Usecase_Id=${post.fields.Usecase_Id}&viewControls=on`} frameborder="0" onmousewheel="" width="100%" height="610" style={{ background: 'transparent', border: 'none', marginBottom: '-4rem', paddingTop: '0rem', marginRight: '10rem' }}></iframe>
                                 </TabPanel>
-                                <TabPanel style={{background:'#F5F5F5'}}>
+                                <TabPanel style={{ background: '#F5F5F5' }}>
                                     <iframe className="airtable-embed" src={`https://airtable.com/embed/shrJFXIT0ZWH3JIv9?filter_Usecase_Id=${post.fields.Usecase_Id}&viewControls=on`} frameborder="0" onmousewheel="" width="100%" height="610" style={{ background: 'transparent', border: 'none', marginBottom: '-4rem', paddingTop: '0rem', marginRight: '10rem' }}></iframe>
                                 </TabPanel>
-                                <TabPanel style={{background:'#F5F5F5'}}>
+                                <TabPanel style={{ background: '#F5F5F5' }}>
                                     <iframe className="airtable-embed" src={`https://airtable.com/embed/shrBZLziN8jWec6Ff?filter_Usecase_Id=${post.fields.Usecase_Id}&viewControls=on`} frameborder="0" onmousewheel="" width="100%" height="610" style={{ background: 'transparent', border: 'none', marginBottom: '-4rem', paddingTop: '0rem', marginRight: '10rem' }}></iframe>
                                 </TabPanel>
                             </div>

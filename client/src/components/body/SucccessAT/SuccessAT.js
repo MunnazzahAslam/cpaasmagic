@@ -93,7 +93,7 @@ export default function SuccessAT(props) {
                                         <Button style={{ marginTop: '1rem', background: '#CFDFFF', color: '#111', padding: '14px' }}>{post.fields.Success_Challenge_Title}</Button><br />
                                         <br /><p>{post.fields.Success_Challenge}</p><br /><br />
                                         <p style={{ textAlign: 'justify', fontSize: 'clamp(1.4rem, 1.2vw, 1rem)', color: '#383838' }}><b>Solution</b><br /></p>
-                                       <p>{post.fields.Success_Solution}</p><br /><br />
+                                        <p>{post.fields.Success_Solution}</p><br /><br />
                                         <p style={{ textAlign: 'justify', fontSize: 'clamp(1.4rem, 1.2vw, 1rem)', color: '#383838' }}><b>Result</b></p><p>{post.fields.Success_Result}</p>
                                     </div>
                                     <Card style={{ width: '490px', height: '450px', margin: '1.5rem', marginLeft: '12rem', marginTop: '4rem' }}>
@@ -118,11 +118,12 @@ export default function SuccessAT(props) {
 
                             <div style={{ display: 'flex', flexDirection: 'column' }}>
                                 <TabPanel>
+                                    <iframe className="airtable-embed" src={`https://airtable.com/embed/shrJqJKEkBFkSlEfQ?filter_Success_Id=${post.fields.Success_Id}&viewControls=on`} frameborder="0" onmousewheel="" width="100%" height="610" style={{ background: 'transparent', border: 'none', marginBottom: '-4rem', paddingTop: '0rem', marginRight: '10rem' }}></iframe>
                                 </TabPanel>
-                                <TabPanel style={{background:'#Fff'}}>
-                                <iframe className="airtable-embed" src={`https://airtable.com/embed/shrJFXIT0ZWH3JIv9?filter_Success_Id=${post.fields.Success_Id}&viewControls=on`} frameborder="0" onmousewheel="" width="100%" height="610" style={{ background: 'transparent', border: 'none', marginBottom: '-4rem', paddingTop: '0rem', marginRight: '10rem' }}></iframe>
+                                <TabPanel style={{ background: '#Fff' }}>
+                                    <iframe className="airtable-embed" src={`https://airtable.com/embed/shrJFXIT0ZWH3JIv9?filter_Success_Id=${post.fields.Success_Id}&viewControls=on`} frameborder="0" onmousewheel="" width="100%" height="610" style={{ background: 'transparent', border: 'none', marginBottom: '-4rem', paddingTop: '0rem', marginRight: '10rem' }}></iframe>
                                 </TabPanel>
-                                <TabPanel style={{background:'#Fff'}}>
+                                <TabPanel style={{ background: '#Fff' }}>
                                     <iframe className="airtable-embed" src={`https://airtable.com/embed/shrBZLziN8jWec6Ff?filter_Success_Id=${post.fields.Success_Id}&viewControls=on`} frameborder="0" onmousewheel="" width="100%" height="610" style={{ background: 'transparent', border: 'none', marginBottom: '-4rem', paddingTop: '0rem', marginRight: '10rem' }}></iframe>
                                 </TabPanel>
                             </div>
