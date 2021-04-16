@@ -9,7 +9,6 @@ export default function APIAT(props) {
     const [post, setPost] = useState(null);
 
     useEffect(() => {
-
         Axios.get("https://api.airtable.com/v0/appDrjzV9YZk6MRQA/cpaas%20APIs%20(Synced)/" + props.match.params.id + "?api_key=keyIRsjrVlk0Wnz9b").then(
             response => {
                 setPost(response.data);
@@ -82,19 +81,19 @@ export default function APIAT(props) {
                             <TabPanel>
                                 <div style={{ display: 'flex', flexDirection: 'row', marginLeft: '8rem', marginRight: '2rem' }}>
                                     <div className="card" style={{ padding: '0rem', paddingTop: '0rem', margin: '0 2rem', width: '45%' }}><br />
-                                        <p style={{ textAlign: 'justify', fontSize: 'clamp(1.4rem, 1.2vw, 1rem)', color: '#383838' }}><b>Description</b><br /></p>
-                                        <br /><p>{post.fields.API_Description}</p><br />
-                                        <p style={{ textAlign: 'justify', fontSize: 'clamp(1.4rem, 1.2vw, 1rem)', color: '#383838' }}><b>Features</b><br /></p>
-                                        <br /><p><b>1- {post.fields.API_Feature_1}</b></p><br />
-                                        <p>{post.fields.API_Feature_Description_1}</p><br />
-                                        <p><b>2- {post.fields.API_Feature_2}</b></p><br />
-                                        <p>{post.fields.API_Feature_Description_2}</p><br />
-                                        <p><b>3- {post.fields.API_Feature_3}</b></p><br />
-                                        <p>{post.fields.API_Feature_Description_3}</p><br />
-                                        <p><b>4- {post.fields.API_Feature_4}</b></p><br />
-                                        <p>{post.fields.API_Feature_Description_4}</p><br />
-                                        <p><b>5- {post.fields.API_Feature_5}</b></p><br />
-                                        <p>{post.fields.API_Feature_Description_5}</p><br /><br />
+                                        <p style={{ textAlign: 'justify', fontSize: '16px' }}>Description <br /><span style={{ color: "#002060" }}>{post.fields.API_Description}</span></p>
+                                        <br />
+                                        <p style={{ textAlign: 'justify', fontSize: '16px' }}>Features <br /></p>
+                                        <br />
+                                        <p style={{ textAlign: 'justify', fontSize: '14px' }}>{post.fields.API_Feature_1}<br /><br /> <span style={{ color: "#002060" }}>{post.fields.API_Feature_Description_1}</span></p>
+                                        <br />
+                                        <p style={{ textAlign: 'justify', fontSize: '14px' }}>{post.fields.API_Feature_2}<br /><br /> <span style={{ color: "#002060" }}>{post.fields.API_Feature_Description_2}</span></p>
+                                        <br />
+                                        <p style={{ textAlign: 'justify', fontSize: '14px' }}>{post.fields.API_Feature_3}<br /><br /> <span style={{ color: "#002060" }}>{post.fields.API_Feature_Description_3}</span></p>
+                                        <br />
+                                        <p style={{ textAlign: 'justify', fontSize: '14px' }}>{post.fields.API_Feature_2}<br /><br /> <span style={{ color: "#002060" }}>{post.fields.API_Feature_Description_2}</span></p>
+                                        <br />
+                                        <p style={{ textAlign: 'justify', fontSize: '14px' }}>{post.fields.API_Feature_3}<br /><br /> <span style={{ color: "#002060" }}>{post.fields.API_Feature_Description_3}</span></p>
                                     </div>
                                     <Card style={{ width: '490px', height: '450px', margin: '1.5rem', marginLeft: '12rem', marginTop: '8rem' }}>
                                         <TwitterTimelineEmbed
@@ -118,13 +117,13 @@ export default function APIAT(props) {
 
                             <div style={{ display: 'flex', flexDirection: 'column' }}>
                                 <TabPanel>
-                                    
+
                                 </TabPanel>
-                                <TabPanel style={{background:'#F5F5F5'}}>
-                                    <iframe className="airtable-embed" src={`https://airtable.com/embed/shrrzXsxpROZjNZOl?filter_API_Id=${post.fields.API_Id}&viewControls=on`} frameborder="0" onmousewheel="" width="100%" height="510" style={{ background: 'transparent', border: 'none', marginBottom: '-2rem', paddingTop: '0rem', marginRight: '10rem' }}></iframe>
+                                <TabPanel style={{ background: '#F5F5F5' }}>
+                                    <iframe className="airtable-embed" src={`https://airtable.com/embed/shrrzXsxpROZjNZOl?filter_API_Id=${post.fields.API_Id}&viewControls=on`} frameborder="0" onmousewheel="" width="100%" height="510" style={{ background: 'transparent', border: 'none', marginBottom: '-4rem', paddingTop: '0rem', marginRight: '10rem' }}></iframe>
                                 </TabPanel>
-                                <TabPanel style={{background:'#F5F5F5'}}>
-                                    <iframe className="airtable-embed" src={`https://airtable.com/embed/shrBZLziN8jWec6Ff?filter_API_Id=${post.fields.API_Id}&viewControls=on`} frameborder="0" onmousewheel="" width="100%" height="510" style={{ background: 'transparent', border: 'none', marginBottom: '-2rem', paddingTop: '0rem', marginRight: '10rem' }}></iframe>
+                                <TabPanel style={{ background: '#F5F5F5' }}>
+                                    <iframe className="airtable-embed" src={`https://airtable.com/embed/shrBZLziN8jWec6Ff?filter_API_Id=${post.fields.API_Id}&viewControls=on`} frameborder="0" onmousewheel="" width="100%" height="510" style={{ background: 'transparent', border: 'none', marginBottom: '-4rem', paddingTop: '0rem', marginRight: '10rem' }}></iframe>
                                 </TabPanel>
                             </div>
                         </Tabs>

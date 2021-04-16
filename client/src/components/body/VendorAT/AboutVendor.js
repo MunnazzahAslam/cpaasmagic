@@ -4,10 +4,6 @@ import Card from '@material-ui/core/Card';
 import { TwitterTimelineEmbed } from 'react-twitter-embed';
 import { Button } from '../../../globalStyles';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import Picture4 from '../home/Picture4.png';
-import Picture5 from '../home/Picture5.png';
-import Picture6 from '../home/Picture6.png';
-import Picture7 from '../home/Picture7.png';
 var { SocialIcon } = require('react-social-icons');
 export default function AboutVendor(props) {
     const [post, setPost] = useState(null);
