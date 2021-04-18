@@ -8,6 +8,7 @@ var { SocialIcon } = require('react-social-icons');
 
 export default function UsecaseAT(props) {
     const [post, setPost] = useState(null);
+    const [vendor, setVendor] = useState(null);
 
     useEffect(() => {
 
@@ -19,23 +20,32 @@ export default function UsecaseAT(props) {
         );
     }, [setPost]);
 
+
     async function fetchData() {
         try {
             const responsePost = await Axios.get("https://api.airtable.com/v0/appDrjzV9YZk6MRQA/cpaas%20Usecases%20(Synced)/" + props.match.params.id + "?api_key=keyIRsjrVlk0Wnz9b");
             const res = responsePost.data;
-            console.log(res);
 
-            const responseVendor = await Axios.get(`https://airtable.com/shrJqJKEkBFkSlEfQ?filter_Usecase_Id=${res.fields.Usecase_Id}`);
-            const resV = responseVendor.data;
-            console.log(resV);
+            var get_options = {
+                'method': 'get',
+                'headers': {
+                    Authorization: 'Bearer keyIRsjrVlk0Wnz9b'
+                },
+            }
+
+            var url = 'https://api.airtable.com/v0/appDrjzV9YZk6MRQA/cpaas%20Vendors%20(Synced)?filterByFormula=%7BVendor_Name%7D+%3D+%22' + responsePost.data.fields.Vendor_Name + '%22';
+
+            const responseV = await Axios.get(url, get_options)
+            setVendor(responseV.data.records[0].fields);
         }
         catch (error) {
             console.log(error)
         }
     }
+    useEffect(() => {
+        fetchData();
+    }, []);
     
-    fetchData();
-
     return (
         <div>
             {post && (
@@ -112,24 +122,24 @@ export default function UsecaseAT(props) {
                             </div>
                             <TabPanel>
                                 <div style={{ display: 'flex', flexDirection: 'row', marginLeft: '9rem' }}>
-                                    <div className="card" style={{ padding: '0rem', paddingTop: '0.5rem', margin: '0 2rem', width: '45%' }}>
+                                    <div className="card" style={{ padding: '0rem', paddingTop: '2rem', margin: '0 2rem', width: '45%', paddingBottom:'2rem' }}>
                                         {/*  <br />
                                         <Button style={{ marginTop: '1rem', background: '#CFDFFF', color: '#111', padding: '14px', marginRight: '0.5rem' }}>{post.fields.Usecase_Category}</Button>
                                         <Button style={{ marginTop: '1rem', background: '#CFDFFF', color: '#111', padding: '14px' }}>{post.fields.Usecase_Industry}</Button>
                                         <br /><br />
-                                        */}<p style={{ textAlign: 'justify', fontSize: 'clamp(1.4rem, 1.2vw, 1rem)', color: '#383838' }}><b>Process</b><br /></p>
-                                        <br /><p>- {post.fields.Usecase_Process_1}</p><br />
-                                        <p>- {post.fields.Usecase_Process_2}</p><br />
-                                        <p>- {post.fields.Usecase_Process_3}</p><br />
-                                        <p>- {post.fields.Usecase_Process_4}</p><br />
-                                        <p>- {post.fields.Usecase_Process_5}</p><br />
+                                        */}<p style={{ textAlign: 'justify', fontSize: '16px'  }}>Process<br /></p>
+                                        <br /><p style={{ color: "#002060" }}>- {post.fields.Usecase_Process_1}</p><br />
+                                        <p style={{ color: "#002060" }}>- {post.fields.Usecase_Process_2}</p><br />
+                                        <p style={{ color: "#002060" }}>- {post.fields.Usecase_Process_3}</p><br />
+                                        <p style={{ color: "#002060" }}>- {post.fields.Usecase_Process_4}</p><br />
+                                        <p style={{ color: "#002060" }}>- {post.fields.Usecase_Process_5}</p><br />
                                         <br />
-                                        <p style={{ textAlign: 'justify', fontSize: 'clamp(1.4rem, 1.2vw, 1rem)', color: '#383838' }}><b>Value Generated</b><br /><br /></p>
-                                        <p>- {post.fields.Usecase_Value_Generated_1}</p><br />
-                                        <p>- {post.fields.Usecase_Value_Generated_2}</p><br />
-                                        <p>- {post.fields.Usecase_Value_Generated_3}</p><br />
-                                        <p>- {post.fields.Usecase_Value_Generated_4}</p><br />
-                                        <p>- {post.fields.Usecase_Value_Generated_5}</p>
+                                        <p style={{ textAlign: 'justify', fontSize: '16px'  }}>Value Generated<br /><br /></p>
+                                        <p style={{ color: "#002060" }}>- {post.fields.Usecase_Value_Generated_1}</p><br />
+                                        <p style={{ color: "#002060" }}>- {post.fields.Usecase_Value_Generated_2}</p><br />
+                                        <p style={{ color: "#002060" }}>- {post.fields.Usecase_Value_Generated_3}</p><br />
+                                        <p style={{ color: "#002060" }}>- {post.fields.Usecase_Value_Generated_4}</p><br />
+                                        <p style={{ color: "#002060" }}>- {post.fields.Usecase_Value_Generated_5}</p>
                                     </div>
                                     <Card style={{ width: '490px', height: '450px', margin: '1.5rem', marginLeft: '12rem', marginTop: '5rem' }}>
                                         <TwitterTimelineEmbed
@@ -152,13 +162,38 @@ export default function UsecaseAT(props) {
 
                             <div style={{ display: 'flex', flexDirection: 'column' }}>
                                 <TabPanel>
-                                    <iframe className="airtable-embed" src={`https://airtable.com/embed/shrJqJKEkBFkSlEfQ?filter_Usecase_Id=${post.fields.Usecase_Id}&viewControls=on`} frameborder="0" onmousewheel="" width="100%" height="610" style={{ background: 'transparent', border: 'none', marginBottom: '-4rem', paddingTop: '0rem', marginRight: '10rem' }}></iframe>
+                                    {vendor != null ?
+                                        <div style={{ display: 'flex', flexDirection: 'row', marginLeft: '8rem' }}>
+                                            <div className="card" style={{ padding: '0rem', margin: '0 2rem', width: '45%' }}>
+                                                <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
+                                                    <img style={{ borderRadius: '8px', width: '6vw', height: '6vw', marginTop:'2rem'}} src={vendor.Airtable_Vendor_Logo[0].url} alt="VendorProfile" />
+                                                    <h2 style={{ fontSize: 'clamp(1.4rem, 1.2vw, 1rem)', marginLeft: '1rem', fontWeight: '500', color: '#383838' }}>{vendor.Vendor_Name}</h2>
+                                                </div>
+                                                <br />
+                                                <p style={{ textAlign: 'justify', fontSize: '16px' }}>Description <br /><span style={{ color: "#002060" }}>{vendor.Vendor_Overview}</span></p>
+                                                <br />
+                                                <p style={{ textAlign: 'justify', fontSize: '16px' }}>Founders <br /> <span style={{ color: "#002060" }}>{vendor.Vendor_Founders}</span></p>
+                                                <br />
+                                                <p style={{ textAlign: 'justify', fontSize: '16px' }}>Founded in <br /> <span style={{ color: "#002060" }}>{vendor.Vendor_Founded_Year}</span></p>
+                                                <br />
+                                                <p style={{ textAlign: 'justify', fontSize: '16px' }}>Industry <br /> <span style={{ color: "#002060" }}>{vendor.Vendor_Industry}</span></p>
+                                                <br />
+                                                <p style={{ textAlign: 'justify', fontSize: '16px' }}>Company Size <br /> <span style={{ color: "#002060" }}>{vendor.Vendor_Company_Size}</span></p>
+                                            </div>
+                                            <Card style={{ width: '490px', height: '450px', margin: '1.5rem', marginLeft: '12rem', marginTop: '5rem' }}>
+                                                <TwitterTimelineEmbed
+                                                    sourceType="profile"
+                                                    screenName={vendor.Vendor_Name}
+                                                    options={{ height: 550, width: 550 }}
+                                                />
+                                            </Card>
+                                        </div> : ""}
                                 </TabPanel>
                                 <TabPanel style={{ background: '#F5F5F5' }}>
-                                    <iframe className="airtable-embed" src={`https://airtable.com/embed/shrJFXIT0ZWH3JIv9?filter_Usecase_Id=${post.fields.Usecase_Id}&viewControls=on`} frameborder="0" onmousewheel="" width="100%" height="610" style={{ background: 'transparent', border: 'none', marginBottom: '-4rem', paddingTop: '0rem', marginRight: '10rem' }}></iframe>
+                                    <iframe className="airtable-embed" src={`https://airtable.com/embed/shrJFXIT0ZWH3JIv9?filter_Usecase_Id=${post.fields.Usecase_Id}&viewControls=on`} width="100%" height="610" style={{ background: 'transparent', border: 'none', marginBottom: '-4rem', paddingTop: '0rem', marginRight: '10rem' }}></iframe>
                                 </TabPanel>
                                 <TabPanel style={{ background: '#F5F5F5' }}>
-                                    <iframe className="airtable-embed" src={`https://airtable.com/embed/shrBZLziN8jWec6Ff?filter_Usecase_Id=${post.fields.Usecase_Id}&viewControls=on`} frameborder="0" onmousewheel="" width="100%" height="610" style={{ background: 'transparent', border: 'none', marginBottom: '-4rem', paddingTop: '0rem', marginRight: '10rem' }}></iframe>
+                                    <iframe className="airtable-embed" src={`https://airtable.com/embed/shrBZLziN8jWec6Ff?filter_Usecase_Id=${post.fields.Usecase_Id}&viewControls=on`} width="100%" height="610" style={{ background: 'transparent', border: 'none', marginBottom: '-4rem', paddingTop: '0rem', marginRight: '10rem' }}></iframe>
                                 </TabPanel>
                             </div>
                         </Tabs>
