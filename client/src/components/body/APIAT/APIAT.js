@@ -148,8 +148,7 @@ export default function APIAT(props) {
                                             <div className="card" style={{ padding: '0rem', paddingTop: '0.5rem', margin: '0 2rem', width: '45%' }}>
                                                 <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
                                                     <img style={{ borderRadius: '8px', width: '6vw', height: '6vw', marginTop:'2rem' }} src={vendor.Airtable_Vendor_Logo[0].url} alt="VendorProfile" />
-                                                    <h2 style={{ fontSize: 'clamp(1.4rem, 1.2vw, 1rem)', marginLeft: '1rem', fontWeight: '500', color: '#383838' }}>{vendor.Vendor_Name}</h2>
-                                                </div>
+                                               </div>
                                                 <br />
                                                 <p style={{ textAlign: 'justify', fontSize: '16px' }}>Description <br /><span style={{ color: "#002060" }}>{vendor.Vendor_Overview}</span></p>
                                                 <br />
