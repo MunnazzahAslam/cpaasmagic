@@ -24,7 +24,75 @@ button{
   outline: none;
   cursor: pointer;
 }
+.item-container{
+  overflow: hidden;
+}
 
+.item-con{
+  width: 90%;
+  padding: 1.2rem 1.2rem;
+  margin: 0 auto;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgb(0 0 0 / 10%);
+}
+
+.item-container > img{
+  width: 100%;
+  transition: all .3s ease-in-out;
+}
+
+.item-container > img:hover{
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.buttons{
+  width: 70%;
+  margin: 3rem auto;
+  text-align: center;
+}
+
+.btn{
+  padding: .5rem 2rem;
+  border-radius: 32px;
+  font-family: inherit;
+  margin-top: 1rem;
+  font-size: inherit;
+  color: #1283DA;
+  background: #fff;
+  transition: all 0.4s cubic-bezier(1,-0.16,.6,1.35);
+  border: 2px solid #1283DA;
+}
+
+.btn:not(:last-child){
+  margin-right: 1rem;
+}
+
+.btn:hover{
+  background: #1283DA;
+  color:white;
+  cursor: pointer;
+}
+
+.btn:active, .btn:focus{
+  background: #1283DA;
+  color:#fff;
+  outline: none;
+  border: 2px solid #1283DA;
+}
+
+.item{
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  padding: 15px 20px;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 3rem;
+  padding-bottom: 6rem;
+
+}
 /* ----------------- Header ------------------- */
 @import url("./components/header/header.css");
 

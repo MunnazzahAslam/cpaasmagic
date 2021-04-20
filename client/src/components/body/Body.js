@@ -41,6 +41,7 @@ import AboutVendor from '../body/VendorAT/AboutVendor'
 import APIAT from '../body/APIAT/APIAT'
 import UsecaseAT from '../body/UsecaseAT/UsecaseAT'
 import SuccessAT from '../body/SucccessAT/SuccessAT'
+import APICategory from '../body/APICategory/APICategory'
 
 function Body() {
     const auth = useSelector(state => state.auth)
@@ -60,7 +61,9 @@ function Body() {
                 <ProtectedRoute path="/dashboard" component={isLogged ? Dashboard : Register} />
                 {/*  <ProtectedRoute path="/buyerdashboard" component={BuyerDashboard} />
                  <ProtectedRoute path="/getstarted/buyer" component={BuyergetStartedPage} />
+                
                 */}
+                <ProtectedRoute path="/apicategory" component={APICategory} />
                 <ProtectedRoute path="/payment" component={Payment} />
                 <ProtectedRoute path="/dashboardpro" component={ProDashboard} />
                 <ProtectedRoute path="/getstarted" component={GetStartedPage} />

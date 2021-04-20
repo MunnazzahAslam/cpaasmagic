@@ -121,7 +121,7 @@ export default function APIAT(props) {
                                         <br />
                                         <p style={{ textAlign: 'justify', fontSize: '14px' }}>{post.fields.API_Feature_3}<br /> <span style={{ color: "#002060" }}>{post.fields.API_Feature_Description_3}</span></p>
                                     </div>
-                                    <Card style={{ width: '490px', height: '450px', margin: '1.5rem', marginLeft: '12rem', marginTop: '8rem' }}>
+                                    <Card style={{ width: '490px', height: '450px', margin: '1.5rem', marginLeft: '12rem' }}>
                                         <TwitterTimelineEmbed
                                             sourceType="profile"
                                             screenName={post.fields.Vendor_Name}

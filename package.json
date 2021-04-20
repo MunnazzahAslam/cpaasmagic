@@ -19,6 +19,7 @@
   "dependencies": {
     "@material-ui/core": "^4.11.3",
     "@material-ui/icons": "^4.11.2",
+    "@reactions/component": "^2.0.2",
     "antd": "^4.13.1",
     "bcrypt": "^5.0.1",
     "buttercms": "^1.2.6",

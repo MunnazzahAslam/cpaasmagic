@@ -162,7 +162,7 @@ export default function SuccessAT(props) {
                                                 <br />
                                                 <p style={{ textAlign: 'justify', fontSize: '16px' }}>Company Size <br /> <span style={{ color: "#002060" }}>{vendor.Vendor_Company_Size}</span></p>
                                             </div>
-                                            <Card style={{ width: '490px', height: '450px', margin: '1.5rem', marginLeft: '12rem', marginTop: '5rem' }}>
+                                            <Card style={{ width: '490px', height: '450px', margin: '1.5rem', marginLeft: '12rem' }}>
                                                 <TwitterTimelineEmbed
                                                     sourceType="profile"
                                                     screenName={vendor.Vendor_Name}
