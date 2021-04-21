@@ -18,7 +18,6 @@ export default [
             "Vendor_Id": "Vendor_6",
             "API_Name": "Personalized Content",
             "API_Type": "Messaging API",
-            "url": "https://dl.airtable.com/.attachments/f60a4cd175f16af24eb649400f6814b9/6c829759/004-chat.png",
             "Airtable_API_Logo": [
                 {
                     "id": "attuPQ1mdSdVJ5X5f",
@@ -4907,34 +4906,6 @@ export default [
             "API_ChildPage_URL": {
                 "label": "View API",
                 "url": "https://cpaasmagic.herokuapp.com/api/recS7hF5y9QjpQSQB"
-            }
-        },
-        "createdTime": "2021-04-08T18:40:53.000Z"
-    },
-    {
-        "id": "recSf5NeIlw4SLHCx",
-        "fields": {
-            "API_Id": "API_118",
-            "Vendor_Name": "Alcatel-Lucent Enterprise",
-            "API_Description": "Information Not Available",
-            "API_Category": "-",
-            "cpaas Usecases (Synced)": [
-                "recx3VCW7UM40OOQh",
-                "recFteFU4r6IgZbnb"
-            ],
-            "Usecase_Id": [
-                "recx3VCW7UM40OOQh",
-                "recFteFU4r6IgZbnb"
-            ],
-            "cpaas Vendors (Synced)": [
-                "rec5VJ35AnJeltnwW"
-            ],
-            "Vendor_Id": "Vendor_11",
-            "API_Name": "PSTN Telephony",
-            "API_Type": "-",
-            "API_ChildPage_URL": {
-                "label": "View API",
-                "url": "https://cpaasmagic.herokuapp.com/api/recSf5NeIlw4SLHCx"
             }
         },
         "createdTime": "2021-04-08T18:40:53.000Z"
