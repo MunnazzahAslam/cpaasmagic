@@ -9,7 +9,9 @@ function Menu({ menuItem }) {
                         <div className="item-container" style={{ display: 'flex', flexDirection: 'row' }}>
                             {item.fields.Airtable_API_Logo.map((c, i) => (
                                 <div key={i}>
-                                    <img href={item.fields.API_ChildPage_URL.url}  style={{ margin: '0 2rem', borderRadius: '8px', width: '4vw', height: '4vw', marginLeft: '1rem' }} src={c.url} />
+                                    <a href={item.fields.API_ChildPage_URL.url}  >
+                                    <img style={{ margin: '0 2rem', borderRadius: '8px', width: '4vw', height: '4vw', marginLeft: '1rem' }} src={c.url} />
+                                    </a>
                                 </div>
                             ))}
                             <div style={{ display: 'flex', flexDirection: 'column' }}>
