@@ -4,7 +4,6 @@ import Card from '@material-ui/core/Card';
 import { Button } from '../../../globalStyles';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import { TwitterTimelineEmbed } from 'react-twitter-embed';
-var { SocialIcon } = require('react-social-icons');
 
 export default function SuccessAT(props) {
     const [post, setPost] = useState(null);
@@ -50,9 +49,9 @@ export default function SuccessAT(props) {
             {post && (
                 <div style={{ marginBottom: '2rem' }}>
                     <div style={{ width: '100%', height: '100%' }}>
-                        <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', padding: '2rem 0', paddingLeft: '10rem', paddingRight: '2rem', background: '#1283DA', color: '#fff' }}>{/*
-                            <img style={{ margin: '0 2rem', borderRadius: '8px', width: '6vw', height: '6vw', marginLeft: '2rem' }} src={post.fields.Airtable_Success_Logo[0].url} alt="VendorProfile" />*/}
-                            <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+                        <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', padding: '2rem 0', paddingLeft: '10rem', paddingRight: '2rem', background: '#1283DA', color: '#fff' }}>
+                            <img style={{ borderRadius: '8px', width: '6vw', height: '6vw', }} src={post.fields.Airtable_Success_Client_Logo[0].url} alt="VendorProfile" />
+                            <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', marginLeft: '2rem' }}>
                                 <p style={{ color: '#E4E7EB', fontSize: '16px', marginBottom: '-0rem' }}>Success</p>
                                 <h2 style={{ fontSize: '30px', fontWeight: '500', color: '#fff' }}>{post.fields.Success_Name}</h2>
                                 {/*<div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
@@ -117,7 +116,7 @@ export default function SuccessAT(props) {
                                     <div className="card" style={{ padding: '0rem', paddingTop: '0.5rem', margin: '0 2rem', width: '45%' }}>
                                         <br />
                                         <p style={{ textAlign: 'justify', fontSize: '16px' }}>Challenge<br /></p>
-                                        <Button style={{ marginTop: '1rem', background: '#CFDFFF', color: '#111', fontSize:'14px' }}>{post.fields.Success_Challenge_Title}</Button><br />
+                                        <Button style={{ marginTop: '1rem', background: '#CFDFFF', color: '#111', fontSize: '14px' }}>{post.fields.Success_Challenge_Title}</Button><br />
                                         <br /><p style={{ color: "#002060" }}>{post.fields.Success_Challenge}</p><br /><br />
                                         <p style={{ textAlign: 'justify', fontSize: '16px' }}>Solution<br /></p>
                                         <p style={{ color: "#002060" }}>{post.fields.Success_Solution}</p><br /><br />
@@ -149,7 +148,7 @@ export default function SuccessAT(props) {
                                         <div style={{ display: 'flex', flexDirection: 'row', marginLeft: '8rem' }}>
                                             <div className="card" style={{ padding: '0rem', margin: '0 2rem', width: '45%' }}>
                                                 <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
-                                                    <img style={{ borderRadius: '8px', width: '6vw', height: '6vw', marginTop:'2rem' }} src={vendor.Airtable_Vendor_Logo[0].url} alt="VendorProfile" />
+                                                    <img style={{ borderRadius: '8px', width: '6vw', height: '6vw', marginTop: '2rem' }} src={vendor.Airtable_Vendor_Logo[0].url} alt="VendorProfile" />
                                                 </div>
                                                 <br />
                                                 <p style={{ textAlign: 'justify', fontSize: '16px' }}>Description <br /><span style={{ color: "#002060" }}>{vendor.Vendor_Overview}</span></p>
@@ -172,10 +171,10 @@ export default function SuccessAT(props) {
                                         </div> : ""}
                                 </TabPanel>
                                 <TabPanel style={{ background: '#Fff' }}>
-                                    <iframe className="airtable-embed" src={`https://airtable.com/embed/shrJFXIT0ZWH3JIv9?filter_Success_Id=${post.fields.Success_Id}&viewControls=on`} frameborder="0" onmousewheel="" width="100%" height="610" style={{ background: 'transparent', border: 'none', marginBottom: '-4rem', paddingTop: '0rem', marginRight: '10rem' }}></iframe>
+                                    <iframe className="airtable-embed" src={`https://airtable.com/embed/shrrzXsxpROZjNZOl?filter_Success_Id=${post.fields.Success_Id}&viewControls=on`} frameborder="0" onmousewheel="" width="100%" height="610" style={{ background: 'transparent', border: 'none', marginBottom: '-2rem', paddingTop: '0rem', marginRight: '10rem' }}></iframe>
                                 </TabPanel>
                                 <TabPanel style={{ background: '#Fff' }}>
-                                    <iframe className="airtable-embed" src={`https://airtable.com/embed/shrBZLziN8jWec6Ff?filter_Success_Id=${post.fields.Success_Id}&viewControls=on`} frameborder="0" onmousewheel="" width="100%" height="610" style={{ background: 'transparent', border: 'none', marginBottom: '-4rem', paddingTop: '0rem', marginRight: '10rem' }}></iframe>
+                                    <iframe className="airtable-embed" src={`https://airtable.com/embed/shrrzXsxpROZjNZOl?filter_Success_Id=${post.fields.Success_Id}&viewControls=on`} frameborder="0" onmousewheel="" width="100%" height="610" style={{ background: 'transparent', border: 'none', marginBottom: '-4rem', paddingTop: '0rem', marginRight: '10rem' }}></iframe>
                                 </TabPanel>
                             </div>
                         </Tabs>
