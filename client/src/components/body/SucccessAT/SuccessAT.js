@@ -131,7 +131,7 @@ export default function SuccessAT(props) {
                                     <Card style={{ width: '490px', height: '450px', margin: '1.5rem', marginLeft: '12rem', marginTop: '4rem' }}>
                                         <LinkedinCompanyProfile
                                             lang="en_US"
-                                            companyId={vonage}
+                                            companyId={"vonage"}
                                             format="inline" // Or "hover"
                                             text={post.fields.Vendor} // text to show in "hover" format
                                         />
