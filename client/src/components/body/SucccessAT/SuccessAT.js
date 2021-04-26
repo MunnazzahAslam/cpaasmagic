@@ -4,6 +4,13 @@ import Card from '@material-ui/core/Card';
 import { Button } from '../../../globalStyles';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import { TwitterTimelineEmbed } from 'react-twitter-embed';
+import {
+    LinkedinCompanyProfile,
+    LinkedinFollowCompany,
+    LinkedinLogin,
+    LinkedinAddProfile,
+    LinkedinProfile,
+} from 'react-social-plugins';
 
 export default function SuccessAT(props) {
     const [post, setPost] = useState(null);
@@ -112,8 +119,8 @@ export default function SuccessAT(props) {
                                 </TabList>
                             </div>
                             <TabPanel>
-                                <div style={{ display: 'flex', flexDirection: 'row', marginLeft: '8rem', marginRight: '2rem' }}>
-                                    <div className="card" style={{ padding: '0rem', paddingTop: '2rem', margin: '0 2rem', width: '45%' }}>
+                                <div style={{ display: 'flex', flexDirection: 'row', marginLeft: '8rem', marginRight: '2rem', alignItems: 'center' }}>
+                                    <div className="card" style={{ padding: '0rem', margin: '0 2rem', width: '45%' }}>
                                         <p style={{ textAlign: 'justify', fontSize: '16px' }}>Challenge<br /></p>
                                         <Button style={{ marginTop: '1rem', background: '#CFDFFF', color: '#111', fontSize: '14px' }}>{post.fields.Challenge}</Button><br />
                                         <br /><p style={{ color: "#002060" }}>{post.fields['Success Challenge']}</p><br /><br />
@@ -122,10 +129,11 @@ export default function SuccessAT(props) {
                                         <p style={{ textAlign: 'justify', fontSize: '16px' }}>Result</p><p style={{ color: "#002060" }}>{post.fields['Success Result']}</p>
                                     </div>
                                     <Card style={{ width: '490px', height: '450px', margin: '1.5rem', marginLeft: '12rem', marginTop: '4rem' }}>
-                                        <TwitterTimelineEmbed
-                                            sourceType="profile"
-                                            screenName={post.fields.Vendor}
-                                            options={{ height: 550, width: 550 }}
+                                        <LinkedinCompanyProfile
+                                            lang="en_US"
+                                            companyId={vonage}
+                                            format="inline" // Or "hover"
+                                            text={post.fields.Vendor} // text to show in "hover" format
                                         />
                                     </Card>
                                 </div>

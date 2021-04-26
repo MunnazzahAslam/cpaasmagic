@@ -105,8 +105,8 @@ export default function APIAT(props) {
                                 </TabList>
                             </div>
                             <TabPanel>
-                                <div style={{ display: 'flex', flexDirection: 'row', marginLeft: '8rem', marginRight: '2rem' }}>
-                                    <div className="card" style={{ padding: '0rem', paddingTop: '2rem', margin: '0 2rem', width: '45%' }}>
+                                <div style={{ display: 'flex', flexDirection: 'row', marginLeft: '8rem', marginRight: '2rem', alignItems:'center' }}>
+                                    <div className="card" style={{ padding: '0rem', margin: '0 2rem', width: '45%' }}>
                                         <p style={{ textAlign: 'justify', fontSize: '16px' }}>Description <br /><span style={{ color: "#002060" }}>{post.fields['API Description']}</span></p>
                                         <br />
                                         <p style={{ textAlign: 'justify', fontSize: '16px' }}>Features <br /></p>

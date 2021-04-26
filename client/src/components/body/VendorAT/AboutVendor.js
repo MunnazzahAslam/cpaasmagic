@@ -41,8 +41,8 @@ export default function AboutVendor(props) {
                                 </TabList>
                             </div>
                             <TabPanel>
-                                <div style={{ display: 'flex', flexDirection: 'row', marginLeft: '8rem', }}>
-                                    <div className="card" style={{ padding: '0rem', paddingTop: '0.5rem', margin: '0 2rem', width: '45%' }}>
+                                <div style={{ display: 'flex', flexDirection: 'row', marginLeft: '8rem', alignItems:'center'}}>
+                                    <div className="card" style={{ padding: '0rem', margin: '0 2rem', width: '45%' }}>
                                         {/*   <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'flex-start', marginTop: '2rem' }}>
                                             <Button style={{ marginRight: '0.5rem', marginTop: '1rem', background: '#CFDFFF', color: '#111', padding: '10px' }}>Pure Player</Button>
                                             <Button style={{ marginTop: '1rem', background: '#CFDFFF', color: '#111', padding: '10px' }}>Top Vendors</Button>
