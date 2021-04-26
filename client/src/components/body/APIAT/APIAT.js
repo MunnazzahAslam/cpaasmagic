@@ -29,7 +29,7 @@ export default function APIAT(props) {
                 },
             }
 
-            var url = 'https://api.airtable.com/v0/appDrjzV9YZk6MRQA/cpaas%20Vendors%20(Synced)?filterByFormula=%7BVendor_Name%7D+%3D+%22' + responsePost.data.fields.Vendor_Name + '%22';
+            var url = 'https://api.airtable.com/v0/appDrjzV9YZk6MRQA/cpaas%20Vendors%20(Synced)?filterByFormula=%7BVendor%7D+%3D+%22' + responsePost.data.fields.Vendor + '%22';
 
             const responseV = await Axios.get(url, get_options)
             setVendor(responseV.data.records[0].fields);
@@ -48,10 +48,10 @@ export default function APIAT(props) {
                 <div>
                     <div style={{ width: '100%' }}>
                         <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', padding: '2rem 0', paddingLeft: '10rem', paddingRight: '2rem', background: '#1283DA' }}>
-                            <img style={{ margin: '0 2rem', borderRadius: '8px', width: '6vw', height: '6vw', marginLeft: '2rem' }} src={post.fields.Airtable_API_Logo[0].url} alt="VendorProfile" />
+                            <img style={{ margin: '0 2rem', borderRadius: '8px', width: '6vw', height: '6vw', marginLeft: '2rem' }} src={post.fields['API Logo'][0].url} alt="VendorProfile" />
                             <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
                                 <p style={{ color: '#E4E7EB', fontSize: '16px', marginBottom: '-0.5rem' }}>API</p>
-                                <h2 style={{ fontSize: '40px', fontWeight: '500', color: '#fff' }}>{post.fields.API_Name}</h2>
+                                <h2 style={{ fontSize: '40px', fontWeight: '500', color: '#fff' }}>{post.fields.API}</h2>
                                 {/*<div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
                                     <div style={{ marginTop: '0.5rem' }}>
                                         <SocialIcon network="linkedin" style={{ height: 35, width: 35, marginRight: '0.5rem' }} />
@@ -106,26 +106,26 @@ export default function APIAT(props) {
                             </div>
                             <TabPanel>
                                 <div style={{ display: 'flex', flexDirection: 'row', marginLeft: '8rem', marginRight: '2rem' }}>
-                                    <div className="card" style={{ padding: '0rem', paddingTop: '2rem', margin: '0 2rem', width: '45%' }}><br />
-                                        <p style={{ textAlign: 'justify', fontSize: '16px' }}>Description <br /><span style={{ color: "#002060" }}>{post.fields.API_Description}</span></p>
+                                    <div className="card" style={{ padding: '0rem', paddingTop: '2rem', margin: '0 2rem', width: '45%' }}>
+                                        <p style={{ textAlign: 'justify', fontSize: '16px' }}>Description <br /><span style={{ color: "#002060" }}>{post.fields['API Description']}</span></p>
                                         <br />
                                         <p style={{ textAlign: 'justify', fontSize: '16px' }}>Features <br /></p>
                                         <br />
-                                        <p style={{ textAlign: 'justify', fontSize: '14px' }}>{post.fields.API_Feature_1}<br /> <span style={{ color: "#002060" }}>{post.fields.API_Feature_Description_1}</span></p>
+                                        <p style={{ textAlign: 'justify', fontSize: '14px' }}>{post.fields['API Feature 1']}<br /> <span style={{ color: "#002060" }}>{post.fields['API Feature Description 1']}</span></p>
                                         <br />
-                                        <p style={{ textAlign: 'justify', fontSize: '14px' }}>{post.fields.API_Feature_2}<br /> <span style={{ color: "#002060" }}>{post.fields.API_Feature_Description_2}</span></p>
+                                        <p style={{ textAlign: 'justify', fontSize: '14px' }}>{post.fields['API Feature 2']}<br /> <span style={{ color: "#002060" }}>{post.fields['API Feature Description 2']}</span></p>
                                         <br />
-                                        <p style={{ textAlign: 'justify', fontSize: '14px' }}>{post.fields.API_Feature_3}<br /> <span style={{ color: "#002060" }}>{post.fields.API_Feature_Description_3}</span></p>
+                                        <p style={{ textAlign: 'justify', fontSize: '14px' }}>{post.fields['API Feature 3']}<br /> <span style={{ color: "#002060" }}>{post.fields['API Feature Description 3']}</span></p>
                                         <br />
-                                        <p style={{ textAlign: 'justify', fontSize: '14px' }}>{post.fields.API_Feature_2}<br /> <span style={{ color: "#002060" }}>{post.fields.API_Feature_Description_2}</span></p>
+                                        <p style={{ textAlign: 'justify', fontSize: '14px' }}>{post.fields['API Feature 4']}<br /> <span style={{ color: "#002060" }}>{post.fields['API Feature Description 4']}</span></p>
                                         <br />
-                                        <p style={{ textAlign: 'justify', fontSize: '14px' }}>{post.fields.API_Feature_3}<br /> <span style={{ color: "#002060" }}>{post.fields.API_Feature_Description_3}</span></p>
-                                    </div>
+                                        <p style={{ textAlign: 'justify', fontSize: '14px' }}>{post.fields['API Feature 5']}<br /> <span style={{ color: "#002060" }}>{post.fields['API Feature Description 5']}</span></p>
+                                        </div>
                                     <Card style={{ width: '490px', height: '450px', margin: '1.5rem', marginLeft: '12rem' }}>
                                         <TwitterTimelineEmbed
                                             sourceType="profile"
-                                            screenName={post.fields.Vendor_Name}
-                                            options={{ height: 550, width: 550 }}
+                                            screenName={post.fields.Vendor}
+                                            options={{ height: 550, width: 490 }}
                                         />
                                     </Card>
                                 </div>
@@ -147,18 +147,18 @@ export default function APIAT(props) {
                                         <div style={{ display: 'flex', flexDirection: 'row', marginLeft: '8rem', paddingBottom:'2rem' }}>
                                             <div className="card" style={{ padding: '0rem', paddingTop: '0.5rem', margin: '0 2rem', width: '45%' }}>
                                                 <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
-                                                    <img style={{ borderRadius: '8px', width: '6vw', height: '6vw', marginTop:'2rem' }} src={vendor.Airtable_Vendor_Logo[0].url} alt="VendorProfile" />
+                                                    <img style={{ borderRadius: '8px', width: '6vw', height: '6vw', marginTop:'2rem' }} src={vendor.Logo[0].url} alt="VendorProfile" />
                                                </div>
                                                 <br />
-                                                <p style={{ textAlign: 'justify', fontSize: '16px' }}>Description <br /><span style={{ color: "#002060" }}>{vendor.Vendor_Overview}</span></p>
+                                                <p style={{ textAlign: 'justify', fontSize: '16px' }}>Description <br /><span style={{ color: "#002060" }}>{vendor.Description}</span></p>
                                                 <br />
-                                                <p style={{ textAlign: 'justify', fontSize: '16px' }}>Founders <br /> <span style={{ color: "#002060" }}>{vendor.Vendor_Founders}</span></p>
+                                                <p style={{ textAlign: 'justify', fontSize: '16px' }}>Founders <br /> <span style={{ color: "#002060" }}>{vendor.Founders}</span></p>
                                                 <br />
-                                                <p style={{ textAlign: 'justify', fontSize: '16px' }}>Founded in <br /> <span style={{ color: "#002060" }}>{vendor.Vendor_Founded_Year}</span></p>
+                                                <p style={{ textAlign: 'justify', fontSize: '16px' }}>Founded in <br /> <span style={{ color: "#002060" }}>{vendor['Founded Year']}</span></p>
                                                 <br />
-                                                <p style={{ textAlign: 'justify', fontSize: '16px' }}>Industry <br /> <span style={{ color: "#002060" }}>{vendor.Vendor_Industry}</span></p>
+                                                <p style={{ textAlign: 'justify', fontSize: '16px' }}>Industry <br /> <span style={{ color: "#002060" }}>{vendor.Industry}</span></p>
                                                 <br />
-                                                <p style={{ textAlign: 'justify', fontSize: '16px' }}>Company Size <br /> <span style={{ color: "#002060" }}>{vendor.Vendor_Company_Size}</span></p>
+                                                <p style={{ textAlign: 'justify', fontSize: '16px' }}>Company Size <br /> <span style={{ color: "#002060" }}>{vendor['Company Size']}</span></p>
                                             </div>
                                             <Card style={{ width: '490px', height: '450px', margin: '1.5rem', marginLeft: '12rem', marginTop: '5rem' }}>
                                                 <TwitterTimelineEmbed

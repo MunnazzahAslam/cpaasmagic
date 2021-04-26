@@ -33,7 +33,7 @@ export default function UsecaseAT(props) {
                 },
             }
 
-            var url = 'https://api.airtable.com/v0/appDrjzV9YZk6MRQA/cpaas%20Vendors%20(Synced)?filterByFormula=%7BVendor_Name%7D+%3D+%22' + responsePost.data.fields.Vendor_Name + '%22';
+            var url = 'https://api.airtable.com/v0/appDrjzV9YZk6MRQA/cpaas%20Vendors%20(Synced)?filterByFormula=%7BVendor%7D+%3D+%22' + responsePost.data.fields.Vendor + '%22';
 
             const responseV = await Axios.get(url, get_options)
             setVendor(responseV.data.records[0].fields);
@@ -55,7 +55,7 @@ export default function UsecaseAT(props) {
                             <img style={{ margin: '0 2rem', borderRadius: '8px', width: '6vw', height: '6vw', marginLeft: '2rem' }} src={post.fields.Airtable_Usecase_Logo[0].url} alt="VendorProfile" />*/}
                             <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
                                 <p style={{ color: '#E4E7EB', fontSize: '16px', marginBottom: '-0.5rem' }}>Use Case</p>
-                                <h2 style={{ fontSize: '40px', fontWeight: '500', color: '#fff' }}>{post.fields.Usecase_Name}</h2>
+                                <h2 style={{ fontSize: '40px', fontWeight: '500', color: '#fff' }}>{post.fields.Usecase}</h2>
                                 {/*<div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
                                 <div style={{ marginTop: '0.5rem' }}>
                                     <SocialIcon network="linkedin" style={{ height: 35, width: 35, marginRight: '0.5rem' }} />
@@ -128,18 +128,18 @@ export default function UsecaseAT(props) {
                                         <Button style={{ marginTop: '1rem', background: '#CFDFFF', color: '#111', padding: '14px' }}>{post.fields.Usecase_Industry}</Button>
                                         <br /><br />
                                         */}<p style={{ textAlign: 'justify', fontSize: '16px'  }}>Process<br /></p>
-                                        <br /><p style={{ color: "#002060" }}>- {post.fields.Usecase_Process_1}</p><br />
-                                        <p style={{ color: "#002060" }}>- {post.fields.Usecase_Process_2}</p><br />
-                                        <p style={{ color: "#002060" }}>- {post.fields.Usecase_Process_3}</p><br />
-                                        <p style={{ color: "#002060" }}>- {post.fields.Usecase_Process_4}</p><br />
-                                        <p style={{ color: "#002060" }}>- {post.fields.Usecase_Process_5}</p><br />
+                                        <br /><p style={{ color: "#002060" }}>- {post.fields['Usecase Process 1']}</p><br />
+                                        <p style={{ color: "#002060" }}>- {post.fields['Usecase Process 2']}</p><br />
+                                        <p style={{ color: "#002060" }}>- {post.fields['Usecase Process 3']}</p><br />
+                                        <p style={{ color: "#002060" }}>- {post.fields['Usecase Process 4']}</p><br />
+                                        <p style={{ color: "#002060" }}>- {post.fields['Usecase Process 5']}</p><br />
                                         <br />
                                         <p style={{ textAlign: 'justify', fontSize: '16px'  }}>Value Generated<br /><br /></p>
-                                        <p style={{ color: "#002060" }}>- {post.fields.Usecase_Value_Generated_1}</p><br />
-                                        <p style={{ color: "#002060" }}>- {post.fields.Usecase_Value_Generated_2}</p><br />
-                                        <p style={{ color: "#002060" }}>- {post.fields.Usecase_Value_Generated_3}</p><br />
-                                        <p style={{ color: "#002060" }}>- {post.fields.Usecase_Value_Generated_4}</p><br />
-                                        <p style={{ color: "#002060" }}>- {post.fields.Usecase_Value_Generated_5}</p>
+                                        <p style={{ color: "#002060" }}>- {post.fields['Usecase Value Generated 1']}</p><br />
+                                        <p style={{ color: "#002060" }}>- {post.fields['Usecase Value Generated 2']}</p><br />
+                                        <p style={{ color: "#002060" }}>- {post.fields['Usecase Value Generated 3']}</p><br />
+                                        <p style={{ color: "#002060" }}>- {post.fields['Usecase Value Generated 4']}</p><br />
+                                        <p style={{ color: "#002060" }}>- {post.fields['Usecase Value Generated 5']}</p>
                                     </div>
                                     <Card style={{ width: '490px', height: '450px', margin: '1.5rem', marginLeft: '12rem', marginTop: '5rem' }}>
                                         <TwitterTimelineEmbed
@@ -165,19 +165,19 @@ export default function UsecaseAT(props) {
                                     {vendor != null ?
                                         <div style={{ display: 'flex', flexDirection: 'row', marginLeft: '8rem' }}>
                                             <div className="card" style={{ padding: '0rem', margin: '0 2rem', width: '45%' }}>
-                                                <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
-                                                    <img style={{ borderRadius: '8px', width: '6vw', height: '6vw', marginTop:'2rem'}} src={vendor.Airtable_Vendor_Logo[0].url} alt="VendorProfile" />
-                                                </div>
+                                            <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
+                                                    <img style={{ borderRadius: '8px', width: '6vw', height: '6vw', marginTop:'2rem' }} src={vendor.Logo[0].url} alt="VendorProfile" />
+                                               </div>
                                                 <br />
-                                                <p style={{ textAlign: 'justify', fontSize: '16px' }}>Description <br /><span style={{ color: "#002060" }}>{vendor.Vendor_Overview}</span></p>
+                                                <p style={{ textAlign: 'justify', fontSize: '16px' }}>Description <br /><span style={{ color: "#002060" }}>{vendor.Description}</span></p>
                                                 <br />
-                                                <p style={{ textAlign: 'justify', fontSize: '16px' }}>Founders <br /> <span style={{ color: "#002060" }}>{vendor.Vendor_Founders}</span></p>
+                                                <p style={{ textAlign: 'justify', fontSize: '16px' }}>Founders <br /> <span style={{ color: "#002060" }}>{vendor.Founders}</span></p>
                                                 <br />
-                                                <p style={{ textAlign: 'justify', fontSize: '16px' }}>Founded in <br /> <span style={{ color: "#002060" }}>{vendor.Vendor_Founded_Year}</span></p>
+                                                <p style={{ textAlign: 'justify', fontSize: '16px' }}>Founded in <br /> <span style={{ color: "#002060" }}>{vendor['Founded Year']}</span></p>
                                                 <br />
-                                                <p style={{ textAlign: 'justify', fontSize: '16px' }}>Industry <br /> <span style={{ color: "#002060" }}>{vendor.Vendor_Industry}</span></p>
+                                                <p style={{ textAlign: 'justify', fontSize: '16px' }}>Industry <br /> <span style={{ color: "#002060" }}>{vendor.Industry}</span></p>
                                                 <br />
-                                                <p style={{ textAlign: 'justify', fontSize: '16px' }}>Company Size <br /> <span style={{ color: "#002060" }}>{vendor.Vendor_Company_Size}</span></p>
+                                                <p style={{ textAlign: 'justify', fontSize: '16px' }}>Company Size <br /> <span style={{ color: "#002060" }}>{vendor['Company Size']}</span></p>
                                             </div>
                                             <Card style={{ width: '490px', height: '450px', margin: '1.5rem', marginLeft: '12rem' }}>
                                                 <TwitterTimelineEmbed
