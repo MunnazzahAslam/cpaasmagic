@@ -131,7 +131,7 @@ function Dashboard() {
                     </div>
                 </TabPanel>
                 <TabPanel>
-                    <iframe class="airtable-embed" src="https://airtable.com/embed/shrC3g53RKXDmRcay?backgroundColor=blue&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="533"></iframe>
+                    <iframe class="airtable-embed" src="https://airtable.com/embed/shrC3g53RKXDmRcay?backgroundColor=blue&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="820"></iframe>
                     <div className="topbar banner Cards" style={{ paddingLeft: '0%', justifyContent: 'center', overflow: 'overlay', marginTop: '-2rem' }} >
                         <div>
                             <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', paddingTop: '15%' }}>

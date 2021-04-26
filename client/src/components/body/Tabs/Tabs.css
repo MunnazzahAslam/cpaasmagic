@@ -1,8 +1,6 @@
 
 .react-tabs{
   margin-top: -3rem;
-  padding-top: 1rem;
-  background: #1283DA; 
 }
 .react-tabs__tab-list {
     cursor: pointer;
