@@ -10,7 +10,7 @@ export default function APIAT(props) {
     const [vendor, setVendor] = useState(null);
 
     useEffect(() => {
-        Axios.get("https://api.airtable.com/v0/appDrjzV9YZk6MRQA/cpaas%20APIs%20(Synced)/" + props.match.params.id + "?api_key=keyIRsjrVlk0Wnz9b").then(
+        Axios.get("https://api.airtable.com/v0/appDrjzV9YZk6MRQA/cpaas%20APIs/" + props.match.params.id + "?api_key=keyIRsjrVlk0Wnz9b").then(
             response => {
                 setPost(response.data);
             }
@@ -19,7 +19,7 @@ export default function APIAT(props) {
 
     async function fetchData() {
         try {
-            const responsePost = await Axios.get("https://api.airtable.com/v0/appDrjzV9YZk6MRQA/cpaas%20Usecases%20(Synced)/" + props.match.params.id + "?api_key=keyIRsjrVlk0Wnz9b");
+            const responsePost = await Axios.get("https://api.airtable.com/v0/appDrjzV9YZk6MRQA/cpaas%20Usecases/" + props.match.params.id + "?api_key=keyIRsjrVlk0Wnz9b");
             const res = responsePost.data;
 
             var get_options = {
@@ -29,7 +29,7 @@ export default function APIAT(props) {
                 },
             }
 
-            var url = 'https://api.airtable.com/v0/appDrjzV9YZk6MRQA/cpaas%20Vendors%20(Synced)?filterByFormula=%7BVendor%7D+%3D+%22' + responsePost.data.fields.Vendor + '%22';
+            var url = 'https://api.airtable.com/v0/appDrjzV9YZk6MRQA/cpaas%20Vendors?filterByFormula=%7BVendor%20Name%7D+%3D+%22' + responsePost.data.fields['Vendor Name'] + '%22';
 
             const responseV = await Axios.get(url, get_options)
             setVendor(responseV.data.records[0].fields);
@@ -51,7 +51,7 @@ export default function APIAT(props) {
                             <img style={{ margin: '0 2rem', borderRadius: '8px', width: '6vw', height: '6vw', marginLeft: '2rem' }} src={post.fields['API Logo'][0].url} alt="VendorProfile" />
                             <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
                                 <p style={{ color: '#E4E7EB', fontSize: '16px', marginBottom: '-0.5rem' }}>API</p>
-                                <h2 style={{ fontSize: '40px', fontWeight: '500', color: '#fff' }}>{post.fields.API}</h2>
+                                <h2 style={{ fontSize: '40px', fontWeight: '500', color: '#fff' }}>{post.fields['API Name']}</h2>
                                 {/*<div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
                                     <div style={{ marginTop: '0.5rem' }}>
                                         <SocialIcon network="linkedin" style={{ height: 35, width: 35, marginRight: '0.5rem' }} />
@@ -124,7 +124,7 @@ export default function APIAT(props) {
                                     <Card style={{ width: '490px', height: '450px', margin: '1.5rem', marginLeft: '12rem' }}>
                                         <TwitterTimelineEmbed
                                             sourceType="profile"
-                                            screenName={post.fields.Vendor}
+                                            screenName={post.fields['Vendor Name']}
                                             options={{ height: 550, width: 490 }}
                                         />
                                     </Card>
@@ -147,10 +147,10 @@ export default function APIAT(props) {
                                         <div style={{ display: 'flex', flexDirection: 'row', marginLeft: '8rem', paddingBottom:'2rem' }}>
                                             <div className="card" style={{ padding: '0rem', paddingTop: '0.5rem', margin: '0 2rem', width: '45%' }}>
                                                 <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
-                                                    <img style={{ borderRadius: '8px', width: '6vw', height: '6vw', marginTop:'2rem' }} src={vendor.Logo[0].url} alt="VendorProfile" />
+                                                    <img style={{ borderRadius: '8px', width: '6vw', height: '6vw', marginTop:'2rem' }} src={vendor['Vendor Logo'][0].url} alt="VendorProfile" />
                                                </div>
                                                 <br />
-                                                <p style={{ textAlign: 'justify', fontSize: '16px' }}>Description <br /><span style={{ color: "#002060" }}>{vendor.Description}</span></p>
+                                                <p style={{ textAlign: 'justify', fontSize: '16px' }}>Description <br /><span style={{ color: "#002060" }}>{vendor['Vendor Description']}</span></p>
                                                 <br />
                                                 <p style={{ textAlign: 'justify', fontSize: '16px' }}>Founders <br /> <span style={{ color: "#002060" }}>{vendor.Founders}</span></p>
                                                 <br />
@@ -163,17 +163,17 @@ export default function APIAT(props) {
                                             <Card style={{ width: '490px', height: '450px', margin: '1.5rem', marginLeft: '12rem', marginTop: '5rem' }}>
                                                 <TwitterTimelineEmbed
                                                     sourceType="profile"
-                                                    screenName={vendor.Vendor_Name}
+                                                    screenName={vendor['Vendor Name']}
                                                     options={{ height: 550, width: 550 }}
                                                 />
                                             </Card>
                                         </div> : ""}
                                 </TabPanel>
                                 <TabPanel style={{ background: '#F5F5F5' }}>
-                                    <iframe className="airtable-embed" src={`https://airtable.com/embed/shrrzXsxpROZjNZOl?filter_API_Id=${post.fields.API_Id}&viewControls=on`} frameborder="0" onmousewheel="" width="100%" height="610" style={{ background: 'transparent', border: 'none', marginBottom: '-2rem', paddingTop: '0rem', marginRight: '10rem' }}></iframe>
+                                    <iframe className="airtable-embed" src={`https://airtable.com/embed/shrrzXsxpROZjNZOl?filter_API%20Id=${post.fields['API Id']}&viewControls=on`} frameborder="0" onmousewheel="" width="100%" height="610" style={{ background: 'transparent', border: 'none', marginBottom: '-2rem', paddingTop: '0rem', marginRight: '10rem' }}></iframe>
                                 </TabPanel>
                                 <TabPanel style={{ background: '#F5F5F5' }}>
-                                    <iframe className="airtable-embed" src={`https://airtable.com/embed/shrBZLziN8jWec6Ff?filter_API_Id=${post.fields.API_Id}&viewControls=on`} frameborder="0" onmousewheel="" width="100%" height="610" style={{ background: 'transparent', border: 'none', marginBottom: '-2rem', paddingTop: '0rem', marginRight: '10rem' }}></iframe>
+                                    <iframe className="airtable-embed" src={`https://airtable.com/embed/shrBZLziN8jWec6Ff?filter_API%20Id=${post.fields['API Id']}&viewControls=on`} frameborder="0" onmousewheel="" width="100%" height="610" style={{ background: 'transparent', border: 'none', marginBottom: '-2rem', paddingTop: '0rem', marginRight: '10rem' }}></iframe>
                                 </TabPanel>
                             </div>
                         </Tabs>

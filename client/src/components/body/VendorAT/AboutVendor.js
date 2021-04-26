@@ -9,7 +9,7 @@ export default function AboutVendor(props) {
     const [post, setPost] = useState(null);
 
     useEffect(() => {
-        Axios.get("https://api.airtable.com/v0/appDrjzV9YZk6MRQA/cpaas%20Vendors%20(Synced)/" + props.match.params.id + "?api_key=keyIRsjrVlk0Wnz9b").then(
+        Axios.get("https://api.airtable.com/v0/appDrjzV9YZk6MRQA/cpaas%20Vendors/" + props.match.params.id + "?api_key=keyIRsjrVlk0Wnz9b").then(
             response => {
                 setPost(response.data);
                 console.log(response.data);
@@ -23,10 +23,10 @@ export default function AboutVendor(props) {
                 <div>
                     <div style={{ width: '100%' }}>
                         <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', padding: '2rem 0', paddingLeft: '8rem', background: '#1283DA' }}>
-                            <img style={{ margin: '0 3rem', borderRadius: '8px', width: '6vw', height: '6vw', marginLeft: '2rem', background: '#fff' }} src={post.fields.Logo[0].url} alt="VendorProfile" />
+                            <img style={{ margin: '0 3rem', borderRadius: '8px', width: '6vw', height: '6vw', marginLeft: '2rem', background: '#fff' }} src={post.fields['Vendor Logo'][0].url} alt="VendorProfile" />
                             <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
                                 <p style={{ color: '#E4E7EB', fontSize: '16px', marginBottom: '-0.5rem' }}>Vendor</p>
-                                <h2 style={{ fontSize: '40px', fontWeight: '500', color: '#fff' }}>{post.fields.Vendor}</h2>
+                                <h2 style={{ fontSize: '40px', fontWeight: '500', color: '#fff' }}>{post.fields['Vendor Name']}</h2>
                             </div>
                         </div>
                         <Tabs defaultIndex={0}>
@@ -48,7 +48,7 @@ export default function AboutVendor(props) {
                                             <Button style={{ marginTop: '1rem', background: '#CFDFFF', color: '#111', padding: '10px' }}>Top Vendors</Button>
                                     </div> */}
                                         <br />
-                                        <p style={{ textAlign: 'justify', fontSize: '16px' }}>Description <br /><span style={{ color: "#002060" }}>{post.fields.Description}</span></p>
+                                        <p style={{ textAlign: 'justify', fontSize: '16px' }}>Description <br /><span style={{ color: "#002060" }}>{post.fields['Vendor Description']}</span></p>
                                         <br />
                                         <p style={{ textAlign: 'justify', fontSize: '16px' }}>Founders <br /> <span style={{ color: "#002060" }}>{post.fields.Founders}</span></p>
                                         <br />
@@ -61,7 +61,7 @@ export default function AboutVendor(props) {
                                     <Card style={{ width: '490px', height: '450px', margin: '1.5rem', marginLeft: '8rem' }}>
                                         <TwitterTimelineEmbed
                                             sourceType="profile"
-                                            screenName={post.fields.Vendor}
+                                            screenName={post.fields['Vendor Name']}
                                             options={{ height: 550, width: 490 }}
                                         />
                                     </Card>

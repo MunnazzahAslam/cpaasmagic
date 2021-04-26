@@ -14,6 +14,9 @@
     padding-right: 1rem;
     margin-right: 0.5rem;
     cursor: pointer;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    background:#1079C9;
   }
   .main{
     color: #fff;
@@ -29,6 +32,7 @@
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
   background:#fff;
+  font-weight: 550;
 }
 @media (max-width: 950px) {
 .boxt{

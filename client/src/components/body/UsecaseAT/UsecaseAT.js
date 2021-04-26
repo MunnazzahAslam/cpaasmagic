@@ -12,7 +12,7 @@ export default function UsecaseAT(props) {
 
     useEffect(() => {
 
-        Axios.get("https://api.airtable.com/v0/appDrjzV9YZk6MRQA/cpaas%20Usecases%20(Synced)/" + props.match.params.id + "?api_key=keyIRsjrVlk0Wnz9b").then(
+        Axios.get("https://api.airtable.com/v0/appDrjzV9YZk6MRQA/cpaas%20Usecases/" + props.match.params.id + "?api_key=keyIRsjrVlk0Wnz9b").then(
             response => {
                 setPost(response.data);
                 console.log(response.data);
@@ -23,7 +23,7 @@ export default function UsecaseAT(props) {
 
     async function fetchData() {
         try {
-            const responsePost = await Axios.get("https://api.airtable.com/v0/appDrjzV9YZk6MRQA/cpaas%20Usecases%20(Synced)/" + props.match.params.id + "?api_key=keyIRsjrVlk0Wnz9b");
+            const responsePost = await Axios.get("https://api.airtable.com/v0/appDrjzV9YZk6MRQA/cpaas%20Usecases/" + props.match.params.id + "?api_key=keyIRsjrVlk0Wnz9b");
             const res = responsePost.data;
 
             var get_options = {
@@ -33,7 +33,7 @@ export default function UsecaseAT(props) {
                 },
             }
 
-            var url = 'https://api.airtable.com/v0/appDrjzV9YZk6MRQA/cpaas%20Vendors%20(Synced)?filterByFormula=%7BVendor%7D+%3D+%22' + responsePost.data.fields.Vendor + '%22';
+            var url = 'https://api.airtable.com/v0/appDrjzV9YZk6MRQA/cpaas%20Vendors?filterByFormula=%7BVendor%20Name%7D+%3D+%22' + responsePost.data.fields['Vendor Name'] + '%22';
 
             const responseV = await Axios.get(url, get_options)
             setVendor(responseV.data.records[0].fields);
@@ -45,7 +45,7 @@ export default function UsecaseAT(props) {
     useEffect(() => {
         fetchData();
     }, []);
-    
+
     return (
         <div>
             {post && (
@@ -55,7 +55,7 @@ export default function UsecaseAT(props) {
                             <img style={{ margin: '0 2rem', borderRadius: '8px', width: '6vw', height: '6vw', marginLeft: '2rem' }} src={post.fields.Airtable_Usecase_Logo[0].url} alt="VendorProfile" />*/}
                             <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
                                 <p style={{ color: '#E4E7EB', fontSize: '16px', marginBottom: '-0.5rem' }}>Use Case</p>
-                                <h2 style={{ fontSize: '40px', fontWeight: '500', color: '#fff' }}>{post.fields.Usecase}</h2>
+                                <h2 style={{ fontSize: '40px', fontWeight: '500', color: '#fff' }}>{post.fields['Usecase Name']}</h2>
                                 {/*<div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
                                 <div style={{ marginTop: '0.5rem' }}>
                                     <SocialIcon network="linkedin" style={{ height: 35, width: 35, marginRight: '0.5rem' }} />
@@ -121,20 +121,20 @@ export default function UsecaseAT(props) {
                                 </TabList>
                             </div>
                             <TabPanel>
-                                <div style={{ display: 'flex', flexDirection: 'row', marginLeft: '9rem', alignItems:'center' }}>
-                                    <div className="card" style={{ padding: '0rem', margin: '0 2rem', width: '45%', paddingBottom:'2rem' }}>
+                                <div style={{ display: 'flex', flexDirection: 'row', marginLeft: '9rem', alignItems: 'center' }}>
+                                    <div className="card" style={{ paddingTop: '1.5rem', margin: '0 2rem', width: '45%', paddingBottom: '2rem' }}>
                                         {/*  <br />
                                         <Button style={{ marginTop: '1rem', background: '#CFDFFF', color: '#111', padding: '14px', marginRight: '0.5rem' }}>{post.fields.Usecase_Category}</Button>
                                         <Button style={{ marginTop: '1rem', background: '#CFDFFF', color: '#111', padding: '14px' }}>{post.fields.Usecase_Industry}</Button>
                                         <br /><br />
-                                        */}<p style={{ textAlign: 'justify', fontSize: '16px'  }}>Process<br /></p>
-                                        <br /><p style={{ color: "#002060" }}>- {post.fields['Usecase Process 1']}</p><br />
-                                        <p style={{ color: "#002060" }}>- {post.fields['Usecase Process 2']}</p><br />
-                                        <p style={{ color: "#002060" }}>- {post.fields['Usecase Process 3']}</p><br />
-                                        <p style={{ color: "#002060" }}>- {post.fields['Usecase Process 4']}</p><br />
-                                        <p style={{ color: "#002060" }}>- {post.fields['Usecase Process 5']}</p><br />
+                                        */}<p style={{ textAlign: 'justify', fontSize: '16px' }}>Process<br /></p>
+                                        <br /><p style={{ color: "#002060" }}>- {post.fields['Process Step 1']}</p><br />
+                                        <p style={{ color: "#002060" }}>- {post.fields['Process Step 2']}</p><br />
+                                        <p style={{ color: "#002060" }}>- {post.fields['Process Step 3']}</p><br />
+                                        <p style={{ color: "#002060" }}>- {post.fields['Process Step 4']}</p><br />
+                                        <p style={{ color: "#002060" }}>- {post.fields['Process Step 5']}</p><br />
                                         <br />
-                                        <p style={{ textAlign: 'justify', fontSize: '16px'  }}>Value Generated<br /><br /></p>
+                                        <p style={{ textAlign: 'justify', fontSize: '16px' }}>Value Generated<br /><br /></p>
                                         <p style={{ color: "#002060" }}>- {post.fields['Usecase Value Generated 1']}</p><br />
                                         <p style={{ color: "#002060" }}>- {post.fields['Usecase Value Generated 2']}</p><br />
                                         <p style={{ color: "#002060" }}>- {post.fields['Usecase Value Generated 3']}</p><br />
@@ -144,7 +144,7 @@ export default function UsecaseAT(props) {
                                     <Card style={{ width: '490px', height: '450px', margin: '1.5rem', marginLeft: '12rem', marginTop: '5rem' }}>
                                         <TwitterTimelineEmbed
                                             sourceType="profile"
-                                            screenName={post.fields.Vendor_Name}
+                                            screenName={post.fields['Vendor Name']}
                                             options={{ height: 550, width: 550 }}
                                         />
                                     </Card>
@@ -165,11 +165,11 @@ export default function UsecaseAT(props) {
                                     {vendor != null ?
                                         <div style={{ display: 'flex', flexDirection: 'row', marginLeft: '8rem' }}>
                                             <div className="card" style={{ padding: '0rem', margin: '0 2rem', width: '45%' }}>
-                                            <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
-                                                    <img style={{ borderRadius: '8px', width: '6vw', height: '6vw', marginTop:'2rem' }} src={vendor.Logo[0].url} alt="VendorProfile" />
-                                               </div>
+                                                <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
+                                                    <img style={{ borderRadius: '8px', width: '6vw', height: '6vw', marginTop: '2rem' }} src={vendor['Vendor Logo'][0].url} alt="VendorProfile" />
+                                                </div>
                                                 <br />
-                                                <p style={{ textAlign: 'justify', fontSize: '16px' }}>Description <br /><span style={{ color: "#002060" }}>{vendor.Description}</span></p>
+                                                <p style={{ textAlign: 'justify', fontSize: '16px' }}>Description <br /><span style={{ color: "#002060" }}>{vendor['Vendor Description']}</span></p>
                                                 <br />
                                                 <p style={{ textAlign: 'justify', fontSize: '16px' }}>Founders <br /> <span style={{ color: "#002060" }}>{vendor.Founders}</span></p>
                                                 <br />
@@ -179,20 +179,20 @@ export default function UsecaseAT(props) {
                                                 <br />
                                                 <p style={{ textAlign: 'justify', fontSize: '16px' }}>Company Size <br /> <span style={{ color: "#002060" }}>{vendor['Company Size']}</span></p>
                                             </div>
-                                            <Card style={{ width: '490px', height: '450px', margin: '1.5rem', marginLeft: '12rem' }}>
+                                            <Card style={{ width: '490px', height: '450px', margin: '1.5rem', marginLeft: '12rem', marginTop: '5rem' }}>
                                                 <TwitterTimelineEmbed
                                                     sourceType="profile"
-                                                    screenName={vendor.Vendor_Name}
+                                                    screenName={vendor['Vendor Name']}
                                                     options={{ height: 550, width: 550 }}
                                                 />
                                             </Card>
                                         </div> : ""}
                                 </TabPanel>
                                 <TabPanel style={{ background: '#F5F5F5' }}>
-                                    <iframe className="airtable-embed" src={`https://airtable.com/embed/shrJFXIT0ZWH3JIv9?filter_Usecase_Id=${post.fields.Usecase_Id}&viewControls=on`} width="100%" height="610" style={{ background: 'transparent', border: 'none', marginBottom: '-4rem', paddingTop: '0rem', marginRight: '10rem' }}></iframe>
+                                    <iframe className="airtable-embed" src={`https://airtable.com/embed/shrJFXIT0ZWH3JIv9?filter_Usecase%20Id=${post.fields['Usecase Id']}&viewControls=on`} width="100%" height="610" style={{ background: 'transparent', border: 'none', marginBottom: '-4rem', paddingTop: '0rem', marginRight: '10rem' }}></iframe>
                                 </TabPanel>
                                 <TabPanel style={{ background: '#F5F5F5' }}>
-                                    <iframe className="airtable-embed" src={`https://airtable.com/embed/shrBZLziN8jWec6Ff?filter_Usecase_Id=${post.fields.Usecase_Id}&viewControls=on`} width="100%" height="610" style={{ background: 'transparent', border: 'none', marginBottom: '-4rem', paddingTop: '0rem', marginRight: '10rem' }}></iframe>
+                                    <iframe className="airtable-embed" src={`https://airtable.com/embed/shrBZLziN8jWec6Ff?filter_Usecase%20Id=${post.fields['Usecase Id']}&viewControls=on`} width="100%" height="610" style={{ background: 'transparent', border: 'none', marginBottom: '-4rem', paddingTop: '0rem', marginRight: '10rem' }}></iframe>
                                 </TabPanel>
                             </div>
                         </Tabs>

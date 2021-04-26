@@ -4,13 +4,6 @@ import Card from '@material-ui/core/Card';
 import { Button } from '../../../globalStyles';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import { TwitterTimelineEmbed } from 'react-twitter-embed';
-import {
-    LinkedinCompanyProfile,
-    LinkedinFollowCompany,
-    LinkedinLogin,
-    LinkedinAddProfile,
-    LinkedinProfile,
-} from 'react-social-plugins';
 
 export default function SuccessAT(props) {
     const [post, setPost] = useState(null);
@@ -18,7 +11,7 @@ export default function SuccessAT(props) {
 
     useEffect(() => {
 
-        Axios.get("https://api.airtable.com/v0/appDrjzV9YZk6MRQA/cpaas%20Successes%20(Synced)/" + props.match.params.id + "?api_key=keyIRsjrVlk0Wnz9b").then(
+        Axios.get("https://api.airtable.com/v0/appDrjzV9YZk6MRQA/cpaas%20Successes/" + props.match.params.id + "?api_key=keyIRsjrVlk0Wnz9b").then(
             response => {
                 setPost(response.data);
             }
@@ -28,7 +21,7 @@ export default function SuccessAT(props) {
 
     async function fetchData() {
         try {
-            const responsePost = await Axios.get("https://api.airtable.com/v0/appDrjzV9YZk6MRQA/cpaas%20Successes%20(Synced)/" + props.match.params.id + "?api_key=keyIRsjrVlk0Wnz9b");
+            const responsePost = await Axios.get("https://api.airtable.com/v0/appDrjzV9YZk6MRQA/cpaas%20Successes/" + props.match.params.id + "?api_key=keyIRsjrVlk0Wnz9b");
             const res = responsePost.data;
 
             var get_options = {
@@ -38,7 +31,7 @@ export default function SuccessAT(props) {
                 },
             }
 
-            var url = 'https://api.airtable.com/v0/appDrjzV9YZk6MRQA/cpaas%20Vendors%20(Synced)?filterByFormula=%7BVendor%7D+%3D+%22' + responsePost.data.fields.Vendor + '%22';
+            var url = 'https://api.airtable.com/v0/appDrjzV9YZk6MRQA/cpaas%20Vendors?filterByFormula=%7BVendor%20Name%7D+%3D+%22' + responsePost.data.fields['Vendor Name'] + '%22';
 
             const responseV = await Axios.get(url, get_options)
             setVendor(responseV.data.records[0].fields);
@@ -60,7 +53,7 @@ export default function SuccessAT(props) {
                             <img style={{ margin: '0 3rem', borderRadius: '8px', width: '6vw', height: '6vw', marginLeft: '2rem', background: '#fff' }} src={post.fields['Client Logo'][0].url} alt="VendorProfile" />
                             <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', marginLeft: '2rem' }}>
                                 <p style={{ color: '#E4E7EB', fontSize: '16px', marginBottom: '-0rem' }}>Success</p>
-                                <h2 style={{ fontSize: '30px', fontWeight: '500', color: '#fff' }}>{post.fields.Success}</h2>
+                                <h2 style={{ fontSize: '30px', fontWeight: '500', color: '#fff' }}>{post.fields['Success Title']}</h2>
                                 {/*<div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
                                  <div style={{ marginTop: '0.5rem' }}>
                                      <SocialIcon network="linkedin" style={{ height: 35, width: 35, marginRight: '0.5rem' }} />
@@ -122,18 +115,17 @@ export default function SuccessAT(props) {
                                 <div style={{ display: 'flex', flexDirection: 'row', marginLeft: '8rem', marginRight: '2rem', alignItems: 'center' }}>
                                     <div className="card" style={{ padding: '0rem', margin: '0 2rem', width: '45%' }}>
                                         <p style={{ textAlign: 'justify', fontSize: '16px' }}>Challenge<br /></p>
-                                        <Button style={{ marginTop: '1rem', background: '#CFDFFF', color: '#111', fontSize: '14px' }}>{post.fields.Challenge}</Button><br />
-                                        <br /><p style={{ color: "#002060" }}>{post.fields['Success Challenge']}</p><br /><br />
+                                        <Button style={{ marginTop: '1rem', background: '#CFDFFF', color: '#111', fontSize: '14px' }}>{post.fields['Challenge Title']}</Button><br />
+                                        <br /><p style={{ color: "#002060" }}>{post.fields['Challenge Description']}</p><br /><br />
                                         <p style={{ textAlign: 'justify', fontSize: '16px' }}>Solution<br /></p>
                                         <p style={{ color: "#002060" }}>{post.fields['Success Solution']}</p><br /><br />
                                         <p style={{ textAlign: 'justify', fontSize: '16px' }}>Result</p><p style={{ color: "#002060" }}>{post.fields['Success Result']}</p>
                                     </div>
                                     <Card style={{ width: '490px', height: '450px', margin: '1.5rem', marginLeft: '12rem', marginTop: '4rem' }}>
-                                        <LinkedinCompanyProfile
-                                            lang="en_US"
-                                            companyId={"vonage"}
-                                            format="inline" // Or "hover"
-                                            text={post.fields.Vendor} // text to show in "hover" format
+                                        <TwitterTimelineEmbed
+                                            sourceType="profile"
+                                            screenName={post.fields['Vendor Name']}
+                                            options={{ height: 550, width: 550 }}
                                         />
                                     </Card>
                                 </div>
@@ -155,10 +147,10 @@ export default function SuccessAT(props) {
                                         <div style={{ display: 'flex', flexDirection: 'row', marginLeft: '8rem' }}>
                                             <div className="card" style={{ padding: '0rem', margin: '0 2rem', width: '45%' }}>
                                                 <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
-                                                    <img style={{ borderRadius: '8px', width: '6vw', height: '6vw', marginTop: '2rem' }} src={vendor.Logo[0].url} alt="VendorProfile" />
+                                                    <img style={{ borderRadius: '8px', width: '6vw', height: '6vw', marginTop: '2rem' }} src={vendor['Vendor Logo'][0].url} alt="VendorProfile" />
                                                 </div>
                                                 <br />
-                                                <p style={{ textAlign: 'justify', fontSize: '16px' }}>Description <br /><span style={{ color: "#002060" }}>{vendor.Description}</span></p>
+                                                <p style={{ textAlign: 'justify', fontSize: '16px' }}>Description <br /><span style={{ color: "#002060" }}>{vendor['Vendor Description']}</span></p>
                                                 <br />
                                                 <p style={{ textAlign: 'justify', fontSize: '16px' }}>Founders <br /> <span style={{ color: "#002060" }}>{vendor.Founders}</span></p>
                                                 <br />
@@ -168,20 +160,20 @@ export default function SuccessAT(props) {
                                                 <br />
                                                 <p style={{ textAlign: 'justify', fontSize: '16px' }}>Company Size <br /> <span style={{ color: "#002060" }}>{vendor['Company Size']}</span></p>
                                             </div>
-                                            <Card style={{ width: '490px', height: '450px', margin: '1.5rem', marginLeft: '12rem' }}>
+                                            <Card style={{ width: '490px', height: '450px', margin: '1.5rem', marginLeft: '12rem', marginTop: '5rem' }}>
                                                 <TwitterTimelineEmbed
                                                     sourceType="profile"
-                                                    screenName={vendor.Vendor_Name}
-                                                    options={{ height: 550, width: 490 }}
+                                                    screenName={vendor['Vendor Name']}
+                                                    options={{ height: 550, width: 550 }}
                                                 />
                                             </Card>
                                         </div> : ""}
                                 </TabPanel>
                                 <TabPanel style={{ background: '#F5F5F5' }}>
-                                    <iframe className="airtable-embed" src={`https://airtable.com/embed/shrJFXIT0ZWH3JIv9?filter_Success_Id=${post.fields.Success_Id}&viewControls=on`} width="100%" height="610" style={{ background: 'transparent', border: 'none', marginBottom: '-4rem', paddingTop: '0rem', marginRight: '10rem' }}></iframe>
+                                    <iframe className="airtable-embed" src={`https://airtable.com/embed/shrJFXIT0ZWH3JIv9?filter_Success%20Id=${post.fields['Success Id']}&viewControls=on`} width="100%" height="610" style={{ background: 'transparent', border: 'none', marginBottom: '-4rem', paddingTop: '0rem', marginRight: '10rem' }}></iframe>
                                 </TabPanel>
                                 <TabPanel style={{ background: '#Fff' }}>
-                                    <iframe className="airtable-embed" src={`https://airtable.com/embed/shrrzXsxpROZjNZOl?filter_Success_Id=${post.fields.Success_Id}&viewControls=on`} width="100%" height="610" style={{ background: 'transparent', border: 'none', marginBottom: '-4rem', paddingTop: '0rem', marginRight: '10rem' }}></iframe>
+                                    <iframe className="airtable-embed" src={`https://airtable.com/embed/shrrzXsxpROZjNZOl?filter_Success%20Id=${post.fields['Success Id']}&viewControls=on`} width="100%" height="610" style={{ background: 'transparent', border: 'none', marginBottom: '-4rem', paddingTop: '0rem', marginRight: '10rem' }}></iframe>
                                 </TabPanel>
                             </div>
                         </Tabs>

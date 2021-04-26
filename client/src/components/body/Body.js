@@ -76,7 +76,7 @@ function Body() {
                 <ProtectedRoute path="/search/apis/notloggedin" component={APIs} />
                 <ProtectedRoute path="/search/usecases/notloggedin" component={Usecases} />
                 <ProtectedRoute path="/search/successes/notloggedin" component={SuccessStories} />
-                <ProtectedRoute path="/search" component={TabsVendor} />
+                <ProtectedRoute path="/search/vendors" component={TabsVendor} />
                 <ProtectedRoute path="/search/apis" component={TabsAPI} />
                 <ProtectedRoute path="/search/usecases" component={TabsUsecase} />
                 <ProtectedRoute path="/search/successes" component={TabsSuccess} />

@@ -20,53 +20,94 @@ import { InfoSec, InfoRow, InfoColumn, TextWrapper, Heading, Subtitle, ImgWrappe
 import './Tabs.css';
 
 export default () => (
-    <div>
-        <div style={{ color: '#444444' }}>
-            <iframe class="airtable-embed" src="https://airtable.com/embed/shrNmx5n35cvR6gsM?backgroundColor=blue&viewControls=on" width="100%" height="800" style={{ background: 'transparent', border: 'none' }}></iframe>
+    <Tabs defaultIndex={2}>
+        <br />
+        <br />
+        <div className=".react-tabs__tab-list" >
+            <TabList style={{ paddingLeft: '10rem', fontSize: '1em'  }}>
+                <Tab><div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>cpaas Vendors</div></Tab>
+                <Tab><div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>cpaas APIs</div></Tab>
+                <Tab><div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>cpaas Usecases</div></Tab>
+                <Tab><div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>cpaas Successes</div></Tab>
+            </TabList>
         </div>
-        <div className="topbar banner Cards" style={{ paddingLeft: '0%', justifyContent: 'center', overflow:'overlay',marginTop:'-2rem' }} >
-            <div>
-                <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', paddingTop: '15%' }}>
-                    <Heading style={{ textAlign: 'left' }}>Elevate your search with cpaasmagic Pro</Heading>
-                    <Subtitle style={{ textAlign: 'left', maxWidth: '550px' }}>Intelligently search and target the right opportunities with advanced search filters, analysis tools, and company alerts.</Subtitle>
-                    <div style={{ display: 'flex', justifyContent: 'flex-start' }}>
-                        <Link to="/register" ><Button style={{ background: '#FAD069', fontWeight: '500' }}>Start Free Trial</Button></Link>
+        <div className="boxt">
+            <TabPanel>
+                <iframe class="airtable-embed" src="https://airtable.com/embed/shrJqJKEkBFkSlEfQ?backgroundColor=blue&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="533"></iframe>
+                <div className="topbar banner Cards" style={{ paddingLeft: '0%', justifyContent: 'center', overflow: 'overlay', marginTop: '-2rem' }} >
+                    <div>
+                        <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', paddingTop: '15%' }}>
+                            <Heading style={{ textAlign: 'left' }}>Elevate your search with cpaasmagic Pro</Heading>
+                            <Subtitle style={{ textAlign: 'left', maxWidth: '550px' }}>Intelligently search and target the right opportunities with advanced search filters, analysis tools, and company alerts.</Subtitle>
+                            <div style={{ display: 'flex', justifyContent: 'flex-start' }}>
+                                <Link to="/register" ><Button style={{ background: '#FAD069', fontWeight: '500' }}>Start Free Trial</Button></Link>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <ImgWrapper>
+                            <Image src={Picture3} className="laptop" style={{ margin: '0rem' }} />
+                        </ImgWrapper>
                     </div>
                 </div>
-            </div>
-            <div>
-                <ImgWrapper>
-                    <Image src={Picture3} className="laptop" style={{ margin: '0rem' }} />
-                </ImgWrapper>
-            </div>
+            </TabPanel >
+            <TabPanel>
+                <iframe class="airtable-embed" src="https://airtable.com/embed/shrJFXIT0ZWH3JIv9?backgroundColor=blue&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="533" ></iframe>
+                <div className="topbar banner Cards" style={{ paddingLeft: '0%', justifyContent: 'center', overflow: 'overlay', marginTop: '-2rem' }} >
+                    <div>
+                        <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', paddingTop: '15%' }}>
+                            <Heading style={{ textAlign: 'left' }}>Elevate your search with cpaasmagic Pro</Heading>
+                            <Subtitle style={{ textAlign: 'left', maxWidth: '550px' }}>Intelligently search and target the right opportunities with advanced search filters, analysis tools, and company alerts.</Subtitle>
+                            <div style={{ display: 'flex', justifyContent: 'flex-start' }}>
+                                <Link to="/register" ><Button style={{ background: '#FAD069', fontWeight: '500' }}>Start Free Trial</Button></Link>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <ImgWrapper>
+                            <Image src={Picture3} className="laptop" style={{ margin: '0rem' }} />
+                        </ImgWrapper>
+                    </div>
+                </div>
+            </TabPanel>
+            <TabPanel>
+                <iframe class="airtable-embed" src="https://airtable.com/embed/shrrzXsxpROZjNZOl?backgroundColor=blue&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="533"></iframe>
+                <div className="topbar banner Cards" style={{ paddingLeft: '0%', justifyContent: 'center', overflow: 'overlay', marginTop: '-2rem' }} >
+                    <div>
+                        <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', paddingTop: '15%' }}>
+                            <Heading style={{ textAlign: 'left' }}>Elevate your search with cpaasmagic Pro</Heading>
+                            <Subtitle style={{ textAlign: 'left', maxWidth: '550px' }}>Intelligently search and target the right opportunities with advanced search filters, analysis tools, and company alerts.</Subtitle>
+                            <div style={{ display: 'flex', justifyContent: 'flex-start' }}>
+                                <Link to="/register" ><Button style={{ background: '#FAD069', fontWeight: '500' }}>Start Free Trial</Button></Link>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <ImgWrapper>
+                            <Image src={Picture3} className="laptop" style={{ margin: '0rem' }} />
+                        </ImgWrapper>
+                    </div>
+                </div>
+            </TabPanel>
+            <TabPanel>
+                <iframe class="airtable-embed" src="https://airtable.com/embed/shrBZLziN8jWec6Ff?backgroundColor=blue&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="533"></iframe>
+                <div className="topbar banner Cards" style={{ paddingLeft: '0%', justifyContent: 'center', overflow: 'overlay', marginTop: '-2rem' }} >
+                    <div>
+                        <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', paddingTop: '15%' }}>
+                            <Heading style={{ textAlign: 'left' }}>Elevate your search with cpaasmagic Pro</Heading>
+                            <Subtitle style={{ textAlign: 'left', maxWidth: '550px' }}>Intelligently search and target the right opportunities with advanced search filters, analysis tools, and company alerts.</Subtitle>
+                            <div style={{ display: 'flex', justifyContent: 'flex-start' }}>
+                                <Link to="/register" ><Button style={{ background: '#FAD069', fontWeight: '500' }}>Start Free Trial</Button></Link>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <ImgWrapper>
+                            <Image src={Picture3} className="laptop" style={{ margin: '0rem' }} />
+                        </ImgWrapper>
+                    </div>
+                </div>
+            </TabPanel>
         </div>
-    {/*
-        <Tabs defaultIndex={2}>
-            <br />
-            <br />
-            <div className=".react-tabs__tab-list" style={{ margin: '0 auto', marginTop: '4rem', width: '1400px' }} >
-                <TabList style={{ margin: '0 2rem', color: '#282828' }}>
-                    <Tab style={{ color: '#282828' }} ><div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}><img src={Picture4} style={{ width: '2rem', height: '2rem', borderRadius: '0px', transform: 'translateY(0px)', marginRight: '0.5em' }} />Vendors</div></Tab>
-                    <Tab style={{ color: '#282828' }}><div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}><img src={Picture5} style={{ width: '2rem', height: '2rem', borderRadius: '0px', transform: 'translateY(0px)', marginRight: '0.5em' }} />APIs</div></Tab>
-                    <Tab style={{ color: '#282828' }}><div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}><img src={Picture6} style={{ width: '2rem', height: '2rem', borderRadius: '0px', transform: 'translateY(0px)', marginRight: '0.5em' }} />Use Cases</div></Tab>
-                    <Tab style={{ color: '#282828' }}><div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}><img src={Picture7} style={{ width: '2rem', height: '2rem', borderRadius: '0px', transform: 'translateY(0px)', marginRight: '0.5em' }} />Successes</div></Tab>
-                </TabList>
-            </div>
-            <div className="boxt">
-                <TabPanel>
-                    <Vendors />
-                </TabPanel >
-                <TabPanel>
-                    <APIs />
-                </TabPanel>
-                <TabPanel>
-                    <Usecases />
-                </TabPanel>
-                <TabPanel>
-                    <Successstories />
-                </TabPanel>
-            </div>
-        </Tabs>
-    */}
-    </div>
+    </Tabs>
 );
