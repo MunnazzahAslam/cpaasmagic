@@ -19,7 +19,7 @@ a{
 ul{
   list-style: none;
 }
-button{
+.btn{
   border: none;
   outline: none;
   cursor: pointer;
@@ -27,14 +27,29 @@ button{
 .item-container{
   overflow: hidden;
 }
-
-.item-con{
+.accordion{
+  background: #fff;
   width: 90%;
-  padding: 1.2rem 1.2rem;
   margin: 0 auto;
+}
+.card-header{
+  padding:2rem;
   border-radius: 5px;
-  background-color: #fff;
+  background-color: #fff !important;
   box-shadow: 0 0 10px rgb(0 0 0 / 10%);
+  cursor: pointer;
+}
+
+.card-body{
+  padding: 2rem;
+  padding-left: 4rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  width: 1500px;
+  max-width: 1500px;
+  margin: 0 auto;
+  color: #222 !important;
+  font-size: 1.1rem !important;
 }
 
 .item-container > img{
@@ -89,8 +104,7 @@ button{
   padding: 15px 20px;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  grid-gap: 3rem;
-  padding-bottom: 6rem;
+  grid-gap: 2rem;
 
 }
 /* ----------------- Header ------------------- */
@@ -102,3 +116,4 @@ button{
 /* ----------------- Profile ------------------- */
 @import url("./components/body/profile/profile.css");
 
+@import '~bootstrap/dist/css/bootstrap.css';
