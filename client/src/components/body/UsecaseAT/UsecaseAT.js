@@ -122,7 +122,7 @@ export default function UsecaseAT(props) {
                             </div>
                             <TabPanel>
                                 <div style={{ display: 'flex', flexDirection: 'row', marginLeft: '9rem', alignItems: 'center' }}>
-                                    <div className="card" style={{ paddingTop: '1.5rem', margin: '0 2rem', width: '45%', paddingBottom: '2rem' }}>
+                                    <div className="card-one" style={{ paddingTop: '1.5rem', margin: '0 2rem', width: '45%', paddingBottom: '2rem' }}>
                                         {/*  <br />
                                         <Button style={{ marginTop: '1rem', background: '#CFDFFF', color: '#111', padding: '14px', marginRight: '0.5rem' }}>{post.fields.Usecase_Category}</Button>
                                         <Button style={{ marginTop: '1rem', background: '#CFDFFF', color: '#111', padding: '14px' }}>{post.fields.Usecase_Industry}</Button>
@@ -164,7 +164,7 @@ export default function UsecaseAT(props) {
                                 <TabPanel>
                                     {vendor != null ?
                                         <div style={{ display: 'flex', flexDirection: 'row', marginLeft: '8rem' }}>
-                                            <div className="card" style={{ padding: '0rem', margin: '0 2rem', width: '45%' }}>
+                                            <div className="card-one" style={{ padding: '0rem', margin: '0 2rem', width: '45%' }}>
                                                 <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
                                                     <img style={{ borderRadius: '8px', width: '6vw', height: '6vw', marginTop: '2rem' }} src={vendor['Vendor Logo'][0].url} alt="VendorProfile" />
                                                 </div>

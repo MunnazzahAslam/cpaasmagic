@@ -113,7 +113,7 @@ export default function SuccessAT(props) {
                             </div>
                             <TabPanel>
                                 <div style={{ display: 'flex', flexDirection: 'row', marginLeft: '8rem', marginRight: '2rem', alignItems: 'center' }}>
-                                    <div className="card" style={{ padding: '0rem', margin: '0 2rem', width: '45%' }}>
+                                    <div className="card-one" style={{ padding: '0rem', margin: '0 2rem', width: '45%' }}>
                                         <p style={{ textAlign: 'justify', fontSize: '16px' }}>Challenge<br /></p>
                                         <Button style={{ marginTop: '1rem', background: '#CFDFFF', color: '#111', fontSize: '14px' }}>{post.fields['Challenge Title']}</Button><br />
                                         <br /><p style={{ color: "#002060" }}>{post.fields['Challenge Description']}</p><br /><br />
@@ -145,7 +145,7 @@ export default function SuccessAT(props) {
                                 <TabPanel>
                                     {vendor != null ?
                                         <div style={{ display: 'flex', flexDirection: 'row', marginLeft: '8rem' }}>
-                                            <div className="card" style={{ padding: '0rem', margin: '0 2rem', width: '45%' }}>
+                                            <div className="card-one" style={{ padding: '0rem', margin: '0 2rem', width: '45%' }}>
                                                 <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
                                                     <img style={{ borderRadius: '8px', width: '6vw', height: '6vw', marginTop: '2rem' }} src={vendor['Vendor Logo'][0].url} alt="VendorProfile" />
                                                 </div>

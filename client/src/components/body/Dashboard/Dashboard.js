@@ -36,7 +36,7 @@ function Dashboard() {
             </div>
             <div className="boxt">
                 <TabPanel>
-                    <iframe class="airtable-embed" src="https://airtable.com/embed/shrJqJKEkBFkSlEfQ?backgroundColor=blue&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="533"></iframe>
+                    <iframe class="airtable-embed" src="https://airtable.com/embed/shrJqJKEkBFkSlEfQ?filter_Column_Accessibility=Freemium?backgroundColor=blue&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="580"></iframe>
                     <div className="topbar banner Cards" style={{ paddingLeft: '0%', justifyContent: 'center', overflow: 'overlay', marginTop: '-2rem' }} >
                         <div>
                             <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', paddingTop: '15%' }}>
@@ -55,7 +55,7 @@ function Dashboard() {
                     </div>
                 </TabPanel >
                 <TabPanel>
-                    <iframe class="airtable-embed" src="https://airtable.com/embed/shrJFXIT0ZWH3JIv9?backgroundColor=blue&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="533" ></iframe>
+                    <iframe class="airtable-embed" src="https://airtable.com/embed/shrJFXIT0ZWH3JIv9?filter_Column_Accessibility=Freemium?backgroundColor=blue&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="580" ></iframe>
                     <div className="topbar banner Cards" style={{ paddingLeft: '0%', justifyContent: 'center', overflow: 'overlay', marginTop: '-2rem' }} >
                         <div>
                             <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', paddingTop: '15%' }}>
@@ -74,7 +74,7 @@ function Dashboard() {
                     </div>
                 </TabPanel>
                 <TabPanel>
-                    <iframe class="airtable-embed" src="https://airtable.com/embed/shrrzXsxpROZjNZOl?backgroundColor=blue&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="533"></iframe>
+                    <iframe class="airtable-embed" src="https://airtable.com/embed/shrrzXsxpROZjNZOl?filter_Column_Accessibility=Freemium?backgroundColor=blue&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="580"></iframe>
                     <div className="topbar banner Cards" style={{ paddingLeft: '0%', justifyContent: 'center', overflow: 'overlay', marginTop: '-2rem' }} >
                         <div>
                             <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', paddingTop: '15%' }}>
@@ -93,7 +93,7 @@ function Dashboard() {
                     </div>
                 </TabPanel>
                 <TabPanel>
-                    <iframe class="airtable-embed" src="https://airtable.com/embed/shrBZLziN8jWec6Ff?backgroundColor=blue&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="533"></iframe>
+                    <iframe class="airtable-embed" src="https://airtable.com/embed/shrBZLziN8jWec6Ff?filter_Column_Accessibility=Freemium?backgroundColor=blue&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="580"></iframe>
                     <div className="topbar banner Cards" style={{ paddingLeft: '0%', justifyContent: 'center', overflow: 'overlay', marginTop: '-2rem' }} >
                         <div>
                             <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', paddingTop: '15%' }}>
@@ -112,7 +112,7 @@ function Dashboard() {
                     </div>
                 </TabPanel>
                 <TabPanel>
-                    <iframe class="airtable-embed" src="https://airtable.com/embed/shrBRKXzzMAIDAm2W?backgroundColor=blue&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="533"></iframe>
+                    <iframe class="airtable-embed" src="https://airtable.com/embed/shrBRKXzzMAIDAm2W?filter_Column_Accessibility=Freemium?backgroundColor=blue&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="580"></iframe>
                     <div className="topbar banner Cards" style={{ paddingLeft: '0%', justifyContent: 'center', overflow: 'overlay', marginTop: '-2rem' }} >
                         <div>
                             <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', paddingTop: '15%' }}>
@@ -131,7 +131,7 @@ function Dashboard() {
                     </div>
                 </TabPanel>
                 <TabPanel>
-                    <iframe class="airtable-embed" src="https://airtable.com/embed/shrC3g53RKXDmRcay?backgroundColor=blue&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="820"></iframe>
+                    <iframe class="airtable-embed" src="https://airtable.com/embed/shrC3g53RKXDmRcay?filter_Column_Accessibility=Freemium?backgroundColor=blue&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="820"></iframe>
                     <div className="topbar banner Cards" style={{ paddingLeft: '0%', justifyContent: 'center', overflow: 'overlay', marginTop: '-2rem' }} >
                         <div>
                             <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', paddingTop: '15%' }}>
