@@ -48,11 +48,11 @@ export default function UsecaseAT(props) {
 
     return (
         <div>
-            {post && (
+            {post && vendor != null &&(
                 <div style={{ marginBottom: '2rem' }}>
                     <div style={{ width: '100%', height: '100%' }}>
-                        <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', padding: '2rem 0', paddingLeft: '10rem', paddingRight: '2rem', background: '#1283DA' }}>{/*
-                            <img style={{ margin: '0 2rem', borderRadius: '8px', width: '6vw', height: '6vw', marginLeft: '2rem' }} src={post.fields.Airtable_Usecase_Logo[0].url} alt="VendorProfile" />*/}
+                        <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', padding: '2rem 0', paddingLeft: '10rem', paddingRight: '2rem', background: '#1283DA' }}>
+                            <img style={{ margin: '0 2rem', borderRadius: '8px', width: '6vw', height: '6vw', marginLeft: '2rem' }} src={vendor['Vendor Logo'][0].url} alt="VendorProfile" />
                             <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
                                 <p style={{ color: '#E4E7EB', fontSize: '16px', marginBottom: '-0.5rem' }}>Use Case</p>
                                 <h2 style={{ fontSize: '40px', fontWeight: '500', color: '#fff' }}>{post.fields['Usecase']}</h2>
@@ -143,13 +143,7 @@ export default function UsecaseAT(props) {
                                             <p> {post.fields['Process Step 5']}</p><br />
                                         </div>
                                     </div>
-                                    <Card style={{ width: '400px', height: '400px', marginTop: '2.5rem', marginLeft: '4rem', marginBottom: '2.5rem' }}>
-                                        <TwitterTimelineEmbed
-                                            sourceType="profile"
-                                            screenName={post.fields['Vendor']}
-                                            options={{ height: 400, width: 400 }}
-                                        />
-                                    </Card>
+                                 
                                 </div><hr></hr>
                                 <div style={{ display: 'flex', flexDirection: 'row', marginLeft: '8rem', alignItems: 'center' }}>
                                     <div style={{ paddingTop: '2rem', margin: '0 2rem', width: '60%', paddingLeft: '1rem' }}>

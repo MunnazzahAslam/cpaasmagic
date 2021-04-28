@@ -124,7 +124,7 @@ export default function APIAT(props) {
                                         />
 
 
-                                        
+
                                     </Card>
                                 </div><hr></hr>
                                 <div style={{ display: 'flex', flexDirection: 'row', marginLeft: '8rem', alignItems: 'center' }}>
@@ -144,13 +144,7 @@ export default function APIAT(props) {
                                         </div>
 
                                     </div>
-                                    <Card style={{ width: '400px', height: '400px', marginTop: '2.5rem', marginLeft: '4rem', marginBottom: '2.5rem' }}>
-                                        <TwitterTimelineEmbed
-                                            sourceType="profile"
-                                            screenName={post.fields['Vendor']}
-                                            options={{ height: 400, width: 400 }}
-                                        />
-                                    </Card>
+                                  
                                 </div>
                                 <div style={{ display: 'flex', flexDirection: 'row', marginLeft: '8rem', alignItems: 'center' }}>
                                     <div style={{ display: 'flex', margin: '0 2rem', width: '60%', paddingLeft: '1rem' }}>
@@ -168,13 +162,7 @@ export default function APIAT(props) {
                                         </div>
 
                                     </div>
-                                    <Card style={{ width: '400px', height: '400px', marginTop: '2.5rem', marginLeft: '4rem', marginBottom: '2.5rem' }}>
-                                        <TwitterTimelineEmbed
-                                            sourceType="profile"
-                                            screenName={post.fields['Vendor']}
-                                            options={{ height: 400, width: 400 }}
-                                        />
-                                    </Card>
+                                  
                                 </div>
                                 <hr></hr>
                                 <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', marginLeft: '8rem', alignItems: 'center', marginBottom: '5rem' }}>
