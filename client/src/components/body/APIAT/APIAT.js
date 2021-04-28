@@ -106,33 +106,36 @@ export default function APIAT(props) {
                             </div>
                             <TabPanel>
                                 <div style={{ display: 'flex', flexDirection: 'row', marginLeft: '8rem', alignItems: 'center' }}>
-                                    <div style={{ paddingTop: '2rem', margin: '0 2rem', width: '30%', paddingLeft: '1rem' }}>
-                                        <h5 style={{ paddingBottom: '2rem' }}>About</h5>
-                                        <p>VENDOR {post.fields['Vendor']}</p>
+                                    <div style={{ paddingTop: '2rem', margin: '0 2rem', width: '60%', paddingLeft: '1rem' }}>
+                                        <h5 style={{ paddingBottom: '1rem' }}>About</h5>
+                                        <p>{post.fields['API Description']}</p>
+                                        <p style={{ fontWeight: '480' }}>Vendor</p>
+                                        <p><span style={{ background: '#D0F0FD', color: '#222', borderRadius: '33px', padding: '0.5rem', marginRight: '0.5rem' }}>{post.fields['Vendor']}</span></p>
+                                        <p style={{ fontWeight: '480' }}>API Category</p>
+                                        <p><span style={{ background: '#FFDAF6', color: '#222', borderRadius: '33px', padding: '0.5rem', marginRight: '0.5rem' }}>{post.fields['API Category']}</span></p>
+                                        <p style={{ fontWeight: '480' }}>Type</p>
+                                        <p><span style={{ background: '#CFDFFF', color: '#222', borderRadius: '33px', padding: '0.5rem', marginRight: '0.5rem' }}>{post.fields['API Type']}</span></p>
                                     </div>
+                                    <Card style={{ width: '400px', height: '400px', marginTop: '2.5rem', marginLeft: '4rem', marginBottom: '2.5rem' }}>
+                                        <TwitterTimelineEmbed
+                                            sourceType="profile"
+                                            screenName={post.fields['Vendor']}
+                                            options={{ height: 400, width: 400 }}
+                                        />
+                                    </Card>
                                 </div><hr></hr>
                                 <div style={{ display: 'flex', flexDirection: 'row', marginLeft: '8rem', alignItems: 'center' }}>
                                     <div style={{ display: 'flex', paddingTop: '2rem', margin: '0 2rem', width: '60%', paddingLeft: '1rem' }}>
                                         <div><h5 style={{ paddingBottom: '2rem' }}>Features</h5>
-                                            <p style={{ color: '#1283DA', padding: '0.3rem' }}>{post.fields['API Feature 1']}<br /> <span>{post.fields['API Feature Description 1']}</span></p>
+                                            <p style={{ padding: '0.3rem' }}>1- {post.fields['API Feature 1']}<br /> <span>{post.fields['API Feature Description 1']}</span></p>
                                             <br />
-                                            <p style={{ color: '#1283DA', padding: '0.3rem' }}>{post.fields['API Feature 2']}<br /> <span>{post.fields['API Feature Description 2']}</span></p>
+                                            <p style={{ padding: '0.3rem' }}>2- {post.fields['API Feature 2']}<br /> <span>{post.fields['API Feature Description 2']}</span></p>
                                             <br />
-                                            <p style={{ color: '#1283DA', padding: '0.3rem' }}>{post.fields['API Feature 3']}<br /> <span>{post.fields['API Feature Description 3']}</span></p>
+                                            <p style={{ padding: '0.3rem' }}>3- {post.fields['API Feature 3']}<br /> <span>{post.fields['API Feature Description 3']}</span></p>
                                             <br />
-                                            <p style={{ color: '#1283DA', padding: '0.3rem' }}>{post.fields['API Feature 4']}<br /> <span>{post.fields['API Feature Description 4']}</span></p>
+                                            <p style={{ padding: '0.3rem' }}>4- {post.fields['API Feature 4']}<br /> <span>{post.fields['API Feature Description 4']}</span></p>
                                             <br />
-                                            <p style={{ color: '#1283DA', padding: '0.3rem' }}>{post.fields['API Feature 5']}<br /> <span>{post.fields['API Feature Description 5']}</span></p>
-                                            <br />
-                                            <p style={{ color: '#1283DA', padding: '0.3rem' }}>{post.fields['API Feature 6']}<br /> <span>{post.fields['API Feature Description 6']}</span></p>
-                                            <br />
-                                            <p style={{ color: '#1283DA', padding: '0.3rem' }}>{post.fields['API Feature 7']}<br /> <span>{post.fields['API Feature Description 7']}</span></p>
-                                            <br />
-                                            <p style={{ color: '#1283DA', padding: '0.3rem' }}>{post.fields['API Feature 8']}<br /> <span>{post.fields['API Feature Description 8']}</span></p>
-                                            <br />
-                                            <p style={{ color: '#1283DA', padding: '0.3rem' }}>{post.fields['API Feature 9']}<br /> <span>{post.fields['API Feature Description 9']}</span></p>
-                                            <br />
-                                            <p style={{ color: '#1283DA', padding: '0.3rem' }}>{post.fields['API Feature 10']}<br /> <span>{post.fields['API Feature Description 10']}</span></p>
+                                            <p style={{ padding: '0.3rem' }}>5- {post.fields['API Feature 5']}<br /> <span>{post.fields['API Feature Description 5']}</span></p>
                                         </div>
                                         <div style={{ paddingTop: '4rem', paddingLeft: '8rem' }}>
                                         </div>
@@ -145,13 +148,24 @@ export default function APIAT(props) {
                                             options={{ height: 400, width: 400 }}
                                         />
                                     </Card>
-                                </div><hr></hr>
+                                </div>
                                 <div style={{ display: 'flex', flexDirection: 'row', marginLeft: '8rem', alignItems: 'center' }}>
-                                    <div style={{ paddingTop: '2rem', margin: '0 2rem', width: '60%', paddingLeft: '1rem' }}>
-                                        <p style={{ color: '#1283DA' }}><u>Read More</u></p>
+                                    <div style={{ display: 'flex', margin: '0 2rem', width: '60%', paddingLeft: '1rem' }}>
+                                        <div> <p style={{ padding: '0.3rem' }}>6- {post.fields['API Feature 6']}<br /> <span>{post.fields['API Feature Description 6']}</span></p>
+                                            <br />
+                                            <p style={{ padding: '0.3rem' }}>7- {post.fields['API Feature 7']}<br /> <span>{post.fields['API Feature Description 7']}</span></p>
+                                            <br />
+                                            <p style={{ padding: '0.3rem' }}>8- {post.fields['API Feature 8']}<br /> <span>{post.fields['API Feature Description 8']}</span></p>
+                                            <br />
+                                            <p style={{ padding: '0.3rem' }}>9- {post.fields['API Feature 9']}<br /> <span>{post.fields['API Feature Description 9']}</span></p>
+                                            <br />
+                                            <p style={{ padding: '0.3rem' }}>10- {post.fields['API Feature 10']}<br /> <span>{post.fields['API Feature Description 10']}</span></p>
+                                        </div>
+                                        <div style={{ paddingTop: '4rem', paddingLeft: '8rem' }}>
+                                        </div>
 
                                     </div>
-                                    <Card style={{ width: '400px', height: '400px', marginTop: '2.5rem', marginLeft: '4rem' }}>
+                                    <Card style={{ width: '400px', height: '400px', marginTop: '2.5rem', marginLeft: '4rem', marginBottom: '2.5rem' }}>
                                         <TwitterTimelineEmbed
                                             sourceType="profile"
                                             screenName={post.fields['Vendor']}
@@ -159,6 +173,7 @@ export default function APIAT(props) {
                                         />
                                     </Card>
                                 </div>
+                                <hr></hr>
                                 <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', marginLeft: '8rem', alignItems: 'center', marginBottom: '5rem' }}>
                                     <div style={{ paddingTop: '2rem', margin: '0 2rem', width: '60%', paddingLeft: '1rem' }}>
                                         <SocialIcon network="linkedin" style={{ height: 35, width: 35, marginRight: '0.5rem' }} />
