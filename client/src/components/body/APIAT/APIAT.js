@@ -122,6 +122,9 @@ export default function APIAT(props) {
                                             screenName={post.fields['Vendor']}
                                             options={{ height: 400, width: 400 }}
                                         />
+
+
+                                        
                                     </Card>
                                 </div><hr></hr>
                                 <div style={{ display: 'flex', flexDirection: 'row', marginLeft: '8rem', alignItems: 'center' }}>
