@@ -33,7 +33,7 @@ export default function UsecaseAT(props) {
                 },
             }
 
-            var url = 'https://api.airtable.com/v0/appDrjzV9YZk6MRQA/cpaas%20Vendors?filterByFormula=%7BVendor%20Name%7D+%3D+%22' + responsePost.data.fields['Vendor Name'] + '%22';
+            var url = 'https://api.airtable.com/v0/appDrjzV9YZk6MRQA/cpaas%20Vendors?filterByFormula=%7BVendor%20Name%7D+%3D+%22' + responsePost.data.fields['Vendor'] + '%22';
 
             const responseV = await Axios.get(url, get_options)
             setVendor(responseV.data.records[0].fields);
@@ -55,7 +55,7 @@ export default function UsecaseAT(props) {
                             <img style={{ margin: '0 2rem', borderRadius: '8px', width: '6vw', height: '6vw', marginLeft: '2rem' }} src={post.fields.Airtable_Usecase_Logo[0].url} alt="VendorProfile" />*/}
                             <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
                                 <p style={{ color: '#E4E7EB', fontSize: '16px', marginBottom: '-0.5rem' }}>Use Case</p>
-                                <h2 style={{ fontSize: '40px', fontWeight: '500', color: '#fff' }}>{post.fields['Usecase Name']}</h2>
+                                <h2 style={{ fontSize: '40px', fontWeight: '500', color: '#fff' }}>{post.fields['Usecase']}</h2>
                                 {/*<div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
                                 <div style={{ marginTop: '0.5rem' }}>
                                     <SocialIcon network="linkedin" style={{ height: 35, width: 35, marginRight: '0.5rem' }} />
@@ -121,34 +121,155 @@ export default function UsecaseAT(props) {
                                 </TabList>
                             </div>
                             <TabPanel>
-                                <div style={{ display: 'flex', flexDirection: 'row', marginLeft: '9rem', alignItems: 'center' }}>
+                                <div style={{ display: 'flex', flexDirection: 'row', marginLeft: '8rem', alignItems: 'center' }}>
+                                    <div style={{ paddingTop: '2rem', margin: '0 2rem', width: '70%', paddingLeft: '1rem' }}>
+                                        <h5 style={{ paddingBottom: '0.5rem' }}>About</h5>
+                                        <p>{post.fields['Usecase Description']}</p>
+                                        <p style={{ fontWeight: '480' }}>Industry</p>
+                                        <p>{post.fields['Industry']}</p>
+                                        <p>Category</p>
+                                        <p><span  style={{ fontWeight: '480', background:'#D1F7C4', color: '#222', borderRadius: '33px', padding: '0.5rem', marginRight: '0.5rem' }}>{post.fields['Category']}</span></p>
+                                        <p style={{ fontWeight: '480' }}>APIs Used</p>
+                                        <p><span style={{ background: '#D0F0FD', color: '#222', borderRadius: '33px', padding: '0.5rem', marginRight: '0.5rem' }}>{post.fields['API Used 1']}</span><span style={{ padding: '0.5rem', marginRight: '0.5rem', background: '#D0F0FD', color: '#222', borderRadius: '33px' }}>{post.fields['API Used 2']}</span></p>
+                                    </div>
+                                </div><hr></hr>
+                                <div style={{ display: 'flex', flexDirection: 'row', marginLeft: '8rem', alignItems: 'center' }}>
+                                    <div style={{ display: 'flex', paddingTop: '2rem', margin: '0 2rem', width: '60%', paddingLeft: '1rem' }}>
+                                        <div><h5 style={{ paddingBottom: '2rem' }}>Process</h5>
+                                            <br /><p> {post.fields['Process Step 1']}</p><br />
+                                            <p> {post.fields['Process Step 2']}</p><br />
+                                            <p> {post.fields['Process Step 3']}</p><br />
+                                            <p> {post.fields['Process Step 4']}</p><br />
+                                            <p> {post.fields['Process Step 5']}</p><br />
+                                        </div>
+                                    </div>
+                                    <Card style={{ width: '400px', height: '400px', marginTop: '2.5rem', marginLeft: '4rem', marginBottom: '2.5rem' }}>
+                                        <TwitterTimelineEmbed
+                                            sourceType="profile"
+                                            screenName={post.fields['Vendor']}
+                                            options={{ height: 400, width: 400 }}
+                                        />
+                                    </Card>
+                                </div><hr></hr>
+                                <div style={{ display: 'flex', flexDirection: 'row', marginLeft: '8rem', alignItems: 'center' }}>
+                                    <div style={{ paddingTop: '2rem', margin: '0 2rem', width: '60%', paddingLeft: '1rem' }}>
+                                        <h5 style={{ paddingBottom: '2rem' }}>Value Generated</h5><br/>
+                                        <p> {post.fields['Usecase Value Generated 1']}</p><br />
+                                        <p> {post.fields['Usecase Value Generated 2']}</p><br />
+                                        <p> {post.fields['Usecase Value Generated 3']}</p><br />
+                                        <p> {post.fields['Usecase Value Generated 4']}</p><br />
+                                        <p> {post.fields['Usecase Value Generated 5']}</p>
+                                    </div>
+                                    <Card style={{ width: '400px', height: '400px', marginTop: '2.5rem', marginLeft: '4rem' }}>
+                                        <TwitterTimelineEmbed
+                                            sourceType="profile"
+                                            screenName={post.fields['Vendor']}
+                                            options={{ height: 400, width: 400 }}
+                                        />
+                                    </Card>
+                                </div>
+                                <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', marginLeft: '8rem', alignItems: 'center', marginBottom: '5rem' }}>
+                                    <div style={{ paddingTop: '2rem', margin: '0 2rem', width: '60%', paddingLeft: '1rem' }}>
+                                        <SocialIcon network="linkedin" style={{ height: 35, width: 35, marginRight: '0.5rem' }} />
+                                        <SocialIcon network="youtube" style={{ height: 35, width: 35, marginRight: '0.5rem' }} />
+                                        <SocialIcon network="facebook" style={{ height: 35, width: 35, marginRight: '0.5rem' }} />
+                                        <SocialIcon network="twitter" style={{ height: 35, width: 35, marginRight: '0.5rem' }} />
+                                    </div>
+                                </div>
+
+                                {/*  <div className="card-one" style={{ padding: '0rem', margin: '0 2rem', width: '45%' }}>
+                                           <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'flex-start', marginTop: '2rem' }}>
+                                            <Button style={{ marginRight: '0.5rem', marginTop: '1rem', background: '#CFDFFF', color: '#111', padding: '10px' }}>Pure Player</Button>
+                                            <Button style={{ marginTop: '1rem', background: '#CFDFFF', color: '#111', padding: '10px' }}>Top Vendors</Button>
+                                    </div> 
+                                        <br />
+                                        <p style={{ textAlign: 'justify', fontSize: '16px' }}>Description <br /><span>{post.fields['Vendor Description']}</span></p>
+                                        <br />
+                                        <p style={{ textAlign: 'justify', fontSize: '16px' }}>Founders <br /> <span>{post.fields.Founders}</span></p>
+                                        <br />
+                                        <p style={{ textAlign: 'justify', fontSize: '16px' }}>Founded in <br /> <span>{post.fields['Founded Year']}</span></p>
+                                        <br />
+                                        <p style={{ textAlign: 'justify', fontSize: '16px' }}>Industry <br /> <span>{post.fields.Industry}</span></p>
+                                        <br />
+                                        <p style={{ textAlign: 'justify', fontSize: '16px' }}>Company Size <br /> <span>{post.fields['Company Size']}</span></p>
+                                    </div>
+                                    <Card style={{ width: '490px', height: '450px', margin: '1.5rem', marginLeft: '8rem' }}>
+                                        <TwitterTimelineEmbed
+                                            sourceType="profile"
+                                            screenName={post.fields['Vendor']}
+                                            options={{ height: 550, width: 490 }}
+                                        />
+                                    </Card>*/}
+                                {/* {   </Card>
+                            <Card style={{ width: '490px', height: '450px' }}>
+                                <TwitterTimelineEmbed
+                                    sourceType="profile"
+                                    screenName={post.fields.TransformX_Vendor_Name}
+                                    options={{ height: 550, width: 550 }}
+                                />
+                            </Card>*/}
+                                {/*    <div style={{ display: 'flex', flexDirection: 'row', marginLeft: '8rem', marginRight: '2rem', alignItems:'center' }}>
+                                    <div className="card-one" style={{ padding: '0rem', margin: '0 2rem', width: '45%' }}>
+                                        <p style={{ textAlign: 'justify', fontSize: '16px' }}>Description <br /><span>{post.fields['API Description']}</span></p>
+                                        <br />
+                                        <p style={{ textAlign: 'justify', fontSize: '16px' }}>Features <br /></p>
+                                        <br />
+                                        <p style={{ textAlign: 'justify', fontSize: '14px' }}>{post.fields['API Feature 1']}<br /> <span>{post.fields['API Feature Description 1']}</span></p>
+                                        <br />
+                                        <p style={{ textAlign: 'justify', fontSize: '14px' }}>{post.fields['API Feature 2']}<br /> <span>{post.fields['API Feature Description 2']}</span></p>
+                                        <br />
+                                        <p style={{ textAlign: 'justify', fontSize: '14px' }}>{post.fields['API Feature 3']}<br /> <span>{post.fields['API Feature Description 3']}</span></p>
+                                        <br />
+                                        <p style={{ textAlign: 'justify', fontSize: '14px' }}>{post.fields['API Feature 4']}<br /> <span>{post.fields['API Feature Description 4']}</span></p>
+                                        <br />
+                                        <p style={{ textAlign: 'justify', fontSize: '14px' }}>{post.fields['API Feature 5']}<br /> <span>{post.fields['API Feature Description 5']}</span></p>
+                                        </div>
+                                    <Card style={{ width: '490px', height: '450px', margin: '1.5rem', marginLeft: '12rem' }}>
+                                        <TwitterTimelineEmbed
+                                            sourceType="profile"
+                                            screenName={post.fields['Vendor']}
+                                            options={{ height: 550, width: 490 }}
+                                        />
+                                    </Card>
+                                </div>
+
+                                 {   </Card>
+                            <Card style={{ width: '490px', height: '450px' }}>
+                                <TwitterTimelineEmbed
+                                    sourceType="profile"
+                                    screenName={vendorTransformX_Vendor_Name}
+                                    options={{ height: 550, width: 550 }}
+                                />
+                            </Card>
+                             */}
+                                {/*   <div style={{ display: 'flex', flexDirection: 'row', marginLeft: '9rem', alignItems: 'center' }}>
                                     <div className="card-one" style={{ paddingTop: '1.5rem', margin: '0 2rem', width: '45%', paddingBottom: '2rem' }}>
-                                        {/*  <br />
+                                         <br />
                                         <Button style={{ marginTop: '1rem', background: '#CFDFFF', color: '#111', padding: '14px', marginRight: '0.5rem' }}>{post.fields.Usecase_Category}</Button>
                                         <Button style={{ marginTop: '1rem', background: '#CFDFFF', color: '#111', padding: '14px' }}>{post.fields.Usecase_Industry}</Button>
                                         <br /><br />
-                                        */}<p style={{ textAlign: 'justify', fontSize: '16px' }}>Process<br /></p>
-                                        <br /><p style={{ color: "#002060" }}>- {post.fields['Process Step 1']}</p><br />
-                                        <p style={{ color: "#002060" }}>- {post.fields['Process Step 2']}</p><br />
-                                        <p style={{ color: "#002060" }}>- {post.fields['Process Step 3']}</p><br />
-                                        <p style={{ color: "#002060" }}>- {post.fields['Process Step 4']}</p><br />
-                                        <p style={{ color: "#002060" }}>- {post.fields['Process Step 5']}</p><br />
+                                       <p style={{ textAlign: 'justify', fontSize: '16px' }}>Process<br /></p>
+                                        <br /><p>- {post.fields['Process Step 1']}</p><br />
+                                        <p>- {post.fields['Process Step 2']}</p><br />
+                                        <p>- {post.fields['Process Step 3']}</p><br />
+                                        <p>- {post.fields['Process Step 4']}</p><br />
+                                        <p>- {post.fields['Process Step 5']}</p><br />
                                         <br />
                                         <p style={{ textAlign: 'justify', fontSize: '16px' }}>Value Generated<br /><br /></p>
-                                        <p style={{ color: "#002060" }}>- {post.fields['Usecase Value Generated 1']}</p><br />
-                                        <p style={{ color: "#002060" }}>- {post.fields['Usecase Value Generated 2']}</p><br />
-                                        <p style={{ color: "#002060" }}>- {post.fields['Usecase Value Generated 3']}</p><br />
-                                        <p style={{ color: "#002060" }}>- {post.fields['Usecase Value Generated 4']}</p><br />
-                                        <p style={{ color: "#002060" }}>- {post.fields['Usecase Value Generated 5']}</p>
+                                        <p>- {post.fields['Usecase Value Generated 1']}</p><br />
+                                        <p>- {post.fields['Usecase Value Generated 2']}</p><br />
+                                        <p>- {post.fields['Usecase Value Generated 3']}</p><br />
+                                        <p>- {post.fields['Usecase Value Generated 4']}</p><br />
+                                        <p>- {post.fields['Usecase Value Generated 5']}</p>
                                     </div>
                                     <Card style={{ width: '490px', height: '450px', margin: '1.5rem', marginLeft: '12rem', marginTop: '5rem' }}>
                                         <TwitterTimelineEmbed
                                             sourceType="profile"
-                                            screenName={post.fields['Vendor Name']}
+                                            screenName={post.fields['Vendor']}
                                             options={{ height: 550, width: 550 }}
                                         />
                                     </Card>
-                                </div>
+                                </div> */}
                                 {/* {   </Card>
                             <Card style={{ width: '490px', height: '450px' }}>
                                 <TwitterTimelineEmbed
@@ -163,30 +284,113 @@ export default function UsecaseAT(props) {
                             <div style={{ display: 'flex', flexDirection: 'column' }}>
                                 <TabPanel>
                                     {vendor != null ?
-                                        <div style={{ display: 'flex', flexDirection: 'row', marginLeft: '8rem' }}>
-                                            <div className="card-one" style={{ padding: '0rem', margin: '0 2rem', width: '45%' }}>
-                                                <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
-                                                    <img style={{ borderRadius: '8px', width: '6vw', height: '6vw', marginTop: '2rem' }} src={vendor['Vendor Logo'][0].url} alt="VendorProfile" />
+                                        <>
+                                            <div style={{ display: 'flex', flexDirection: 'row', marginLeft: '8rem', alignItems: 'center' }}>
+                                                <div style={{ paddingTop: '2rem', margin: '0 2rem', width: '30%', paddingLeft: '1rem' }}>
+                                                    <h5 style={{ paddingBottom: '2rem' }}>About {vendor.Vendor}</h5>
+                                                    <p>{vendor.Headquarters},  {vendor['Headquarter State or Province']},  {vendor['Headquarter Country']}</p>
+                                                    <p>{vendor['Company Size']}</p>
+                                                    <p>{vendor['Ownership Type']}</p>
+                                                    <p>{vendor.Founders}</p>
+                                                    <p>{vendor['Founded Year']}</p>
+                                                    <p>{vendor.Website}</p>
                                                 </div>
-                                                <br />
-                                                <p style={{ textAlign: 'justify', fontSize: '16px' }}>Description <br /><span style={{ color: "#002060" }}>{vendor['Vendor Description']}</span></p>
-                                                <br />
-                                                <p style={{ textAlign: 'justify', fontSize: '16px' }}>Founders <br /> <span style={{ color: "#002060" }}>{vendor.Founders}</span></p>
-                                                <br />
-                                                <p style={{ textAlign: 'justify', fontSize: '16px' }}>Founded in <br /> <span style={{ color: "#002060" }}>{vendor['Founded Year']}</span></p>
-                                                <br />
-                                                <p style={{ textAlign: 'justify', fontSize: '16px' }}>Industry <br /> <span style={{ color: "#002060" }}>{vendor.Industry}</span></p>
-                                                <br />
-                                                <p style={{ textAlign: 'justify', fontSize: '16px' }}>Company Size <br /> <span style={{ color: "#002060" }}>{vendor['Company Size']}</span></p>
+                                                <div style={{ paddingTop: '2rem', margin: '0 2rem', width: '30%' }}>
+                                                    <h5 style={{ paddingBottom: '2rem' }}>Highlights</h5>
+                                                    <p>Stock Symbol<br /><p style={{ color: '#1283DA', padding: '0.3rem' }}>{vendor['Stock Symbol']}</p></p>
+                                                    <p>Operational Regions<br /><p style={{ color: '#1283DA', padding: '0.3rem', width: '260px', maxWidth: '260px' }}>{vendor['Operational Regions']}</p></p>
+                                                    <p>Number of Supported Countries<br /><p style={{ color: '#1283DA', padding: '0.3rem', width: '260px', maxWidth: '260px' }}>{vendor['Number of Supported Countries']}</p></p>
+                                                </div>
+                                                <div style={{ paddingTop: '2rem', margin: '0 2rem', width: '30%' }}>
+                                                    <h5 style={{ paddingBottom: '2rem' }}>Support</h5>
+                                                    <p >Scalable Global Platform: <span style={{ color: '#1283DA' }}>{vendor['Scalable Global Platform']}</span></p>
+                                                    <p >Voice Routing Reach: <span style={{ color: '#1283DA' }}>{vendor['Voice Routing Reach']}</span></p>
+                                                    <p >SMS Routing Reach: <span style={{ color: '#1283DA' }}>{vendor['SMS Routing Reach']}</span></p>
+                                                    <p >Messaging API Capability: <span style={{ color: '#1283DA' }}>{vendor['Messaging API Capability']}</span></p>
+                                                    <p >Communications API Capability: <span style={{ color: '#1283DA' }}>{vendor['Communications API Capability']}</span></p>
+                                                    <p >Advanced API Capability: <span style={{ color: '#1283DA' }}>{vendor['Advanced API Capability']}</span></p>
+                                                </div>
+                                            </div><hr></hr>
+                                            <div style={{ display: 'flex', flexDirection: 'row', marginLeft: '8rem', alignItems: 'center' }}>
+                                                <div style={{ display: 'flex', paddingTop: '2rem', margin: '0 2rem', width: '60%', paddingLeft: '1rem' }}>
+                                                    <div><h5 style={{ paddingBottom: '2rem' }}>Details</h5>
+                                                        <p>Industry<br /><p style={{ color: '#1283DA', padding: '0.3rem' }}>{vendor['Industry']}</p></p>
+                                                        <p>Founded Year<br /><p style={{ color: '#1283DA', padding: '0.3rem', width: '260px', maxWidth: '260px' }}>{vendor['Founded Year']}</p></p>
+                                                        <p>Local Support Countries<br /><p style={{ color: '#1283DA', padding: '0.3rem', width: '160px', maxWidth: '160px' }}>{vendor['Local Support Countries']}</p></p>
+                                                        <p>Phone Number<br /><p style={{ color: '#1283DA', padding: '0.3rem', width: '260px', maxWidth: '260px' }}>{vendor['Phone Number']}</p></p>
+                                                    </div>
+                                                    <div style={{ paddingTop: '4rem', paddingLeft: '8rem' }}>
+                                                        <p>Languages Supported<br /><p style={{ color: '#1283DA', padding: '0.3rem', width: '180px', maxWidth: '180px' }}>{vendor['Languages Supported']}</p></p>
+                                                        <p>Company Type<br /><p style={{ color: '#1283DA', padding: '0.3rem', width: '260px', maxWidth: '260px' }}>{vendor['Operational Regions']}</p></p>
+                                                        <p>Contact Email<br /><p style={{ color: '#1283DA', padding: '0.3rem', width: '260px', maxWidth: '260px' }}>{vendor['Contact Email']}</p></p>
+                                                    </div>
+
+                                                </div>
+                                                <Card style={{ width: '400px', height: '400px', marginTop: '2.5rem', marginLeft: '4rem', marginBottom: '2.5rem' }}>
+                                                    <TwitterTimelineEmbed
+                                                        sourceType="profile"
+                                                        screenName={vendor['Vendor']}
+                                                        options={{ height: 400, width: 400 }}
+                                                    />
+                                                </Card>
+                                            </div><hr></hr>
+                                            <div style={{ display: 'flex', flexDirection: 'row', marginLeft: '8rem', alignItems: 'center' }}>
+                                                <div style={{ paddingTop: '2rem', margin: '0 2rem', width: '60%', paddingLeft: '1rem' }}>
+                                                    <p>{vendor['Vendor Description']}</p>
+                                                    <p>{vendor['Unique Sell Point']}</p>
+                                                    <p>Support Services<br />{vendor['Support Services']}</p>
+                                                    <p>Pricing Tiers<br />{vendor['Pricing Tiers']}</p>
+                                                    <p style={{ color: '#1283DA' }}><u>Read More</u></p>
+
+                                                </div>
+                                                <Card style={{ width: '400px', height: '400px', marginTop: '2.5rem', marginLeft: '4rem' }}>
+                                                    <TwitterTimelineEmbed
+                                                        sourceType="profile"
+                                                        screenName={vendor['Vendor']}
+                                                        options={{ height: 400, width: 400 }}
+                                                    />
+                                                </Card>
                                             </div>
-                                            <Card style={{ width: '490px', height: '450px', margin: '1.5rem', marginLeft: '12rem', marginTop: '5rem' }}>
-                                                <TwitterTimelineEmbed
-                                                    sourceType="profile"
-                                                    screenName={vendor['Vendor Name']}
-                                                    options={{ height: 550, width: 550 }}
-                                                />
-                                            </Card>
-                                        </div> : ""}
+                                            <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', marginLeft: '8rem', alignItems: 'center', marginBottom: '5rem' }}>
+                                                <div style={{ paddingTop: '2rem', margin: '0 2rem', width: '60%', paddingLeft: '1rem' }}>
+                                                    <SocialIcon network="linkedin" style={{ height: 35, width: 35, marginRight: '0.5rem' }} />
+                                                    <SocialIcon network="youtube" style={{ height: 35, width: 35, marginRight: '0.5rem' }} />
+                                                    <SocialIcon network="facebook" style={{ height: 35, width: 35, marginRight: '0.5rem' }} />
+                                                    <SocialIcon network="twitter" style={{ height: 35, width: 35, marginRight: '0.5rem' }} />
+                                                </div>
+                                            </div>
+
+                                            {/*  <div className="card-one" style={{ padding: '0rem', margin: '0 2rem', width: '45%' }}>
+                                              <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'flex-start', marginTop: '2rem' }}>
+                                               <Button style={{ marginRight: '0.5rem', marginTop: '1rem', background: '#CFDFFF', color: '#111', padding: '10px' }}>Pure Player</Button>
+                                               <Button style={{ marginTop: '1rem', background: '#CFDFFF', color: '#111', padding: '10px' }}>Top Vendors</Button>
+                                       </div> 
+                                           <br />
+                                           <p style={{ textAlign: 'justify', fontSize: '16px' }}>Description <br /><span>{post.fields['Vendor Description']}</span></p>
+                                           <br />
+                                           <p style={{ textAlign: 'justify', fontSize: '16px' }}>Founders <br /> <span>{vendorFounders}</span></p>
+                                           <br />
+                                           <p style={{ textAlign: 'justify', fontSize: '16px' }}>Founded in <br /> <span>{post.fields['Founded Year']}</span></p>
+                                           <br />
+                                           <p style={{ textAlign: 'justify', fontSize: '16px' }}>Industry <br /> <span>{vendorIndustry}</span></p>
+                                           <br />
+                                           <p style={{ textAlign: 'justify', fontSize: '16px' }}>Company Size <br /> <span>{post.fields['Company Size']}</span></p>
+                                       </div>
+                                       <Card style={{ width: '490px', height: '450px', margin: '1.5rem', marginLeft: '8rem' }}>
+                                           <TwitterTimelineEmbed
+                                               sourceType="profile"
+                                               screenName={post.fields['Vendor']}
+                                               options={{ height: 550, width: 490 }}
+                                           />
+                                       </Card>*/}
+                                            {/* {   </Card>
+                               <Card style={{ width: '490px', height: '450px' }}>
+                                   <TwitterTimelineEmbed
+                                       sourceType="profile"
+                                       screenName={vendorTransformX_Vendor_Name}
+                                       options={{ height: 550, width: 550 }}
+                                   />
+                               </Card>*/}</> : ""}
                                 </TabPanel>
                                 <TabPanel style={{ background: '#F5F5F5' }}>
                                     <iframe className="airtable-embed" src={`https://airtable.com/embed/shrJFXIT0ZWH3JIv9?filter_Usecase%20Id=${post.fields['Usecase Id']}&viewControls=on`} width="100%" height="610" style={{ background: 'transparent', border: 'none', marginBottom: '-4rem', paddingTop: '0rem', marginRight: '10rem' }}></iframe>
